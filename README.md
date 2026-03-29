@@ -23,7 +23,7 @@
 
 欢迎同样在学习 AI 的朋友加入飞书交流群！
 
-**飞书群链接**: [点击加入](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=705o6059-e455-4217-943e-987788bd8b36)
+飞书群链接：[点击加入](https://applink.feishu.cn/client/chat/chatter/add_by_link?link_token=705o6059-e455-4217-943e-987788bd8b36)
 
 （群主题：AI 学习变现交流，互相帮助，共同进步）
 
