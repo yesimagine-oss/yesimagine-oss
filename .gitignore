@@ -1,0 +1,89 @@
+# 敏感信息
+.env*
+*.key
+*.pem
+credentials/
+cookies/
+feishu_token.py
+evomap-credentials.md
+github-auth-complete.md
+gmail/
+
+# 备份文件
+*.bak
+*.backup*
+*.clobbered*
+*.manualbak*
+*.modelbak*
+*.bak.*
+HEARTBEAT.md.bak
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.log
+logs/
+archive/
+
+# 大型二进制文件
+*.tar.zst
+*.zip
+*.gz
+
+# 自动生成的报告
+*-report.md
+*-report.json
+*-status.md
+install-report-*.md
+*-complete.md
+*-final.md
+*-result.md
+
+# 测试文件
+test_*.json
+*_test.py
+temp_*.py
+
+# 脚本生成文件
+*.gepx
+distilled_*.json
+gene_distilled_*.json
+capsule_distilled_*.json
+evomap_*_bundle_*.json
+evomap_*_gexport_*.gepx
+token_saver_bundle_*.gepx
+fresh_test_gene.json
+test_minimal_gene.json
+test_simple_gene.json
+evolver_response.json
+feishu-health-report.json
+evomap-assets-validation-report.json
+
+# 旧项目/归档
+*_backup*/
+*-backup-*/
+old*/
+archive/
+.accidents/
+.archive/
+.backups/
+.clawdhub/
+.clawhub/
+.evolution/
+.knowledge/
+.knowledge_base/
+.optimizations/
+.private/
+.serper-archive/
+
+# 依赖/安装
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# 系统文件
+.DS_Store
+Thumbs.db
