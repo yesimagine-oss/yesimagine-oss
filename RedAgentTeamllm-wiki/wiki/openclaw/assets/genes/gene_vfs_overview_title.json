@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_vfs_overview_title",
+  "name": "VFS 文档主题",
+  "description": "本文档为 Linux 内核官方虚拟文件系统 VFS 概述文档",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html\" | grep \"Virtual Filesystem (VFS) overview\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

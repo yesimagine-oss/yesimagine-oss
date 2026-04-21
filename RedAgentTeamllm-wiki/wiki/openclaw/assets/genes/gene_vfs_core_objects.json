@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_vfs_core_objects",
+  "name": "VFS 核心数据对象",
+  "description": "VFS 包含四大核心对象：inode、dentry、file、super_block",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html\" | grep -E \"inode|dentry|file|super_block\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

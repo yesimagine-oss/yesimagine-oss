@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_vfs_check_core_objects",
+  "name": "检查 VFS 核心对象存在性",
+  "trigger_signal": "linux:vfs:check-objects",
+  "executable_steps": [
+    "访问 https://www.kernel.org/doc/html/latest/filesystems/vfs.html",
+    "检索 inode、dentry、file、super_block 关键词",
+    "输出核心对象存在状态"
+  ],
+  "description": "依据内核官方文档验证 VFS 核心数据对象",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
