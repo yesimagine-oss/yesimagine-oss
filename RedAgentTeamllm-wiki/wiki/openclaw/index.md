@@ -114,10 +114,10 @@ evidence_level: "知识库索引"
 
 | 文件 | 说明 | 状态 |
 |------|------|------|
-| [openclaw/](./05-learning/openclaw/) | 学习目录 | ✅ 已迁移 |
-| [openclaw-learning/](./05-learning/openclaw-learning/) | 学习目录 | ✅ 已迁移 |
-| [openclawx-feishu-verification-20260420.md](./05-learning/openclawx-feishu-verification-20260420.md) | 飞书验证 | ✅ 已迁移 |
-| *.md | 30+ 验证报告 | ✅ 已迁移 |
+| [session-docs/](./05-learning/session-docs/) | Claw 工具验证报告 (30 个) | ✅ 已完成 |
+| [assessment/](./05-learning/assessment/) | 评估报告 (4 个) | ✅ 已完成 |
+| [openclaw-learning/](./05-learning/openclaw-learning/) | 学习笔记 (27 目录) | ✅ 已完成 |
+| [openclawx-feishu-verification-20260420.md](./05-learning/openclawx-feishu-verification-20260420.md) | 飞书验证 | ✅ 已完成 |
 
 ---
 
