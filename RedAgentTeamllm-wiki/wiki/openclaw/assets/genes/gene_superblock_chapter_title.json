@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_superblock_chapter_title",
+  "name": "VFS 超级块章节标题",
+  "description": "VFS 文档包含 The superblock object 章节，描述超级块对象结构与管理",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html#the-superblock-object\" | grep \"The superblock object\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#the-superblock-object",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

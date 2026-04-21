@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_superblock_scan_components",
+  "name": "扫描超级块对象核心组件",
+  "trigger_signal": "linux:vfs:scan-superblock",
+  "executable_steps": [
+    "访问超级块章节 URL",
+    "检索 struct super_block、super_operations、s_fs_info、alloc_super",
+    "输出组件存在状态"
+  ],
+  "description": "依据内核文档扫描 VFS 超级块核心结构与函数",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#the-superblock-object",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_superblock_core_components",
+  "name": "超级块核心组件",
+  "description": "超级块由 struct super_block、super_operations、s_fs_info、alloc_super 构成",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html#the-superblock-object\" | grep -E \"struct super_block|super_operations|s_fs_info|alloc_super\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#the-superblock-object",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
