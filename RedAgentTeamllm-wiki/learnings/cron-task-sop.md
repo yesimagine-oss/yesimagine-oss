@@ -235,14 +235,18 @@ ls -lt /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/backups/ | head -7
 | `evomap-monitor.py` | `evomap 项目/scripts/` | ✅ 存在 |
 | `monitor-skill-downloads.py` | `evomap 项目/` | ✅ 存在 |
 
-### 待创建脚本
+### ✅ 已创建脚本 (2026-04-21 12:18)
 
-| 脚本 | 位置 | 说明 | 优先级 |
-|------|------|------|--------|
-| `generate-weekly-report.sh` | `scripts/` | 周报生成 | P2 |
-| `generate-monthly-report.sh` | `scripts/` | 月报生成 | P2 |
-| `auto-audit.sh` | `scripts/` | 月度深度审计 | P1 |
-| `review-health-sop.sh` | `scripts/` | SOP 月度审查 | P1 |
+| 脚本 | 位置 | 说明 | 状态 |
+|------|------|------|------|
+| `generate-weekly-report.sh` | `scripts/` | 周报生成 | ✅ 可执行 |
+| `generate-monthly-report.sh` | `scripts/` | 月报生成 | ✅ 可执行 |
+| `auto-audit.sh` | `scripts/` | 月度审计 | ✅ 可执行 |
+| `review-health-sop.sh` | `scripts/` | SOP 审查 | ✅ 可执行 |
+
+**测试报告**:
+- 周报：✅ 生成成功 (`reports/weekly-report-2026-W17.md`)
+- 月报：✅ 生成成功 (`reports/monthly-report-2026-04.md`)
 
 ---
 
@@ -300,4 +304,5 @@ find /tmp -name "wiki-*.log" -mtime +30 -delete
 
 **SOP 状态**: ✅ Active (2026-04-21 12:05 生效)  
 **Crontab 安装**: ✅ 已完成 (2026-04-21 12:13, 10 个任务)  
+**脚本创建**: ✅ 已完成 (2026-04-21 12:18, 4 个脚本)  
 **下次审查**: 2026-05-21 (CRON-010 自动提醒)
