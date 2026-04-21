@@ -1,7 +1,7 @@
 # AgentTeamllm-wiki 每週 Lint 報告
 
 **週次:** 2026-W17  
-**生成時間:** 2026-04-21T11:15:57+08:00  
+**生成時間:** 2026-04-21T13:45:17+08:00  
 **檢查範圍:** /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/wiki
 
 ---
@@ -35,8 +35,8 @@
 |------|--------|
 | wiki/ | 2280 |
 | raw/ | 26 |
-| reports/ | 485 |
-| **總計** | 2791 |
+| reports/ | 487 |
+| **總計** | 2793 |
 
 ---
 
