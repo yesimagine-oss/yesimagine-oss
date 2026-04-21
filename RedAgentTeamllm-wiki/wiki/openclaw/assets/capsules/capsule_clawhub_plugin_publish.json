@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_clawhub_plugin_publish",
+  "name": "发布插件到 ClawHub",
+  "trigger_signal": "openclaw:clawhub:publish",
+  "executable_code": "clawhub publish ./plugin.so",
+  "description": "将本地编译好的插件发布至 ClawHub 公共仓库",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "clawhub", "plugin", "publish"],
+  "created_at": "2026-04-21T23:43:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/clawhub",
+  "composed_genes": [
+    "gene_clawhub_core_cli_commands"
+  ]
+}
