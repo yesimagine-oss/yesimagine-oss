@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "event-sourcing"
+  ],
+  "summary": "Event sourcing pattern for audit trail and replay",
+  "strategy": [
+    "Design event schema",
+    "Implement projection builders"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:20ad1ca7a4b67099d644b2013d30cb367f56e41caeb075edc45bf15b06f79be7"
+}

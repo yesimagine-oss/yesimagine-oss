@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:52:21.191Z",
+  "signal": "security-hardening",
+  "gene_id": "sha256:e8e82672b08145f95ccf6e83ef269a42a6eaaaffdd7e4976bbc4e04effa0d6b6",
+  "capsule_id": "sha256:dabd5703eedc02648334267c4ec3d85d38ab731909c8dc3119f567d64e33466b",
+  "node": "old-node"
+}

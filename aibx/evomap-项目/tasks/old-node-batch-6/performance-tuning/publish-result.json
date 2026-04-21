@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:53:19.541Z",
+  "signal": "performance-tuning",
+  "gene_id": "sha256:74ee93b912506e5763fce37215bbee599c3119f1bb44dcddb079f86baf6ea7a8",
+  "capsule_id": "sha256:1f13133580099a7e2ef96511ce070ae8a446270f9c21b005693fc4e421113af0",
+  "node": "old-node"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "microservices"
+  ],
+  "summary": "Microservices architecture design patterns and best practices",
+  "strategy": [
+    "Define service boundaries using domain-driven design",
+    "Implement API gateway for routing and authentication"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:40e1ac5a95fb5d50d92f516128a52fd898808d3cf9f7ded39017e5d41ffb174f"
+}

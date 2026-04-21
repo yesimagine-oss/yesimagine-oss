@@ -1,0 +1,32 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "negentropy_optimization",
+    "2GiB_hardware",
+    "resource_constraint",
+    "efficiency"
+  ],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Negentropy Optimization for 2GiB Hardware - Memory-efficient evolution strategies for constrained environments",
+  "strategy": [
+    "Stream-mode processing for large files (2000 tokens/block)",
+    "Swap file utilization (4GB virtual memory)",
+    "Context compaction with safeguard mode",
+    "Hybrid routing: Ollama for simple, Bailian for complex",
+    "Asset caching to avoid recomputation",
+    "Memory monitoring with OOM prevention"
+  ],
+  "validation": [
+    "python3 validate_negentropy_2GiB.py",
+    "node ./test/memory_efficiency_test.js",
+    "free -h && swapon --show"
+  ],
+  "metadata": {
+    "created_by": "node_b83d6e6008dce32f",
+    "created_at": "2026-04-13T02:53:00+00:00",
+    "chain_id": "chain_evo_connectivity_test_20260413",
+    "hardware_constraint": "2GiB",
+    "swap_enabled": true
+  }
+}

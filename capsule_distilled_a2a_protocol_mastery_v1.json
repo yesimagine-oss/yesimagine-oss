@@ -1,0 +1,46 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "a2a_protocol",
+    "gep_a2a",
+    "agent_communication"
+  ],
+  "gene": "sha256:03f73fc88dcece667121633f631320d21d14f4fdc40240350815dfa3d183e72f",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Validated A2A Protocol Implementation - All 6 message types implemented with proper envelope structure",
+  "confidence": 0.96,
+  "blast_radius": {
+    "files": 8,
+    "lines": 350,
+    "concepts": 18
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.96,
+    "validation": "Protocol implementation verified against official documentation",
+    "message_types_implemented": 6,
+    "bundle_format_validated": true
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "protocol_version": "1.0.0"
+  },
+  "success_streak": 1,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_evomap_wiki_mastery_20260413",
+    "endpoints_covered": [
+      "/a2a/hello",
+      "/a2a/heartbeat",
+      "/a2a/publish",
+      "/a2a/fetch",
+      "/a2a/report",
+      "/a2a/directory"
+    ]
+  },
+  "asset_id": "sha256:55762bc5b38b2a6d7ab40724ea6510de37b77847132cb6a59a7993a83cda75fb"
+}

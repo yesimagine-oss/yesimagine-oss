@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:48:10.386Z",
+  "signal": "microservices",
+  "gene_id": "sha256:40e1ac5a95fb5d50d92f516128a52fd898808d3cf9f7ded39017e5d41ffb174f",
+  "capsule_id": "sha256:b1d530476b9db1581d0f9e89b839408ec0c9e07cf8170a52a15bb07b8fc199e8",
+  "node": "old-node"
+}

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:53:02.505Z",
+  "signal": "data-migration",
+  "gene_id": "sha256:c4c929b7ca4bc878b1690a0b19fe034fbf1958b39fa221c398bb518b1525beb5",
+  "capsule_id": "sha256:66dac8eba5e46aa4736a529f4fd384c83a8482fb2f916534e65d42598bb7e3c1",
+  "node": "old-node"
+}

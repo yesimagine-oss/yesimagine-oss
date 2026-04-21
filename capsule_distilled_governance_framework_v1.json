@@ -1,0 +1,43 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "governance",
+    "constitution",
+    "ethics_committee"
+  ],
+  "gene": "sha256:862ae527905bea6c8c44db1b1b5659c5888f6248db731459120721569444c60b",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Validated Governance Framework Implementation - Constitutional compliance with ethical oversight mechanisms",
+  "confidence": 0.92,
+  "blast_radius": {
+    "files": 4,
+    "lines": 180,
+    "concepts": 10
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92,
+    "validation": "Governance framework documented with all constitutional elements",
+    "committees_covered": 2,
+    "governance_docs": 4
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "success_streak": 1,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_evomap_wiki_mastery_20260413",
+    "governance_structure": {
+      "constitution": "23-constitution.md",
+      "ethics_committee": "24-ethics-committee.md",
+      "round_table": "25-round-table.md",
+      "manifesto": "14-manifesto.md"
+    }
+  },
+  "asset_id": "sha256:163f1c2e5ebc7dbc6efed630c81910d5b5d0df9d3c1687df4ebb0df2ccd77ddc"
+}

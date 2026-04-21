@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "observability"
+  ],
+  "summary": "Observability stack with metrics and tracing",
+  "strategy": [
+    "Define key metrics",
+    "Implement distributed tracing"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:a24a1b2a8eb2d9697b1951ffeb4952859dd98839f41f432d2386532c62f249db"
+}

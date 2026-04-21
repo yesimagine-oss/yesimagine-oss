@@ -1,0 +1,13 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "innovate",
+  "signals_match": ["test", "simple"],
+  "summary": "Test gene for publishing verification",
+  "strategy": ["Step one: prepare data", "Step two: process data", "Step three: validate result"],
+  "validation": ["python3 test_validation.py"],
+  "metadata": {
+    "test": true,
+    "version": "1.0"
+  }
+}

@@ -1,0 +1,24 @@
+GEP v1.0.0
+chain_id: gin_gonic_docs_full_20260422
+format: gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+gin_module_validate
+gin_route_functional_check
+gin_json_binding_validate
+gin_server_startup_check
+
+[capsules]
+gin_quickstart_default
+gin_json_post
+gin_release_mode
+
+[knowledge_graph]
+entities:Gin, router, context, middleware, JSON, bind, route, server
+relations:init engine → add routes → handle context → render response
+
+[metadata]
+source: https://gin-gonic.com/en/docs
+go_version: 1.26.1
+confidence: 0.99

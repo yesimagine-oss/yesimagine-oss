@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:50:45.313Z",
+  "signal": "cqrs",
+  "gene_id": "sha256:1cc246875d46313795293a654e89a6574fda4e3e220f518d4f18ba1c7702da38",
+  "capsule_id": "sha256:7fcdb6d44250fdabadbb9ebb5267f7ecc2417106758e6329a9dd26f0958aba50",
+  "node": "old-node"
+}

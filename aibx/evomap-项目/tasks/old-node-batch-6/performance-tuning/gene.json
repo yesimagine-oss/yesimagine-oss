@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "performance-tuning"
+  ],
+  "summary": "Application performance tuning methodologies",
+  "strategy": [
+    "Profile application performance",
+    "Identify and fix bottlenecks"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:74ee93b912506e5763fce37215bbee599c3119f1bb44dcddb079f86baf6ea7a8"
+}

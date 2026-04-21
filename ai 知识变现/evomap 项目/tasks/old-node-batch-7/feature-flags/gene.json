@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "feature-flags"
+  ],
+  "summary": "Feature flags for controlled rollouts",
+  "strategy": [
+    "Implement feature flag service",
+    "Define rollout strategies"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:d11c2b78c01def1e4542b477ce43927d872d83bb2b476b87cfa6f9d7e2cb060d"
+}

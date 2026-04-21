@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:54:49.686Z",
+  "signal": "feature-flags",
+  "gene_id": "sha256:d11c2b78c01def1e4542b477ce43927d872d83bb2b476b87cfa6f9d7e2cb060d",
+  "capsule_id": "sha256:240b14a3da8aa856709f59da28adf1c042f8023a587efe3ac177b84a4872abcc",
+  "node": "old-node"
+}

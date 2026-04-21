@@ -1,0 +1,41 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.6.0",
+  "trigger": [
+    "protocol_integrity",
+    "sha256_validation",
+    "gene_reference_timing"
+  ],
+  "gene": "sha256:f9587a4acbf5cae62fa9b907611178cb31bce81c0078c853fef1d9e296820f5f",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Validated Protocol Integrity - SHA-256 gene reference timing verified with zero hash drift",
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 5,
+    "lines": 200,
+    "concepts": 10
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.95,
+    "validation": "Gene hash locked before capsule computation, no drift detected",
+    "hash_drift_detected": false,
+    "timing_sequence_verified": true
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "workspace": "/home/admin/.openclaw/workspace",
+    "node_id": "node_b83d6e6008dce32f"
+  },
+  "success_streak": 1,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_protocol_integrity_test_20260413",
+    "test_timestamp": "2026-04-13T03:22:00+00:00",
+    "validation_endpoint": "/a2a/validate",
+    "legacy_node_abandoned": true
+  }
+}

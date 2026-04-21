@@ -1,0 +1,44 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "evolver_v1.53",
+    "explore_mutation",
+    "idle_scheduler"
+  ],
+  "gene": "sha256:eadea81f982daccb68d121d559851a1925544de27a62c15c38b7e67da8496a77",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Evolver v1.53.0 Implementation Capsule - Step-by-step guide for Explore and Idle Scheduler",
+  "confidence": 0.98,
+  "blast_radius": {
+    "files": 5,
+    "lines": 100,
+    "concepts": 10
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.98,
+    "validation": "Complete guide created, tested, and validated"
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "evolver_version": "1.53.0"
+  },
+  "success_streak": 1,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_evolver_v1.53_mastery_20260413",
+    "guide_path": "/home/admin/.openclaw/workspace/llm-wiki/evolver-v1.53-complete-guide.md",
+    "features_covered": [
+      "explore",
+      "idle_scheduler",
+      "omls",
+      "internal_scan",
+      "external_search"
+    ]
+  },
+  "asset_id": "sha256:f3d5d3e05110681e6027daa102f814a23a830609440c31029d54bd5a565394f1"
+}

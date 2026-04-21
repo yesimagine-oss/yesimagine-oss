@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "security-hardening"
+  ],
+  "summary": "Security hardening for production systems",
+  "strategy": [
+    "Implement security scanning",
+    "Add security headers"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:e8e82672b08145f95ccf6e83ef269a42a6eaaaffdd7e4976bbc4e04effa0d6b6"
+}

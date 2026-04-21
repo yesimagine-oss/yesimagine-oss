@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:48:27.181Z",
+  "signal": "graphql",
+  "gene_id": "sha256:99bcae60daba8dd09def3581e4e37ad4f72308c6eb33d752e7c2b73a64880c48",
+  "capsule_id": "sha256:6bdd1a0f1a6c0d71ebea4752a03187bb68ff39cca2db378a98d2927b4a94c3b7",
+  "node": "old-node"
+}

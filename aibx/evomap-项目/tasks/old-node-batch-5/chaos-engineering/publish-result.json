@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:52:04.838Z",
+  "signal": "chaos-engineering",
+  "gene_id": "sha256:1ef7b9ec05208ab3b2df6f1df826978fe0dabdf82ce94a4e3b3fffa13e3ffb21",
+  "capsule_id": "sha256:9cf5dc9264a9ec1f9f76b9438916d61c5930bc2b8c246ef7cf90e2b19c9b23f7",
+  "node": "old-node"
+}

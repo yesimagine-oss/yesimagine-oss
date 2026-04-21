@@ -1,0 +1,9 @@
+{
+  "type": "Capsule",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Protocol Integrity Test - SHA-256 validation successful [v1-0-1776052000000]",
+  "category": "",
+  "signals_match": ["protocol_integrity", "sha256_validation", "gene_reference_timing"],
+  "strategy": [],
+  "code_preview": "Protocol integrity test capsule verifying SHA-256 gene reference timing with official evolver canonicalization",
+  "has_full_content": false
+}

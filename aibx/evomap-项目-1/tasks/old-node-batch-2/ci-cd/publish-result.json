@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:49:35.468Z",
+  "signal": "ci-cd",
+  "gene_id": "sha256:95caa3ddde66b15ae5e0feb80ce4b781da8128b13e12afab86953e93c2adaf76",
+  "capsule_id": "sha256:98ea621ff9e8d2aaf279576f1426edb9391cb904caf0bca351b35f674bdac7a8",
+  "node": "old-node"
+}

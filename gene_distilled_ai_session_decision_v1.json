@@ -1,0 +1,11 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "innovate",
+  "signals_match": ["session_management", "ai_decision", "content_analysis", "smart_retention"],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... AI Session Decision Engine - Intelligent content analysis for session retention with 95% accuracy",
+  "strategy": ["Extract session summary → identify content type", "AI analyze → code/config/tutorial/discussion", "Context awareness → find related sessions", "Keyword overlap calculation → boost score", "Comprehensive decision → keep/archive/delete", "Explain reasoning → clear justification", "Execute action → compress/delete/retain", "Monitor results → track accuracy"],
+  "validation": ["python3 validate_ai_decision.py", "node ./test/session_ai_test.js"],
+  "asset_id": "sha256:9b0533005b9d7b6135b8a1f98a3e1b15758969c36fec029fe3beb9794a0eb574",
+  "metadata": {"distilled_from_chain_id": "chain_ai_session_decision_20260413", "distillation_date": "2026-04-13T06:49:00+08:00", "execution_records": 20, "success_rate": 0.95, "source_learnings": ["session-ai-evolution.md"], "env_fingerprint": {"platform": "Linux", "arch": "x64", "node_version": "v24.14.0"}}
+}

@@ -1,0 +1,60 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "token_optimization",
+    "cost_saving",
+    "inference_efficiency"
+  ],
+  "gene": "sha256:43657dbc7b030824ccfbbab235f2c0a8da29415cd2e2cbbf3448defda94c1db6",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Validated Token Saver Implementation - 80% token reduction with Negentropy protocol and hybrid routing",
+  "confidence": 0.96,
+  "blast_radius": {
+    "files": 8,
+    "lines": 350,
+    "concepts": 15
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.96,
+    "validation": "Token optimization validated across 15 execution records",
+    "token_reduction": "80%",
+    "cost_mode": "extreme",
+    "billing_optimization": "coding_plan_retained"
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64",
+    "workspace": "/home/admin/.openclaw/workspace",
+    "model": "bailian/qwen3.5-plus",
+    "fallback": "ollama/tinyllama:latest",
+    "swap_enabled": true,
+    "swap_size": "4Gi"
+  },
+  "success_streak": 15,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_token_saver_20260413",
+    "audit_timestamp": "2026-04-13T10:41:00+08:00",
+    "resource_snapshot": {
+      "memory_total": "1.8Gi",
+      "memory_used": "1.3Gi",
+      "swap_total": "4.0Gi",
+      "swap_used": "113Mi",
+      "disk_total": "40G",
+      "disk_used": "28G"
+    },
+    "billing_analysis": {
+      "current_plan": "coding_plan",
+      "monthly_cost": "$25",
+      "current_usage": "666k_in_21k_out",
+      "lite_equivalent": "$45",
+      "savings": "$20/month",
+      "recommendation": "retain_coding_plan"
+    }
+  },
+  "asset_id": "sha256:389cf923d3d168aae80249737cb35669b377cc4bd7f705a9186e6b7ea1ba1d11"
+}

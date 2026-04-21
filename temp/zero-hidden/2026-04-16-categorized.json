@@ -1,0 +1,318 @@
+{
+  "meta": {
+    "generated_at": "2026-04-16T13:29:49.859Z",
+    "total_errors": 360,
+    "total_categories": 14,
+    "zero_hidden_mode": true
+  },
+  "categories": [
+    {
+      "type": "OTHER_THINKING_ERROR",
+      "count": 89,
+      "percentage": "24.7%",
+      "rootCause": "未分類",
+      "severity": "INFO",
+      "uniqueSessions": 1,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 7,
+          "snippet": "{\"type\":\"message\",\"id\":\"9308e4b0\",\"parentId\":\"c1949c47\",\"timestamp\":\"2026-04-15T22:36:24.755Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"No memory results. Let me check t"
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 33,
+          "snippet": "{\"type\":\"message\",\"id\":\"bfdf65b7\",\"parentId\":\"e349c78f\",\"timestamp\":\"2026-04-15T22:38:52.188Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"There's a variable redeclaration "
+        }
+      ]
+    },
+    {
+      "type": "EVO_HEARTBEAT_SCRIPT_READ",
+      "count": 48,
+      "percentage": "13.3%",
+      "rootCause": "定時任務觸發讀取心跳腳本文件",
+      "severity": "INFO",
+      "uniqueSessions": 32,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "09e74b4a-c12a-42ab-8b4c-86aa2501bc74.jsonl",
+          "line": 6,
+          "snippet": "{\"type\":\"message\",\"id\":\"f4f17e10\",\"parentId\":\"d9cfb84b\",\"timestamp\":\"2026-04-16T12:30:07.786Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_64bdd94c03434478931d3f9e\",\"toolName\":\"read\",\"content\":["
+        },
+        {
+          "timestamp": "N/A",
+          "source": "0ee0771f-44c8-4d9d-9811-2d9edddca6e0.jsonl",
+          "line": 6,
+          "snippet": "{\"type\":\"message\",\"id\":\"65ab0d76\",\"parentId\":\"e993212c\",\"timestamp\":\"2026-04-16T11:20:05.301Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_87feaef28ebe421d80a20001\",\"toolName\":\"read\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "OTHER_TOOL_ERROR",
+      "count": 39,
+      "percentage": "10.8%",
+      "rootCause": "未分類",
+      "severity": "INFO",
+      "uniqueSessions": 1,
+      "examples": [
+        {
+          "timestamp": "2026-04-15T22:38:49.044Z",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 32,
+          "snippet": ""
+        },
+        {
+          "timestamp": "2026-04-15T22:41:02.649Z",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 44,
+          "snippet": ""
+        }
+      ]
+    },
+    {
+      "type": "CONFIG_CLASH_VIOLATION",
+      "count": 31,
+      "percentage": "8.6%",
+      "rootCause": "違反 Clash 禁令（查看/修改配置）",
+      "severity": "CATASTROPHIC",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 775,
+          "snippet": "{\"type\":\"message\",\"id\":\"8895531d\",\"parentId\":\"0912b688\",\"timestamp\":\"2026-04-16T08:31:08.298Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_1a85e9fd3b6c450bb2a067d0\",\"toolName\":\"read\",\"content\":["
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 822,
+          "snippet": "{\"type\":\"message\",\"id\":\"dfde5648\",\"parentId\":\"d0a68c5c\",\"timestamp\":\"2026-04-16T08:52:57.745Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"用户问的是如何让我对 OpenClaw 深度掌握且 100% 熟练"
+        }
+      ]
+    },
+    {
+      "type": "HALLUCINATION",
+      "count": 30,
+      "percentage": "8.3%",
+      "rootCause": "AI 編造/捏造信息",
+      "severity": "CRITICAL",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 760,
+          "snippet": "{\"type\":\"message\",\"id\":\"bd0b107b\",\"parentId\":\"0acaf791\",\"timestamp\":\"2026-04-16T07:50:46.401Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_9084a670fed3477fa0a6e015\",\"toolName\":\"exec\",\"content\":["
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 775,
+          "snippet": "{\"type\":\"message\",\"id\":\"8895531d\",\"parentId\":\"0912b688\",\"timestamp\":\"2026-04-16T08:31:08.298Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_1a85e9fd3b6c450bb2a067d0\",\"toolName\":\"read\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "VIOLATION_CLASH",
+      "count": 27,
+      "percentage": "7.5%",
+      "rootCause": "Clash 操作違規",
+      "severity": "CATASTROPHIC",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 775,
+          "snippet": "{\"type\":\"message\",\"id\":\"8895531d\",\"parentId\":\"0912b688\",\"timestamp\":\"2026-04-16T08:31:08.298Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_1a85e9fd3b6c450bb2a067d0\",\"toolName\":\"read\",\"content\":["
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 911,
+          "snippet": "{\"type\":\"message\",\"id\":\"125c4a1c\",\"parentId\":\"3052857c\",\"timestamp\":\"2026-04-16T09:54:20.652Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_dfe7b25cfc3a490a9b5a68d1\",\"toolName\":\"read\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "OTHER_CONFIG_MODIFICATION",
+      "count": 22,
+      "percentage": "6.1%",
+      "rootCause": "未分類",
+      "severity": "INFO",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 325,
+          "snippet": "{\"type\":\"message\",\"id\":\"f0a69cd5\",\"parentId\":\"27151785\",\"timestamp\":\"2026-04-16T03:33:00.805Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"太好了！用户已经配置了 OpenClaw 飞书集成，有 appId"
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 347,
+          "snippet": "{\"type\":\"message\",\"id\":\"91795497\",\"parentId\":\"16610766\",\"timestamp\":\"2026-04-16T03:42:11.970Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"用户问了三个任务和一个评估问题。让我先分析：\\n\\n1. **配置"
+        }
+      ]
+    },
+    {
+      "type": "OTHER_VIOLATION_DETECTED",
+      "count": 20,
+      "percentage": "5.6%",
+      "rootCause": "未分類",
+      "severity": "INFO",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 680,
+          "snippet": "{\"type\":\"message\",\"id\":\"00b40a38\",\"parentId\":\"9f8d8a2c\",\"timestamp\":\"2026-04-16T07:02:45.437Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_4c7a2104ae9d4da89b653128\",\"toolName\":\"process\",\"content"
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 760,
+          "snippet": "{\"type\":\"message\",\"id\":\"bd0b107b\",\"parentId\":\"0acaf791\",\"timestamp\":\"2026-04-16T07:50:46.401Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_9084a670fed3477fa0a6e015\",\"toolName\":\"exec\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "OTHER_EXECUTION_HESTITATION",
+      "count": 16,
+      "percentage": "4.4%",
+      "rootCause": "未分類",
+      "severity": "INFO",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 760,
+          "snippet": "{\"type\":\"message\",\"id\":\"bd0b107b\",\"parentId\":\"0acaf791\",\"timestamp\":\"2026-04-16T07:50:46.401Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_9084a670fed3477fa0a6e015\",\"toolName\":\"exec\",\"content\":["
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 775,
+          "snippet": "{\"type\":\"message\",\"id\":\"8895531d\",\"parentId\":\"0912b688\",\"timestamp\":\"2026-04-16T08:31:08.298Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_1a85e9fd3b6c450bb2a067d0\",\"toolName\":\"read\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "API_INTERRUPT",
+      "count": 15,
+      "percentage": "4.2%",
+      "rootCause": "API 請求被用戶或系統中斷",
+      "severity": "WARNING",
+      "uniqueSessions": 1,
+      "examples": [
+        {
+          "timestamp": "2026-04-15T23:06:45.424Z",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 112,
+          "snippet": ""
+        },
+        {
+          "timestamp": "2026-04-16T00:17:58.940Z",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 272,
+          "snippet": ""
+        }
+      ]
+    },
+    {
+      "type": "SPECULATION",
+      "count": 10,
+      "percentage": "2.8%",
+      "rootCause": "AI 猜測而非查證",
+      "severity": "WARNING",
+      "uniqueSessions": 1,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 775,
+          "snippet": "{\"type\":\"message\",\"id\":\"8895531d\",\"parentId\":\"0912b688\",\"timestamp\":\"2026-04-16T08:31:08.298Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_1a85e9fd3b6c450bb2a067d0\",\"toolName\":\"read\",\"content\":["
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 911,
+          "snippet": "{\"type\":\"message\",\"id\":\"125c4a1c\",\"parentId\":\"3052857c\",\"timestamp\":\"2026-04-16T09:54:20.652Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_dfe7b25cfc3a490a9b5a68d1\",\"toolName\":\"read\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "OTHER_ANOMALY_DETECTED",
+      "count": 7,
+      "percentage": "1.9%",
+      "rootCause": "未分類",
+      "severity": "INFO",
+      "uniqueSessions": 2,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "260924a1-ad54-4477-ae39-77ee7e52e529.jsonl",
+          "line": 7,
+          "snippet": "{\"type\":\"message\",\"id\":\"9409b73e\",\"parentId\":\"ad3735fb\",\"timestamp\":\"2026-04-16T12:20:14.343Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"心跳檢查成功完成。節點狀態正常，Credit 餘額為 10，下次心"
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 754,
+          "snippet": "{\"type\":\"message\",\"id\":\"790f982e\",\"parentId\":\"e139fb46\",\"timestamp\":\"2026-04-16T07:50:22.628Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_1b2b77cdf08d4b4c8c88aa6d\",\"toolName\":\"read\",\"content\":["
+        }
+      ]
+    },
+    {
+      "type": "EVOLVER_FAIL",
+      "count": 4,
+      "percentage": "1.1%",
+      "rootCause": "Evolver 固化失敗",
+      "severity": "ERROR",
+      "uniqueSessions": 1,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 1107,
+          "snippet": ""
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 1300,
+          "snippet": ""
+        }
+      ]
+    },
+    {
+      "type": "DEV_TIMEOUT_DEBUG",
+      "count": 2,
+      "percentage": "0.6%",
+      "rootCause": "瀏覽器自動化超時問題調試",
+      "severity": "NORMAL",
+      "uniqueSessions": 1,
+      "examples": [
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 45,
+          "snippet": "{\"type\":\"message\",\"id\":\"4941da29\",\"parentId\":\"dad03116\",\"timestamp\":\"2026-04-15T22:41:05.591Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"The search test timed out - proba"
+        },
+        {
+          "timestamp": "N/A",
+          "source": "3f092dad-28a3-4492-b768-71110913541e.jsonl",
+          "line": 107,
+          "snippet": "{\"type\":\"message\",\"id\":\"3dbb0cac\",\"parentId\":\"c872eebd\",\"timestamp\":\"2026-04-15T23:05:54.645Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"网络超时需要尝试使用不同的代理设置来下载 chromedp 依赖。"
+        }
+      ]
+    }
+  ]
+}

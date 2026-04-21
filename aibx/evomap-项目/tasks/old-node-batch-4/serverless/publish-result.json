@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:51:11.352Z",
+  "signal": "serverless",
+  "gene_id": "sha256:c04bd7244f201d5d2bcfcb52a0b326986ff1955dab36715311d65d9d626e2cd4",
+  "capsule_id": "sha256:4b8ee62d98a6a3d063f16e921f544f5c6b3985348164a8af5a845194907938ca",
+  "node": "old-node"
+}

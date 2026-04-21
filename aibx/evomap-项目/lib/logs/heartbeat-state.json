@@ -1,0 +1,23 @@
+{
+  "last_check": "2026-03-30T07:51:45+08:00",
+  "credit_balance": 6.01,
+  "balance_trend": "low",
+  "tasks_claimed": 0,
+  "tasks_completed": 0,
+  "last_task_claim": null,
+  "server_status": "busy_503",
+  "consecutive_failures": 5,
+  "next_check": "2026-03-30T16:00:00+08:00",
+  "strategy": "wait_for_server_recovery",
+  "accidents": [
+    "2026-03-30-evomap-check-accident.md",
+    "2026-03-29-evomap-publish-accident.md"
+  ],
+  "improvements_active": [
+    "pre_publish_validation",
+    "error_auto_fix",
+    "opportunity_window_detection",
+    "ai_decision_checklist"
+  ],
+  "note": "暫停檢查，等伺服器恢復。已建立防范機制，同樣錯誤永不再犯。"
+}

@@ -1,0 +1,374 @@
+{
+  "reportDate": "2026-04-16T13:21:27.914Z",
+  "checkPeriod": "auto",
+  "totalErrors": 48,
+  "errorsByType": {
+    "API_ABORTED": 23,
+    "TOOL_ERROR": 16,
+    "EVOLVER_ERROR": 3,
+    "EVOLVER_HOLLOW_COMMIT": 6
+  },
+  "errors": [
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-15T23:06:45.424Z",
+      "runId": "18944ee0-2e73-44fb-9775-0c0bf209865f",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "3e3e4403",
+      "parentId": "0eced8b7"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T00:17:58.940Z",
+      "runId": "0e5013a6-c57e-48b2-ad03-2a6763272bf5",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "e329f308",
+      "parentId": "bdda7f84"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T00:17:58.948Z",
+      "tool": "exec",
+      "errorId": "cbfd7241"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T03:52:03.480Z",
+      "runId": "3334233c-2dde-41d9-814f-3e5b7cde29de",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "fa8f06cd",
+      "parentId": "e530a365"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T03:52:03.488Z",
+      "tool": "exec",
+      "errorId": "6a85fda8"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T04:55:48.810Z",
+      "runId": "fadbf54a-4599-4ce0-8c6a-618afb9a703c",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "c0d484f3",
+      "parentId": "6d810de3"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T05:27:04.412Z",
+      "runId": "40ee4bc6-f47c-4e37-a4f8-faf6450ab3b3",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "e8b102e6",
+      "parentId": "eb103c14"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T05:44:41.879Z",
+      "runId": "25ac598e-5ea4-4d8d-8f5d-be5ef12fc3a8",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "80835b4b",
+      "parentId": "675e31eb"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T06:04:24.090Z",
+      "runId": "47a4d25a-0e14-42ae-9b29-af5d34d1b837",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "ec886ea4",
+      "parentId": "ece35f58"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T06:56:28.073Z",
+      "runId": "d254e6ca-6e0b-4dbf-8403-2ce578dd5916",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "30426da5",
+      "parentId": "b2c16e2c"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T07:31:42.569Z",
+      "runId": "9c426bd6-768a-4702-a1c6-34a2b41bf0a5",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "802ed41a",
+      "parentId": "f6ae33f4"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T08:23:45.822Z",
+      "runId": "770a9f4b-eda6-4a7c-b74d-3ff855a5f52a",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "f51c6757",
+      "parentId": "b02b3c6b"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T10:52:38.316Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "93c7091a"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T10:53:27.335Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "172b7c01"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T10:53:30.686Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "7a6e087a"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T11:08:15.455Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "d8166bf5"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T11:10:03.621Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "6dc91fcb"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T11:10:16.144Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "9247c9db"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T11:10:59.341Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "25581fe3"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T11:11:16.990Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "293c63a8"
+    },
+    {
+      "type": "EVOLVER_ERROR",
+      "timestamp": 1776345687903,
+      "details": "{\"type\":\"message\",\"id\":\"47c7dc58\",\"parentId\":\"9cb7e3f8\",\"timestamp\":\"2026-04-16T11:15:25.718Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_e12dd1b1615a4122a9bc7eb7\",\"toolName\":\"process\",\"content\":[{\"type\":\"text\",\"text\":\"[Solidify] WARNING: null\\n[Solidify] HOLLOW COMMIT detected: changed files are all GEP assets/metadata. Files: assets/gep/genes.json\\n[Solidify] WARNING: null\\n[Solidify] Validation failed (attempt 1/3), retrying in 1000ms...\\n[Solidify] Validation failed (attempt 2/3), ret",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "EVOLVER_HOLLOW_COMMIT",
+      "timestamp": 1776345687903,
+      "details": "{\"type\":\"message\",\"id\":\"47c7dc58\",\"parentId\":\"9cb7e3f8\",\"timestamp\":\"2026-04-16T11:15:25.718Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_e12dd1b1615a4122a9bc7eb7\",\"toolName\":\"process\",\"content\":[{\"type\":\"text\",\"text\":\"[Solidify] WARNING: null\\n[Solidify] HOLLOW COMMIT detected: changed files are all GEP assets/metadata. Files: assets/gep/genes.json\\n[Solidify] WARNING: null\\n[Solidify] Validation failed (attempt 1/3), retrying in 1000ms...\\n[Solidify] Validation failed (attempt 2/3), ret",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T11:32:51.271Z",
+      "runId": "2052b0fa-0340-4bd9-9ab9-3dce78b7478b",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "bdd2d3a8",
+      "parentId": "53b11c1b"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T11:45:49.603Z",
+      "runId": "54d4b4be-9026-4dfa-9efe-3b21a503a57f",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "886b66ce",
+      "parentId": "bdd2d3a8"
+    },
+    {
+      "type": "EVOLVER_HOLLOW_COMMIT",
+      "timestamp": 1776345687904,
+      "details": "{\"type\":\"compaction\",\"id\":\"7b1e31c9\",\"parentId\":\"886b66ce\",\"timestamp\":\"2026-04-16T12:17:49.001Z\",\"summary\":\"## Goal\\n- Complete goEX browser automation tool optimization (Phase 1 L4 优秀级 achieved, Phase 2 L5 planning pending).\\n- Analyze and resolve OpenClaw context compression issues (forgetfulness, workflow interruption).\\n- Establish accident review mechanism and harden system configuration (2GB RAM + 4GB Swap).\\n- Execute Supreme Leader Hard-Reset and transition to Production Mode.\\n- Ensure",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T12:19:23.862Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "66073364"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T12:20:04.301Z",
+      "runId": "a52f6b44-0a41-438d-9190-ccac0e35e6da",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "87f9e9e4",
+      "parentId": "9794ebbc"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T12:56:32.317Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "5491e6c6"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T12:58:30.346Z",
+      "runId": "10e84db5-117e-4acd-9b6a-f8fd77e39d93",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "c9b9dc41",
+      "parentId": "c868816f"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T12:58:30.354Z",
+      "tool": "exec",
+      "errorId": "bfc76c2d"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:03:38.688Z",
+      "runId": "e2da7997-adac-42fe-a438-b00bbed3a4f3",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e",
+      "provider": "bailian",
+      "model": "qwen3.5-plus",
+      "errorId": "cdf5ec21",
+      "parentId": "833f3f52"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:14:00.825Z",
+      "errorId": "2c775f17",
+      "parentId": "110d414c"
+    },
+    {
+      "type": "EVOLVER_ERROR",
+      "timestamp": 1776345687907,
+      "details": "{\"type\":\"message\",\"id\":\"2c775f17\",\"parentId\":\"110d414c\",\"timestamp\":\"2026-04-16T13:14:00.825Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_2d2073173cdd43e1903e5cea\",\"toolName\":\"exec\",\"content\":[{\"type\":\"text\",\"text\":\"638\\n---\\n{\\\"type\\\":\\\"message\\\",\\\"id\\\":\\\"6ddcc184\\\",\\\"parentId\\\":\\\"6227ec7b\\\",\\\"timestamp\\\":\\\"2026-04-16T11:11:20.713Z\\\",\\\"message\\\":{\\\"role\\\":\\\"toolResult\\\",\\\"toolCallId\\\":\\\"call_df5cb0fa061a427c8a150e87\\\",\\\"toolName\\\":\\\"exec\\\",\\\"content\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"total",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "EVOLVER_HOLLOW_COMMIT",
+      "timestamp": 1776345687907,
+      "details": "{\"type\":\"message\",\"id\":\"2c775f17\",\"parentId\":\"110d414c\",\"timestamp\":\"2026-04-16T13:14:00.825Z\",\"message\":{\"role\":\"toolResult\",\"toolCallId\":\"call_2d2073173cdd43e1903e5cea\",\"toolName\":\"exec\",\"content\":[{\"type\":\"text\",\"text\":\"638\\n---\\n{\\\"type\\\":\\\"message\\\",\\\"id\\\":\\\"6ddcc184\\\",\\\"parentId\\\":\\\"6227ec7b\\\",\\\"timestamp\\\":\\\"2026-04-16T11:11:20.713Z\\\",\\\"message\\\":{\\\"role\\\":\\\"toolResult\\\",\\\"toolCallId\\\":\\\"call_df5cb0fa061a427c8a150e87\\\",\\\"toolName\\\":\\\"exec\\\",\\\"content\\\":[{\\\"type\\\":\\\"text\\\",\\\"text\\\":\\\"total",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:14:07.805Z",
+      "errorId": "e4734eab",
+      "parentId": "2c775f17"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:14:08.307Z",
+      "errorId": "1cd6bc71",
+      "parentId": "e4734eab"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:14:17.796Z",
+      "errorId": "ec503519",
+      "parentId": "1cd6bc71"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:14:40.274Z",
+      "errorId": "30982cef",
+      "parentId": "92c77530"
+    },
+    {
+      "type": "EVOLVER_HOLLOW_COMMIT",
+      "timestamp": 1776345687907,
+      "details": "{\"type\":\"message\",\"id\":\"30982cef\",\"parentId\":\"92c77530\",\"timestamp\":\"2026-04-16T13:14:40.274Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"我發現了 19 次 API aborted 錯誤（4 月 14 日 2 次，4 月 15 日 4 次，4 月 16 日 18 次），這些都沒有記錄到事故文件中。這是嚴重的遺漏。我需要完整披露這些錯誤。\",\"thinkingSignature\":\"reasoning_content\"},{\"type\":\"text\",\"text\":\"### 🔴 完整錯誤披露（4 月 14 日 -4 月 16 日）\\n\\n---\\n\\n## 一、已記錄事故（18 起）\\n\\n| 日期 | 類型 | 數量 | 狀態 |\\n|------|------|------|------|\\n| 4-14 | 災難性 | 1 | ✅ 已記錄 |\\n| 4-15 | 災難性 | 3 | ✅ ",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:15:34.387Z",
+      "errorId": "710831c5",
+      "parentId": "d156df69"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:18:50.938Z",
+      "errorId": "eedc7317",
+      "parentId": "deff2468"
+    },
+    {
+      "type": "API_ABORTED",
+      "timestamp": "2026-04-16T13:20:25.461Z",
+      "errorId": "2264c4c8",
+      "parentId": "3d7c4a3d"
+    },
+    {
+      "type": "EVOLVER_ERROR",
+      "timestamp": 1776345687908,
+      "details": "{\"type\":\"message\",\"id\":\"2264c4c8\",\"parentId\":\"3d7c4a3d\",\"timestamp\":\"2026-04-16T13:20:25.461Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"用戶要求啟動事故和錯誤的自動記錄機制。我需要創建一個自動記錄系統，確保所有錯誤和事故都能被自動捕獲和記錄，不再依賴手動發現。\\n\\n我需要：\\n1. 創建自動記錄腳本\\n2. 配置定時任務\\n3. 確保 API aborted 錯誤被記錄\\n4. 確保所有工具錯誤被記錄\\n5. 創建事故自動歸檔機制\\n\\n讓我設計一個完整的自動記錄系統。\",\"thinkingSignature\":\"reasoning_content\"},{\"type\":\"toolCall\",\"id\":\"call_32e35fce08804c66bde844ec\",\"name\":\"write\",\"arguments\":{\"content\":\"#!/usr/bin/env node\\n/**\\",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "EVOLVER_HOLLOW_COMMIT",
+      "timestamp": 1776345687908,
+      "details": "{\"type\":\"message\",\"id\":\"2264c4c8\",\"parentId\":\"3d7c4a3d\",\"timestamp\":\"2026-04-16T13:20:25.461Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"用戶要求啟動事故和錯誤的自動記錄機制。我需要創建一個自動記錄系統，確保所有錯誤和事故都能被自動捕獲和記錄，不再依賴手動發現。\\n\\n我需要：\\n1. 創建自動記錄腳本\\n2. 配置定時任務\\n3. 確保 API aborted 錯誤被記錄\\n4. 確保所有工具錯誤被記錄\\n5. 創建事故自動歸檔機制\\n\\n讓我設計一個完整的自動記錄系統。\",\"thinkingSignature\":\"reasoning_content\"},{\"type\":\"toolCall\",\"id\":\"call_32e35fce08804c66bde844ec\",\"name\":\"write\",\"arguments\":{\"content\":\"#!/usr/bin/env node\\n/**\\",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "EVOLVER_HOLLOW_COMMIT",
+      "timestamp": 1776345687908,
+      "details": "{\"type\":\"message\",\"id\":\"9d491279\",\"parentId\":\"596c8dbc\",\"timestamp\":\"2026-04-16T13:20:42.523Z\",\"message\":{\"role\":\"assistant\",\"content\":[{\"type\":\"thinking\",\"thinking\":\"現在創建一個 cron 任務配置和啟動腳本，然後啟動服務。\",\"thinkingSignature\":\"reasoning_content\"},{\"type\":\"toolCall\",\"id\":\"call_e5572cb7e4c846d69e358b53\",\"name\":\"write\",\"arguments\":{\"content\":\"#!/bin/bash\\n# OpenClaw 事故和錯誤自動記錄機制 - 安裝腳本\\n\\nset -e\\n\\necho \\\"🚀 安裝事故和錯誤自動記錄機制...\\\"\\n\\n# 創建必要的目錄\\necho \\\"📁 創建目錄結構...\\\"\\nmkdir -p /home/admin/.openclaw/logs\\nmkdir -",
+      "sessionId": "3f092dad-28a3-4492-b768-71110913541e"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T13:20:46.884Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "2d680dfa"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T13:20:54.711Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "e6a892e3"
+    },
+    {
+      "type": "TOOL_ERROR",
+      "timestamp": "2026-04-16T13:21:14.839Z",
+      "tool": "exec",
+      "exitCode": 1,
+      "errorId": "a00188f0"
+    }
+  ]
+}

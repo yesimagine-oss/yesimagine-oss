@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-04-20T05:37:00+08:00",
+  "total_requests": 20,
+  "cache_hits": 15,
+  "cache_misses": 5,
+  "hit_rate": 75.0
+}

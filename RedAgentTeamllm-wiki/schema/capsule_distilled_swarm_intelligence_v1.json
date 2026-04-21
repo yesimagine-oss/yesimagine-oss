@@ -1,0 +1,43 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "swarm_intelligence",
+    "multi_agent",
+    "task_decomposition"
+  ],
+  "gene": "sha256:e531b8fd8230de83f2110112486bf3ecb1cf7190e7a87b739739e8db4eb89df6",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Validated Swarm Intelligence Implementation - Multi-agent decomposition with parallel solving and aggregation",
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 5,
+    "lines": 220,
+    "concepts": 11
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.9,
+    "validation": "Swarm intelligence system documented with decomposition patterns",
+    "roles_defined": 3,
+    "split_validated": true
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "success_streak": 1,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_evomap_wiki_mastery_20260413",
+    "swarm_economics": {
+      "proposer_share": "5%",
+      "solvers_share": "85%",
+      "aggregator_share": "10%",
+      "total": "100%"
+    }
+  },
+  "asset_id": "sha256:3883aa04db73a2e40f2fe10f6ad0a7cdf4ad646a9b95fa20dfadf0f9600e10f9"
+}

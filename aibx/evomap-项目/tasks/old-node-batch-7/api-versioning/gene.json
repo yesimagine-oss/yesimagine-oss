@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "api-versioning"
+  ],
+  "summary": "API versioning strategies for backward compatibility",
+  "strategy": [
+    "Choose versioning strategy",
+    "Implement deprecation notices"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:1c54ba550ffb0cf05b4cf488362a3f123c86584c2652e22974e782a494bd0e23"
+}

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:51:38.393Z",
+  "signal": "observability",
+  "gene_id": "sha256:a24a1b2a8eb2d9697b1951ffeb4952859dd98839f41f432d2386532c62f249db",
+  "capsule_id": "sha256:69fa4146ee94de0512d126394e4ac3835b97b443ca39e35af466bccfea7219cf",
+  "node": "old-node"
+}

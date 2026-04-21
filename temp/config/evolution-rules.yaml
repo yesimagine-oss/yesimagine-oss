@@ -1,0 +1,31 @@
+auto_record: true
+auto_analyze: true
+auto_promote: true
+daily_report: true
+
+keywords:
+  correction:
+    - "不对"
+    - "错了"
+    - "应该是"
+    - "不正确"
+    - "错误"
+  failure:
+    - "失败"
+    - "错误"
+    - "异常"
+    - "报错"
+    - "failed"
+    - "error"
+  feature:
+    - "能不能"
+    - "想要"
+    - "需要"
+    - "希望"
+    - "建议"
+  optimization:
+    - "优化"
+    - "改进"
+    - "更好"
+    - "提升"
+    - "效率"

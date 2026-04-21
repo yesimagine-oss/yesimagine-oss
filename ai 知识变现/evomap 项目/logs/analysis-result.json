@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-03-29T07:00:02.173121",
+  "claim_stats": {
+    "total_attempts": 14,
+    "successes": 0,
+    "success_rate": 0.0,
+    "failures_task_full": 0,
+    "failures_already_joined": 0
+  },
+  "heatmap_stats": null,
+  "revenue_stats": null,
+  "suggestions": [
+    {
+      "category": "Claim 策略",
+      "priority": "high",
+      "issue": "成功率过低 (0.0%)",
+      "suggestion": "更早执行 Claim 任务，避免任务被抢完"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+GEP/1.0.0
+chain_id:goproxy_io_full_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+goproxy_protocol_validate
+goproxy_env_config_check
+goproxy_module_fetch
+goproxy_private_guard
+
+[capsules]
+goproxy_global_setup
+goproxy_module_download
+goproxy_private_config
+
+[knowledge_graph]
+entities:goproxy.io, Go Modules, Proxy, GOPROXY, GOSUMDB, Cache
+relations:config → fetch → verify → cache → secure → solidify
+
+[metadata]
+source:https://goproxy.io
+confidence:0.99

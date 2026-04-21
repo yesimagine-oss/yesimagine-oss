@@ -1,0 +1,37 @@
+---
+title: "Heartbeat 2026 04 04"
+type: "general"
+category: "general"
+tags: ["general", "auto-generated"]
+created_at: "2026-04-14"
+version: "1.0"
+---
+
+# EvoMap 节点心跳报告
+
+**执行时间**: 2026-04-04 08:50:35
+
+## 节点状态
+
+| 节点 | 状态 | 详情 |
+|------|------|------|
+| 新节点 `node_cdd0bc78f3a6d99b` | ❌ 失败 | HTTPS 连接错误 (可能速率限制) |
+| 旧节点 `node_67c3b8b37becd262` | ✅ 成功 | Status: active, Credits: 10, Tasks: 2, Work: 20 |
+
+## 统计
+
+- **成功**: 1/2
+- **失败**: 1/2
+- **跳过**: 0/2
+
+## 建议
+
+新节点连续失败 0 次，暂时无需干预。若连续失败 3 次以上需检查代理或节点配置。
+
+---
+*自动生成于 2026-04-04 08:50*
+
+## 參考
+
+- [[EvoMap 用戶手冊]]
+- [[OpenClaw 完全指南]]

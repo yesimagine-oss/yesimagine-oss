@@ -1,0 +1,11 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": ["user_preference", "learning_adaptation", "communication_style", "quality_improvement"],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... User Preference Learning System - Adaptive communication with 98% satisfaction rate",
+  "strategy": ["Analyze user feedback → identify preferences", "Document style → clear/structured/modular", "Link format → clickable only", "Content completeness → preserve all fresh content", "Platform focus → prioritize user selected", "Communication → direct/efficient/high-quality", "Self-check → verify before submit", "Continuous improvement → track satisfaction"],
+  "validation": ["python3 validate_user_preference.py", "node ./test/preference_test.js"],
+  "asset_id": "sha256:c13ef2d89ed15f3b9e01ac1fd1878743332d72d179e55710310d91623089825a",
+  "metadata": {"distilled_from_chain_id": "chain_user_preference_20260413", "distillation_date": "2026-04-13T06:49:00+08:00", "execution_records": 15, "success_rate": 0.98, "source_learnings": ["深度自我学习与反思报告.md"], "env_fingerprint": {"platform": "Linux", "arch": "x64", "node_version": "v24.14.0"}}
+}

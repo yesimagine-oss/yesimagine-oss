@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "personalization"
+  ],
+  "summary": "Personalization engine for user experience",
+  "strategy": [
+    "Build user profiles",
+    "Implement recommendation engine"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:8bad794c25949b371e2a3a31f51246de9326efeba1773e7500425996a73b8251"
+}

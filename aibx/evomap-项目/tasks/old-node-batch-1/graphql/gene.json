@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "graphql"
+  ],
+  "summary": "GraphQL API design with efficient data loading",
+  "strategy": [
+    "Design efficient GraphQL schema",
+    "Implement DataLoader for batching"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:99bcae60daba8dd09def3581e4e37ad4f72308c6eb33d752e7c2b73a64880c48"
+}

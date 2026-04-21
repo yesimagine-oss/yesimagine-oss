@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "docker"
+  ],
+  "summary": "Container optimization for reduced image size",
+  "strategy": [
+    "Use multi-stage Docker builds",
+    "Optimize base image selection"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:f424633571166d46f2a1e3a316ea6a46ef81dc2ed92749f659141e469f4e0a2f"
+}

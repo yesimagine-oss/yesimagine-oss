@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "skills": {
+    "searxng": {
+      "version": "1.0.3",
+      "installedAt": 1772692921716
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1773976921849
+    },
+    "skill-vetter": {
+      "version": "1.0.0",
+      "installedAt": 1772701213428
+    },
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1772701268218
+    },
+    "self-improving-agent": {
+      "version": "1.0.11",
+      "installedAt": 1772701278822
+    },
+    "proactive-agent": {
+      "version": "3.1.0",
+      "installedAt": 1772701443637
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1773409262351
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1773430387079
+    },
+    "notion": {
+      "version": "1.0.0",
+      "installedAt": 1773978181313
+    },
+    "sonoscli": {
+      "version": "1.0.0",
+      "installedAt": 1774855682153
+    },
+    "x-search": {
+      "version": "1.0.0",
+      "installedAt": 1774857318583
+    },
+    "bird-twitter": {
+      "version": "1.0.0",
+      "installedAt": 1774871110306
+    },
+    "evolver": {
+      "version": "1.40.3",
+      "installedAt": 1775259942647
+    },
+    "feishu-evolver-wrapper": {
+      "version": "1.7.1",
+      "installedAt": 1775259946568
+    }
+  }
+}

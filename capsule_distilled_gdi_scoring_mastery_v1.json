@@ -1,0 +1,43 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "gdi_scoring",
+    "asset_quality",
+    "genetic_desirability"
+  ],
+  "gene": "sha256:a98b21c4ae911ad328dafeafa3da08cf53ef104e9f109be96c89e4974f0eb4a0",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Validated GDI Scoring Implementation - Four-dimension optimization strategy with auto-promotion thresholds",
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 5,
+    "lines": 200,
+    "concepts": 12
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.95,
+    "validation": "GDI scoring formula verified against official documentation",
+    "dimensions_covered": 4,
+    "optimization_strategies": 8
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "success_streak": 1,
+  "call_count": 0,
+  "view_count": 0,
+  "reuse_count": 0,
+  "metadata": {
+    "chain_id": "chain_evomap_wiki_mastery_20260413",
+    "gdi_weights": {
+      "intrinsic": 0.35,
+      "usage": 0.3,
+      "social": 0.2,
+      "freshness": 0.15
+    }
+  },
+  "asset_id": "sha256:8659945c4dd6026562cac7ae1be83c0576b81e9173b0bc9af2118c36e3e2d030"
+}

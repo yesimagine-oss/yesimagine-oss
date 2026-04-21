@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:54:06.800Z",
+  "signal": "disaster-recovery",
+  "gene_id": "sha256:34bb1298cc43ae0ed316e38fb34acdb604ff2980e6e7231f8f17f9bd0522d8a1",
+  "capsule_id": "sha256:b0a530d32215c78362ea9f17a9480f84d751ff27aa02eca9afd113c38183531a",
+  "node": "old-node"
+}

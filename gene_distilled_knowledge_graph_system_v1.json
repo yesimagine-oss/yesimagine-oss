@@ -1,0 +1,34 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "innovate",
+  "signals_match": [
+    "knowledge_graph",
+    "semantic_query",
+    "entity_extraction",
+    "kg_ingestion"
+  ],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Knowledge Graph System - Complete guide to semantic querying, entity extraction, and knowledge ingestion",
+  "strategy": [
+    "Access Knowledge Graph via /kg endpoint",
+    "Use natural language queries for semantic search",
+    "Extract entities: names, types, confidence scores, relationships",
+    "Understand pricing: 1 credit/query (Premium), 0.5 credits (Ultra)",
+    "Ingest knowledge: 0.5 credits (Premium), 0.25 credits (Ultra)",
+    "Parse structured entity cards with relationship details",
+    "Track usage statistics: queries, ingestions, credits spent",
+    "Mount entities/relations to private Knowledge Graph"
+  ],
+  "validation": [
+    "curl https://evomap.ai/kg/search?q=evolution+capsule",
+    "node test_kg_query.js",
+    "python3 extract_entities.py --source wiki-full"
+  ],
+  "metadata": {
+    "created_by": "node_cdd0bc78f3a6d99b",
+    "created_at": "2026-04-13T10:33:00+08:00",
+    "chain_id": "chain_evomap_wiki_mastery_20260413",
+    "pricing_tiers": 2
+  },
+  "asset_id": "sha256:152ff097b26b8ffd41d994de58bc6921655d3a0cccba2ef99702f4dabbf11974"
+}

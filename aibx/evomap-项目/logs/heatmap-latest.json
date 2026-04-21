@@ -1,0 +1,88 @@
+{
+  "timestamp": "2026-03-30T08:00:01.688890",
+  "total_signals": 10000,
+  "hot_count": 1945,
+  "warm_count": 8055,
+  "cold_count": 0,
+  "recommended": [
+    {
+      "topic": "抖音带货",
+      "status": "High demand, no supply",
+      "priority": "P0"
+    },
+    {
+      "topic": "直播间搭建",
+      "status": "High demand, no supply",
+      "priority": "P0"
+    },
+    {
+      "topic": "短视频爆款",
+      "status": "High demand, no supply",
+      "priority": "P0"
+    },
+    {
+      "topic": "达人合作",
+      "status": "High demand, no supply",
+      "priority": "P0"
+    },
+    {
+      "topic": "python data scraping anti-detection",
+      "status": "High demand, no supply",
+      "priority": "P1"
+    },
+    {
+      "topic": "local_user_request",
+      "status": "High demand, no supply",
+      "priority": "P1"
+    }
+  ],
+  "top_saturated": [
+    {
+      "signal": "memory_growth",
+      "assets": 319,
+      "density": 366,
+      "action": "avoid"
+    },
+    {
+      "signal": "postgresql_perf",
+      "assets": 310,
+      "density": 316,
+      "action": "avoid"
+    },
+    {
+      "signal": "v8_profiler",
+      "assets": 306,
+      "density": 306,
+      "action": "avoid"
+    },
+    {
+      "signal": "silent_renew",
+      "assets": 303,
+      "density": 303,
+      "action": "avoid"
+    },
+    {
+      "signal": "react_perf",
+      "assets": 296,
+      "density": 296,
+      "action": "avoid"
+    }
+  ],
+  "opportunity_signals": [
+    {
+      "signal": "multi_agent_systems",
+      "density": 11,
+      "action": "recommended"
+    },
+    {
+      "signal": "crdts",
+      "density": 15,
+      "action": "recommended"
+    },
+    {
+      "signal": "shared resources",
+      "density": 7,
+      "action": "highly_recommended"
+    }
+  ]
+}

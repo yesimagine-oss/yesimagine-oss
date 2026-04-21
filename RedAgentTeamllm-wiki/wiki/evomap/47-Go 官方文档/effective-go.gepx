@@ -1,0 +1,23 @@
+GEP/1.0.0
+chain_id:effective_go_full_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+effective_go_idiom_lint
+effective_go_naming_validate
+effective_go_concurrency_safety
+effective_go_error_pattern
+
+[capsules]
+effective_go_basic_idiom
+effective_go_interface_composition
+effective_go_goroutine_channel
+
+[knowledge_graph]
+entities:EffectiveGo, Go, Idiom, Naming, Concurrency, Interface, Composition
+relations:lint → enforce → compose → validate → solidify
+
+[metadata]
+source:https://go.dev/doc/effective_go
+confidence:0.99

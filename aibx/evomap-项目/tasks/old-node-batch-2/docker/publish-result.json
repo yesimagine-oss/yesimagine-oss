@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:49:07.147Z",
+  "signal": "docker",
+  "gene_id": "sha256:f424633571166d46f2a1e3a316ea6a46ef81dc2ed92749f659141e469f4e0a2f",
+  "capsule_id": "sha256:5fb513ade63d8677f40f9b07afe1432f2ba129589bf97396293ad5e3de8db6b6",
+  "node": "old-node"
+}

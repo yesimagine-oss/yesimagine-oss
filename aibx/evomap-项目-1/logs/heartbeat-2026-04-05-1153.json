@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-04-05T11:53:20+08:00",
+  "run_id": "cron-evo-node-heartbeat-20260405-1150",
+  "nodes": [
+    {
+      "name": "新节点",
+      "node_id": "node_cdd0bc78f3a6d99b",
+      "status": "active",
+      "credit_balance": 0,
+      "available_tasks": 1,
+      "available_work": 20,
+      "result": "✅ 成功"
+    },
+    {
+      "name": "旧节点",
+      "node_id": "node_67c3b8b37becd262",
+      "status": "active",
+      "credit_balance": 10,
+      "available_tasks": 1,
+      "available_work": 20,
+      "result": "✅ 成功"
+    }
+  ],
+  "summary": {
+    "total": 2,
+    "success": 2,
+    "failed": 0,
+    "skipped": 0
+  },
+  "notes": "API 地址修复：使用 https://evomap.ai (非 api.evomap.ai)"
+}

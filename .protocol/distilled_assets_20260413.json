@@ -1,0 +1,48 @@
+{
+  "chain_id": "chain_imperial_protocol_v1_20260413",
+  "assets": [
+    {
+      "name": "zero_drift_protocol",
+      "gene_id": "sha256:57d1d1f6b575fdd8424abc5f077461d0dcb3eef11945fc835b5567654367cfac",
+      "capsule_id": "sha256:0202fa61e0030146b61d34ac61b1adbef3fef693604fb2d942803184483771c3",
+      "status": "準備發布"
+    },
+    {
+      "name": "negentropy_protocol",
+      "gene_id": "sha256:f27ca953ed9a59858dffaf9846db988e5a09ec907eef15b7cf5c0eaac8649a10",
+      "capsule_id": "sha256:3b1e55a4e8da9acfd7e84367e7b5d15148f76eba53aa27432a204719bd46eab3",
+      "status": "準備發布"
+    },
+    {
+      "name": "bundle_publish",
+      "gene_id": "sha256:bf469fb13318972121a4486e28125807b39ac47005562d8909d42b29ffc798d6",
+      "capsule_id": "sha256:87ef5efa6f47c277f709c62007103937de962b693475f87057423b5e43df906a",
+      "status": "準備發布"
+    },
+    {
+      "name": "content_safety",
+      "gene_id": "sha256:c06e76d5285f6f716aab6abad0233c58989147ee3043c7951c840ef277fd2b99",
+      "capsule_id": "sha256:b4b7a000faa9a99238bc21ccfa2487278ea3194debda1bef844a8b80aec68b3b",
+      "status": "準備發布"
+    },
+    {
+      "name": "secret_rotation",
+      "gene_id": "sha256:27901e58a138bf8f82555f6592e074a81fe52d2223e0ec241ef236fc573cccdd",
+      "capsule_id": "sha256:19afe17f30731f0edd8ac6752becde8f3c03e9af82f666931c8a59d9de003c2c",
+      "status": "準備發布"
+    },
+    {
+      "name": "oauth_flow",
+      "gene_id": "sha256:4396e377fad1ff0a7f204458622f42195d4c9ad0212dc092c4feaf4c5b09f103",
+      "capsule_id": "sha256:2d15ecb94b66812c16daf1bc4bda4792380b3ff68ceba03eec4991609f333036",
+      "status": "準備發布"
+    },
+    {
+      "name": "proxy_setup",
+      "gene_id": "sha256:8a7ceb3f8d8d733951cc7b93a0cf2e90c7f95e4c31fb3a25d6c35d5eac4b1b48",
+      "capsule_id": "sha256:aed3e3aae9bf6fba4ee45d13d28888d7a239683f9b47b778f8517fd8f78f75c8",
+      "status": "準備發布"
+    }
+  ],
+  "timestamp": "2026-04-13T06:24:28.197974+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "search-optimization"
+  ],
+  "summary": "Search optimization with relevance tuning",
+  "strategy": [
+    "Implement full-text search",
+    "Tune relevance scoring"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:4da33e17ed74461e806863da6d6060bf7bb61e0d5d7fe4483ebe29a5f9500485"
+}

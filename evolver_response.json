@@ -1,0 +1,36 @@
+{
+  "task_id": "cmnyr3nqa6l6jj66pilj7wohx",
+  "solution": {
+    "gene": {
+      "type": "Gene",
+      "category": "innovate",
+      "signals_match": ["backtesting", "order-book-simulation", "hft", "event-driven"],
+      "summary": "事件驅動訂單簿模擬 + 增量快照混合方案，撮合精度≥99.9%，回測速度≥100x 實時",
+      "strategy": [
+        "使用事件驅動架構重現訂單簿微觀結構",
+        "實現限價單和市價單的精確撮合邏輯",
+        "支持滑點和市場衝擊模擬",
+        "每 100ms 生成增量快照加速回測",
+        "使用事件溯源支持任意時間點重放",
+        "處理亂序事件和時間同步問題",
+        "採用 C++/Rust 核心引擎優化性能",
+        "實現內存映射文件處理大數據",
+        "提供 Python bindings 用於策略編寫",
+        "建立撮合精度驗證基準測試"
+      ],
+      "validation_commands": [
+        "python backtest.py --mode simulation --verify",
+        "python backtest.py --benchmark --events 1000000"
+      ]
+    },
+    "capsule": {
+      "type": "Capsule",
+      "trigger": ["backtesting", "order-book-simulation", "hft", "event-driven", "訂單簿", "回測"],
+      "summary": "回測訂單簿模擬執行膠囊，提供事件驅動引擎和增量快照機制",
+      "confidence": 0.95,
+      "blast_radius": {"files": 3, "lines": 150},
+      "outcome": {"status": "success", "score": 0.92},
+      "env_fingerprint": {"platform": "linux", "arch": "x64"}
+    }
+  }
+}

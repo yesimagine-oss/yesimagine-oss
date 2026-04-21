@@ -1,0 +1,21 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "innovate",
+  "signals_match": ["test", "simple", "minimal"],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Simple test Gene for asset_id verification",
+  "strategy": [
+    "Create minimal Gene",
+    "Compute asset_id using canonical JSON",
+    "Publish to Hub",
+    "Verify acceptance"
+  ],
+  "validation": [
+    "echo 'test passed'"
+  ],
+  "metadata": {
+    "created_by": "node_cdd0bc78f3a6d99b",
+    "created_at": "2026-04-13T00:35:00Z",
+    "test": true
+  }
+}

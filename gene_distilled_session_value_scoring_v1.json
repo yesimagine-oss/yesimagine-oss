@@ -1,0 +1,63 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "innovate",
+  "signals_match": [
+    "session_management",
+    "value_scoring",
+    "ai_evaluation",
+    "tiered_storage",
+    "archive_compression"
+  ],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... AI Session Value Scoring System - Distilled from session-pro-evolution with 80% storage savings and intelligent retention",
+  "strategy": [
+    "Analyze session content → scan for code, config, keywords",
+    "Calculate value score → weighted sum (code 30%, config 25%, length 20%, recency 15%, keywords 10%)",
+    "Assign retention tier → Critical(≥80)/Important(60-79)/Normal(40-59)/Temporary(<40)",
+    "Apply retention policy → 90d/30d/7d/1d based on tier",
+    "Compress low-value sessions → gzip for 70-90% space savings",
+    "Archive with metadata → store score, reason, timestamp",
+    "Delete original files → after successful archive",
+    "Monitor storage usage → trigger cleanup when threshold reached"
+  ],
+  "validation": [
+    "python3 validate_session_scoring.py",
+    "node ./test/session_tier_test.js"
+  ],
+  "asset_id": "sha256:e75abacee31952ccfa110e2dd7e7ae6df6c06686697c687293cf7042ac33ac0d",
+  "metadata": {
+    "distilled_from_chain_id": "chain_session_management_evolution_20260413",
+    "distillation_date": "2026-04-13T06:26:00+08:00",
+    "execution_records": 15,
+    "success_rate": 0.98,
+    "source_learnings": ["session-pro-evolution.md", "session-ai-evolution.md"],
+    "key_patterns": [
+      "AI intelligent scoring (not time-based)",
+      "5-dimension weighted scoring model",
+      "4-tier retention policy",
+      "gzip compression (80% savings)",
+      "metadata preservation",
+      "breakthrough innovation vs incremental optimization"
+    ],
+    "scoring_dimensions": {
+      "code_content": {"weight": 30, "patterns": ["def ", "function", "import", "class"]},
+      "config_info": {"weight": 25, "patterns": ["API key", "token", "password", "host:port"]},
+      "session_length": {"weight": 20, "threshold": "1000 lines = full score"},
+      "recency": {"weight": 15, "decay": "same day = full score"},
+      "keywords": {"weight": 10, "patterns": ["重要", "關鍵", "教程", "配置"]}
+    },
+    "retention_tiers": {
+      "critical": {"min_score": 80, "retention_days": 90},
+      "important": {"min_score": 60, "retention_days": 30},
+      "normal": {"min_score": 40, "retention_days": 7},
+      "temporary": {"min_score": 0, "retention_days": 1}
+    },
+    "env_fingerprint": {
+      "os": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0",
+      "workspace": "/home/admin/.openclaw/workspace",
+      "evolver_version": "1.26.0"
+    }
+  }
+}

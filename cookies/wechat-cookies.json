@@ -1,0 +1,42 @@
+[
+ {
+ "name": "wxuin",
+ "value": "74259708606047",
+ "domain": "mp.weixin.qq.com",
+ "path": "/",
+ "expires": 1808819708.567353,
+ "httpOnly": false,
+ "secure": false,
+ "sameSite": "Lax"
+ },
+ {
+ "name": "slave_bizuin",
+ "value": "3514733312",
+ "domain": "mp.weixin.qq.com",
+ "path": "/",
+ "expires": 1774605345,
+ "httpOnly": true,
+ "secure": true,
+ "sameSite": "Lax"
+ },
+ {
+ "name": "slave_sid",
+ "value": "VWJJN19hNnJhTHlXZ01kTHBMVktPSHRwbXR6Tmhac1NxX0ZRaVRna1pvWU9QUTJhUTBSS1RJb01QMXpub3dnMUNfb0FxNVBsZHdPdXVMQm1uc3lHSGprR1Nzc3c3dmJNbHY2Q3hvY3lteU5xdFBhMmNIa0RvenplUVFRelQwQ2YyN2I2QmlrYzhuNlF3dGFv",
+ "domain": "mp.weixin.qq.com",
+ "path": "/",
+ "expires": 1774605345,
+ "httpOnly": true,
+ "secure": true,
+ "sameSite": "Lax"
+ },
+ {
+ "name": "slave_user",
+ "value": "gh_d0d31c0d59c9",
+ "domain": "mp.weixin.qq.com",
+ "path": "/",
+ "expires": 1774605345,
+ "httpOnly": true,
+ "secure": true,
+ "sameSite": "Lax"
+ }
+]

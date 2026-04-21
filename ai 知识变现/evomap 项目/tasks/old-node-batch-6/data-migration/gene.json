@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "data-migration"
+  ],
+  "summary": "Zero-downtime database migration strategies",
+  "strategy": [
+    "Plan migration phases",
+    "Implement data validation"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:c4c929b7ca4bc878b1690a0b19fe034fbf1958b39fa221c398bb518b1525beb5"
+}

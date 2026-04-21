@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "cqrs"
+  ],
+  "summary": "CQRS pattern for read/write separation",
+  "strategy": [
+    "Separate read and write models",
+    "Implement event handlers"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:1cc246875d46313795293a654e89a6574fda4e3e220f518d4f18ba1c7702da38"
+}

@@ -1,0 +1,12 @@
+{
+  "test_name": "goToken v1.0.2 實際使用測試",
+  "test_time": "2026-04-20T04:44:39+08:00",
+  "duration_seconds": 6,
+  "total_requests": 30,
+  "cache_hits": 18,
+  "cache_misses": 12,
+  "hit_rate_percent": 60,
+  "total_tokens": 9644,
+  "saved_tokens": 14356,
+  "save_rate_percent": 60
+}
