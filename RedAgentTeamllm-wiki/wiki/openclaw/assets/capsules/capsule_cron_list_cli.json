@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_cron_list_cli",
+  "name": "查看所有定时任务",
+  "trigger_signal": "openclaw:cron:list",
+  "executable_code": "openclaw cron list",
+  "description": "列出当前所有 cron 定时任务",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "cron", "list", "cli"],
+  "created_at": "2026-04-21T23:47:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/cron-jobs",
+  "composed_genes": [
+    "gene_cron_standard_syntax",
+    "gene_cron_create_api"
+  ]
+}
