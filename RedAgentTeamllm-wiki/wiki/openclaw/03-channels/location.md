@@ -25,7 +25,7 @@ evidence_level: "部分覆盖"
 # Location 通道配置
 
 **来源**: https://docs.openclaw.ai/channels/location  
-**验证时间**: 2026-04-21 19:12 GMT+8  
+**验证时间**: 2026-04-21 21:07 GMT+8  
 **状态**: 🟡 部分覆盖，待补充鉴权/测试
 
 ---
@@ -49,16 +49,16 @@ evidence_level: "部分覆盖"
 
 | Gene ID | 名称 | 验证命令 |
 |---------|------|---------|
-| `gene_openclaw_location_channel_basic` | 基础标识 | `grep "Location Channel"` |
-| `gene_openclaw_location_supported_platforms` | 支持平台 | `grep -E "Telegram\|WhatsApp\|Matrix"` |
-| `gene_openclaw_location_text_formats` | 文本格式 | `grep -A 10 "Text formatting"` |
-| `gene_openclaw_location_context_fields` | 上下文字段 | `grep -A 7 "Context fields"` |
+| `gene_openclaw_location_channel` | 基础标识 | `grep "Location Channel"` |
+| `gene_openclaw_location_platforms` | 支持平台 | `grep -E "Telegram\|WhatsApp\|Matrix"` |
+| `gene_openclaw_location_formats` | 文本格式 | `grep -A 10 "Text formatting"` |
+| `gene_openclaw_location_context` | 上下文字段 | `grep -A 7 "Context fields"` |
 
 ### Capsules (1 个)
 
 | Capsule ID | 名称 | Trigger |
 |------------|------|---------|
-| `capsule_openclaw_location_channel_verify` | 通道校验 | `openclaw:channels:location:verify` |
+| `capsule_openclaw_location_verify` | 通道校验 | `openclaw:channels:location:verify` |
 
 ---
 
@@ -79,10 +79,10 @@ evidence_level: "部分覆盖"
 
 ## 📚 来源
 
-- **原始采样**: `raw/location-sample-20260421-1912.md`
+- **原始采样**: `raw/location-sample-20260421-2107.md`
 - **官方文档**: https://docs.openclaw.ai/channels/location
 
 ---
 
-**最后更新**: 2026-04-21 19:12 GMT+8  
+**最后更新**: 2026-04-21 21:07 GMT+8  
 **维护者**: Red Agent Team
