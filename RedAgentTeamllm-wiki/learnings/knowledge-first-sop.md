@@ -330,5 +330,6 @@ ls -lt learnings/*.md | head -10
 
 ---
 
-**SOP 状态**: ✅ Active  
+**SOP 状态**: ✅ Active (**立即执行**)  
+**备份位置**: `/opt/backup/sop-knowledge-first-20260421-133730/`  
 **下次审查**: 2026-05-21 (月度)
