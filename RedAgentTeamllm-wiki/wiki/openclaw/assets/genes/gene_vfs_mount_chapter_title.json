@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_vfs_mount_chapter_title",
+  "name": "VFS 注册挂载章节标题",
+  "description": "VFS 文档包含 Registering and mounting a filesystem 专用章节，描述文件系统注册与挂载",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html#registering-and-mounting-a-filesystem\" | grep \"Registering and mounting a filesystem\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#registering-and-mounting-a-filesystem",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
