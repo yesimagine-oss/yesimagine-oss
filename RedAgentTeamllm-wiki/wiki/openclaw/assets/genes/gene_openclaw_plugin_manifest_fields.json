@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_plugin_manifest_fields",
+  "name": "插件清单必填字段",
+  "description": "必须包含：id、name、version、author、type、sdk_version",
+  "validate_command": "curl -s https://docs.openclaw.ai/plugins/manifest | grep \"Fields\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "plugin", "manifest", "fields"],
+  "created_at": "2026-04-21T23:35:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/manifest"
+}
