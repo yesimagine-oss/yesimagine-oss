@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_linux_fs_list_check",
+  "name": "检查内核支持的文件系统",
+  "trigger_signal": "linux:fs:check-supported",
+  "executable_steps": [
+    "访问 https://www.kernel.org/doc/html/latest/filesystems",
+    "提取 ext4/xfs/btrfs/fat/ntfs 等文件系统列表",
+    "输出支持状态"
+  ],
+  "description": "依据内核官方文档查询支持的文件系统",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

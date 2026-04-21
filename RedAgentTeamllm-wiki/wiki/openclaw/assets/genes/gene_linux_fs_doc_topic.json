@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_linux_fs_doc_topic",
+  "name": "Linux 内核文件系统文档主题",
+  "description": "本文档为 Linux 内核官方最新版文件系统总览，包含 VFS、挂载、各类文件系统实现",
+  "validate_command": "curl -s https://www.kernel.org/doc/html/latest/filesystems | grep \"Filesystems in the Linux kernel\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
