@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_workflow_run_cli",
+  "name": "CLI 运行工作流",
+  "trigger_signal": "openclaw:automation:run",
+  "executable_code": "openclaw workflow run daily-report",
+  "description": "通过命令行直接执行指定名称的自动化工作流",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "workflow", "cli"],
+  "created_at": "2026-04-21T23:45:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation",
+  "composed_genes": [
+    "gene_automation_framework_purpose",
+    "gene_automation_trigger_types"
+  ]
+}
