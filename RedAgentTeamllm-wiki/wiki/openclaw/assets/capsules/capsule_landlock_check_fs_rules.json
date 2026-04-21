@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_landlock_check_fs_rules",
+  "name": "Landlock 文件系统规则检查",
+  "trigger_signal": "linux:landlock:check-fs-perms",
+  "executable_steps": [
+    "确认内核启用 Landlock",
+    "定义路径与允许操作（read/write/execute）",
+    "验证规则继承性"
+  ],
+  "description": "依据内核文档检查 Landlock 文件系统访问控制规则",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/security/landlock.html#filesystem",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

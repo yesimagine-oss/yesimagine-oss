@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_landlock_unprivileged_ac",
+  "name": "Landlock 核心特性",
+  "description": "Landlock 是 Linux 内核提供的非特权进程级访问控制机制，支持文件系统路径权限限制",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/security/landlock.html#filesystem\" | grep \"Unprivileged access control\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/security/landlock.html#filesystem",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_landlock_fs_permissions",
+  "name": "Landlock 文件系统权限",
+  "description": "支持控制 read/write/execute/append/refer 等路径级文件操作，规则可跨 fork/exec 继承",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/security/landlock.html#filesystem\" | grep -E \"read|write|inheritance\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/security/landlock.html#filesystem",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
