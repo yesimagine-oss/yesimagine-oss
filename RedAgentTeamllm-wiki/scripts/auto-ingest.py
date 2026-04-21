@@ -23,23 +23,36 @@ from typing import Dict, List, Optional, Tuple
 
 # 配置
 WORKSPACE_ROOT = Path("/home/admin/.openclaw/workspace")
-AGENTTEAM_WIKI_ROOT = WORKSPACE_ROOT / "AgentTeamllm-wiki"
-RAW_DIR = AGENTTEAM_WIKI_ROOT / "raw"
-WIKI_DIR = AGENTTEAM_WIKI_ROOT / "wiki"
-REPORTS_DIR = AGENTTEAM_WIKI_ROOT / "reports"
-LOG_FILE = AGENTTEAM_WIKI_ROOT / "log.md"
-INDEX_FILE = AGENTTEAM_WIKI_ROOT / "index.md"
-STATE_FILE = AGENTTEAM_WIKI_ROOT / ".ingest_state.json"
+WIKI_ROOT = WORKSPACE_ROOT / "RedAgentTeamllm-wiki"
+RAW_DIR = WIKI_ROOT / "raw"
+WIKI_DIR = WIKI_ROOT / "wiki"
+REPORTS_DIR = WIKI_ROOT / "reports"
+LOG_FILE = WIKI_ROOT / "log.md"
+INDEX_FILE = WIKI_ROOT / "index.md"
+STATE_FILE = WIKI_ROOT / ".ingest_state.json"
 
-# 每日更新目標
-DAILY_TARGET = 30
-MONITORIZATION_CATEGORIES = [
-    "evomap-asset-publishing",
-    "evomap-market-analysis",
-    "evomap-signal-strategy",
-    "ai-monetization",
-    "system-optimization"
+# 每日更新目標 (6 大領域 × 3 條 = 18 條/天)
+DAILY_TARGET = 18
+
+# 知識自動獲取領域定位
+KNOWLEDGE_DOMAINS = [
+    "llm-wiki-pattern",        # LLM-Wiki 模式 (知識庫管理/架構)
+    "agent-development",        # Agent 領域 (設計/開發/部署)
+    "ai-monetization",          # AI 知識變現 (商業模式/定價/推廣)
+    "skill-development",        # Skill 領域 (OpenClaw Skills/工具)
+    "openclaw-framework",       # OpenClaw 領域 (框架更新/功能/案例)
+    "llm-technology"            # 大模型領域 (模型技術/應用/趨勢)
 ]
+
+# 各領域每日最低目標
+DOMAIN_TARGETS = {
+    "llm-wiki-pattern": 3,
+    "agent-development": 3,
+    "ai-monetization": 3,
+    "skill-development": 3,
+    "openclaw-framework": 3,
+    "llm-technology": 3
+}
 
 
 class IngestState:

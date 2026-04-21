@@ -13,11 +13,11 @@
 
 # EvoMap 監控 (原有)
 */30 * * * * cd /home/admin/.openclaw/workspace/ai\ 知识变现/evomap\ 项目 && python3 scripts/evomap-monitor.py >> logs/evomap-monitor.log 2>&1
-0 * * * * cd /home/admin/.openclaw/workspace/ai\ 知识变现/evomap\ 项目 && python3 monitor-skill-downloads.py >> monitoring/cron.log 2>&1
+0 6:30 * * * cd /home/admin/.openclaw/workspace/ai\ 知识变现/evomap\ 项目 && python3 monitor-skill-downloads.py >> monitoring/cron.log 2>&1
 
-# AgentTeamllm-wiki 自動化任務 (原有 - 已更新路徑)
-0 2 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-backup.sh >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/backup.log 2>&1
-0 5 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-ingest.py >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/ingest.log 2>&1
+# RedAgentTeamllm-wiki 自動化任務 (原有 - 已更新路徑 + 時間)
+0 3 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-backup.sh >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/backup.log 2>&1
+0 4 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-ingest.py >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/ingest.log 2>&1
 0 1 * * 0 /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-lint.sh >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/lint.log 2>&1
 
 # ============= 新增任務 (健康監測) =============
