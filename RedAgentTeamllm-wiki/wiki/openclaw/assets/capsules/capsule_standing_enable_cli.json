@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_standing_enable_cli",
+  "name": "启用常驻指令",
+  "trigger_signal": "openclaw:standing:enable",
+  "executable_code": "openclaw standing enable <rule-id>",
+  "description": "激活指定常驻规则开始监听事件",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "standing-orders", "enable", "cli"],
+  "created_at": "2026-04-21T23:52:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/standing-orders",
+  "composed_genes": [
+    "gene_standing_order_behavior"
+  ]
+}
