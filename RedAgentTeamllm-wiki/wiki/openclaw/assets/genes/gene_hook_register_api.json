@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_hook_register_api",
+  "name": "Hook 注册接口",
+  "description": "通过 hook.On(event string, handler HookHandler) 绑定事件处理逻辑",
+  "validate_command": "curl -s https://docs.openclaw.ai/automation/hooks | grep \"hook.On\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "hooks", "register", "api"],
+  "created_at": "2026-04-21T23:55:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/hooks"
+}

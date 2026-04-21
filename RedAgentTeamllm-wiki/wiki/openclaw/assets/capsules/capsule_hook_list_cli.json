@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_hook_list_cli",
+  "name": "列出已注册钩子",
+  "trigger_signal": "openclaw:hook:list",
+  "executable_code": "openclaw hook list",
+  "description": "查看当前所有事件钩子及其绑定事件",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "hooks", "list", "cli"],
+  "created_at": "2026-04-21T23:55:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/hooks",
+  "composed_genes": [
+    "gene_hook_builtin_events",
+    "gene_hook_register_api"
+  ]
+}
