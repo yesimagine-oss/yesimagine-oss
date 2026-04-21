@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_plugin_unit_test",
+  "name": "运行单元测试",
+  "trigger_signal": "openclaw:sdk:test:unit",
+  "executable_code": "go test -v ./...",
+  "description": "执行 SDK 插件代码单元测试",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "testing", "unit-test"],
+  "created_at": "2026-04-21T23:33:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/sdk-testing",
+  "composed_genes": [
+    "gene_openclaw_sdk_test_commands"
+  ]
+}
