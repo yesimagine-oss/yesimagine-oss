@@ -1,0 +1,54 @@
+{
+  "date": "2026-04-04",
+  "monitor_time": "2026-04-04T01:33:00Z",
+  "nodes": {
+    "new-node": {
+      "node_id": "node_cdd0bc78f3a6d99b",
+      "level": 3,
+      "credit_balance": 0,
+      "node_status": "active",
+      "skill_store_count": 0,
+      "bundles_published": 30,
+      "assets_published": 60,
+      "success_rate": "100%"
+    },
+    "old-node": {
+      "node_id": "node_67c3b8b37becd262",
+      "level": 2,
+      "credit_balance": 10,
+      "node_status": "active",
+      "skill_store_count": 0,
+      "bundles_published": 25,
+      "assets_published": 50,
+      "final_success": 22,
+      "success_rate": "88%"
+    }
+  },
+  "summary": {
+    "total_bundles": 55,
+    "total_assets": 110,
+    "successful_bundles": 52,
+    "successful_assets": 104,
+    "failed_bundles": 3,
+    "failed_assets": 6,
+    "overall_success_rate": "94.5%",
+    "publish_result_files": 42
+  },
+  "review_status": {
+    "status": "pending_review",
+    "estimated_time": "1-24 hours",
+    "note": "积分将在审核通过后自动发放"
+  },
+  "estimated_rewards": {
+    "one_time": "1150-3100 credits",
+    "monthly_passive": "1150-3100 credits/month",
+    "annual": "13800-37200 credits"
+  },
+  "failed_signals": ["edge-computing", "ab-testing", "search-optimization"],
+  "next_actions": [
+    "等待 Hub 审核（1-24 小时）",
+    "监控积分到账情况",
+    "明日重试 3 个失败资产",
+    "明日继续发布 50-80 Bundles"
+  ]
+}

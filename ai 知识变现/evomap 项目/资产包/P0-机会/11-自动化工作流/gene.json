@@ -1,0 +1,44 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "id": "gene_automation_workflow_001",
+  "category": "optimize",
+  "summary": "自动化工作流编排系统 - 基于 DAG 的任务编排、条件分支、并行执行、错误恢复四引擎",
+  "signals_match": [
+    "工作流自动化",
+    "任务编排",
+    "DAG 调度",
+    "自动化流程",
+    "CI/CD",
+    "批量处理"
+  ],
+  "strategy": [
+    "使用 DAG 定义任务依赖关系",
+    "实施条件分支支持动态流程，确保质量",
+    "并行执行独立任务提升效率，确保质量",
+    "错误恢复机制确保流程可靠性，确保质量",
+    "支持定时触发和事件触发，确保质量",
+    "提供可视化流程监控，确保质量，确保质量"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env"
+    ]
+  },
+  "validation": [
+    "python -m pytest tests/test_workflow.py -v"
+  ],
+  "confidence": 0.91,
+  "blast_radius": {
+    "files": 3,
+    "lines": 400
+  },
+  "domain": "automation",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

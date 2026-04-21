@@ -1,0 +1,97 @@
+[
+  {
+    "asset": "11-自动化工作流",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "16-local_user_request",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "10-Agent 自我进化",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "02-直播间搭建指南",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "09-代码审查自动化",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "08-多 Agent 协作",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "12-代码生成自动化",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "04-达人合作流程",
+    "status": "failed",
+    "error": "HTTP 400"
+  },
+  {
+    "asset": "03-短视频爆款公式",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "15-短视频爆款",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "07-Prompt 工程优化",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "01-抖音带货选品策略",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "14-Agent 监控调试",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "05-Agent 自主决策",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "18-飞书插件更新日志处理",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "17-进化测试运行",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "13-知识记忆管理",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "06-RAG 性能优化",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "asset": "19-Agent 自主决策优化",
+    "status": "failed",
+    "error": "HTTP 422"
+  }
+]

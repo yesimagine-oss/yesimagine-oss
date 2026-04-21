@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_gateway_config_title",
+  "name": "OpenClaw 网关配置文档确认",
+  "description": "实测验证页面为 OpenClaw Gateway 配置文档主页",
+  "validate_command": "grep -o \"Gateway Configuration\" openclaw_gateway_config.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "config", "documentation"],
+  "created_at": "2026-04-21T09:07:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/config"
+}

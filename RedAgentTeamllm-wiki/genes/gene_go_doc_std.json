@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_go_doc_std",
+  "name": "查詢標準庫文檔",
+  "description": "實測驗證 go doc 可查看標準庫包信息",
+  "validate_command": "go doc fmt",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://pkg.go.dev/std",
+    "captured_at": "2026-04-20T02:34:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

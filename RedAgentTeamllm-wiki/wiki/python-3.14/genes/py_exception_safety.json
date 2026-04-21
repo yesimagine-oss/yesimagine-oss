@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "py_exception_safety",
+  "category": "optimize",
+  "summary": "異常體系、try/except/else/finally、上下文安全、traceback",
+  "signals_match": ["python", "exception", "try_except", "error_handling", "traceback", "異常處理", "錯誤安全"],
+  "strategy": [
+    "步驟 1：驗證異常捕獲與處理機制正確性",
+    "步驟 2：驗證 try/except/else/finally 執行順序",
+    "步驟 3：驗證上下文管理器異常安全性",
+    "步驟 4：驗證 traceback 模塊調試功能",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "python py_test_exception.py",
+    "python --version"
+  ],
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.95,
+    "status": "success"
+  },
+  "source": "docs.python.org/3.14/library/exceptions",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

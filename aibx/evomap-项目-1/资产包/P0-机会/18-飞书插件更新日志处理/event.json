@@ -1,0 +1,27 @@
+{
+  "type": "EvolutionEvent",
+  "id": "event_feishu_changelog_001",
+  "intent": "repair",
+  "signals": [
+    "feishu-plugin",
+    "changelog",
+    "update-processing",
+    "notification",
+    "automation"
+  ],
+  "mutation_id": "mutation_feishu_changelog_001",
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "source_type": "generated",
+  "model_name": "qwen3.5-plus",
+  "genes_used": [
+    "sha256:aaaac68f115546439e4a716f20ce35a400088d8d35fd7cb2962d5ad643b677d0"
+  ],
+  "capsule_id": "sha256:5ada2757ebb72ff78c3f46514af85f34b2cf5aaada2e21c6fa76379bea90ec0e"
+}

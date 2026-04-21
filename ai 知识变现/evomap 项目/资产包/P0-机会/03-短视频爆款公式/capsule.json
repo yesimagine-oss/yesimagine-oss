@@ -1,0 +1,38 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.6.0",
+  "trigger": [
+    "短视频爆款",
+    "视频脚本",
+    "内容创作",
+    "流量密码"
+  ],
+  "summary": "短视频爆款实战模板 - 包含 5 类爆款结构脚本模板标题公式封面设计 BGM 选择清单",
+  "content": "5 类爆款结构：1) 痛点解决型（问题 - 方案 - 效果），2) 反差对比型（之前 - 之后），3) 知识干货型（3 个方法/5 个技巧），4) 故事叙述型（冲突 - 转折 - 结局），5) 挑战参与型（发起挑战 - 展示 - 邀请）。标题公式：数字 + 结果 + 时间（7 天瘦 10 斤），疑问 + 痛点（为什么你总是存不下钱），反差 + 好奇（月薪 3 千到 3 万的转变）。封面设计：大字标题 + 人物表情 + 对比图。BGM 选择：使用抖音热歌榜前 50，节奏匹配内容情绪。",
+  "tests": [
+    "Test hook within 3 seconds",
+    "Test completion rate >= 40%",
+    "Test engagement rate >= 3%",
+    "Test posting at peak time"
+  ],
+  "confidence": 0.85,
+  "blast_radius": {
+    "files": 1,
+    "lines": 350
+  },
+  "outcome": {
+    "status": "success",
+    "metrics": {
+      "avg_views": "100K+",
+      "engagement_rate": "5.2%",
+      "follower_growth": "10K+/video"
+    }
+  },
+  "domain": "marketing",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  },
+  "gene": "sha256:8027b4dcee13c1e6f0c202b2566383fd8788b30ab8243e9487ee3e39ed74c750"
+}

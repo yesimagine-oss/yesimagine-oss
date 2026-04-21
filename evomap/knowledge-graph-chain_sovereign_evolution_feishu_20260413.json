@@ -1,0 +1,102 @@
+{
+  "knowledge_graph": {
+    "chain_id": "chain_sovereign_evolution_feishu_20260413",
+    "extracted_at": "2026-04-13T22:35:00+08:00",
+    "source": "open.feishu.cn + 20+ learning docs + 2 genes",
+    "entities": [
+      {
+        "id": "entity_feishu_platform",
+        "type": "Platform",
+        "name": "Feishu Open Platform",
+        "description": "Enterprise collaboration platform API",
+        "attributes": {
+          "provider": "ByteDance",
+          "api_base": "https://open.feishu.cn/open-apis",
+          "auth": "OAuth2/App Secret"
+        }
+      },
+      {
+        "id": "entity_feishu_bot",
+        "type": "Component",
+        "name": "Feishu Bot",
+        "description": "Chat bot for messaging and automation",
+        "attributes": {
+          "features": ["text", "card", "image", "file"],
+          "events": ["message", "join", "leave"]
+        }
+      },
+      {
+        "id": "entity_feishu_im",
+        "type": "API",
+        "name": "IM API",
+        "description": "Instant messaging API",
+        "attributes": {
+          "endpoints": ["/message/send", "/message/list"],
+          "types": ["text", "card", "image", "file", "audio"]
+        }
+      },
+      {
+        "id": "entity_feishu_contact",
+        "type": "API",
+        "name": "Contact API",
+        "description": "User and department management",
+        "attributes": {
+          "endpoints": ["/contact/users", "/contact/departments"],
+          "operations": ["get", "create", "update", "delete"]
+        }
+      },
+      {
+        "id": "entity_feishu_oauth",
+        "type": "Security",
+        "name": "OAuth2",
+        "description": "Authentication and authorization",
+        "attributes": {
+          "flows": ["authorization_code", "tenant_access_token"],
+          "tokens": ["access_token", "refresh_token", "tenant_access_token"]
+        }
+      }
+    ],
+    "relations": [
+      {
+        "id": "rel_platform_bot",
+        "source": "entity_feishu_platform",
+        "target": "entity_feishu_bot",
+        "type": "SUPPORTS",
+        "description": "Platform supports Bot development"
+      },
+      {
+        "id": "rel_bot_im",
+        "source": "entity_feishu_bot",
+        "target": "entity_feishu_im",
+        "type": "USES",
+        "description": "Bot uses IM API for messaging"
+      },
+      {
+        "id": "rel_bot_contact",
+        "source": "entity_feishu_bot",
+        "target": "entity_feishu_contact",
+        "type": "ACCESSES",
+        "description": "Bot accesses Contact API for user info"
+      },
+      {
+        "id": "rel_oauth_platform",
+        "source": "entity_feishu_oauth",
+        "target": "entity_feishu_platform",
+        "type": "AUTHENTICATES",
+        "description": "OAuth2 authenticates to Platform"
+      },
+      {
+        "id": "rel_im_contact",
+        "source": "entity_feishu_im",
+        "target": "entity_feishu_contact",
+        "type": "REFERENCES",
+        "description": "IM API references Contact API for user IDs"
+      }
+    ],
+    "assets_linked": [
+      "skill_feishu_open_platform_mastery_v1",
+      "gene_distilled_feishu_mastery_100_v1",
+      "gene_distilled_feishu_bot_conduct_v1"
+    ]
+  }
+}

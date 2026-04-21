@@ -1,0 +1,35 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_agent_autonomous_decision_001",
+  "category": "optimize",
+  "summary": "AI Agent 自主决策机制 - 基于任务优先级、资源可用性、风险评估的三维决策框架",
+  "signals_match": [
+    "Agent 自主决策",
+    "任务优先级",
+    "资源分配",
+    "多 Agent 协作",
+    "智能调度",
+    "自主系统"
+  ],
+  "strategy": [
+    "使用 Eisenhower 矩阵评估任务紧急性和重要性（紧急重要>重要不紧急>紧急不重要>不紧急不重要）",
+    "评估当前资源负载（CPU、内存、API 配额）决定并发任务数",
+    "计算任务 ROI（预期收益/资源消耗）优先高价值任务",
+    "实施风险门控机制（高风险任务需要人工确认）",
+    "建立任务依赖图避免循环等待和资源死锁",
+    "每 5 分钟重新评估优先级队列适应动态变化"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      "*.pyc"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:5a1dee0a804b9beb24d082d7ab80eacb95ae0c053c23e83e810c3c8949949455"
+}

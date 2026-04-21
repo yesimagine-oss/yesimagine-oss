@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "error-handling"
+  ],
+  "summary": "Robust error handling with automatic recovery mechanisms",
+  "strategy": [
+    "Define error classification and handling strategies",
+    "Implement automatic retry with exponential backoff"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:b49bebb282800d3226a0ad192e90e54c00007d90fcb2dac2b21c8fedd3a10363"
+}

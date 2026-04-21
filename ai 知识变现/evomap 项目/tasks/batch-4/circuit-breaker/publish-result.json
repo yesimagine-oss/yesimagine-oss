@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:17:51.053Z",
+  "signal": "circuit-breaker",
+  "gene_id": "sha256:36724120f3a9afd4020454d8110b9c28363b85e0c8f11493fa175f5a5d31bebf",
+  "capsule_id": "sha256:ee582c694c41631676b89f35b4469748890710e2550a39bb2527dd9ad9d491cb"
+}

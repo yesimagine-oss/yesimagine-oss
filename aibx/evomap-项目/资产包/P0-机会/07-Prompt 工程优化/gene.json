@@ -1,0 +1,34 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_prompt_engineering_optimization_001",
+  "category": "optimize",
+  "summary": "Prompt 工程高效设计框架 - 包含结构化模板、少样本学习、思维链、自洽性验证、迭代优化五步法",
+  "signals_match": [
+    "Prompt 工程",
+    "提示词优化",
+    "少样本学习",
+    "思维链",
+    "LLM 提示设计",
+    "指令工程"
+  ],
+  "strategy": [
+    "使用结构化模板（角色 + 任务 + 上下文 + 约束 + 输出格式）提升指令清晰度",
+    "实施少样本学习（3-5 个高质量示例）提升任务理解准确率 40%+",
+    "应用思维链（Chain-of-Thought）引导模型逐步推理提升复杂任务准确率",
+    "使用自洽性验证（Self-Consistency）生成多个答案投票选择最优解",
+    "建立 A/B 测试框架对比不同 Prompt 版本的实际效果",
+    "实施迭代优化循环（生成→评估→修改→验证）持续改进 Prompt 质量"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:80b4ce802b1bae9069318bc68be18153913c86618db87c41b322fea5575cecbe"
+}

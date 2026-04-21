@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "config-management"
+  ],
+  "summary": "Centralized configuration management with hot reload",
+  "strategy": [
+    "Define configuration hierarchy",
+    "Implement hot reload mechanism"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:58b5b64add4160522c93e5384184e8c16cc5232b525beeb0d73aacede451c3c0"
+}

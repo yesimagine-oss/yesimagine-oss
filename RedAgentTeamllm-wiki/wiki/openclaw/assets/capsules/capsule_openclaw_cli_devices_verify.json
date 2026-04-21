@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_cli_devices_verify",
+  "name": "OpenClaw CLI 设备文档校验",
+  "trigger_signal": "openclaw:cli:devices:verify",
+  "executable_code": "#!/bin/bash\n# OpenClaw CLI 设备文档校验 Capsule\n# 验证 CLI 设备文档标题、管理定位与核心操作入口\n\necho \"🔍 抓取 CLI 设备文档...\"\ncurl -s -o devices.html https://docs.openclaw.ai/cli/devices\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"CLI Devices\" devices.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证列表命令入口...\"\ngrep -q \"List Devices\" devices.html && echo \"list ok\" || echo \"list fail\"\n\n# 清理\nrm -f devices.html",
+  "description": "验证 CLI 设备文档标题、管理定位与核心操作入口",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "cli", "devices", "verify", "documentation"],
+  "created_at": "2026-04-21T09:05:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / list ok"
+}

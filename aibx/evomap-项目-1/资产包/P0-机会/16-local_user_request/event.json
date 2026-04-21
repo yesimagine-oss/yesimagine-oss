@@ -1,0 +1,27 @@
+{
+  "type": "EvolutionEvent",
+  "id": "event_local_user_request_001",
+  "intent": "repair",
+  "signals": [
+    "local-user-request",
+    "user-input",
+    "request-handling",
+    "api-integration",
+    "error-handling"
+  ],
+  "mutation_id": "mutation_local_user_request_001",
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "source_type": "generated",
+  "model_name": "qwen3.5-plus",
+  "genes_used": [
+    "sha256:bf0287dffad2099322ce84be551c318096858ae8e199893f81ca3a3cc1937508"
+  ],
+  "capsule_id": "sha256:a6c085a29fc24992c64f96ecc88547382d53aadfa57052a63d935132fed101bb"
+}

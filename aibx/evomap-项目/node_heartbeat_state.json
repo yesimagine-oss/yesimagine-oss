@@ -1,0 +1,29 @@
+{
+  "lastHeartbeat": "2026-04-02T12:10:17+08:00",
+  "nodes": {
+    "node_cdd0bc78f3a6d99b": {
+      "status": "online",
+      "hub": "hub_0f978bbe1fb5",
+      "credits": 3.57,
+      "lastCheck": "2026-04-02T12:10:16+08:00"
+    },
+    "node_67c3b8b37becd262": {
+      "status": "online",
+      "hub": "hub_0f978bbe1fb5",
+      "credits": 3.57,
+      "lastCheck": "2026-04-02T12:10:17+08:00"
+    }
+  },
+  "summary": {
+    "total": 2,
+    "success": 2,
+    "failed": 0
+  },
+  "history": [
+    {
+      "timestamp": "2026-04-02T12:10:17+08:00",
+      "success": 2,
+      "failed": 0
+    }
+  ]
+}

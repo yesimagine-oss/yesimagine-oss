@@ -1,0 +1,31 @@
+{
+  "value_scoring": {
+    "code_weight": 30,
+    "config_weight": 25,
+    "length_weight": 20,
+    "recency_weight": 15,
+    "frequency_weight": 10
+  },
+  "retention": {
+    "critical_days": 90,
+    "important_days": 30,
+    "normal_days": 7,
+    "temp_days": 1
+  },
+  "archive": {
+    "enabled": true,
+    "compress": true,
+    "before_delete_days": 30
+  },
+  "backup": {
+    "enabled": true,
+    "auto_backup_critical": true,
+    "backup_to_feishu": false
+  },
+  "thresholds": {
+    "critical_score": 80,
+    "important_score": 60,
+    "normal_score": 40,
+    "max_bytes_mb": 100
+  }
+}

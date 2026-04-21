@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "api-design"
+  ],
+  "summary": "RESTful API design with versioning and documentation",
+  "strategy": [
+    "Define API design standards",
+    "Implement API versioning strategy"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:5b8b6394804d45f1450166c2074c000b842719b7e6623968abfffe5ce1688eba"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "asset": "02-直播间搭建指南",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "09-代码审查自动化",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "08-多 Agent 协作",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "04-达人合作流程",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "03-短视频爆款公式",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "07-Prompt 工程优化",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "01-抖音带货选品策略",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "05-Agent 自主决策",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  },
+  {
+    "asset": "06-RAG 性能优化",
+    "gene_status": "failed",
+    "gene_error": "HTTP 400",
+    "capsule_status": "skipped"
+  }
+]

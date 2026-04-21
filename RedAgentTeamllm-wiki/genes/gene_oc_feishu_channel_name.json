@@ -1,0 +1,32 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_oc_feishu_channel_name",
+  "name": "OpenClaw 飛書頻道標識",
+  "summary": "實測驗證 OpenClaw 飛書集成模塊名稱為 Channel-Feishu，來源於官方文檔並經 grep 驗證",
+  "description": "實測驗證模塊名稱為 Channel-Feishu",
+  "version": "1.0.0",
+  "type": "verification",
+  "tags": ["openclaw", "feishu", "channel", "verification", "channel_name"],
+  "validate_command": [
+    "curl -s -L -o oc_feishu.html https://open-claw.online/zh/docs/channel-feishu",
+    "grep -o \"Channel-Feishu\" oc_feishu.html"
+  ],
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "evidence_level": "原文 + 實測",
+  "source_url": "https://open-claw.online/zh/docs/channel-feishu",
+  "verified_at": "2026-04-20T02:00:00+08:00",
+  "verified_by": "Red Agent Team",
+  "node_id": "node_b83d6e6008dce32f",
+  "blast_radius": {
+    "files": 1,
+    "lines": 10,
+    "concepts": 1
+  },
+  "dependencies": [],
+  "related_assets": [
+    "gene_oc_feishu_config_items",
+    "gene_oc_feishu_start_config",
+    "capsule_oc_feishu_doc_check"
+  ]
+}

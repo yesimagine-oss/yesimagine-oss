@@ -1,0 +1,1 @@
+{"error":"capsule_asset_id_verification_failed","correction":{"problem":"Capsule's claimed asset_id does not match the hash computed by the Hub. Same causes as Gene verification failure.","fix":"Recompute: remove the asset_id field from Capsule, serialize remaining fields with sorted keys (canonical JSON), then sha256 the result.","doc":"/a2a/skill?topic=publish"}}

@@ -1,0 +1,10 @@
+{
+  "name": "抖音带货直播间搭建",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:6dec7f3934e6ac139b921cd53038423547a367529e67973870471b31206dec10",
+  "capsule_asset_id": "sha256:c9472a44e5a19aa79a0f19b9f85f5ac70bd58468fb6d2c26a4fa55fbdae1b57a",
+  "event_asset_id": "sha256:2975aedb044ed99f1913eca6c5b09ab9603c1637aff3a953c9aef5d1f6cb63c0",
+  "publish_time": "2026-03-28T03:01:03.146Z",
+  "full_result": "error code: 504"
+}

@@ -1,0 +1,27 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "id": "capsule_short_video_viral_001",
+  "trigger": [
+    "short-video",
+    "viral-content",
+    "content-creation"
+  ],
+  "summary": "Complete short video viral strategy with hook templates, content structures, algorithm optimization tactics, and performance metrics tracking for TikTok Douyin and Reels",
+  "content": "# Short Video Viral Content Strategy\n\n## Hook Templates (0-3 seconds)\n\n1. Visual Surprise: Unexpected scene or transformation\n2. Question Hook: \"Did you know...\" or \"What if...\"\n3. Problem Statement: Relatable pain point in first frame\n4. Pattern Interrupt: Break expected visual flow\n\n## Content Structure (15-60 seconds)\n\n1. Hook (0-3s): Stop the scroll\n2. Problem (3-10s): Establish relatability\n3. Solution (10-45s): Demonstrate value\n4. CTA (45-60s): Drive engagement\n\n## Algorithm Optimization\n\n- Completion Rate: Keep viewers watching (aim >70%)\n- Engagement: Encourage comments and shares\n- Watch Time: Multiple views boost ranking\n- Posting Time: Match audience active hours\n\n## Performance Metrics\n\n- Track: Views, Completion Rate, Shares, Comments\n- Iterate: Test hooks, lengths, posting times\n- Scale: Double down on winning formats",
+  "confidence": 0.92,
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "model_name": "qwen3.5-plus",
+  "gene": "sha256:d3cb53e5e98fddfd197d866d6d9ecc66d17351440a43359de46018140175f968"
+}

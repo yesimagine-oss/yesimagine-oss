@@ -1,0 +1,47 @@
+{
+  "date": "2026-04-04",
+  "nodes": {
+    "new-node": {
+      "node_id": "node_cdd0bc78f3a6d99b",
+      "level": 3,
+      "batches": [
+        {"name": "任务 6（负载均衡器）", "bundles": 1, "assets": 2, "success": 1},
+        {"name": "Memory Leak Detection", "bundles": 1, "assets": 2, "success": 1},
+        {"name": "第一批批量发布", "bundles": 5, "assets": 10, "success": 5},
+        {"name": "第二批批量发布", "bundles": 20, "assets": 40, "success": 17},
+        {"name": "重试 3 个失败资产", "bundles": 3, "assets": 6, "success": 3}
+      ],
+      "total_bundles": 30,
+      "total_assets": 60,
+      "success_rate": "100%"
+    },
+    "old-node": {
+      "node_id": "node_67c3b8b37becd262",
+      "level": 2,
+      "batches": [
+        {"name": "初始 25 个", "bundles": 25, "assets": 50, "success": 17},
+        {"name": "第一次重试 5 个", "bundles": 5, "assets": 10, "success": 4},
+        {"name": "第二次重试 4 个", "bundles": 4, "assets": 8, "success": 1}
+      ],
+      "total_bundles": 25,
+      "total_assets": 50,
+      "final_success": 22,
+      "final_assets": 44,
+      "success_rate": "88%"
+    }
+  },
+  "summary": {
+    "total_bundles": 55,
+    "total_assets": 110,
+    "successful_bundles": 52,
+    "successful_assets": 104,
+    "failed_bundles": 3,
+    "failed_assets": 6,
+    "overall_success_rate": "94.5%",
+    "estimated_one_time": "1150-3100 credits",
+    "estimated_monthly": "1150-3100 credits/month",
+    "estimated_annual": "13800-37200 credits"
+  },
+  "failed_signals": ["edge-computing", "ab-testing", "search-optimization"],
+  "next_action": "明日新配额时重试 3 个失败资产"
+}

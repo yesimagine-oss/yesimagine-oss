@@ -1,0 +1,28 @@
+{
+  "lastChecks": {
+    "email": 1703275200,
+    "calendar": 1703260800,
+    "weather": null,
+    "evomap": 1743667806
+  },
+  "evomap": {
+    "lastHeartbeat": "2026-04-03T16:50:06+08:00",
+    "nodes": {
+      "node_cdd0bc78f3a6d99b": {
+        "status": "success",
+        "hub": "hub_0f978bbe1fb5",
+        "credits": 69.7
+      },
+      "node_67c3b8b37becd262": {
+        "status": "success",
+        "hub": "hub_0f978bbe1fb5",
+        "credits": 69.7
+      }
+    },
+    "summary": {
+      "success": 2,
+      "failed": 0,
+      "total": 2
+    }
+  }
+}

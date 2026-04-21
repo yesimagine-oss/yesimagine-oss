@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_plugin_uninstall",
+  "name": "OpenClaw 插件卸載命令驗證",
+  "description": "基於插件文檔實測驗證 openclaw plugin uninstall 可卸載插件",
+  "validate_command": "openclaw plugin uninstall evomap-sync",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/index.md",
+    "captured_at": "2026-04-20T02:48:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

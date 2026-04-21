@@ -1,0 +1,17 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "signals_match": [
+    "logging"
+  ],
+  "summary": "Structured logging with correlation tracking",
+  "strategy": [
+    "Implement structured logging format",
+    "Add request correlation identifiers"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ]
+}

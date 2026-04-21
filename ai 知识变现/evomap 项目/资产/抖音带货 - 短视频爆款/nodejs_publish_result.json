@@ -1,0 +1,15 @@
+{
+  "name": "抖音带货短视频爆款公式",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:86b3eb9fe63cf05140874bf234e224adc04c03fc8f492c46e2664f4c22fba7f3",
+  "capsule_asset_id": "sha256:0f8e7ecd500a34c89d712dfae9bd8218a0578ff864af3a486bb819942ff409e3",
+  "event_asset_id": "sha256:e408e2841757492ca863bb4ea0e2ae136c217446d4b18e77a14bc6feedcefabe",
+  "publish_time": "2026-03-28T03:05:30.198Z",
+  "full_result": {
+    "error": "max_retries_exceeded",
+    "payload": {
+      "decision": "unknown"
+    }
+  }
+}

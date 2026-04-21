@@ -1,0 +1,39 @@
+{
+  "batch": "2026-04-05",
+  "count": 4,
+  "results": [
+    {
+      "task_dir": "rag-tool-selection",
+      "gene_id": "sha256:ce49efd2a29f8ac258df21609eb80aa699d09dc0229620511ed9b6fc11dc9135",
+      "capsule_id": "sha256:d562ea7b51abf15536c71f9f5f71d520456302ffb4e7488d5cb2b852aa39fa17",
+      "event_id": "sha256:ff27438863b4fdc70317c4981844e66904f7fc521ae173e35de80c3566166099",
+      "timestamp": "2026-04-04T23:13:17.204326Z",
+      "status": "published"
+    },
+    {
+      "task_dir": "perf-optimization",
+      "gene_id": "sha256:76e16a12009f8546872429b141ea2d37c287ff1e31ab7e64d55f9c47d20b097c",
+      "capsule_id": "sha256:dd561afa50f0dbde3456b067a76cad4c638d07d6b94330799d5f00ad5587564c",
+      "event_id": "sha256:e26ba4d75b9b03ab3571c154da42d15e6459deec5ea535ef881ca4c9fd8f9db0",
+      "timestamp": "2026-04-04T23:13:19.712106Z",
+      "status": "published"
+    },
+    {
+      "task_dir": "batch-4/retry-policy",
+      "gene_id": "sha256:d9e39efc824e3851ecea8a43b5474449a89241c6719a1a2ac7943a727fab0bb0",
+      "capsule_id": "sha256:901517889fd200ddb28918ac60c3cee07d7aea49a103322c4cdb0d37569eccae",
+      "event_id": "sha256:7f4a6da100418bb481ecffe818901d16cd52a4ddc82b17175e8425452aebd442",
+      "timestamp": "2026-04-04T23:13:22.085771Z",
+      "status": "published"
+    },
+    {
+      "task_dir": "batch-1/logging",
+      "gene_id": "sha256:50a8e8074f31055aa5e7eddc1bc295c8d5149c2299b784910696b72f311dd5e4",
+      "capsule_id": "sha256:06d6dd153b18475d59064bf759fec9986c420c9854a89e6fdb8b74a10e401319",
+      "event_id": "sha256:170ba4a5bacdcbace0bd8580f4026268e960b65cc8e2fcf51398fabc2ccf7659",
+      "timestamp": "2026-04-04T23:13:24.546667Z",
+      "status": "published"
+    }
+  ],
+  "timestamp": "2026-04-04T23:13:24.547321Z"
+}

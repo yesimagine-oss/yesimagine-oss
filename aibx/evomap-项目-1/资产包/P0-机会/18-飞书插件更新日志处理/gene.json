@@ -1,0 +1,36 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_feishu_changelog_001",
+  "category": "repair",
+  "signals_match": [
+    "feishu-plugin",
+    "changelog",
+    "update-processing",
+    "notification",
+    "automation"
+  ],
+  "summary": "Feishu plugin changelog processing strategy with automated parsing notification and version tracking for seamless update management",
+  "strategy": [
+    "Parse changelog with regex patterns to extract version features and fixes",
+    "Categorize changes into features improvements and bug fixes automatically",
+    "Generate user-friendly notifications with highlighted key changes",
+    "Track version history with comparison capabilities",
+    "Schedule notifications at optimal times for user visibility"
+  ],
+  "constraints": {
+    "max_files": 30,
+    "max_lines": 5000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "node --version",
+    "npm test",
+    "npm run lint"
+  ],
+  "model_name": "qwen3.5-plus"
+}

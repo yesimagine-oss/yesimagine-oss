@@ -1,0 +1,19 @@
+{
+  "type": "EvolutionEvent",
+  "schema_version": "1.6.0",
+  "id": "event_adaptive_load_balancer_001",
+  "intent": "optimize",
+  "genes_used": [
+    "sha256:6ae3b1aad18e8fc98b8effdc2e955d80d3868811d5a6cc06e0f79e3efea86e2c"
+  ],
+  "capsule": "sha256:059c22b22838cf1f912821adb22c1c10d4ec7741a5f4abab43c0775bdf21cfb6",
+  "outcome": {
+    "status": "success",
+    "score": 0.95
+  },
+  "blast_radius": {
+    "files": 7,
+    "lines": 1500
+  },
+  "asset_id": "sha256:c841ff4134a31a4b506f9235a0ba1f6e7d6dbaec99ef395d1bcace89476de39c"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "數據解讀、趨勢分析、圖表生成、建議輸出",
+  "signals_match": ["多維表格", "數據分析", "圖表", "趨勢", "建議", "看板"],
+  "strategy": [
+    "讀取表格數據，清洗格式",
+    "AI 分析，識別模式和異常",
+    "生成可視化圖表和看板",
+    "輸出業務建議和洞察"
+  ],
+  "validation": ["feishu bitable --analyze --table-id xxx"],
+  "confidence": 0.97,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "filename": "01-signal-ontology.json",
+    "ontology_id": "signal_classification_v1",
+    "asset_id": "sha256:e9bf1d94bd3670b2644758004665d66c62155f37353635bcd5e29f6c1d086fbd",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "02-gene-ontology.json",
+    "ontology_id": "gene_structure_v1",
+    "asset_id": "sha256:382269cb83b27ebedc95074148f80a11c78ccbf5003343171f2809ac6ecb48a6",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "03-capsule-ontology.json",
+    "ontology_id": "capsule_structure_v1",
+    "asset_id": "sha256:646cc48312dc7800dcaf3b2ffa70f18f6ad48c17805062e67fe8e3787764e905",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "04-canonical-ontology.json",
+    "ontology_id": "canonical_serialization_v1",
+    "asset_id": "sha256:6437ecba8af9aafa2ae93192bc2e4fe39c9bca528e60fec73c176789fc16e78b",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "05-protocol-ontology.json",
+    "ontology_id": "a2a_protocol_v1",
+    "asset_id": "sha256:c605050887a679de057aac4631cc9c6771878d81874cfc58ea760a201462103a",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "06-gdi-ontology.json",
+    "ontology_id": "gdi_scoring_v1",
+    "asset_id": "sha256:b00d5e333496dd6aa4f203bd93d5605ec0e8b26a792d8e9d8eb271c60f85b112",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "07-event-ontology.json",
+    "ontology_id": "evolution_event_v1",
+    "asset_id": "sha256:6209df4ef53e25422c505e2410d3ad893d7e82e1868d11d552f63e36f3603546",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "filename": "08-sovereignty-ontology.json",
+    "ontology_id": "sovereignty_lock_v1",
+    "asset_id": "sha256:bf933e6cb5d76ecef34b3b5401db8c6daf05747bf76a61a3be02944421d734db",
+    "status": "✅ Ready for publish"
+  }
+]

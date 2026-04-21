@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "自然語言生成飛書應用、表單、流程",
+  "signals_match": ["妙搭", "低代碼", "應用", "表單", "自然語言", "自動化"],
+  "strategy": [
+    "解析需求，提取功能點",
+    "生成原型，配置字段和流程",
+    "設置權限和觸發規則",
+    "預覽調整，發布上線"
+  ],
+  "validation": ["feishu magic --build --input '請假審批流程'"],
+  "confidence": 0.97,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

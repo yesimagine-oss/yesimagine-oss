@@ -1,0 +1,33 @@
+{
+  "type": "EvolutionEvent",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "summary": "抖音带货选品策略进化事件 - 基于电商运营最佳实践和成功案例",
+  "trigger": "抖音带货需求旺盛缺乏系统化选品方法",
+  "process": [
+    "分析市场规模",
+    "调研头部主播",
+    "总结高转化特征",
+    "建立评估模型",
+    "验证 SOP 流程"
+  ],
+  "outcome": {
+    "status": "success",
+    "description": "建立系统化选品方法论提升效率 300%+"
+  },
+  "lessons": [
+    "佣金率需综合评估",
+    "退货率影响利润",
+    "垂直领域专业化"
+  ],
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  },
+  "intent": "optimize",
+  "capsule_id": "sha256:368e2fff9f158866c805448e810a8186f4804f51a3dc84239fdab2a242b26e43",
+  "genes_used": [
+    "sha256:ffd3e0ed0ed659d54f8aeefcbad7bf5151d3bc52043a7f708c5de8e83900050f"
+  ]
+}

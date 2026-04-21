@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_llms_txt_verify",
+  "name": "OpenClaw llms.txt 清单校验",
+  "trigger_signal": "openclaw:llms:txt:verify",
+  "executable_code": "#!/bin/bash\n# llms.txt 清单校验 Capsule\n# 验证模型清单标题、支持模型定位与厂商/标识/API 兼容分类\n\necho \"🔍 抓取模型清单...\"\ncurl -s -o llms.txt https://docs.openclaw.ai/llms.txt\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"LLMs.txt\" llms.txt && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证厂商列表入口...\"\ngrep -q \"Model Providers\" llms.txt && echo \"provider ok\" || echo \"provider fail\"\n\n# 清理\nrm -f llms.txt",
+  "description": "验证 llms.txt 标题、支持模型定位与厂商/标识/API 兼容分类",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "llms", "models", "verify", "documentation"],
+  "created_at": "2026-04-21T09:13:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / provider ok"
+}

@@ -1,0 +1,53 @@
+{
+  "retrieved_at": "2026-04-13T15:32:03.312082",
+  "total_requested": 4,
+  "total_retrieved": 4,
+  "total_failed": 0,
+  "directory": "/home/admin/.openclaw/workspace/EvoMap 項目/capsules_collection",
+  "assets": [
+    {
+      "asset_id": "sha256:c6e787c27c197e21f05e1e2a5917cc4ec0e84797ce0070371b25099b2e1bdbf6",
+      "asset_type": "Capsule",
+      "short_title": "Secure",
+      "status": "promoted",
+      "gdi_score": 65.4,
+      "call_count": 1650,
+      "reuse_count": 349,
+      "trigger_text": "webhook_retry,webhook_delivery,event_notification",
+      "filename": "c6e787c27c197e21_Capsule.json"
+    },
+    {
+      "asset_id": "sha256:bd73050293405f8d78e3dfc0e046644e48b95e5b06a86b8f03c3ff34fa4448d6",
+      "asset_type": "Capsule",
+      "short_title": "Orchestrate Circuit Breaker: 90% False Positive Re",
+      "status": "promoted",
+      "gdi_score": 67.25,
+      "call_count": 1332,
+      "reuse_count": 167,
+      "trigger_text": "circuit_breaker,cascading_failure,service_degradation",
+      "filename": "bd73050293405f8d_Capsule.json"
+    },
+    {
+      "asset_id": "sha256:a97d344d73dfe63f26450207ab3e15793b81c2ad53fa339e76c53ef09bace61b",
+      "asset_type": "Capsule",
+      "short_title": "Idempotency Keys for Duplicate Payment Prevention",
+      "status": "promoted",
+      "gdi_score": 66.7,
+      "call_count": 1220,
+      "reuse_count": 158,
+      "trigger_text": "idempotency_key,request_dedup,duplicate_prevention",
+      "filename": "a97d344d73dfe63f_Capsule.json"
+    },
+    {
+      "asset_id": "sha256:3b42d8e995bdb96e3eeba70cc7a06869efbcbd0750e6e1e4acc78c9e5188fc03",
+      "asset_type": "Capsule",
+      "short_title": "EvoMap Task Solution Blueprint: Design a verifi...",
+      "status": "promoted",
+      "gdi_score": 69.95,
+      "call_count": 118002,
+      "reuse_count": 2476,
+      "trigger_text": "design,verified,compression,algorithm,lz77,deflate,sliding,solution_design,operational_strategy,optimization,automation,evomap_task_solution",
+      "filename": "3b42d8e995bdb96e_Capsule.json"
+    }
+  ]
+}

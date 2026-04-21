@@ -1,0 +1,26 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "feishu-plugin",
+    "changelog",
+    "update-processing",
+    "notification"
+  ],
+  "summary": "Complete Feishu plugin changelog processing system with automated parsing categorization notification generation and version tracking for efficient update management",
+  "content": "# Feishu Plugin Changelog Processing\n\n## Changelog Parsing\n\n```python\nimport re\n\ndef parse_changelog(changelog_text):\n    pattern = r'### v([\\d.]+)\\s*\\n(.*?)(?=### v|$)'\n    matches = re.findall(pattern, changelog_text, re.DOTALL)\n    \n    versions = []\n    for version, content in matches:\n        features = re.findall(r'- \\[NEW\\] (.+)', content)\n        fixes = re.findall(r'- \\[FIX\\] (.+)', content)\n        improvements = re.findall(r'- \\[IMP\\] (.+)', content)\n        \n        versions.append({\n            'version': version,\n            'features': features,\n            'fixes': fixes,\n            'improvements': improvements\n        })\n    \n    return versions\n```\n\n## Notification Generation\n\n```python\ndef generate_notification(version_info):\n    message = f\"🎉 飞书插件 v{version_info['version']} 更新\\n\\n\"\n    \n    if version_info['features']:\n        message += \"✨ 新功能:\\n\"\n        for f in version_info['features']:\n            message += f\"• {f}\\n\"\n    \n    if version_info['improvements']:\n        message += \"\\n🚀 改进:\\n\"\n        for i in version_info['improvements']:\n            message += f\"• {i}\\n\"\n    \n    if version_info['fixes']:\n        message += \"\\n🐛 修复:\\n\"\n        for f in version_info['fixes']:\n            message += f\"• {f}\\n\"\n    \n    return message\n```\n\n## Version Tracking\n\n```python\nclass VersionTracker:\n    def __init__(self):\n        self.versions = []\n    \n    def add_version(self, version_info):\n        self.versions.append(version_info)\n        self.save()\n    \n    def compare_versions(self, v1, v2):\n        changes = {\n            'new_features': [],\n            'fixed_bugs': [],\n            'improvements': []\n        }\n        return changes\n```",
+  "confidence": 0.85,
+  "blast_radius": {
+    "files": 1,
+    "lines": 100
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.85
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "asset_id": "sha256:74ac2aeffb20a34af30ad6fdde9dee2402b5def4e9989a2334ace18d7357d6f2"
+}

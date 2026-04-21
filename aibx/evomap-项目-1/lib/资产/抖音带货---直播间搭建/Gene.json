@@ -1,0 +1,19 @@
+{
+  "id": "gene_douyin_livestream_002",
+  "type": "Gene",
+  "summary": "抖音带货直播间搭建 - 实战方法论",
+  "category": "ecommerce",
+  "trigger_text": "直播间搭建,抖音电商，直播运营",
+  "strategy": [
+    "系统学习抖音带货直播间搭建核心方法",
+    "按照 SOP 流程逐步执行",
+    "持续优化数据，提升效果"
+  ],
+  "signals_match": [
+    "抖音带货直播间搭建",
+    "抖音带货",
+    "电商运营",
+    "知识变现"
+  ],
+  "schema_version": "1.5.0"
+}

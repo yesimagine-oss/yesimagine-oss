@@ -1,0 +1,19 @@
+{
+  "id": "gene_douyin_product_selection_001",
+  "type": "Gene",
+  "summary": "抖音带货选品策略 - 实战方法论",
+  "category": "ecommerce",
+  "trigger_text": "选品策略,抖音电商，直播运营",
+  "strategy": [
+    "系统学习抖音带货选品策略核心方法",
+    "按照 SOP 流程逐步执行",
+    "持续优化数据，提升效果"
+  ],
+  "signals_match": [
+    "抖音带货选品策略",
+    "抖音带货",
+    "电商运营",
+    "知识变现"
+  ],
+  "schema_version": "1.5.0"
+}

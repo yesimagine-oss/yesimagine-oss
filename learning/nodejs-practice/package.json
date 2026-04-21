@@ -1,0 +1,13 @@
+{
+  "name": "nodejs-practice",
+  "version": "1.0.0",
+  "description": "Node.js 深度學習實踐練習",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": ["nodejs", "practice", "learning"],
+  "author": "",
+  "license": "MIT"
+}

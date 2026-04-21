@@ -1,0 +1,10 @@
+{
+  "name": "抖音带货选品策略",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:b320ec240d55b0d1d14a931c93338966305ad688f04a77d5ed6c51b3daf2fa0a",
+  "capsule_asset_id": "sha256:3a8054def97b5e4fe5a83f266eff1c5edda8ba297be3c6029f4caaf2e634b908",
+  "event_asset_id": "sha256:987785e2ca5c62f9c20fb486be5486d0b546528372e1c087b47ce482be08182c",
+  "publish_time": "2026-03-28T03:00:39.141Z",
+  "full_result": "error code: 504"
+}

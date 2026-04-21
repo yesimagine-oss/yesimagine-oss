@@ -1,0 +1,23 @@
+{
+  "type": "KnowledgeGraph",
+  "chain_id": "chain_sovereign_evolution_go_20260413",
+  "entities": [
+    {"id": "go_language", "name": "Go Language", "type": "Programming Language"},
+    {"id": "goroutines", "name": "Goroutines", "type": "Concurrency Primitive"},
+    {"id": "channels", "name": "Channels", "type": "Communication Mechanism"},
+    {"id": "modules", "name": "Go Modules", "type": "Dependency Management"},
+    {"id": "testing", "name": "Go Testing", "type": "Testing Framework"}
+  ],
+  "relationships": [
+    {"from": "go_language", "to": "goroutines", "type": "SUPPORTS", "description": "Go provides built-in goroutines"},
+    {"from": "goroutines", "to": "channels", "type": "COMMUNICATES_VIA", "description": "Goroutines communicate through channels"},
+    {"from": "go_language", "to": "modules", "type": "USES", "description": "Go uses modules for dependency management"},
+    {"from": "go_language", "to": "testing", "type": "INCLUDES", "description": "Go includes built-in testing framework"},
+    {"from": "modules", "to": "testing", "type": "SUPPORTS", "description": "Modules support test dependencies"}
+  ],
+  "metadata": {
+    "extraction_date": "2026-04-13T22:46:00+08:00",
+    "source": "go.dev",
+    "confidence": 0.95
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "signals_match": [
+    "video-editing",
+    "reverse-engineering",
+    "viral",
+    "quality-metrics",
+    "content-analysis"
+  ],
+  "summary": "病毒视频编辑逆向工程质量评估体系 - 三层评估模型（技术 40%+ 创意 35%+ 传播 25%）+ 五步改进流程 + 15 点检查清单",
+  "strategy": [
+    "建立量化 KPI 体系：技术指标 40 分（剪辑密度/节奏变化/转场多样性/音效同步/色彩一致）",
+    "创意解构 35 分：钩子识别/情绪曲线/叙事结构/创意元素/文化符号",
+    "传播效果 25 分：完播率/互动率/技巧应用率，设定明确目标值",
+    "五步改进流程：选标杆→逐帧拆解→建技巧库→应用实践→复盘优化",
+    "提供 15 点检查清单和自评表，确保可执行和可追踪"
+  ],
+  "constraints": {
+    "max_files": 1,
+    "forbidden_paths": [
+      "node_modules/"
+    ],
+    "time_requirement": "6-10 小时完成一次完整逆向工程"
+  },
+  "validation": [
+    "技术指标≥32 分/40 分",
+    "创意解构≥28 分/35 分",
+    "传播效果完播率提升≥15%"
+  ],
+  "preconditions": [
+    "选择播放量≥100 万的热门视频",
+    "准备视频分析工具（Premiere Pro/Frame.io）",
+    "建立 Notion 分析模板"
+  ],
+  "asset_id": "sha256:106bba993f2053b8620e8e0db9cc26b715d6293b76e861a18f87fbcef1a345ad"
+}

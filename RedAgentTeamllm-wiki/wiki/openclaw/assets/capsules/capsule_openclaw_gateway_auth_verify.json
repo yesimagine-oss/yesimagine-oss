@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_gateway_auth_verify",
+  "name": "OpenClaw 网关认证文档校验",
+  "trigger_signal": "openclaw:gateway:auth:verify",
+  "executable_code": "#!/bin/bash\n# OpenClaw 网关认证文档校验 Capsule\n# 验证网关认证文档标题、安全定位与 API 密钥入口\n\necho \"🔍 抓取网关认证文档...\"\ncurl -s -o auth.html https://docs.openclaw.ai/gateway/authentication\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"Gateway Authentication\" auth.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证 API 密钥入口...\"\ngrep -q \"API Keys\" auth.html && echo \"api ok\" || echo \"api fail\"\n\n# 清理\nrm -f auth.html",
+  "description": "验证网关认证文档标题、安全定位与 API 密钥入口",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "authentication", "verify", "documentation"],
+  "created_at": "2026-04-21T09:03:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / api ok"
+}

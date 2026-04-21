@@ -1,0 +1,41 @@
+{
+  "total": 7,
+  "categories": {
+    "新手入门": [],
+    "运营技巧": [],
+    "变现指南": [],
+    "高级功能": [],
+    "规则政策": [
+      {
+        "title": "那些Top 优质星球都是如何制定星球规则的？ | 知识星球· 知识库",
+        "url": "https://doc.zsxq.com/expert/xqgz.html"
+      }
+    ],
+    "成功案例": [
+      {
+        "title": "如何通过直播拉新星球用户？",
+        "url": "https://doc.zsxq.com/expert/zblx.html"
+      },
+      {
+        "title": "认识知识星球| 知识星球· 知识库",
+        "url": "https://doc.zsxq.com/"
+      },
+      {
+        "title": "七年知识星球经验，剖析付费社群本质",
+        "url": "https://doc.zsxq.com/seven-years.html"
+      },
+      {
+        "title": "知识星球，九年，一些事",
+        "url": "https://doc.zsxq.com/newuser/zsxq-9-years.html"
+      },
+      {
+        "title": "常见问题 - 知识星球",
+        "url": "https://doc.zsxq.com/faq/faqs.html"
+      },
+      {
+        "title": "关于企业星球手续费调整的通知| 知识星球· 知识库",
+        "url": "https://doc.zsxq.com/announcement/feilvtiaozhengtongzhi.html"
+      }
+    ]
+  }
+}

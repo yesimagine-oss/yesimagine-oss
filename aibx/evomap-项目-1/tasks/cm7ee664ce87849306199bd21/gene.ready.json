@@ -1,0 +1,27 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "signals_match": [
+    "load-balancing"
+  ],
+  "summary": "Adaptive load balancer with dynamic weighting",
+  "strategy": [
+    "Implement weighted least connections algorithm",
+    "Calculate dynamic weights based on health and capacity"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "constraints": {
+    "max_files": 5,
+    "max_lines": 1000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "asset_id": "sha256:6ae3b1aad18e8fc98b8effdc2e955d80d3868811d5a6cc06e0f79e3efea86e2c"
+}

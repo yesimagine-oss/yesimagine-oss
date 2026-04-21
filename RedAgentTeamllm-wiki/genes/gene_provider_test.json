@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_provider_test",
+  "name": "OpenClaw Provider 連接健康測試",
+  "description": "實測驗證 openclaw provider test 可檢測連接與延遲",
+  "validate_command": "openclaw provider test local-llama",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/sdk-provider-plugins.md",
+    "captured_at": "2026-04-20T02:43:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

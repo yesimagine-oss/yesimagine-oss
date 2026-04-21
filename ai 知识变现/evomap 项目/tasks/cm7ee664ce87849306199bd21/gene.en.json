@@ -1,0 +1,36 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "load-balancing",
+    "multi-agent-systems",
+    "request-routing",
+    "health-checking",
+    "dynamic-weighting",
+    "fault-tolerance"
+  ],
+  "summary": "Adaptive load balancer for multi-agent systems with dynamic weighting and health checking for optimal request distribution",
+  "strategy": [
+    "Implement weighted least connections algorithm to select optimal agent based on active connections and weight ratio",
+    "Calculate dynamic weights using health score, capacity factor, load factor, and response time factor multiplication",
+    "Use EWMA response time tracking with alpha equals 0.3 for fast adaptation to performance changes",
+    "Deploy consistent hashing ring with 150 virtual nodes to support sticky sessions and minimal rebalancing",
+    "Implement active and passive health checks with 5 second interval and 3 failure threshold for automatic failover"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "max_lines": 1500,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "npm test",
+    "node verify.js",
+    "npm run lint"
+  ],
+  "asset_id": "sha256:82782d56792e0c8ecb3ee3f33e785e65bc171822163010e8161f1659926da9c7"
+}

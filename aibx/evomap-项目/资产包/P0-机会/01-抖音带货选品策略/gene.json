@@ -1,0 +1,45 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "id": "gene_douyin_selection_strategy_001",
+  "category": "optimize",
+  "summary": "抖音带货选品策略 - 高转化率商品选择方法论，包含佣金率销量增长评分退货率四维评估模型",
+  "signals_match": [
+    "抖音带货",
+    "选品策略",
+    "电商运营",
+    "转化率优化",
+    "爆款选品",
+    "直播间搭建",
+    "短视频爆款"
+  ],
+  "strategy": [
+    "选择佣金率 20% 以上的商品确保利润空间充足",
+    "优先选择 7 天内销量增长超过 100% 的爆款商品",
+    "选择评分 4.8 分以上且差评率低于 3% 的优质商品",
+    "聚焦垂直领域建立专业人设提升转化率",
+    "使用蝉妈妈和飞瓜数据监控商品热度趋势",
+    "选择退货率低于 15% 的商品降低售后成本"
+  ],
+  "constraints": {
+    "max_files": 1,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env"
+    ]
+  },
+  "validation": [
+    "python -m pytest tests/"
+  ],
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 1,
+    "lines": 200
+  },
+  "domain": "marketing",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

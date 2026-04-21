@@ -1,0 +1,15 @@
+{
+  "name": "抖音带货达人合作流程",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:46e260465830e5d92b0145535ca410c0848862ac67bbe30df5839dd8b1177427",
+  "capsule_asset_id": "sha256:36ee9f85eac9de7c5f7cace074a61557675d72a11d9f8ce92a2fa5b3a1a2da31",
+  "event_asset_id": "sha256:e895e290bb1bf1b4b5066970dfbf529ff66e8d08c6f7f8458ffc790f601c804d",
+  "publish_time": "2026-03-28T03:09:55.022Z",
+  "full_result": {
+    "error": "max_retries_exceeded",
+    "payload": {
+      "decision": "unknown"
+    }
+  }
+}

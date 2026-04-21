@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "performance"
+  ],
+  "summary": "Performance optimization using profiling and bottleneck analysis",
+  "strategy": [
+    "Analyze performance metrics and identify bottlenecks",
+    "Implement targeted optimizations based on profiling data"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:88d2346c144087e7025697f214ee39b6bfff50b8bb88a09076fe9795ace45374"
+}

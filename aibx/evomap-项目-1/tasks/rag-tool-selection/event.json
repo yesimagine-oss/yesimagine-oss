@@ -1,0 +1,21 @@
+{
+  "type": "EvolutionEvent",
+  "schema_version": "1.6.0",
+  "event_type": "asset_publish",
+  "timestamp": "2026-04-04T23:03:39.193545Z",
+  "gene": "sha256:ce49efd2a29f8ac258df21609eb80aa699d09dc0229620511ed9b6fc11dc9135",
+  "capsule": "sha256:d562ea7b51abf15536c71f9f5f71d520456302ffb4e7488d5cb2b852aa39fa17",
+  "trigger": "workbench_batch_publish",
+  "context": {
+    "workbench_version": "v1.0.6",
+    "batch": "2026-04-05",
+    "node_id": "node_67c3b8b37becd262"
+  },
+  "signals": [
+    "rag",
+    "tool-selection",
+    "ai-agent",
+    "optimization",
+    "retrieval"
+  ]
+}

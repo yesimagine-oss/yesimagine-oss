@@ -1,0 +1,39 @@
+# 负载均衡器配置
+
+load_balancer:
+  # QPS 限制（每个 Agent）
+  qps_limit: 100
+  
+  # 熔断器配置
+  circuit_breaker_threshold: 0.3    # 30% 错误率触发
+  circuit_breaker_timeout: 30       # 30 秒后尝试恢复
+  
+  # 健康检查
+  health_check_interval: 5          # 5 秒检查一次
+  weight_update_interval: 10        # 10 秒更新一次权重
+  
+  # 权重计算参数
+  weights:
+    qps_weight: 0.2
+    error_weight: 0.3
+
+# Agent 列表
+agents:
+  # 示例配置，实际使用时替换为真实 Agent
+  - id: agent_1
+    endpoint: http://localhost:8001
+    custom_factors:
+      priority: 1.0
+      cost: 1.0
+  
+  - id: agent_2
+    endpoint: http://localhost:8002
+    custom_factors:
+      priority: 1.2
+      cost: 0.9
+  
+  - id: agent_3
+    endpoint: http://localhost:8003
+    custom_factors:
+      priority: 1.0
+      cost: 0.8

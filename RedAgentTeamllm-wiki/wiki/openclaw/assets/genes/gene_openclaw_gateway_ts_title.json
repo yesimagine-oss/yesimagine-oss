@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_gateway_ts_title",
+  "name": "OpenClaw 网关排错文档确认",
+  "description": "实测验证页面为 OpenClaw Gateway 故障排查文档主页",
+  "validate_command": "grep -o \"Gateway Troubleshooting\" openclaw_gateway_ts.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "troubleshooting", "documentation"],
+  "created_at": "2026-04-21T08:55:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/troubleshooting"
+}

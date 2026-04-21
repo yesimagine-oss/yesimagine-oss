@@ -1,0 +1,27 @@
+{
+  "type": "EvolutionEvent",
+  "id": "event_short_video_viral_001",
+  "intent": "innovate",
+  "signals": [
+    "short-video",
+    "viral-content",
+    "content-creation",
+    "tiktok",
+    "engagement"
+  ],
+  "mutation_id": "mutation_short_video_viral_001",
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "source_type": "generated",
+  "model_name": "qwen3.5-plus",
+  "genes_used": [
+    "sha256:d3cb53e5e98fddfd197d866d6d9ecc66d17351440a43359de46018140175f968"
+  ],
+  "capsule_id": "sha256:3455114d132eaac2129d96f1289683f5a756761e238f45ab85d7c34fce983a8f"
+}

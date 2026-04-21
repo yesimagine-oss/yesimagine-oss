@@ -1,0 +1,102 @@
+{
+  "last_run": {
+    "run_id": "run_1775261459681",
+    "created_at": "2026-04-04T00:10:59.757Z",
+    "parent_event_id": "evt_1770478341769",
+    "selected_gene_id": "gene_gep_repair_from_errors",
+    "selected_capsule_id": "capsule_1770477654236",
+    "selector": {
+      "selected": "gene_gep_repair_from_errors",
+      "reason": [
+        "signals match gene.signals_match",
+        "capsule trigger matches signals",
+        "signals: log_error, errsig:**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 08:10:10] ============================================================ [2026-04-04 08:10:10] EvoMap 节点心跳开始 [2026-04-04 08:10:10] 新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 08:10:11] ✅ 成功 (Status: active, Cred, repeated_tool_usage:exec",
+        "memory_graph: memory_prefer:gene_gep_repair_from_errors | memory_ban:gene_gep_repair_from_errors | gene_prior:0.037",
+        "drift_intensity: 0.577"
+      ],
+      "alternatives": []
+    },
+    "signals": [
+      "log_error",
+      "errsig:**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 08:10:10] ============================================================ [2026-04-04 08:10:10] EvoMap 节点心跳开始 [2026-04-04 08:10:10] 新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 08:10:11] ✅ 成功 (Status: active, Cred",
+      "repeated_tool_usage:exec"
+    ],
+    "mutation": {
+      "type": "Mutation",
+      "id": "mut_1775261459679",
+      "category": "repair",
+      "trigger_signals": [
+        "log_error",
+        "errsig:**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 08:10:10] ============================================================ [2026-04-04 08:10:10] EvoMap 节点心跳开始 [2026-04-04 08:10:10] 新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 08:10:11] ✅ 成功 (Status: active, Cred",
+        "repeated_tool_usage:exec"
+      ],
+      "target": "gene:gene_gep_repair_from_errors",
+      "expected_effect": "reduce runtime errors, increase stability, and lower failure rate",
+      "risk_level": "low"
+    },
+    "mutation_id": "mut_1775261459679",
+    "personality_state": {
+      "type": "PersonalityState",
+      "rigor": 1,
+      "creativity": 0.35,
+      "verbosity": 0.25,
+      "risk_tolerance": 0.4,
+      "obedience": 0.85
+    },
+    "personality_key": "rigor=1.0|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9",
+    "personality_known": false,
+    "personality_mutations": [
+      {
+        "type": "PersonalityMutation",
+        "param": "rigor",
+        "delta": 0.05,
+        "reason": "errors detected in reflection"
+      }
+    ],
+    "drift": false,
+    "selected_by": "memory_graph+selector",
+    "source_type": "generated",
+    "reused_asset_id": null,
+    "reused_source_node": null,
+    "reused_chain_id": null,
+    "baseline_untracked": [
+      ".evomap/bundle.json",
+      ".evomap/config.json",
+      "evolver.pid",
+      "package-lock.json"
+    ],
+    "baseline_git_head": "fbca5abd5235ab49eddc3f705a916ea15091bbe6",
+    "blast_radius_estimate": {
+      "files": 20,
+      "lines": 1600
+    },
+    "strategy_policy": {
+      "name": "balanced",
+      "label": "Balanced",
+      "description": "Normal operation. Steady growth with stability.",
+      "forceInnovate": false,
+      "cautiousExecution": false,
+      "highRiskGene": false,
+      "repairStreak": 2,
+      "failureStreak": 0,
+      "blastRadiusMaxFiles": 20,
+      "directives": [
+        "Base strategy: Balanced (Normal operation. Steady growth with stability.)",
+        "Target max files for this cycle: 20."
+      ]
+    },
+    "active_task_id": null,
+    "active_task_title": null,
+    "worker_assignment_id": null,
+    "worker_pending": false,
+    "commitment_deadline": null,
+    "applied_lessons": [],
+    "hub_lessons": []
+  },
+  "last_solidify": {
+    "run_id": "run_1775260020181",
+    "rejected": true,
+    "reason": "loop_bridge_disabled_autoreject_no_rollback",
+    "timestamp": "2026-04-03T23:47:00.192Z"
+  }
+}

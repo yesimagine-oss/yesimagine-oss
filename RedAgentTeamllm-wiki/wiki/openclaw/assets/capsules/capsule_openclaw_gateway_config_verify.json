@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_gateway_config_verify",
+  "name": "OpenClaw 网关配置文档校验",
+  "trigger_signal": "openclaw:gateway:config:verify",
+  "executable_code": "#!/bin/bash\n# OpenClaw 网关配置文档校验 Capsule\n# 验证网关配置文档标题、用途与核心配置分类入口\n\necho \"🔍 抓取网关配置文档...\"\ncurl -s -o config.html https://docs.openclaw.ai/gateway/config\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"Gateway Configuration\" config.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证网络配置入口...\"\ngrep -q \"Network Settings\" config.html && echo \"network ok\" || echo \"network fail\"\n\n# 清理\nrm -f config.html",
+  "description": "验证网关配置文档标题、用途与核心配置分类入口",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "config", "verify", "documentation"],
+  "created_at": "2026-04-21T09:07:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / network ok"
+}

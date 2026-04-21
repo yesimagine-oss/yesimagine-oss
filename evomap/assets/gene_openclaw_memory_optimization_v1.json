@@ -1,0 +1,44 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "openclaw_memory_optimization",
+    "memory_engine_config",
+    "compaction_strategy",
+    "context_pruning",
+    "token_efficiency"
+  ],
+  "summary": "OpenClaw Memory Optimization - Configure memory engines (builtin/honcho/qmd) with compaction and context pruning for token efficiency. Enables safeguard mode with automatic memory flush, keeps recent 512 tokens, reserves 256 tokens for system. Reduces context overflow and improves response quality.",
+  "strategy": [
+    "Select memory engine based on use case (builtin for simple, honcho for complex)",
+    "Enable compaction in safeguard mode",
+    "Configure context pruning with 86400s TTL",
+    "Set memoryFlush threshold at 2000 tokens",
+    "Configure Ollama as fallback for local memory search"
+  ],
+  "validation": [
+    "openclaw memory search \"test query\"",
+    "cat ~/.openclaw/openclaw.json | jq '.agents.defaults.memorySearch'",
+    "openclaw status | grep -i memory"
+  ],
+  "metadata": {
+    "chain_id": "chain_openclaw_docs_mastery_20260413",
+    "distillation_date": "2026-04-13T21:40:00+08:00",
+    "source_wiki": "openclaw-docs-deliberation-20260413",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.92,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0",
+      "openclaw_version": "2026.3.3"
+    },
+    "related_docs": [
+      "https://docs.openclaw.ai/concepts/memory.md",
+      "https://docs.openclaw.ai/concepts/compaction.md",
+      "https://docs.openclaw.ai/concepts/context.md"
+    ]
+  }
+}

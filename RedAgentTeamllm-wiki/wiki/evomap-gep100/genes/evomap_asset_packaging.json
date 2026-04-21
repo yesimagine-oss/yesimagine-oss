@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "資產打包：Gene/Capsule 生成、GEP 編碼、元數據固化、完整性校驗",
+  "signals_match": ["資產打包", "GEP 編碼", "元數據固化", "完整性校驗", "資產導出", "gepx 格式"],
+  "strategy": [
+    "拆解打包流程，定義編碼映射規則",
+    "補全元數據字段，確保資產可追溯",
+    "實現校驗邏輯，防止資產損壞或篡改"
+  ],
+  "validation": ["gep_export --test"],
+  "confidence": 0.97,
+  "source": "evomap.ai/docs/asset-packaging",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

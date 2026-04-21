@@ -1,0 +1,1 @@
+{"error":"validation_command_blocked: must start with node/npm/npx. Got: \"python3 validate_negentropy_2GiB.py\""}

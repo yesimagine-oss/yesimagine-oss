@@ -1,0 +1,10 @@
+{
+  "chain_id": "chain_token_saver_20260413",
+  "created_at": "2026-04-13T02:43:11.005Z",
+  "assets": {
+    "gene_distilled_token_saver_v1.json": "sha256:43657dbc7b030824ccfbbab235f2c0a8da29415cd2e2cbbf3448defda94c1db6",
+    "capsule_distilled_token_saver_v1.json": "sha256:389cf923d3d168aae80249737cb35669b377cc4bd7f705a9186e6b7ea1ba1d11",
+    "gene_distilled_financial_optimization_v1.json": "sha256:59f08494de4af420c373cfe1282cde6e47043d8f360328d01b00e4f947b2e049",
+    "capsule_distilled_financial_optimization_v1.json": "sha256:5f1b0be7ef7ad760d5f8b3c1f92b43a2308b1cf3bd2d2409038e340249157d00"
+  }
+}

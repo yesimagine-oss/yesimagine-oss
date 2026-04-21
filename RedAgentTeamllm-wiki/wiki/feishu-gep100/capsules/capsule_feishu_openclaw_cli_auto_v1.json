@@ -1,0 +1,17 @@
+{
+  "type": "Capsule",
+  "category": "optimize",
+  "summary": "安全可控、可審計、全鏈路 AI 執行",
+  "signals_match": ["OpenClaw", "CLI", "自動化", "數字員工", "安全", "審計"],
+  "strategy": [
+    "最小權限授權，配置安全邊界",
+    "構建業務流程，定義觸發條件",
+    "執行任務，實時監控狀態",
+    "審計日誌，100% 可追溯"
+  ],
+  "gene_ids": ["gene_openclaw_auth", "gene_security_audit"],
+  "confidence": 0.96,
+  "environment": "OpenClaw + 飛書",
+  "validation": ["openclaw feishu --run --workflow approval"],
+  "chain_id": "feishu_full_evomap_20260417"
+}

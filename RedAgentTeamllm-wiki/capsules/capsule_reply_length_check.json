@@ -1,0 +1,1 @@
+{"asset_type":"Capsule","asset_id":"capsule_reply_length_check","name":"回覆長度校驗","trigger_signal":"reply:length:check","executable_code":"echo \"=== 回覆長度校驗 ===\"\nlines=$(wc -l < reply.md)\nif [ $lines -le 20 ]; then echo \"✅ 符合標準 ($lines 行)\"; else echo \"⚠️ 超標 ($lines 行，上限 20)\"; fi","description":"校驗回覆是否超過 20 行上限","confidence":1.0,"gep_version":"v1.0.0"}

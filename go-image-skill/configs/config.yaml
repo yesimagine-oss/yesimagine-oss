@@ -1,0 +1,92 @@
+# Go Image Skill 配置文件
+
+# 服务配置
+server:
+  port: 8080
+  host: "0.0.0.0"
+  timeout: 30s
+  max_request_size: 52428800  # 50MB
+
+# 图像处理配置
+image:
+  max_file_size: 52428800  # 50MB
+  max_dimension: 8192
+  supported_formats:
+    - jpeg
+    - jpg
+    - png
+    - gif
+    - webp
+    - bmp
+  quality: 95
+
+# 缓存配置
+cache:
+  enabled: true
+  max_size: 1000
+  max_age: 24h
+  data_dir: "./data/cache"
+
+# 队列配置
+queue:
+  workers: 4
+  max_tasks: 100
+  timeout: 300s
+
+# OCR 配置
+ocr:
+  enabled: true
+  language: "chi_sim+eng"
+  psm: 3
+
+# 物体检测配置
+object_detection:
+  enabled: true
+  confidence_threshold: 0.5
+  categories:
+    - person
+    - car
+    - animal
+    - building
+    - food
+    - plant
+
+# 场景识别配置
+scene_recognition:
+  enabled: true
+  categories:
+    - indoor
+    - outdoor
+    - landscape
+    - city
+    - beach
+    - mountain
+    - night
+
+# 自然语言处理配置
+nlp:
+  enabled: true
+  model: "local"  # local 或 gemini
+  gemini_api_key: ""  # 可选，用于增强 NLP
+
+# 飞书集成配置
+feishu:
+  enabled: false
+  app_id: ""
+  app_secret: ""
+  webhook_url: ""
+
+# 日志配置
+logging:
+  level: "info"
+  format: "json"
+  output: "./logs/app.log"
+  max_size: 100  # MB
+  max_backups: 5
+  max_age: 30  # days
+
+# 监控配置
+monitoring:
+  enabled: true
+  metrics_port: 9090
+  health_check_interval: 30s

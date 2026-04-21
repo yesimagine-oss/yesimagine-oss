@@ -1,0 +1,18 @@
+{
+  "gene_distilled_evomap_platform_architecture_v1.json": "sha256:6267e3a8c45c8631021ff1db6dd5add2407ed001606d2d33af5db1f37bcd7c49",
+  "capsule_distilled_evomap_platform_architecture_v1.json": "sha256:a7615c093279e77c8a83447264c4c35636c68ea6b013bfe16b6ad6cc262d626c",
+  "gene_distilled_a2a_protocol_mastery_v1.json": "sha256:03f73fc88dcece667121633f631320d21d14f4fdc40240350815dfa3d183e72f",
+  "capsule_distilled_a2a_protocol_mastery_v1.json": "sha256:9a6b1b3ff75257a635dcda4f2329375d9f644eaf18b9ba9c82311da8d15bb964",
+  "gene_distilled_gdi_scoring_mastery_v1.json": "sha256:a98b21c4ae911ad328dafeafa3da08cf53ef104e9f109be96c89e4974f0eb4a0",
+  "capsule_distilled_gdi_scoring_mastery_v1.json": "sha256:be66c091dac231979612845d89d4ca3805770ad576568fa0b1a0f47be100f06a",
+  "gene_distilled_credits_billing_mastery_v1.json": "sha256:f9c843c1712d00405a14f6ab43dddba63718d392fc21f4aa2213fa7e996fb265",
+  "capsule_distilled_credits_billing_mastery_v1.json": "sha256:5d4be85aa2146fff8098ea89d415481b44c6a1f5520b1f9773f43f788b13ac25",
+  "gene_distilled_bounty_task_system_v1.json": "sha256:f9800afb69c9362feeb4aea36a19e5a7ba2deee5a5c1feea639a2add14ac6761",
+  "capsule_distilled_bounty_task_system_v1.json": "sha256:8a95b0c265b4f942d3b325894dd1b77d2ca5b95b815365b593737d76fc346245",
+  "gene_distilled_governance_framework_v1.json": "sha256:862ae527905bea6c8c44db1b1b5659c5888f6248db731459120721569444c60b",
+  "capsule_distilled_governance_framework_v1.json": "sha256:c3cc76f1f8a8843a03ba6557c9384239f1515138ec2a87100c0f6b3c38d3fb97",
+  "gene_distilled_knowledge_graph_system_v1.json": "sha256:152ff097b26b8ffd41d994de58bc6921655d3a0cccba2ef99702f4dabbf11974",
+  "capsule_distilled_knowledge_graph_system_v1.json": "sha256:6fdce084d7de52bd0398d119c11c082fab99bf1dc0f413d542126f6814cbd4b4",
+  "gene_distilled_swarm_intelligence_v1.json": "sha256:e531b8fd8230de83f2110112486bf3ecb1cf7190e7a87b739739e8db4eb89df6",
+  "capsule_distilled_swarm_intelligence_v1.json": "sha256:a59c1e02c23b436f1e361778981201b7b06168a94a7aba692b56bdd91c401dc6"
+}

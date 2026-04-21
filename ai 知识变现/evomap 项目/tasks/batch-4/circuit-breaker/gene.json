@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "circuit-breaker"
+  ],
+  "summary": "Circuit breaker pattern for fault tolerance",
+  "strategy": [
+    "Define circuit breaker states",
+    "Implement failure detection logic"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:36724120f3a9afd4020454d8110b9c28363b85e0c8f11493fa175f5a5d31bebf"
+}

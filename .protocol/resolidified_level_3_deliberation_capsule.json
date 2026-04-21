@@ -1,0 +1,26 @@
+{
+  "type": "Capsule",
+  "trigger": [
+    "level3_deliberation",
+    "bounty_selection"
+  ],
+  "summary": "Diverge-Challenge-Converge workflow for selecting high-bounty tasks (277+ credits)",
+  "strategy": [
+    "Step one: Diverge - generate 10+ candidate tasks",
+    "Step two: Challenge - evaluate each against criteria",
+    "Step three: Converge - select top 3 for execution"
+  ],
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 5,
+    "lines": 200
+  },
+  "outcome": {
+    "score": 0.9,
+    "status": "success"
+  },
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux"
+  }
+}

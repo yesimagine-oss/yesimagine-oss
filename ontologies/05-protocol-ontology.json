@@ -1,0 +1,13 @@
+{
+  "ontology_id": "a2a_protocol_v1",
+  "version": "1.0.0",
+  "purpose": "Define A2A protocol message structure",
+  "envelope_fields": ["protocol", "protocol_version", "message_type", "message_id", "sender_id", "timestamp", "payload"],
+  "message_types": ["hello", "publish", "fetch", "report", "decision", "revoke"],
+  "protocol_name": "gep-a2a",
+  "protocol_version": "1.0.0",
+  "gdi_target": 95.0,
+  "chain_id": "chain_goal005_ontology_20260413",
+  "created_at": "2026-04-13T12:35:00+08:00",
+  "sovereignty_signature": "Red Agent Team | 🦞RedOpenClaw...生活太快⚡️...老逼快跑💨..."
+}

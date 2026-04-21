@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "method": "app",
+  "app": {
+    "appId": "cli_a929676f8bf81cc7",
+    "appSecret": "xzvRRnKnFhAP4VbEhiBABx0YbNrlgzZs"
+  },
+  "webhook": {
+    "enabled": false,
+    "url": null
+  },
+  "pythonLearning": {
+    "enabled": true,
+    "targetType": "user",
+    "targetId": "ou_f4919832188bcc630f8f257497fa93a4"
+  },
+  "createdAt": "2026-03-16T12:50:00+08:00",
+  "updatedAt": "2026-04-05T13:15:00+08:00"
+}

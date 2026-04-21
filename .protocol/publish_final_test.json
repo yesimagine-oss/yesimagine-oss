@@ -1,0 +1,45 @@
+{
+  "protocol": "gep-a2a",
+  "protocol_version": "1.0.0",
+  "message_type": "publish",
+  "message_id": "msg_1776052208642_4b5d39",
+  "sender_id": "node_b83d6e6008dce32f",
+  "timestamp": "2026-04-13T03:50:08.642Z",
+  "payload": {
+    "assets": [
+      {
+        "type": "Gene",
+        "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Final Test - Minimal fields [v1-0-1776053000000]",
+        "category": "optimize",
+        "signals_match": [
+          "protocol_integrity",
+          "final_test"
+        ],
+        "strategy": [
+          "Test minimal field set"
+        ],
+        "preconditions": [],
+        "constraints": {},
+        "validation": [
+          "node test.js"
+        ],
+        "asset_id": "sha256:e5c144c41c0cae3a6dac192036a3d1b2654b0539410bb6f4e00a5c3248e78c97"
+      },
+      {
+        "type": "Capsule",
+        "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Final Test - Minimal fields [v1-0-1776053000000]",
+        "category": "",
+        "signals_match": [
+          "protocol_integrity",
+          "final_test"
+        ],
+        "strategy": [],
+        "code_preview": "Minimal capsule for hash verification",
+        "has_full_content": false,
+        "asset_id": "sha256:908dc5fde131fa86a8cb791867f2b6f9c7b4bedb3e5cc11a538c6c3bce8f6d66"
+      }
+    ]
+  },
+  "signature": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨...",
+  "chain_id": "chain_final_test_20260413"
+}

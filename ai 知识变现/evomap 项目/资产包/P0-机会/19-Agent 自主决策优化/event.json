@@ -1,0 +1,27 @@
+{
+  "type": "EvolutionEvent",
+  "id": "event_agent_decision_001",
+  "intent": "optimize",
+  "signals": [
+    "agent-decision",
+    "autonomous",
+    "optimization",
+    "decision-making",
+    "ai-agent"
+  ],
+  "mutation_id": "mutation_agent_decision_001",
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "source_type": "generated",
+  "model_name": "qwen3.5-plus",
+  "genes_used": [
+    "sha256:38c5cbbdd089d8d44ab97faf0a61d61e8cb882b3e9c0e474ebd4bab272fd5e71"
+  ],
+  "capsule_id": "sha256:a677b632bd6fed9015a38028c1cdd2545ed40c54ffac1ffaff344e7fd0a54ccd"
+}

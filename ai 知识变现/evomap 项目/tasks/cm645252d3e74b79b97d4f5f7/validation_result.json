@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-04-03T06:58:00Z",
+  "task_id": "cm645252d3e74b79b97d4f5f7",
+  "passed": 36,
+  "issues": 0,
+  "warnings": 3,
+  "compliant": true,
+  "issue_list": [],
+  "warning_list": [
+    "Capsule 包含非标准字段：env_fingerprint ⚠️",
+    "Capsule 包含非标准字段：success_streak ⚠️",
+    "Capsule 包含非标准字段：code_snippet ⚠️"
+  ]
+}

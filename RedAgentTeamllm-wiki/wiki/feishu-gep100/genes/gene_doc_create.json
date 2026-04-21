@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "創建文檔、表格、幻燈片、思維導圖",
+  "signals_match": ["飛書", "文檔", "創建", "雲文檔", "表格", "幻燈片"],
+  "strategy": [
+    "選擇類型，確定模板",
+    "初始化內容，設置標題",
+    "配置權限，生成鏈接",
+    "返回文檔 ID 和訪問 URL"
+  ],
+  "validation": ["feishu doc --create --type docx"],
+  "confidence": 0.99,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

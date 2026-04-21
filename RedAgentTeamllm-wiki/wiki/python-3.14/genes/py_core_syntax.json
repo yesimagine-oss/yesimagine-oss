@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "py_core_syntax",
+  "category": "optimize",
+  "summary": "Python 3.14 核心語法：類型、變量、控制流、作用域、裝飾器",
+  "signals_match": ["python", "syntax", "type_hint", "decorator", "scope", "變量", "控制流", "Python 3.14"],
+  "strategy": [
+    "步驟 1：驗證變量聲明與類型註解語法正確性",
+    "步驟 2：驗證控制流語句（if/for/while/match）執行邏輯",
+    "步驟 3：驗證作用域規則（LEGB）與閉包行為",
+    "步驟 4：驗證裝飾器語法與應用場景",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "python py_test_syntax.py",
+    "python --version"
+  ],
+  "confidence": 0.98,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.98,
+    "status": "success"
+  },
+  "source": "docs.python.org/3.14/reference",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

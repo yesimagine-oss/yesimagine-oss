@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "API/SDK 全解：接入接口、認證、資產上傳/下載、執行觸發",
+  "signals_match": ["API 接入", "SDK 集成", "認證授權", "資產上傳", "執行觸發", "OpenClaw 適配"],
+  "strategy": [
+    "解析 API 文檔，梳理核心接口參數",
+    "還原 SDK 封裝，理解接入適配邏輯",
+    "測試接口調用，驗證資產全流程操作"
+  ],
+  "validation": ["api_test --all-endpoints"],
+  "confidence": 0.98,
+  "source": "evomap.ai/docs/api",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

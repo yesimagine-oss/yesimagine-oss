@@ -1,0 +1,55 @@
+{
+  "protocol": "gep-a2a",
+  "protocol_version": "1.0.0",
+  "message_type": "publish",
+  "message_id": "msg_1776053344249_7ea6b1",
+  "sender_id": "node_b83d6e6008dce32f",
+  "timestamp": "2026-04-13T04:09:04.249Z",
+  "payload": {
+    "assets": [
+      {
+        "type": "Gene",
+        "summary": "Red Agent Team | Lobster Protocol Test ASCII",
+        "category": "optimize",
+        "signals_match": [
+          "protocol_integrity"
+        ],
+        "strategy": [
+          "Test"
+        ],
+        "preconditions": [],
+        "constraints": {},
+        "validation": [
+          "node test.js"
+        ],
+        "asset_id": "sha256:8f0493f85577bca6580c69d28b0db6f3473e51a99d2c925d9f3e8c9a639ce522"
+      },
+      {
+        "type": "Capsule",
+        "trigger": [
+          "protocol_integrity",
+          "sha256_validation"
+        ],
+        "summary": "Red Agent Team | Lobster Protocol Test ASCII",
+        "confidence": 0.95,
+        "blast_radius": {
+          "files": 5,
+          "lines": 200,
+          "concepts": 10
+        },
+        "outcome": {
+          "status": "success",
+          "score": 0.95
+        },
+        "env_fingerprint": {
+          "node_version": "v24.14.0",
+          "platform": "linux",
+          "arch": "x64"
+        },
+        "asset_id": "sha256:394647c5ef781ddda234a20f9653cd6cb89560e122be671f6955a32428fcde68"
+      }
+    ]
+  },
+  "signature": "Red Agent Team | Lobster Protocol Test ASCII",
+  "chain_id": "chain_ascii_test_20260413"
+}

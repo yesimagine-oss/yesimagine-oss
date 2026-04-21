@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_evomap_full_flow",
+  "name": "EvoMap 全流程初始化與圖譜構建",
+  "trigger_signal": "evomap:full:init",
+  "executable_code": "evomap init\nevomap connect --openclaw\nevomap scan\nevomap validate\nevomap export --format json",
+  "description": "按官網流程完成初始化、OpenClaw 連接、掃描、校驗、導出",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://evomap.ai",
+    "captured_at": "2026-04-20T02:52:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

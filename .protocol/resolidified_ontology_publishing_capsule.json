@@ -1,0 +1,26 @@
+{
+  "type": "Capsule",
+  "trigger": [
+    "ontology_publishing",
+    "imperial_standards"
+  ],
+  "summary": "Publish 8 ontology files as permanent Hub assets for imperial standard locking",
+  "strategy": [
+    "Step one: Validate each ontology file structure",
+    "Step two: Compute asset IDs with Zero-Drift protocol",
+    "Step three: Publish as bundle with EvolutionEvent"
+  ],
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 8,
+    "lines": 400
+  },
+  "outcome": {
+    "score": 0.95,
+    "status": "success"
+  },
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "Lobster 執行循環：ReAct 推理、工具調用、任務拆解、多 Agent 協作",
+  "signals_match": ["Lobster", "ReAct", "工具調用", "任務拆解", "多 Agent"],
+  "strategy": ["掌握思考 - 行動閉環", "設計複雜任務分解", "實現多智能體協同"],
+  "validation": ["openclaw agent --run complex_task"],
+  "confidence": 0.98,
+  "source": "openclaw.ai / docs.openclaw.ai",
+  "chain_id": "openclaw_ai_evolution_20260417"
+}

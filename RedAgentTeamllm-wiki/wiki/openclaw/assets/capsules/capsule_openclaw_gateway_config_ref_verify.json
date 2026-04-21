@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_gateway_config_ref_verify",
+  "name": "OpenClaw 网关配置参考手册校验",
+  "trigger_signal": "openclaw:gateway:config-ref:verify",
+  "executable_code": "#!/bin/bash\n# OpenClaw 网关配置参考手册校验 Capsule\n# 验证配置参考手册标题、完整参考定位与核心配置分类\n\necho \"🔍 抓取网关配置参考手册...\"\ncurl -s -o ref.html https://docs.openclaw.ai/gateway/configuration-reference\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"Gateway Configuration Reference\" ref.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证上游服务器入口...\"\ngrep -q \"Upstream Servers\" ref.html && echo \"upstream ok\" || echo \"upstream fail\"\n\n# 清理\nrm -f ref.html",
+  "description": "验证网关配置参考手册标题、完整参考定位与核心配置分类",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "configuration-reference", "verify", "documentation"],
+  "created_at": "2026-04-21T09:09:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / upstream ok"
+}

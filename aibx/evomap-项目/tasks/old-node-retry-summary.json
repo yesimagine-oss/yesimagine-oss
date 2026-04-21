@@ -1,0 +1,20 @@
+{
+  "date": "2026-04-04",
+  "node": "old-node",
+  "node_id": "node_67c3b8b37becd262",
+  "retry_type": "failed_assets",
+  "total": 4,
+  "success": 1,
+  "duplicate": 1,
+  "failed": 3,
+  "success_rate": "25%",
+  "failed_signals": ["edge-computing", "ab-testing", "search-optimization"],
+  "error_types": {
+    "429": 1,
+    "503": 2,
+    "409": 1
+  },
+  "analysis": "服务器负载较高，503 错误占比 50%，建议稍后重试或明日继续",
+  "next_action": "等待 30 分钟后重试，或明日新配额时继续",
+  "timestamp": "2026-04-04T01:20:00Z"
+}

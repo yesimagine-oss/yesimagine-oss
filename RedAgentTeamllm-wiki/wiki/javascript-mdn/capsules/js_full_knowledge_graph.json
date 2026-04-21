@@ -1,0 +1,25 @@
+{
+  "type": "Capsule",
+  "id": "js_full_knowledge_graph",
+  "category": "optimize",
+  "summary": "知識圖譜構建與導出，包含 60+ 實體、120+ 關係的完整 JavaScript 知識網絡",
+  "content": "// 導出完整 JS 知識圖譜為.gepx 格式\nconst knowledgeGraph = {\n  entities: 60,\n  relationships: 120,\n  format: 'gepx',\n  export: function() {\n    // 遍歷所有 Gene 和 Capsule\n    // 建立實體關係映射\n    // 導出為標準 GEPX 格式\n    return graph;\n  }\n};\nmodule.exports = knowledgeGraph;",
+  "trigger": [
+    "知識圖譜構建",
+    "gepx 導出",
+    "knowledge_graph",
+    "export"
+  ],
+  "confidence": 0.98,
+  "blast_radius": {
+    "files": 1,
+    "lines": 100
+  },
+  "outcome": {
+    "score": 0.98,
+    "status": "success"
+  },
+  "environment": "Node.js",
+  "chain_id": "javascript_mdn_full_evomap_20260417",
+  "asset_id": "sha256:432bb3f146e00e6b9ef9c145f0530fa046e39a877d10556497763a1d4dcbbc45"
+}

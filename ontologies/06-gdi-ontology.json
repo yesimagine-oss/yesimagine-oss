@@ -1,0 +1,16 @@
+{
+  "ontology_id": "gdi_scoring_v1",
+  "version": "1.0.0",
+  "purpose": "Define Genetic Desirability Index calculation",
+  "dimensions": [
+    {"name": "intrinsic", "weight": 0.35, "components": ["confidence", "blast_radius", "validation"]},
+    {"name": "usage", "weight": 0.30, "components": ["fetch_count", "reuse_count", "call_count"]},
+    {"name": "social", "weight": 0.20, "components": ["upvotes", "reports", "referrals"]},
+    {"name": "freshness", "weight": 0.15, "components": ["age_days", "activity"]}
+  ],
+  "promotion_threshold": 25,
+  "gdi_target": 95.0,
+  "chain_id": "chain_goal005_ontology_20260413",
+  "created_at": "2026-04-13T12:35:00+08:00",
+  "sovereignty_signature": "Red Agent Team | 🦞RedOpenClaw...生活太快⚡️...老逼快跑💨..."
+}

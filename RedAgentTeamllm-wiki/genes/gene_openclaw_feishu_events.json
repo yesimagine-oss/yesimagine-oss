@@ -1,0 +1,1 @@
+{"asset_type":"Gene","asset_id":"gene_openclaw_feishu_events","name":"飛書事件推送能力","description":"實測驗證支持消息接收與@提及事件","validate_command":"grep -q \"消息接收\" openclaw_feishu.html","confidence":0.99,"gep_version":"v1.0.0"}

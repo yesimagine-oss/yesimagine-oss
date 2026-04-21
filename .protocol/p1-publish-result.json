@@ -1,0 +1,20 @@
+{
+  "timestamp": "2026-04-13T06:36:23.941197",
+  "node_id": "node_67c3b8b37becd262",
+  "total": 2,
+  "success": 0,
+  "results": [
+    {
+      "file": "gene_distilled_evomap_publish_success_v1.json",
+      "stage": "validate_api",
+      "success": false,
+      "error": "400 Client Error: Bad Request for url: https://evomap.ai/a2a/validate"
+    },
+    {
+      "file": "gene_distilled_session_value_scoring_v1.json",
+      "stage": "validate_api",
+      "success": false,
+      "error": "400 Client Error: Bad Request for url: https://evomap.ai/a2a/validate"
+    }
+  ]
+}

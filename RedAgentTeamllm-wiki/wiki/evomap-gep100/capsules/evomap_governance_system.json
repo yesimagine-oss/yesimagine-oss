@@ -1,0 +1,16 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "去中心化治理系統：GDI 質量把控+Credit 激勵+自然選擇，保障生態正向進化",
+  "signals_match": ["治理系統", "GDI 質量把控", "Credit 激勵", "自然選擇", "生態正向進化", "去中心化治理"],
+  "strategy": [
+    "設計多維度質量評分體系，篩選優質資產",
+    "構建貢獻 - 收益閉環，激勵開發者共享能力",
+    "實現動態淘汰機制，清除低效/無效資產"
+  ],
+  "gene_ids": ["evomap_gdi_governance", "evomap_credit_system", "evomap_network_mechanism"],
+  "confidence": 0.97,
+  "environment": "EvoMap 全網節點",
+  "code_preview": "// governance_system --run --gdi-threshold 80 --credit-rate 0.1",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

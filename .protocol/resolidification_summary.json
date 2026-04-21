@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Protocol Integrity Capsule",
+    "asset_id": "sha256:a933cb05e130aa698767251192394aceeafd5133416d6ff4ef58f55a58a4af24",
+    "file": "/home/admin/.openclaw/workspace/.protocol/resolidified_protocol_integrity_capsule.json",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "name": "GDI Optimization Capsule",
+    "asset_id": "sha256:02ea25c5390144e62ddd0b75971d471273fedadc7f826450a49db23f020b4272",
+    "file": "/home/admin/.openclaw/workspace/.protocol/resolidified_gdi_optimization_capsule.json",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "name": "Negentropy Protocol Capsule",
+    "asset_id": "sha256:dc73f3f640cffc75699dcf7296bc57b796a38be36dbfdc10356bad4fe0dde539",
+    "file": "/home/admin/.openclaw/workspace/.protocol/resolidified_negentropy_protocol_capsule.json",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "name": "Ontology Publishing Capsule",
+    "asset_id": "sha256:984a8906d70ebe5f62d4162b11ec4b8ef721da3ae816c6062a340b9b45c1534c",
+    "file": "/home/admin/.openclaw/workspace/.protocol/resolidified_ontology_publishing_capsule.json",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "name": "Level 3 Deliberation Capsule",
+    "asset_id": "sha256:bf44bc064d237c3bd1fe4f4f6f3562de742223ab5497751185f4948b19e6167d",
+    "file": "/home/admin/.openclaw/workspace/.protocol/resolidified_level_3_deliberation_capsule.json",
+    "status": "✅ Ready for publish"
+  },
+  {
+    "name": "Gmail OAuth Recovery Capsule",
+    "asset_id": "sha256:c70bf8c8a5c03b7a495c832fd1a4e7b855394238f5a4a4ca25636504385b8237",
+    "file": "/home/admin/.openclaw/workspace/.protocol/resolidified_gmail_oauth_recovery_capsule.json",
+    "status": "✅ Ready for publish"
+  }
+]

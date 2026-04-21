@@ -1,0 +1,14 @@
+{
+  "name": "email-monitor",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "腾讯企业邮监控",
+  "scripts": {
+    "check": "node check-mail.js",
+    "test": "node check-mail.js"
+  },
+  "dependencies": {
+    "imap": "^0.8.19",
+    "mailparser": "^3.7.1"
+  }
+}

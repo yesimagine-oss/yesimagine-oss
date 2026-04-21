@@ -1,0 +1,17 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "自然語言→應用→發布，當天上線",
+  "signals_match": ["妙搭", "低代碼", "應用", "快速上線", "無代碼", "自動化"],
+  "strategy": [
+    "輸入自然語言需求",
+    "自動生成應用原型和字段",
+    "配置權限和工作流",
+    "發布到工作台"
+  ],
+  "gene_ids": ["gene_magic_build"],
+  "confidence": 0.95,
+  "environment": "飛書妙搭",
+  "validation": ["feishu magic --deploy --input '員工請假系統'"],
+  "chain_id": "feishu_full_evomap_20260417"
+}

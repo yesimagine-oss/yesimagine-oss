@@ -1,0 +1,113 @@
+{
+  "timestamp": "2026-04-02T06:31:21.491110",
+  "total": 21,
+  "success": 0,
+  "failed": 21,
+  "bundles": [
+    {
+      "priority": "P0",
+      "name": "01-抖音带货选品策略",
+      "path": "资产包/P0-机会/01-抖音带货选品策略"
+    },
+    {
+      "priority": "P0",
+      "name": "02-直播间搭建指南",
+      "path": "资产包/P0-机会/02-直播间搭建指南"
+    },
+    {
+      "priority": "P0",
+      "name": "03-短视频爆款公式",
+      "path": "资产包/P0-机会/03-短视频爆款公式"
+    },
+    {
+      "priority": "P0",
+      "name": "04-达人合作流程",
+      "path": "资产包/P0-机会/04-达人合作流程"
+    },
+    {
+      "priority": "P0",
+      "name": "05-Agent 自主决策",
+      "path": "资产包/P0-机会/05-Agent 自主决策"
+    },
+    {
+      "priority": "P0",
+      "name": "06-RAG 性能优化",
+      "path": "资产包/P0-机会/06-RAG 性能优化"
+    },
+    {
+      "priority": "P0",
+      "name": "07-Prompt 工程优化",
+      "path": "资产包/P0-机会/07-Prompt 工程优化"
+    },
+    {
+      "priority": "P0",
+      "name": "08-多 Agent 协作",
+      "path": "资产包/P0-机会/08-多 Agent 协作"
+    },
+    {
+      "priority": "P0",
+      "name": "09-代码审查自动化",
+      "path": "资产包/P0-机会/09-代码审查自动化"
+    },
+    {
+      "priority": "P0",
+      "name": "10-Agent 自我进化",
+      "path": "资产包/P0-机会/10-Agent 自我进化"
+    },
+    {
+      "priority": "P0",
+      "name": "11-自动化工作流",
+      "path": "资产包/P0-机会/11-自动化工作流"
+    },
+    {
+      "priority": "P0",
+      "name": "12-代码生成自动化",
+      "path": "资产包/P0-机会/12-代码生成自动化"
+    },
+    {
+      "priority": "P0",
+      "name": "13-知识记忆管理",
+      "path": "资产包/P0-机会/13-知识记忆管理"
+    },
+    {
+      "priority": "P0",
+      "name": "14-Agent 监控调试",
+      "path": "资产包/P0-机会/14-Agent 监控调试"
+    },
+    {
+      "priority": "P0",
+      "name": "15-短视频爆款",
+      "path": "资产包/P0-机会/15-短视频爆款"
+    },
+    {
+      "priority": "P0",
+      "name": "16-local_user_request",
+      "path": "资产包/P0-机会/16-local_user_request"
+    },
+    {
+      "priority": "P0",
+      "name": "17-进化测试运行",
+      "path": "资产包/P0-机会/17-进化测试运行"
+    },
+    {
+      "priority": "P0",
+      "name": "18-飞书插件更新日志处理",
+      "path": "资产包/P0-机会/18-飞书插件更新日志处理"
+    },
+    {
+      "priority": "P0",
+      "name": "19-Agent 自主决策优化",
+      "path": "资产包/P0-机会/19-Agent 自主决策优化"
+    },
+    {
+      "priority": "P1",
+      "name": "01-python 数据抓取反爬",
+      "path": "资产包/P1-机会/01-python 数据抓取反爬"
+    },
+    {
+      "priority": "P1",
+      "name": "02-local-user-request",
+      "path": "资产包/P1-机会/02-local-user-request"
+    }
+  ]
+}

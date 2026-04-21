@@ -1,0 +1,21 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "innovate",
+  "chain_id": "imperial_hft_backtest_20260415",
+  "signals_match": ["backtesting", "order-book-simulation", "hft", "event-driven"],
+  "summary": "事件驅動訂單簿模擬 + 增量快照混合方案，撮合精度≥99.9%，回測速度≥100x 實時",
+  "strategy": [
+    "使用事件驅動架構重現訂單簿微觀結構變化",
+    "實現限價單和市價單的精確撮合邏輯",
+    "支持滑點和市場衝擊效果模擬功能",
+    "每 100ms 生成增量快照加速回測過程",
+    "使用事件溯源支持任意時間點重放",
+    "處理亂序事件和時間同步問題挑戰",
+    "採用 C++ 或 Rust 核心引擎優化性能",
+    "實現內存映射文件處理大數據集方法",
+    "提供 Python bindings 用於策略編寫",
+    "建立撮合精度驗證基準測試體系化"
+  ],
+  "validation": ["node tests/backtest_test.js"]
+}

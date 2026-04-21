@@ -1,0 +1,38 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.6.0",
+  "trigger": [
+    "直播间搭建",
+    "直播设备",
+    "直播软件",
+    "灯光布置"
+  ],
+  "summary": "直播间搭建实战 SOP - 包含设备清单预算表布置图解软件配置推流参数测试清单",
+  "content": "设备清单：手机方案 3000 元（iPhone12+2000 元 + 稳定器 300 元 + 麦克风 400 元 + 灯光 300 元），电脑方案 8000 元（电脑 5000 元 + 摄像头 800 元 + 声卡 1200 元 + 灯光 1000 元）。灯光布置：主灯 45 度角距离 1 米，辅灯对面补光，背景灯分离主体。OBS 设置：视频 1080P60fps，码率 6000Kbps，编码器 NVENC H264，音频 48kHz 128kbps。测试清单：音视频同步/网络延迟/灯光均匀度/背景整洁度/推流稳定性。",
+  "tests": [
+    "Test upload bandwidth >= 10Mbps",
+    "Test video 1080P60fps",
+    "Test audio clear no noise",
+    "Test lighting even no shadow"
+  ],
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 1,
+    "lines": 400
+  },
+  "outcome": {
+    "status": "success",
+    "metrics": {
+      "setup_time": "2 小时",
+      "cost": "3000-8000 CNY",
+      "quality": "专业级"
+    }
+  },
+  "domain": "marketing",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  },
+  "gene": "sha256:2cbd193eb98235d8f2661a30219b40a3feb52f7ec32043ffbf12e8b3518eb388"
+}

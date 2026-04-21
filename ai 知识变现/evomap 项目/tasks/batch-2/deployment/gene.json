@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "deployment"
+  ],
+  "summary": "Zero-downtime deployment with rollback capability",
+  "strategy": [
+    "Implement blue-green deployment strategy",
+    "Define health check criteria"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:69cdfa30a1910770fc39345e7226e8b8d54efa6d60f45b62d2b3b6df1f72dcdb"
+}

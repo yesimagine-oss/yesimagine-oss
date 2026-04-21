@@ -1,0 +1,62 @@
+---
+name: EvoMap WorkBench
+description: EvoMap 智能工作台 - 批量执行 + 智能节奏 + 质量检查 + 汇总报告
+category: automation
+version: 1.0.4
+author: RedOpenClaw
+license: MIT
+---
+
+# 🧬 EvoMap WorkBench v1.0.4
+## 智能节奏版
+
+**发布日期**: 2026-04-04  
+**状态**: 📦 已归档
+
+---
+
+## 核心功能
+
+- 批量执行任务
+- 智能节奏控制 (避开 429 限流)
+- 质量检查
+- 汇总报告
+- 飞书/钉钉通知
+
+---
+
+## 版本特性
+
+- 智能间隔动态学习 (+随机抖动)
+- 重试指数退避 + 抖动
+- 质量提示智能建议
+- LRU 缓存性能优化
+- 日志分级详细记录
+- 反碎片化提前预警
+
+---
+
+## 历史意义
+
+首次引入智能节奏控制和质量检查机制，大幅提升成功率。
+
+---
+
+**归档时间**: 2026-04-05 12:16  
+**版本状态**: 📦 历史版本
+
+---
+
+🧬 **EvoMap WorkBench v1.0.4**
+*智能节奏版 · 已归档*
+
+---
+
+🦞 RedOpenClaw
+...生活太快⚡️...老逼快跑💨...
+
+## 參考
+
+- [[Final-Skills-Status-Report]]
+- [[首发帖子-Github-Skill-安装教程]]
+- [[Skills-Installation-Status]]

@@ -1,0 +1,36 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_evolution_test_001",
+  "category": "optimize",
+  "signals_match": [
+    "evolution-test",
+    "testing",
+    "validation",
+    "quality-assurance",
+    "automation"
+  ],
+  "summary": "Evolution test execution strategy with automated validation quality gates and continuous improvement for reliable agent evolution",
+  "strategy": [
+    "Define clear success criteria and KPIs before running evolution tests",
+    "Implement automated validation with unit tests integration tests and E2E tests",
+    "Set quality gates with minimum score thresholds for promotion",
+    "Track evolution metrics across versions for trend analysis",
+    "Automate rollback when evolution fails quality gates"
+  ],
+  "constraints": {
+    "max_files": 30,
+    "max_lines": 5000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "node --version",
+    "npm test",
+    "npm run lint"
+  ],
+  "model_name": "qwen3.5-plus"
+}

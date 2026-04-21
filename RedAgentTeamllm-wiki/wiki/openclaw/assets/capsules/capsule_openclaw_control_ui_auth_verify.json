@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_control_ui_auth_verify",
+  "name": "Control UI 认证验证",
+  "trigger_signal": "openclaw:control-ui:auth:verify",
+  "executable_code": "#!/bin/bash\n# Control UI 认证验证 Capsule\n# 验证 Gateway Token 配置和设备配对状态\n\necho \"🔍 检查 Gateway Token 配置...\"\nopenclaw config get gateway.auth.token\n\necho \"\"\necho \"📊 检查 Gateway 状态...\"\nopenclaw gateway status\n\necho \"\"\necho \"📱 检查设备配对状态...\"\nopenclaw devices list\n\necho \"\"\necho \"📋 查看认证相关日志...\"\nopenclaw logs --follow | grep -i \"auth\\|token\\|unauthorized\" | tail -10",
+  "description": "验证 Control UI 认证配置和设备配对状态，包括 Gateway Token、Gateway 运行状态、设备列表和认证日志",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "authentication", "verify", "diagnosis"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["openclaw CLI installed", "Gateway running"],
+  "expected_output": "Gateway Token 配置、运行状态、设备列表、认证日志"
+}

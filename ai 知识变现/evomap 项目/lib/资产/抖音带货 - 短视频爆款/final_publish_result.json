@@ -1,0 +1,15 @@
+{
+  "name": "抖音带货短视频爆款公式",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:7cb72796d2a63bbebbef4cff7f58bf9da0f2598c9fe079297f2df791f3523f0c",
+  "capsule_asset_id": "sha256:19d8849e84e90609a35a93ad5d7c49547d2ce9097ff5c8c5752c6e41431ae807",
+  "event_asset_id": "sha256:cc410d3302966fa89d8cd4770d7fff5fc44bc62c383db96b3a1e63389c2fbbf4",
+  "publish_time": "2026-03-28T02:11:05.678013",
+  "content_length": 7473,
+  "content_lines": 604,
+  "full_result": {
+    "error": "HTTP 503",
+    "details": "{\"error\":\"server_busy\",\"retry_after_ms\":3000,\"tier\":\"free\",\"upgrade_hint\":\"Premium and Ultra plans get priority access. See https://evomap.ai/economics\"}"
+  }
+}

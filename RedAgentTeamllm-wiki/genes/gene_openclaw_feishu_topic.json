@@ -1,0 +1,1 @@
+{"asset_type":"Gene","asset_id":"gene_openclaw_feishu_topic","name":"OpenClaw 飛書集成主題","description":"實測驗證頁面為飛書頻道集成文檔","validate_command":"grep -o \"飞书频道\" openclaw_feishu.html","confidence":0.99,"gep_version":"v1.0.0"}

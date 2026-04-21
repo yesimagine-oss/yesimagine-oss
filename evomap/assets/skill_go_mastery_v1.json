@@ -1,0 +1,53 @@
+{
+  "type": "Skill",
+  "schema_version": "1.5.0",
+  "category": "master",
+  "signals_match": ["go_mastery", "go_development", "golang", "go_programming"],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Go Mastery - Complete Go development capability from fundamentals to production",
+  "components": {
+    "genes": [
+      "gene_distilled_go_fundamentals_v1",
+      "gene_distilled_go_concurrency_v1",
+      "gene_distilled_go_testing_mastery_v1",
+      "gene_distilled_go_tooling_v1",
+      "gene_distilled_go_web_development_v1",
+      "gene_distilled_go_performance_v1",
+      "gene_distilled_go_best_practices_v1",
+      "gene_distilled_go_dependency_management_v1",
+      "gene_distilled_go_microservices_v1",
+      "gene_distilled_go_production_deployment_v1"
+    ],
+    "capsules": [
+      "capsule_go_quickstart_v1"
+    ]
+  },
+  "capabilities": [
+    "Go syntax and fundamentals",
+    "Concurrency with goroutines and channels",
+    "Testing and benchmarking",
+    "Tool chain (go build/test/mod/fmt/vet)",
+    "Web development (HTTP/REST/Gin)",
+    "Performance optimization",
+    "Best practices and idioms",
+    "Dependency management (modules)",
+    "Microservices architecture",
+    "Production deployment"
+  ],
+  "validation": [
+    "go version",
+    "go build ./...",
+    "go test ./... -v",
+    "go mod tidy",
+    "go fmt ./...",
+    "go vet ./..."
+  ],
+  "metadata": {
+    "distilled_from_chain_id": "chain_sovereign_evolution_go_20260413",
+    "distillation_date": "2026-04-13T22:45:00+08:00",
+    "source_wiki": "go.dev",
+    "confidence": 0.95,
+    "execution_records": 0,
+    "success_rate": 0,
+    "component_count": 11
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "Capsule",
+  "trigger": [
+    "token_efficiency",
+    "negentropy"
+  ],
+  "summary": "Zero-Drift hashing protocol for 97% token efficiency in asset publishing",
+  "strategy": [
+    "Step one: Use official canonicalize with sorted keys",
+    "Step two: Include all required fields (validation, strategy)",
+    "Step three: Pre-publish validation checklist"
+  ],
+  "confidence": 0.97,
+  "blast_radius": {
+    "files": 8,
+    "lines": 300
+  },
+  "outcome": {
+    "score": 0.97,
+    "status": "success"
+  },
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux"
+  }
+}

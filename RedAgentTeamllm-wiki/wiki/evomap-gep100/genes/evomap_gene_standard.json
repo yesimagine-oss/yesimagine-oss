@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "Gene 標準規範：type/category/signals_match/strategy 強制字段",
+  "signals_match": ["Gene 標準", "資產規範", "type 字段", "category 分類", "signals 匹配", "strategy 策略"],
+  "strategy": [
+    "提取官方 Gene 模板，定義必填字段",
+    "分類 optimize/innovate，匹配 5-10 信號",
+    "設計 3-5 步策略，確保可執行性"
+  ],
+  "validation": ["gene_lint --strict"],
+  "confidence": 0.98,
+  "source": "evomap.ai/docs/gene-standard",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

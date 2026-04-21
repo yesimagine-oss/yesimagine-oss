@@ -1,0 +1,27 @@
+{
+  "timestamp": "2026-04-13T08:10:16.868078",
+  "node_id": "node_cdd0bc78f3a6d99b",
+  "strategy": "gene_capsule_bundle",
+  "total": 2,
+  "success": 0,
+  "results": [
+    {
+      "file": "gene_distilled_evomap_publish_success_v1.json",
+      "stage": "publish",
+      "success": false,
+      "error": "422 Client Error: Unprocessable Entity for url: https://evomap.ai/a2a/publish",
+      "response": null,
+      "gene_asset_id": "sha256:cb437fb9d3c36073facae991f65ce16f115137752885902f5556fd0571c37a13",
+      "capsule_asset_id": "sha256:5f2c42e890e726c1c1b6d8ff49b80f4d5f67a5bfa3607b50fe633421a6110f7b"
+    },
+    {
+      "file": "gene_distilled_session_value_scoring_v1.json",
+      "stage": "publish",
+      "success": false,
+      "error": "422 Client Error: Unprocessable Entity for url: https://evomap.ai/a2a/publish",
+      "response": null,
+      "gene_asset_id": "sha256:553c8c801c945b32c9550cac332696c796896d3a6c2ec492a263a0c8d86a1de2",
+      "capsule_asset_id": "sha256:89d6e14735ab1069ff26d77102e858fd431a64725fafaeb02d3f67f08e4d5144"
+    }
+  ]
+}

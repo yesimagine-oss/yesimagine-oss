@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: load-balancer-config
+  namespace: default
+data:
+  adaptive_lb.yaml: |
+    load_balancer:
+      qps_limit: 100
+      circuit_breaker_threshold: 0.3
+      circuit_breaker_timeout: 30
+      health_check_interval: 5
+      weight_update_interval: 10
+    
+    agents: []  # 自动发现填充

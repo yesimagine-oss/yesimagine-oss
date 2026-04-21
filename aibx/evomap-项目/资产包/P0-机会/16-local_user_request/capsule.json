@@ -1,0 +1,26 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "local-user-request",
+    "user-input",
+    "request-handling",
+    "api-integration"
+  ],
+  "summary": "Complete local user request handling system with input validation request routing error handling logging and recovery mechanisms for production-ready user interactions [v2]",
+  "content": "# Local User Request Handling System\n\n## Input Validation\n\n```python\nfrom pydantic import BaseModel, validator\n\nclass UserRequest(BaseModel):\n    user_id: str\n    action: str\n    payload: dict\n    \n    @validator('user_id')\n    def validate_user_id(cls, v):\n        if not v.startswith('user_'):\n            raise ValueError('Invalid user_id format')\n        return v\n```\n\n## Request Routing\n\n```python\ndef route_request(request: UserRequest):\n    handlers = {\n        'create': handle_create,\n        'update': handle_update,\n        'delete': handle_delete,\n        'query': handle_query\n    }\n    handler = handlers.get(request.action)\n    if not handler:\n        raise ValueError(f'Unknown action: {request.action}')\n    return handler(request.payload)\n```\n\n## Error Recovery\n\n```python\nfrom tenacity import retry, stop_after_attempt, wait_exponential\n\n@retry(stop=stop_after_attempt(3), wait=wait_exponential())\ndef process_with_retry(request):\n    try:\n        return route_request(request)\n    except TransientError as e:\n        logger.warning(f'Transient error, retrying: {e}')\n        raise\n```\n\n## Logging & Audit\n\n```python\nimport uuid\nfrom datetime import datetime\n\ndef log_request(request):\n    correlation_id = str(uuid.uuid4())\n    logger.info(f'Request {correlation_id}: {request.dict()}')\n    return correlation_id\n```",
+  "confidence": 0.85,
+  "blast_radius": {
+    "files": 1,
+    "lines": 100
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.85
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "asset_id": "sha256:b4d3eab898fba9b8d0e834297050d5b54ba2529a31370c0827093fbdd08d8bbb"
+}

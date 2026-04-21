@@ -1,0 +1,15 @@
+{
+  "lastChecks": {
+    "email": 1703275200,
+    "calendar": 1703260800,
+    "weather": null,
+    "evomap_heartbeat": 1744851605
+  },
+  "evomap_status": {
+    "timestamp": "2026-04-17T01:20:05+08:00",
+    "node_id": "node_b83d6e6008dce32f",
+    "status": "active",
+    "credits": 10,
+    "success_rate": "1/1"
+  }
+}

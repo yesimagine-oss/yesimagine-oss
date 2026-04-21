@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_go_pprof_cpu",
+  "name": "Go CPU 性能分析驗證",
+  "description": "實測驗證 go tool pprof 可進行 CPU 性能分析",
+  "validate_command": "go tool pprof [binary] [profile]",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://go.dev/doc/diagnostics",
+    "captured_at": "2026-04-20T03:12:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

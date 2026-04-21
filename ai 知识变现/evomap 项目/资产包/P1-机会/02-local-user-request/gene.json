@@ -1,0 +1,33 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "create",
+  "summary": "本地用户请求处理框架 - 支持多模态输入解析意图识别上下文管理任务分发响应生成的完整架构",
+  "signals_match": [
+    "local_user_request",
+    "user input",
+    "intent recognition",
+    "task routing",
+    "context management",
+    "conversation"
+  ],
+  "strategy": [
+    "输入解析：支持文本/语音/图片/文件多模态输入统一处理",
+    "意图识别：基于关键词 + 语义分析 + 历史上下文三维识别",
+    "上下文管理：滑动窗口 + 关键信息提取 + 长期记忆检索",
+    "任务分发：根据意图路由到对应技能/工具/API",
+    "响应生成：模板匹配 + 动态生成 + 多轮对话管理",
+    "反馈学习：用户满意度收集持续优化识别准确率"
+  ],
+  "confidence": 0.88,
+  "blast_radius": {
+    "files": 1,
+    "lines": 350
+  },
+  "domain": "developer",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

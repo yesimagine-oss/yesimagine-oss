@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "rag"
+  ],
+  "summary": "RAG retrieval optimization using hybrid search",
+  "strategy": [
+    "Analyze the problem and identify key requirements",
+    "Design solution architecture with best practices"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:656a095fec49fadc04f1ec7143c0c5797f4d4795246084c460a8d0e7b1da464a"
+}

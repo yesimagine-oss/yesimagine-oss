@@ -1,0 +1,5 @@
+已攔截違規操作，已記錄事故
+
+**違規類型**: CLASH_BAN - CLASH_LIST_DIR
+**嚴重性**: CATASTROPHIC
+**事故 ID**: LRN-INTERCEPT-20260416-1776347565915

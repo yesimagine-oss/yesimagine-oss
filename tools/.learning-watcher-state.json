@@ -1,0 +1,403 @@
+{
+  "files": {
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-day4.md": {
+      "mtime": 1773792713.5811806,
+      "size": 16559,
+      "hash": "853eb2e6670b50eb2eb192ff8ec3d7f4"
+    },
+    "/home/admin/.openclaw/workspace/learning/skills-installation-status.md": {
+      "mtime": 1773541660.5008092,
+      "size": 3749,
+      "hash": "725844f989558c6e1de8956616f30aee"
+    },
+    "/home/admin/.openclaw/workspace/learning/wechat-article-reading-study-plan.md": {
+      "mtime": 1773653149.355837,
+      "size": 15734,
+      "hash": "caf941d2dc020eff8d7abc6c70e487d5"
+    },
+    "/home/admin/.openclaw/workspace/learning/pskoett-skills-deep-study.md": {
+      "mtime": 1773406517.9139771,
+      "size": 13037,
+      "hash": "e7ce58c4b7ef7e3adb07dfd42700824d"
+    },
+    "/home/admin/.openclaw/workspace/learning/skill-complete-inventory.md": {
+      "mtime": 1773407869.881864,
+      "size": 8375,
+      "hash": "7959745498eeacd4668daf54c38008ac"
+    },
+    "/home/admin/.openclaw/workspace/learning/notification-system-auto-test.md": {
+      "mtime": 1773821549.185323,
+      "size": 1529,
+      "hash": "dc7c8d1989ef20a5b67a4bd69279df76"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-notes-day4.md": {
+      "mtime": 1773785336.0905426,
+      "size": 14673,
+      "hash": "29403316da54a4c7111d2ab94be1ee1a"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-permission-guide.md": {
+      "mtime": 1773390811.6306806,
+      "size": 23435,
+      "hash": "bd3001f8f6365d20cb5b998713269bc9"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-remaining-7-apis-guide.md": {
+      "mtime": 1773391721.4887009,
+      "size": 12044,
+      "hash": "016fb0844af175ff57a758242c16c71e"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-final-summary.md": {
+      "mtime": 1773391721.4947014,
+      "size": 7575,
+      "hash": "085eb915b889b3177abc422550e0f848"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-plan-final.md": {
+      "mtime": 1773785763.2338758,
+      "size": 2931,
+      "hash": "bc2792c97a9a927e3adf8a37a9cef9d1"
+    },
+    "/home/admin/.openclaw/workspace/learning/skill-installation-final-status.md": {
+      "mtime": 1773407695.431596,
+      "size": 6534,
+      "hash": "e982c09a5a23b3b83aece8a53e101e63"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-quick-reference.md": {
+      "mtime": 1773385046.924223,
+      "size": 5320,
+      "hash": "ee26db659cf8d23d3135b4a9167752e2"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-projects-guide.md": {
+      "mtime": 1773384508.6039102,
+      "size": 16446,
+      "hash": "15ba9e8d3d103ee62449688bdf2389dc"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-day5.md": {
+      "mtime": 1773794863.282023,
+      "size": 34903,
+      "hash": "9b9c9f69d31101659b80239b1a9fa0b2"
+    },
+    "/home/admin/.openclaw/workspace/learning/skills-installation-study-report.md": {
+      "mtime": 1773375553.1023414,
+      "size": 9043,
+      "hash": "a81a4798275babeb88fd96a72af9aa3e"
+    },
+    "/home/admin/.openclaw/workspace/learning/context-optimization-guide.md": {
+      "mtime": 1773369802.2845123,
+      "size": 7640,
+      "hash": "03307c0dc11b304a1866104031733775"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-day2-code.md": {
+      "mtime": 1773790457.5839612,
+      "size": 27699,
+      "hash": "509d58f3d38954d769560a3ec43b2a58"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-video-meeting-api-guide.md": {
+      "mtime": 1773404941.8498902,
+      "size": 25002,
+      "hash": "2936a02d69ba158c6ca8ce97fc1e241f"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-admin-api-guide.md": {
+      "mtime": 1773405688.5638347,
+      "size": 24278,
+      "hash": "45a59d36ec8ecfccfc4ede5339506eea"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-gap-analysis.md": {
+      "mtime": 1773788281.4144318,
+      "size": 8127,
+      "hash": "31f5fb0265004e359c8f23ac3532e570"
+    },
+    "/home/admin/.openclaw/workspace/learning/simplify-and-harden-install-notes.md": {
+      "mtime": 1773407291.4176047,
+      "size": 2498,
+      "hash": "35ff483e6188b25dd400f69b79bcb390"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-faq.md": {
+      "mtime": 1773384508.6099107,
+      "size": 12717,
+      "hash": "8ec6182c8c2aca194e693378c343d99c"
+    },
+    "/home/admin/.openclaw/workspace/learning/wechat-article-evaluation.md": {
+      "mtime": 1773542563.018232,
+      "size": 6055,
+      "hash": "1d0ed64f0f11402d94c7b305d3d28c64"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-im-api-guide.md": {
+      "mtime": 1773395426.9713151,
+      "size": 23953,
+      "hash": "c333c241c8670b5e74ee1749ac6fd05d"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-plan.md": {
+      "mtime": 1773786558.520698,
+      "size": 3938,
+      "hash": "cfeda0ab1c0b896cd33742e671885281"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-api-study-guide.md": {
+      "mtime": 1773379077.9792483,
+      "size": 13511,
+      "hash": "9c966ae57702cebe3dd2cf5a0d3faa8d"
+    },
+    "/home/admin/.openclaw/workspace/learning/final-skills-status-report.md": {
+      "mtime": 1773376155.284932,
+      "size": 6288,
+      "hash": "102fe36a73b34491041eca36fc795a5e"
+    },
+    "/home/admin/.openclaw/workspace/learning/ecosystem-assessment-report.md": {
+      "mtime": 1773371494.9798791,
+      "size": 10220,
+      "hash": "bbca98a5d3a9c49903838a11e31e1748"
+    },
+    "/home/admin/.openclaw/workspace/learning/progress-tracker.md": {
+      "mtime": 1773369833.2065706,
+      "size": 3053,
+      "hash": "d05d5ba06c5286b09f637c39e682e834"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-notes.md": {
+      "mtime": 1773783237.7685719,
+      "size": 5110,
+      "hash": "8769795c1f22e2efe282ca685736b71f"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-console-advanced.md": {
+      "mtime": 1773658241.8971055,
+      "size": 21376,
+      "hash": "b2316a3b0823585e35cbc864f3cbb8be"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-day2.md": {
+      "mtime": 1773786811.2617476,
+      "size": 16916,
+      "hash": "4c82f0205232d31184e64ea3174017c0"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-oauth2-guide.md": {
+      "mtime": 1773389690.382745,
+      "size": 16450,
+      "hash": "b77715c54a50afd527cf6379d405cba7"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-meeting-api-guide.md": {
+      "mtime": 1773393506.9253669,
+      "size": 22304,
+      "hash": "ff6918273348259660cc0249d7abf9d9"
+    },
+    "/home/admin/.openclaw/workspace/learning/custom-skills-guide.md": {
+      "mtime": 1773541974.9809668,
+      "size": 12849,
+      "hash": "d4d05734114a57cd69fcba72183a330b"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-roadmap.md": {
+      "mtime": 1773384845.5832853,
+      "size": 9780,
+      "hash": "1834eb823d4a5e7b640188167f2971a1"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-plan.md": {
+      "mtime": 1773785371.3650384,
+      "size": 6821,
+      "hash": "173f199189abcc530a7c95ff32ffd69f"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-notes-day3.md": {
+      "mtime": 1773784856.306992,
+      "size": 11118,
+      "hash": "885d8c1c35593247216406077159ef9f"
+    },
+    "/home/admin/.openclaw/workspace/learning/38-skills-installation-progress.md": {
+      "mtime": 1773430575.5581837,
+      "size": 4890,
+      "hash": "8a5af00ae4457c738c54d94000185ee6"
+    },
+    "/home/admin/.openclaw/workspace/learning/complete-46-sites-assessment.md": {
+      "mtime": 1773372854.81537,
+      "size": 18386,
+      "hash": "581d9c8c88aae2dff2968817eb24a5de"
+    },
+    "/home/admin/.openclaw/workspace/learning/MODEL-PERFORMANCE-ANALYSIS-2026-03-18.md": {
+      "mtime": 1773821811.2073064,
+      "size": 13781,
+      "hash": "04ad22a675a72781e3db69a20d7c36c6"
+    },
+    "/home/admin/.openclaw/workspace/learning/steipete-deep-analysis-v2.md": {
+      "mtime": 1773376873.4249892,
+      "size": 17967,
+      "hash": "e6880ed1190d7c0431234dabad4e9c95"
+    },
+    "/home/admin/.openclaw/workspace/learning/skills-installation-log.md": {
+      "mtime": 1773541656.7394366,
+      "size": 696,
+      "hash": "21f15fb1635d3391f98ff774476ddb18"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-hands-on-training.md": {
+      "mtime": 1773658654.8430533,
+      "size": 24169,
+      "hash": "48e37767a342418b7b3450618ed51b34"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-notes-day2.md": {
+      "mtime": 1773784258.6727593,
+      "size": 9215,
+      "hash": "1b4642a82183d3e5049b54f56376f944"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-day3.md": {
+      "mtime": 1773791510.428154,
+      "size": 33443,
+      "hash": "a41db86f81d3473c6aa7fa73c8c3dbe0"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-swas-deep-study.md": {
+      "mtime": 1773655732.9932923,
+      "size": 12352,
+      "hash": "ef6c474e017464e452e646c835de1bc2"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-enterprise-ops.md": {
+      "mtime": 1773658465.3382623,
+      "size": 25454,
+      "hash": "3520b282c2095394a5780fa4b01ac6e6"
+    },
+    "/home/admin/.openclaw/workspace/learning/wechat-reader-development-report.md": {
+      "mtime": 1773542959.8625557,
+      "size": 5081,
+      "hash": "cd2361e6e8876f136910a0592ce8ce30"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-ai-advanced-day1.md": {
+      "mtime": 1773786603.4931552,
+      "size": 13709,
+      "hash": "99a9e5dd8b4101e75d0f141eb5a7aa5f"
+    },
+    "/home/admin/.openclaw/workspace/learning/pskoett-deep-analysis-ultimate.md": {
+      "mtime": 1773378487.7277937,
+      "size": 16187,
+      "hash": "ca4731e2a81a342411b61309e0c4a4c7"
+    },
+    "/home/admin/.openclaw/workspace/learning/first-tier-skills-installation-progress.md": {
+      "mtime": 1773541421.3891273,
+      "size": 4653,
+      "hash": "c23145e1488f59d832de7cc0bb4f4fd4"
+    },
+    "/home/admin/.openclaw/workspace/learning/email-setup-guide.md": {
+      "mtime": 1773670518.1190264,
+      "size": 6396,
+      "hash": "6b8c12d6b5c0f0765c1e0231cf0cd0ab"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-email-api-guide.md": {
+      "mtime": 1773394880.011238,
+      "size": 20239,
+      "hash": "1ff736e44a6b99ab1795051c9a72c6db"
+    },
+    "/home/admin/.openclaw/workspace/learning/installation-status-report.md": {
+      "mtime": 1773377247.340986,
+      "size": 3779,
+      "hash": "097a31386568e1e1bba82dce5b35ed60"
+    },
+    "/home/admin/.openclaw/workspace/learning/steipete-deep-analysis-report.md": {
+      "mtime": 1773376416.91482,
+      "size": 10913,
+      "hash": "315ec81ddb164c4e4ba2eb7f84d72a8a"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-approval-api-guide.md": {
+      "mtime": 1773392412.9221103,
+      "size": 18054,
+      "hash": "8642c900324c92e16fabeef2c9ccc990"
+    },
+    "/home/admin/.openclaw/workspace/learning/pskoett-research-report.md": {
+      "mtime": 1773374662.389203,
+      "size": 5391,
+      "hash": "e94d84d0f28fe9df4c2d75f820508b9b"
+    },
+    "/home/admin/.openclaw/workspace/learning/steipete-deep-analysis-v3.md": {
+      "mtime": 1773377946.4421985,
+      "size": 12066,
+      "hash": "1afe539659611284eff25f36fc83dee4"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-checklist.md": {
+      "mtime": 1773384845.5752847,
+      "size": 10130,
+      "hash": "609d0b732a9ad84b5455976072d01400"
+    },
+    "/home/admin/.openclaw/workspace/learning/publishing-checklist.md": {
+      "mtime": 1773369713.0006816,
+      "size": 2247,
+      "hash": "64854a26246be52428cd8ae50f86f7c0"
+    },
+    "/home/admin/.openclaw/workspace/learning/knowledge-base.md": {
+      "mtime": 1773368147.9908712,
+      "size": 9425,
+      "hash": "ce6bac8bd9ede140c477f4ed86ea0d77"
+    },
+    "/home/admin/.openclaw/workspace/learning/aliyun-study-notes-day5.md": {
+      "mtime": 1773785754.1299736,
+      "size": 15950,
+      "hash": "c9fc4f85031355f20cb2602cf92a2306"
+    },
+    "/home/admin/.openclaw/workspace/learning/rate-limit-bypass-success.md": {
+      "mtime": 1773408089.9866512,
+      "size": 3660,
+      "hash": "29a1d672894e7a67c41ef98a1a143eaa"
+    },
+    "/home/admin/.openclaw/workspace/learning/pskoett-deep-analysis-report.md": {
+      "mtime": 1773374924.4881375,
+      "size": 11110,
+      "hash": "1c886ded933630f3c74ef807f2dc9f02"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-analytics-api-guide.md": {
+      "mtime": 1773405929.9127364,
+      "size": 24870,
+      "hash": "654831e36fcad92190a6a02701961b95"
+    },
+    "/home/admin/.openclaw/workspace/learning/ecosystem-contribution-guide.md": {
+      "mtime": 1773369750.688409,
+      "size": 5285,
+      "hash": "0970f8169ee615c88f7b5efa8e2f9c7e"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-phase1-summary.md": {
+      "mtime": 1773385046.9172223,
+      "size": 10891,
+      "hash": "94e527e814a0f1ba6ca0c54102f50458"
+    },
+    "/home/admin/.openclaw/workspace/learning/ecosystem-deep-assessment.md": {
+      "mtime": 1773371825.8926048,
+      "size": 14934,
+      "hash": "b47e281a82b9bfc5f5b1085df8a8a3ae"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-developer-assessment.md": {
+      "mtime": 1773378763.7981339,
+      "size": 12121,
+      "hash": "4e70635e0d9d9ce4cb73b7d5717d98c0"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-knowledge-base.md": {
+      "mtime": 1773385046.934224,
+      "size": 11774,
+      "hash": "33d8fbb5798a580180b2c38da1783884"
+    },
+    "/home/admin/.openclaw/workspace/learning/full-link-assessment-report.md": {
+      "mtime": 1773372359.7444036,
+      "size": 15644,
+      "hash": "7cd70f5e3fe12e08ac3305998daf59ac"
+    },
+    "/home/admin/.openclaw/workspace/learning/pskoett-assessment-report.md": {
+      "mtime": 1773373875.8153758,
+      "size": 9999,
+      "hash": "24d3119d8a5f835450cb799e01e16ae5"
+    },
+    "/home/admin/.openclaw/workspace/learning/feishu-contact-api-guide.md": {
+      "mtime": 1773390315.067551,
+      "size": 21605,
+      "hash": "d2d7ec9c0696fc9b374d34a72d3ba699"
+    },
+    "/home/admin/.openclaw/workspace/learning/six-skills-study-report.md": {
+      "mtime": 1773541835.284125,
+      "size": 9544,
+      "hash": "4cc8058da6b28489e71d80c7d5762edf"
+    },
+    "/home/admin/.openclaw/workspace/learning/38-skills-installation-plan.md": {
+      "mtime": 1773409070.2176769,
+      "size": 9876,
+      "hash": "ea6bb75a1a57c097a8152823c4d1f592"
+    },
+    "/home/admin/.openclaw/workspace/learning/simplify-and-harden-study-report.md": {
+      "mtime": 1773376038.659391,
+      "size": 9080,
+      "hash": "a9ca6d1d2d4d474acece97c8d5afc4b2"
+    },
+    "/home/admin/.openclaw/workspace/learning/complex-skill-design.md": {
+      "mtime": 1773369833.1845684,
+      "size": 7650,
+      "hash": "33070a0f7c9f0a9c3309c7a23d0078af"
+    }
+  },
+  "last_check": "2026-03-18T16:30:42.134026",
+  "running": true,
+  "pid": 125814,
+  "start_time": "2026-03-18T16:01:28.759245"
+}

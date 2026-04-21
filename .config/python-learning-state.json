@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "currentSession": null,
+  "config": {
+    "appId": "cli_a929676f8bf81cc7",
+    "appSecret": "xzvRRnKnFhAP4VbEhiBABx0YbNrlgzZs",
+    "targetUser": "ou_f4919832188bcc630f8f257497fa93a4",
+    "expectedDuration": 10800,
+    "stallThreshold": 3600,
+    "checkInterval": 300
+  },
+  "sessions": [
+    {
+      "id": "day_1_1773637257",
+      "day": "1",
+      "content": "Python 基礎語法",
+      "startTime": "2026-03-16T13:00:57.327768",
+      "expectedEndTime": "2026-03-16T16:00:57.327768",
+      "expectedDuration": 10800,
+      "status": "in_progress",
+      "lastActivity": "2026-03-16T13:00:57.327768"
+    },
+    {
+      "id": "day_1_1773637358",
+      "day": "1",
+      "content": "Python 基礎語法",
+      "startTime": "2026-03-16T13:02:38.553810",
+      "expectedEndTime": "2026-03-16T16:02:38.553810",
+      "expectedDuration": 10800,
+      "status": "in_progress",
+      "lastActivity": "2026-03-16T13:02:38.553810"
+    },
+    {
+      "id": "day_1_1773637415",
+      "day": "1",
+      "content": "Python 基礎語法",
+      "startTime": "2026-03-16T13:03:35.778776",
+      "expectedEndTime": "2026-03-16T16:03:35.778776",
+      "expectedDuration": 10800,
+      "status": "in_progress",
+      "lastActivity": "2026-03-16T13:03:35.778776"
+    },
+    {
+      "id": "day_2_1773637456",
+      "day": "2",
+      "content": "數據結構",
+      "startTime": "2026-03-16T13:04:16.717590",
+      "expectedEndTime": "2026-03-16T15:04:16.717590",
+      "expectedDuration": 7200,
+      "status": "in_progress",
+      "lastActivity": "2026-03-16T13:04:16.717590"
+    },
+    {
+      "id": "day_1_1773638147",
+      "day": "1",
+      "content": "Python 官方教程全站學習 - https://www.python.org",
+      "startTime": "2026-03-16T13:15:47.058625",
+      "expectedEndTime": "2026-03-16T16:15:47.058625",
+      "expectedDuration": 10800,
+      "status": "in_progress",
+      "lastActivity": "2026-03-16T13:15:47.058625"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_channel_list_only",
+  "name": "通道插件列表查看",
+  "trigger_signal": "claw:channel:list",
+  "executable_code": "openclaw channel list",
+  "description": "執行通道插件列表查詢，獲取註冊狀態與運行情況",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/sdk-channel-plugins.md",
+    "captured_at": "2026-04-20T02:44:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

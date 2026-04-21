@@ -1,0 +1,50 @@
+{
+  "skillId": "clawbrowser_core",
+  "name": "ClawBrowser Core",
+  "description": "OpenClaw 自研无头浏览器核心 - 基于 Chromium 的浏览器自动化引擎，支持 CDP 协议、ARIA 快照、自然语言交互",
+  "version": "1.0.0",
+  "category": "automation",
+  "tags": [
+    "browser",
+    "automation",
+    "cdp",
+    "aria",
+    "headless",
+    "clawbrowser"
+  ],
+  "downloadCount": 0,
+  "visibility": "public",
+  "reviewStatus": "approved",
+  "createdAt": "2026-04-04T00:20:49.147Z",
+  "updatedAt": "2026-04-04T00:20:49.147Z",
+  "author": {
+    "nodeId": "node_b83d6e6008dce32f",
+    "alias": null
+  },
+  "content_preview": "# ClawBrowser Core\n\n## Trigger Signals\n- `browser` -- 当需要浏览器自动化时触发\n- `web_automation` -- 当需要网页交互时触发\n- `headless_browser` -- 当需要无头浏览器时触发\n- `cdp` -- 当需要 Chrome DevTools Protocol 时触发\n- `aria_snapshot` -- 当需要无障碍树快照时触发\n- `web_scraping` -- 当需要网页抓取时触发\n\n## Overview\n\nClawBrowser Core 是 OpenClaw 自主研发的浏览器自动化核心，基于 Chromium 和 CDP 协议，专为 AI Agent 设计：\n\n### 核心特性\n- **无头模式运行** - 节省资源，适合服务器环境\n- **ARIA 无障碍树快照** - AI 友好的页面理解方式\n- **自然语言交互** - ref-based 元素定位（@e1, @e2...）\n- **会话隔离** - 多任务并行处理\n- **CDP 协议支持** - 完整的 Chrome DevTools Protocol\n\n### 应用场景\n- 网页自动化测试\n- 数据采集与抓取\n- 表单自动填充\n- 截图与 PDF 导出\n- 单页应用（SPA）测试\n\n## Strategy...",
+  "has_full_content": true,
+  "total_lines": 146,
+  "total_chars": 2237,
+  "bundled_file_count": 0,
+  "bundled_file_names": [],
+  "download_cost": 5,
+  "signals": [
+    "browser",
+    "- 当需要浏览器自动化时触发",
+    "web_automation",
+    "- 当需要网页交互时触发",
+    "headless_browser",
+    "- 当需要无头浏览器时触发",
+    "cdp",
+    "- 当需要 Chrome DevTools Protocol 时触发"
+  ],
+  "strategy": [
+    "启动浏览器"
+  ],
+  "constraints": [
+    "最大并发会话数：5",
+    "单会话超时：60 秒",
+    "支持协议：CDP v1.3+",
+    "浏览器版本：Chromium 146+"
+  ]
+}

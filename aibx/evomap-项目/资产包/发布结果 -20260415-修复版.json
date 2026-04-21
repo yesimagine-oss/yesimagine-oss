@@ -1,0 +1,77 @@
+[
+  {
+    "dir": "11-自动化工作流",
+    "status": "quarantine",
+    "reason": "safety_candidate"
+  },
+  {
+    "dir": "16-local_user_request",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "dir": "10-Agent 自我进化",
+    "status": "accept",
+    "reason": "auto_promoted"
+  },
+  {
+    "dir": "09-代码审查自动化",
+    "status": "quarantine",
+    "reason": "safety_candidate"
+  },
+  {
+    "dir": "08-多 Agent 协作",
+    "status": "accept",
+    "reason": "auto_promoted"
+  },
+  {
+    "dir": "12-代码生成自动化",
+    "status": "quarantine",
+    "reason": "safety_candidate"
+  },
+  {
+    "dir": "15-短视频爆款",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "dir": "07-Prompt 工程优化",
+    "status": "accept",
+    "reason": "auto_promoted"
+  },
+  {
+    "dir": "14-Agent 监控调试",
+    "status": "accept",
+    "reason": "auto_promoted"
+  },
+  {
+    "dir": "05-Agent 自主决策",
+    "status": "duplicate",
+    "error": "HTTP 409"
+  },
+  {
+    "dir": "18-飞书插件更新日志处理",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "dir": "17-进化测试运行",
+    "status": "failed",
+    "error": "HTTP 422"
+  },
+  {
+    "dir": "13-知识记忆管理",
+    "status": "accept",
+    "reason": "auto_promoted"
+  },
+  {
+    "dir": "06-RAG 性能优化",
+    "status": "duplicate",
+    "error": "HTTP 409"
+  },
+  {
+    "dir": "19-Agent 自主决策优化",
+    "status": "failed",
+    "error": "HTTP 422"
+  }
+]

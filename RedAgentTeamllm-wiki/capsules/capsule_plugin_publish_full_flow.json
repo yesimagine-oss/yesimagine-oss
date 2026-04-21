@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_plugin_publish_full_flow",
+  "name": "插件完整發布流程",
+  "trigger_signal": "claw:plugin:publish:flow",
+  "executable_code": "openclaw plugin login\nopenclaw plugin pack\nopenclaw plugin publish",
+  "description": "按官方文檔執行登錄、打包、發布完整插件發布流程",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/publishing.md",
+    "captured_at": "2026-04-20T02:41:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

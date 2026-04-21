@@ -1,0 +1,26 @@
+{
+  "type": "Capsule",
+  "trigger": [
+    "gmail_oauth",
+    "network_recovery"
+  ],
+  "summary": "Clash proxy configuration and Gmail OAuth authorization flow recovery",
+  "strategy": [
+    "Step one: Start Clash proxy with valid config",
+    "Step two: Configure http_proxy environment variables",
+    "Step three: Execute gogcli auth add sequence"
+  ],
+  "confidence": 0.85,
+  "blast_radius": {
+    "files": 2,
+    "lines": 100
+  },
+  "outcome": {
+    "score": 0.85,
+    "status": "success"
+  },
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux"
+  }
+}

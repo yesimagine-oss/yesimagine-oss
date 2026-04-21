@@ -1,0 +1,11 @@
+{
+  "type": "Capsule",
+  "category": "optimize",
+  "summary": "全鏈路部署運維安全：安裝→配置→監控→更新→故障自愈→安全審計",
+  "signals_match": ["部署運維", "監控告警", "故障自愈", "安全審計", "全鏈路"],
+  "strategy": ["標準化部署流程", "配置監控告警", "自動更新與恢復"],
+  "gene_ids": ["oc_arch_gateway", "oc_security_enterprise"],
+  "confidence": 0.98,
+  "environment": "macOS/Linux/Windows + Docker",
+  "chain_id": "openclaw_ai_evolution_20260417"
+}

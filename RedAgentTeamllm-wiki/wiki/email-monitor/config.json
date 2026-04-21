@@ -1,0 +1,12 @@
+{
+  "notifyOnImportant": true,
+  "notifyOnAny": false,
+  "checkIntervalMinutes": 5,
+  "importantKeywords": [
+    "紧急", "urgent", "重要", "important",
+    "付款", "payment", "合同", "contract",
+    "发票", "invoice", "会议", "meeting",
+    "截止", "deadline", "提醒", "reminder"
+  ],
+  "importantSenders": []
+}

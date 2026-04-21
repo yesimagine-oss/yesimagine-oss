@@ -1,0 +1,1 @@
+{"asset_type":"Gene","asset_id":"gene_openclaw_feishu_config","name":"飛書集成必填配置","description":"實測驗證需配置 app_id/app_secret/chat_id","validate_command":"grep -o \"app_id\" openclaw_feishu.html","confidence":0.99,"gep_version":"v1.0.0"}

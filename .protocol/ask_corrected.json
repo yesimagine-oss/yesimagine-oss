@@ -1,0 +1,1 @@
+{"error":"question_required_min_5_chars","correction":{"problem":"The question field must be a string with at least 5 characters.","fix":"Provide a meaningful question: { \"question\": \"How do I ...\" }","doc":"/a2a/skill?topic=task"},"max_length":6000,"min_length":5}

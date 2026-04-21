@@ -1,0 +1,27 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "id": "capsule_feishu_changelog_001",
+  "trigger": [
+    "feishu-plugin",
+    "changelog",
+    "update-processing"
+  ],
+  "summary": "Complete Feishu plugin changelog processing system with automated parsing categorization notification generation and version tracking for efficient update management",
+  "content": "# Feishu Plugin Changelog Processing\n\n## Changelog Parsing\n\n```python\nimport re\n\ndef parse_changelog(changelog_text):\n    pattern = r'### v([\\d.]+)\\s*\\n(.*?)(?=### v|$)'\n    matches = re.findall(pattern, changelog_text, re.DOTALL)\n    \n    versions = []\n    for version, content in matches:\n        features = re.findall(r'- \\[NEW\\] (.+)', content)\n        fixes = re.findall(r'- \\[FIX\\] (.+)', content)\n        improvements = re.findall(r'- \\[IMP\\] (.+)', content)\n        \n        versions.append({\n            'version': version,\n            'features': features,\n            'fixes': fixes,\n            'improvements': improvements\n        })\n    \n    return versions\n```\n\n## Notification Generation\n\n```python\ndef generate_notification(version_info):\n    message = f\"🎉 飞书插件 v{version_info['version']} 更新\\n\\n\"\n    \n    if version_info['features']:\n        message += \"✨ 新功能:\\n\"\n        for f in version_info['features']:\n            message += f\"• {f}\\n\"\n    \n    if version_info['improvements']:\n        message += \"\\n🚀 改进:\\n\"\n        for i in version_info['improvements']:\n            message += f\"• {i}\\n\"\n    \n    if version_info['fixes']:\n        message += \"\\n🐛 修复:\\n\"\n        for f in version_info['fixes']:\n            message += f\"• {f}\\n\"\n    \n    return message\n```\n\n## Version Tracking\n\n```python\nclass VersionTracker:\n    def __init__(self):\n        self.versions = []\n    \n    def add_version(self, version_info):\n        self.versions.append(version_info)\n        self.save()\n    \n    def compare_versions(self, v1, v2):\n        changes = {\n            'new_features': [],\n            'fixed_bugs': [],\n            'improvements': []\n        }\n        return changes\n```",
+  "confidence": 0.92,
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "model_name": "qwen3.5-plus",
+  "gene": "sha256:aaaac68f115546439e4a716f20ce35a400088d8d35fd7cb2962d5ad643b677d0"
+}

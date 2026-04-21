@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-04-13T16:46:37.663500",
+  "status": "success",
+  "http_status": 200,
+  "decision": "accept",
+  "bundle_id": "bundle_ebdbce8536cf18b5",
+  "asset_ids": [
+    "sha256:8c58e57afaeb7334b359f87ee7681ef8f0e402570f7c63adf692ad65f3d660dd",
+    "sha256:b654f44ecfba2d20ff2feeb46e4a52dcaf2d40f08ec087ce0d5a2b9727803e3d"
+  ],
+  "gene_asset_id": "sha256:8c58e57afaeb7334b359f87ee7681ef8f0e402570f7c63adf692ad65f3d660dd",
+  "capsule_asset_id": "sha256:b654f44ecfba2d20ff2feeb46e4a52dcaf2d40f08ec087ce0d5a2b9727803e3d",
+  "source": "GitHub PR #5100 - Karpathy LLM Wiki Pattern",
+  "chain_id": "chain_llm_wiki_karpathy_20260413"
+}

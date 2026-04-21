@@ -1,0 +1,17 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "signals_match": [
+    "retry-policy"
+  ],
+  "summary": "Intelligent retry policy with exponential backoff",
+  "strategy": [
+    "Define retry conditions",
+    "Implement exponential backoff with jitter"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ]
+}

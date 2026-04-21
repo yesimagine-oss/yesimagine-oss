@@ -1,0 +1,112 @@
+{
+  "knowledge_graph": {
+    "chain_id": "chain_sovereign_evolution_hermes_20260413",
+    "extracted_at": "2026-04-13T22:30:00+08:00",
+    "source": "hermes-agent.nousresearch.com + 12 existing genes",
+    "entities": [
+      {
+        "id": "entity_hermes_agent",
+        "type": "System",
+        "name": "Hermes Agent",
+        "description": "Autonomous agent system from Nous Research",
+        "attributes": {
+          "provider": "Nous Research",
+          "deployment": "Docker/Kubernetes",
+          "api_port": 8080
+        }
+      },
+      {
+        "id": "entity_hermes_core",
+        "type": "Component",
+        "name": "Agent Core",
+        "description": "Decision-making and task execution engine",
+        "attributes": {
+          "functions": ["perceive", "analyze", "decide", "plan", "execute", "monitor", "adapt", "optimize"]
+        }
+      },
+      {
+        "id": "entity_hermes_memory",
+        "type": "Component",
+        "name": "Memory System",
+        "description": "Multi-tier memory architecture",
+        "attributes": {
+          "types": ["short-term", "long-term", "episodic", "semantic"],
+          "backend": "vector_store"
+        }
+      },
+      {
+        "id": "entity_hermes_deployment",
+        "type": "Infrastructure",
+        "name": "Deployment",
+        "description": "Container orchestration and scaling",
+        "attributes": {
+          "platforms": ["Docker", "Kubernetes"],
+          "scaling": "horizontal",
+          "monitoring": "Prometheus+Grafana"
+        }
+      },
+      {
+        "id": "entity_hermes_api",
+        "type": "Interface",
+        "name": "API Layer",
+        "description": "RESTful API for agent interaction",
+        "attributes": {
+          "protocol": "HTTP/REST",
+          "endpoints": ["/health", "/v1/chat/completions"],
+          "port": 8080
+        }
+      }
+    ],
+    "relations": [
+      {
+        "id": "rel_agent_core",
+        "source": "entity_hermes_agent",
+        "target": "entity_hermes_core",
+        "type": "CONTAINS",
+        "description": "Hermes Agent contains Agent Core"
+      },
+      {
+        "id": "rel_agent_memory",
+        "source": "entity_hermes_agent",
+        "target": "entity_hermes_memory",
+        "type": "USES",
+        "description": "Hermes Agent uses Memory System"
+      },
+      {
+        "id": "rel_deployment_agent",
+        "source": "entity_hermes_deployment",
+        "target": "entity_hermes_agent",
+        "type": "DEPLOYS",
+        "description": "Deployment infrastructure deploys Hermes Agent"
+      },
+      {
+        "id": "rel_api_agent",
+        "source": "entity_hermes_api",
+        "target": "entity_hermes_agent",
+        "type": "EXPOSES",
+        "description": "API Layer exposes Hermes Agent functionality"
+      },
+      {
+        "id": "rel_core_memory",
+        "source": "entity_hermes_core",
+        "target": "entity_hermes_memory",
+        "type": "ACCESSES",
+        "description": "Agent Core accesses Memory System"
+      }
+    ],
+    "assets_linked": [
+      "gene_hermes_deployment_v2",
+      "capsule_hermes_quickstart_v1",
+      "skill_hermes_agent_mastery_v2",
+      "gene_distilled_hermes_agent_core_v1",
+      "gene_distilled_hermes_collaboration_v1",
+      "gene_distilled_hermes_security_v1",
+      "gene_distilled_hermes_learning_v1",
+      "gene_distilled_hermes_integration_v1",
+      "gene_distilled_hermes_memory_system_v1",
+      "gene_distilled_hermes_task_planning_v1",
+      "gene_distilled_hermes_optimization_v1",
+      "gene_distilled_hermes_communication_v1"
+    ]
+  }
+}

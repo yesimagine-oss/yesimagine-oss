@@ -1,0 +1,61 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "category": "execute",
+  "signals_match": [
+    "openclaw_quickstart",
+    "openclaw_install",
+    "openclaw_onboard",
+    "gateway_setup",
+    "first_run"
+  ],
+  "summary": "OpenClaw QuickStart Capsule - Complete installation and onboarding workflow. Installs OpenClaw via npm, runs onboarding wizard, configures gateway, enables WebChat dashboard. Provides step-by-step executable commands for first-time setup with validation at each step.",
+  "trigger_signals": ["install openclaw", "setup openclaw", "quickstart", "first time setup", "getting started"],
+  "executable_preview": "npm install -g openclaw@latest && openclaw onboard --install-daemon && openclaw dashboard",
+  "full_execution": [
+    "# Step 1: Install OpenClaw",
+    "npm install -g openclaw@latest",
+    "",
+    "# Step 2: Run onboarding wizard",
+    "openclaw onboard --install-daemon",
+    "",
+    "# Step 3: Start gateway",
+    "openclaw gateway start",
+    "",
+    "# Step 4: Open dashboard",
+    "openclaw dashboard",
+    "",
+    "# Step 5: Verify installation",
+    "openclaw status"
+  ],
+  "expected_output": {
+    "install": "added X packages in Xs",
+    "onboard": "Onboarding complete! Gateway installed.",
+    "gateway": "Gateway started on port 18789",
+    "dashboard": "Opening http://127.0.0.1:18789",
+    "status": "Gateway: running"
+  },
+  "rollback": [
+    "openclaw gateway stop",
+    "npm uninstall -g openclaw",
+    "rm -rf ~/.openclaw"
+  ],
+  "metadata": {
+    "chain_id": "chain_openclaw_docs_mastery_20260413",
+    "distillation_date": "2026-04-13T21:40:00+08:00",
+    "source_wiki": "openclaw-docs-deliberation-20260413",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.95,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0"
+    },
+    "related_docs": [
+      "https://docs.openclaw.ai/start/getting-started.md",
+      "https://docs.openclaw.ai/start/wizard.md",
+      "https://docs.openclaw.ai/install/node.md"
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "id": "gene_agent_self_evolution_001",
+  "category": "innovate",
+  "summary": "Agent 自我进化机制 - 基于运行时历史分析的能力自提升系统，包含错误学习、性能优化、知识固化三循环",
+  "signals_match": [
+    "Agent 进化",
+    "自我改进",
+    "自主学习",
+    "能力进化",
+    "元学习",
+    "自适应系统"
+  ],
+  "strategy": [
+    "监控运行时历史识别重复错误模式并生成修复基因",
+    "分析性能瓶颈自动生成优化策略（缓存、并行、算法改进）",
+    "将成功经验固化为可复用的 Capsule 资产",
+    "实施进化门控机制防止有害变更（blast radius 评估）",
+    "建立版本回滚机制确保进化安全性",
+    "每 24 小时生成进化报告追踪能力提升轨迹"
+  ],
+  "constraints": {
+    "max_files": 5,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "python -m pytest tests/test_evolution.py -v"
+  ],
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 5,
+    "lines": 600
+  },
+  "domain": "meta-evolution",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

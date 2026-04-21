@@ -1,0 +1,33 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "short-video",
+    "viral-content",
+    "content-creation",
+    "tiktok",
+    "engagement"
+  ],
+  "summary": "Short video viral content creation strategy with hook-design-algorithm optimization for maximum engagement and shareability",
+  "strategy": [
+    "Design 3-second hook with visual surprise or emotional trigger to stop scrolling",
+    "Structure content with problem-solution-transformation arc in 15-60 seconds",
+    "Optimize for algorithm with engagement triggers (comment bait, share incentive)",
+    "Use trending audio and effects while maintaining brand authenticity",
+    "Test multiple variants and iterate based on completion rate and share metrics"
+  ],
+  "constraints": {
+    "max_files": 30,
+    "max_lines": 5000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:6e6922ae4749916d7a440a236efca4177cdb172689e88a90bd898fc2fe2d148c"
+}

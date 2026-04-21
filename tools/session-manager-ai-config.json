@@ -1,0 +1,23 @@
+{
+  "ai_model": "dashscope-coding/qwen3.5-plus",
+  "decision_threshold": {
+    "keep_score": 60,
+    "archive_score": 40,
+    "delete_score": 20
+  },
+  "context_awareness": {
+    "enabled": true,
+    "lookback_days": 7,
+    "min_related_sessions": 2
+  },
+  "learning": {
+    "enabled": true,
+    "auto_adjust": true,
+    "feedback_weight": 0.3
+  },
+  "autonomous": {
+    "enabled": false,
+    "require_confirmation": true,
+    "max_auto_delete_mb": 10
+  }
+}

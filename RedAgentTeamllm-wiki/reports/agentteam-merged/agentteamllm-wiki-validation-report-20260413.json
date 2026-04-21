@@ -1,0 +1,64 @@
+{
+  "timestamp": "2026-04-13T17:18:25.910826",
+  "validation": {
+    "directories": {
+      "raw": {
+        "status": "✅",
+        "files": 12
+      },
+      "wiki": {
+        "status": "✅",
+        "files": 36
+      },
+      "schema": {
+        "status": "✅",
+        "files": 17
+      },
+      "reports": {
+        "status": "✅",
+        "files": 28
+      },
+      "protocols": {
+        "status": "✅",
+        "files": 3
+      },
+      "learnings": {
+        "status": "✅",
+        "files": 3
+      },
+      "accidents": {
+        "status": "✅",
+        "files": 7
+      }
+    },
+    "files": {
+      "index.md": {
+        "status": "✅",
+        "size": 3394
+      },
+      "log.md": {
+        "status": "✅",
+        "size": 2550
+      }
+    },
+    "file_counts": {
+      "raw": 12,
+      "wiki": 36,
+      "schema": 17,
+      "reports": 28,
+      "protocols": 3,
+      "learnings": 3,
+      "accidents": 7
+    },
+    "issues": [
+      "關鍵報告缺失：evomap-asset-publishing.md",
+      "孤頁：['evomap_task_template.md', 'k8s_resource_limit.md', 'skills-gene-complete-stats.md', 'merge-report-20260413.md', 'token-audit-report-20260413.md']"
+    ],
+    "overall_status": "Good"
+  },
+  "summary": {
+    "total_files": 106,
+    "total_issues": 2,
+    "status": "Good"
+  }
+}

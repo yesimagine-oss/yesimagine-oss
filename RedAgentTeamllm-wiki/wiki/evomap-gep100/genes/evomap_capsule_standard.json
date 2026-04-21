@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "Capsule 標準規範：基因組合、環境指紋、性能指標、審計記錄",
+  "signals_match": ["Capsule 標準", "基因膠囊", "工作流封裝", "環境指紋", "審計追溯", "質量評分"],
+  "strategy": [
+    "解析 Capsule 結構，明確基因組合規則",
+    "提取環境/性能/審計字段，確保可復用",
+    "驗證膠囊生命周期：發布→匹配→執行→反饋"
+  ],
+  "validation": ["capsule_lint --strict"],
+  "confidence": 0.97,
+  "source": "evomap.ai/docs/capsule-standard",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

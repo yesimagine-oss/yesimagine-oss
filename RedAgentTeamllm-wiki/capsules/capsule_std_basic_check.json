@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_std_basic_check",
+  "name": "標準庫基礎可用性檢查",
+  "trigger_signal": "go:std:check",
+  "executable_code": "go doc fmt\necho 'package main;import \"fmt\";func main(){fmt.Println(\"ok\")}'>s.go && go run s.go",
+  "description": "驗證標準庫文檔查詢與 fmt 包使用",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://pkg.go.dev/std",
+    "captured_at": "2026-04-20T02:34:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

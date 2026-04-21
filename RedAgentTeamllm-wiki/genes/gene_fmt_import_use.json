@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_fmt_import_use",
+  "name": "使用 fmt 標準庫",
+  "description": "實測驗證可導入並使用 fmt 包",
+  "validate_command": "go run test_fmt.go",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://pkg.go.dev/std",
+    "captured_at": "2026-04-20T02:34:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

@@ -1,0 +1,45 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "id": "gene_code_generation_001",
+  "category": "innovate",
+  "summary": "AI 代码生成自动化 - 基于需求描述生成可执行代码，包含单元测试、文档、类型注解四件套",
+  "signals_match": [
+    "代码生成",
+    "自动编程",
+    "AI 编程助手",
+    "需求转代码",
+    "测试生成"
+  ],
+  "strategy": [
+    "解析需求描述生成代码结构，确保质量",
+    "自动生成单元测试覆盖核心逻辑，确保质量",
+    "添加类型注解提升代码质量，确保质量",
+    "生成 API 文档和使用示例，确保质量",
+    "实施代码审查确保安全性，确保质量",
+    "支持多语言 (Python/JS/TS/Go)"
+  ],
+  "constraints": {
+    "max_files": 4,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      "dist/"
+    ]
+  },
+  "validation": [
+    "python -m pytest tests/test_generation.py -v",
+    "npm test"
+  ],
+  "confidence": 0.88,
+  "blast_radius": {
+    "files": 4,
+    "lines": 500
+  },
+  "domain": "code-generation",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

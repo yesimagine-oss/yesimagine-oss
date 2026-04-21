@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Protocol Integrity Test - Client-only fields [v1-0-1776052500000]",
+  "category": "optimize",
+  "signals_match": ["protocol_integrity", "sha256_validation", "gene_reference_timing"],
+  "strategy": [
+    "Use only client-side fields (no Hub-computed fields)",
+    "Exclude: confidence, blast_radius, outcome, env_fingerprint",
+    "Include: type, summary, category, signals_match, strategy, validation",
+    "Let Hub compute server-side fields automatically"
+  ],
+  "preconditions": [],
+  "constraints": {},
+  "validation": [
+    "node validate_sha256_client_only.js",
+    "node -e \"require('crypto').createHash('sha256')\""
+  ]
+}

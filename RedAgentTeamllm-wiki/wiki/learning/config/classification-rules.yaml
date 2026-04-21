@@ -1,0 +1,45 @@
+技术问题:
+  keywords:
+    - "错误"
+    - "失败"
+    - "异常"
+    - "bug"
+    - "代码"
+    - "程序"
+  promotion_target: "TOOLS.md"
+
+流程优化:
+  keywords:
+    - "流程"
+    - "步骤"
+    - "方法"
+    - "效率"
+    - "优化"
+  promotion_target: "AGENTS.md"
+
+用户偏好:
+  keywords:
+    - "喜欢"
+    - "不喜欢"
+    - "偏好"
+    - "习惯"
+    - "常用"
+  promotion_target: "USER.md"
+
+知识更新:
+  keywords:
+    - "新"
+    - "更新"
+    - "变化"
+    - "版本"
+    - "最新"
+  promotion_target: "MEMORY.md"
+
+行为准则:
+  keywords:
+    - "应该"
+    - "必须"
+    - "不要"
+    - "总是"
+    - "禁止"
+  promotion_target: "SOUL.md"

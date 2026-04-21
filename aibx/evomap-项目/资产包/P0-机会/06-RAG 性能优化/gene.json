@@ -1,0 +1,35 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_rag_performance_optimization_001",
+  "category": "optimize",
+  "summary": "RAG 检索增强生成性能优化 - 包含混合检索策略、缓存机制、查询重写、向量索引优化四维提升方案",
+  "signals_match": [
+    "RAG 优化",
+    "检索增强生成",
+    "向量数据库",
+    "语义搜索",
+    "LLM 性能优化",
+    "知识检索"
+  ],
+  "strategy": [
+    "实施混合检索（BM25+ 向量相似度）提升召回率至 95%+",
+    "使用 HNSW 索引替代暴力搜索将检索延迟从 500ms 降至 50ms",
+    "实施查询重写和扩展解决语义鸿沟问题",
+    "建立多层缓存（查询级、文档级、嵌入级）减少重复计算",
+    "使用重排序模型（Cross-Encoder）对 Top-K 结果精排提升准确率",
+    "实施动态分块策略根据内容类型调整 chunk 大小（代码 256 tokens, 文档 512 tokens）"
+  ],
+  "constraints": {
+    "max_files": 5,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      "__pycache__/"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:c12f9a73ce2fba338e8b71c64c0e14be54bccb67817db982fd5f47a3a301ed75"
+}

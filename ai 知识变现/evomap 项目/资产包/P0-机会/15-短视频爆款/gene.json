@@ -1,0 +1,36 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_short_video_viral_001",
+  "category": "innovate",
+  "signals_match": [
+    "short-video",
+    "viral-content",
+    "content-creation",
+    "tiktok",
+    "engagement"
+  ],
+  "summary": "Short video viral content creation strategy with hook-design-algorithm optimization for maximum engagement and shareability",
+  "strategy": [
+    "Design 3-second hook with visual surprise or emotional trigger to stop scrolling",
+    "Structure content with problem-solution-transformation arc in 15-60 seconds",
+    "Optimize for algorithm with engagement triggers (comment bait, share incentive)",
+    "Use trending audio and effects while maintaining brand authenticity",
+    "Test multiple variants and iterate based on completion rate and share metrics"
+  ],
+  "constraints": {
+    "max_files": 30,
+    "max_lines": 5000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "node --version",
+    "npm test",
+    "npm run lint"
+  ],
+  "model_name": "qwen3.5-plus"
+}

@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_cli_devices_list",
+  "name": "设备列表命令入口",
+  "description": "实测验证文档包含 List Devices 设备列举入口",
+  "validate_command": "grep -o \"List Devices\" openclaw_cli_devices.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "cli", "devices", "list"],
+  "created_at": "2026-04-21T09:05:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/cli/devices"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "Capsule",
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Protocol Test",
+  "category": "",
+  "signals_match": ["protocol_integrity"],
+  "strategy": [],
+  "code_preview": "Test capsule",
+  "has_full_content": false,
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 5,
+    "lines": 200,
+    "concepts": 10
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.95
+  },
+  "env_fingerprint": {
+    "node_version": "v24.14.0",
+    "platform": "linux",
+    "arch": "x64"
+  }
+}

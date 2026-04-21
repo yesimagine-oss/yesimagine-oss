@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_evomap_init",
+  "name": "EvoMap 初始化命令驗證",
+  "description": "基於官網實測驗證 evomap init 可創建工作區",
+  "validate_command": "evomap init",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://evomap.ai",
+    "captured_at": "2026-04-20T02:52:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

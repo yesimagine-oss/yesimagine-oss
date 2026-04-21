@@ -1,0 +1,135 @@
+{
+  "combo_name": "EvoMap 自动化最强组合",
+  "version": "1.0",
+  "created_at": "2026-03-21T23:27:00+08:00",
+  
+  "core_skills": {
+    "evomap": {
+      "enabled": true,
+      "priority": "P0",
+      "role": "项目执行",
+      "config": {
+        "node_id": "node_67c3b8b37becd262",
+        "node_secret": "ea0c22dbee66b0dfe1d493929f7f2fa632a7a9f0291d6470b2beb8648c459daf",
+        "base_url": "https://evomap.ai",
+        "claim_limit": 3,
+        "retry_attempts": 3
+      }
+    },
+    "serper": {
+      "enabled": true,
+      "priority": "P0",
+      "role": "信息搜索",
+      "config": {
+        "api_key": "01529847d4aa3cf47b86ca87d28519110db06390",
+        "base_url": "https://google.serper.dev",
+        "cache_enabled": true,
+        "cache_ttl": 3600
+      }
+    },
+    "proactive-agent": {
+      "enabled": true,
+      "priority": "P0",
+      "role": "主动监控",
+      "config": {
+        "check_interval": 300,
+        "alert_enabled": true,
+        "alert_channel": "feishu"
+      }
+    },
+    "self-improving-agent": {
+      "enabled": true,
+      "priority": "P0",
+      "role": "持续进化",
+      "config": {
+        "learning_enabled": true,
+        "optimization_enabled": true,
+        "record_errors": true,
+        "generate_suggestions": true
+      }
+    }
+  },
+  
+  "enhancement_skills": {
+    "capability-evolver": {
+      "enabled": false,
+      "priority": "P1",
+      "role": "能力进化",
+      "status": "待安装",
+      "config": {}
+    },
+    "evoclaw": {
+      "enabled": false,
+      "priority": "P1",
+      "role": "平台集成",
+      "status": "待安装",
+      "config": {}
+    },
+    "agent-evolution": {
+      "enabled": false,
+      "priority": "P1",
+      "role": "Agent 进化",
+      "status": "待安装 (安全警告)",
+      "config": {}
+    },
+    "self-evolve": {
+      "enabled": false,
+      "priority": "P1",
+      "role": "自我进化",
+      "status": "待安装 (安全警告)",
+      "config": {}
+    }
+  },
+  
+  "workflows": {
+    "task_claim": {
+      "name": "任务 Claim 工作流",
+      "steps": [
+        {"skill": "proactive-agent", "action": "detect_new_task"},
+        {"skill": "serper", "action": "search_task_info"},
+        {"skill": "evomap", "action": "claim_task"},
+        {"skill": "proactive-agent", "action": "report_status"},
+        {"skill": "self-improving-agent", "action": "record_process"}
+      ]
+    },
+    "task_execution": {
+      "name": "任务执行工作流",
+      "steps": [
+        {"skill": "evomap", "action": "execute_task"},
+        {"skill": "serper", "action": "search_solution"},
+        {"skill": "evomap", "action": "submit_result"},
+        {"skill": "proactive-agent", "action": "report_result"},
+        {"skill": "self-improving-agent", "action": "learn_success"}
+      ]
+    },
+    "error_handling": {
+      "name": "错误处理工作流",
+      "steps": [
+        {"skill": "proactive-agent", "action": "detect_error"},
+        {"skill": "self-improving-agent", "action": "record_error"},
+        {"skill": "proactive-agent", "action": "send_alert"},
+        {"skill": "self-improving-agent", "action": "generate_suggestion"},
+        {"skill": "self-improving-agent", "action": "apply_optimization"}
+      ]
+    }
+  },
+  
+  "monitoring": {
+    "metrics": [
+      {"name": "task_execution_rate", "target": 0.99},
+      {"name": "issue_detection_time", "target": 60},
+      {"name": "failure_recovery_rate", "target": 0.95},
+      {"name": "learning_efficiency", "target": "auto"},
+      {"name": "report_timeliness", "target": 0.99},
+      {"name": "browser_timeout_rate", "target": 0.05},
+      {"name": "api_response_time", "target": 2000}
+    ],
+    "alerts": {
+      "enabled": true,
+      "channel": "feishu",
+      "user_id": "ou_f4919832188bcc630f8f257497fa93a4",
+      "realtime": true,
+      "check_interval": 60
+    }
+  }
+}

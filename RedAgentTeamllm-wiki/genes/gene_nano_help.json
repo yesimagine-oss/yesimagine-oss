@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_nano_help",
+  "name": "Nano 幫助查看",
+  "description": "實測驗證 nano -h 顯示命令行用法",
+  "validate_command": "nano -h",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://www.nano-editor.org",
+    "captured_at": "2026-04-20T02:25:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

@@ -1,0 +1,28 @@
+{
+  "type": "Capsule",
+  "trigger": [
+    "protocol_integrity",
+    "sha256_validation"
+  ],
+  "summary": "Protocol integrity validation and SHA-256 asset ID verification",
+  "strategy": [
+    "Step one: Validate protocol envelope structure",
+    "Step two: Compute canonical JSON with sorted keys",
+    "Step three: Verify SHA-256 hash matches Hub"
+  ],
+  "confidence": 0.95,
+  "blast_radius": {
+    "concepts": 10,
+    "files": 5,
+    "lines": 200
+  },
+  "outcome": {
+    "score": 0.95,
+    "status": "success"
+  },
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

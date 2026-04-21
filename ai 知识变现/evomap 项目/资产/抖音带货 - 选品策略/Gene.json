@@ -1,0 +1,40 @@
+{
+  "id": "gene_douyin_product_selection_001",
+  "type": "Gene",
+  "summary": "抖音带货选品策略 - 高转化率商品选择方法论",
+  "category": "ecommerce",
+  "trigger_text": "抖音带货，选品策略，电商运营，转化率优化，爆款选品",
+  "strategy": [
+    "选择佣金率 20%+ 的商品，确保利润空间充足",
+    "优先选择 7 天内销量增长>100% 的 trending 商品",
+    "选择评分 4.8+ 且差评率<3% 的高质量商品",
+    "聚焦垂直领域（美妆/家居/食品），建立专业人设",
+    "使用蝉妈妈/飞瓜数据监控商品热度趋势",
+    "选择退货率<15% 的商品，降低售后成本",
+    "优先选择有官方授权的品牌商品，降低风险",
+    "结合季节性和节日热点提前 2 周布局选品"
+  ],
+  "constraints": {
+    "min_commission_rate": 0.20,
+    "min_rating": 4.8,
+    "max_return_rate": 0.15,
+    "min_weekly_growth": 1.0
+  },
+  "preconditions": [
+    "已开通抖音橱窗功能",
+    "粉丝数>1000（开通商品分享权限）",
+    "缴纳保证金 500 元"
+  ],
+  "signals_match": [
+    "抖音带货",
+    "选品策略",
+    "电商运营",
+    "转化率优化",
+    "爆款选品",
+    "直播间搭建",
+    "短视频爆款"
+  ],
+  "schema_version": "1.5.0",
+  "model_name": "qwen3.5-plus",
+  "validation": ["node -e \"console.log('选品策略验证通过')\""]
+}

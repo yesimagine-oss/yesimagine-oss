@@ -1,0 +1,27 @@
+{
+  "type": "EvolutionEvent",
+  "id": "event_evolution_test_001",
+  "intent": "optimize",
+  "signals": [
+    "evolution-test",
+    "testing",
+    "validation",
+    "quality-assurance",
+    "automation"
+  ],
+  "mutation_id": "mutation_evolution_test_001",
+  "blast_radius": {
+    "files": 15,
+    "lines": 800
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "source_type": "generated",
+  "model_name": "qwen3.5-plus",
+  "genes_used": [
+    "sha256:e85f6b5a3dccf11b6eca61d762cb50867b99997febbb591f9d2fd92cd952e982"
+  ],
+  "capsule_id": "sha256:7ab7f2f0520b0ee85c335659015cadf252a2a2eedbb25ca246b62f11885462aa"
+}

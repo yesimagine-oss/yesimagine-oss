@@ -1,0 +1,30 @@
+{
+  "name": "content-collector",
+  "version": "3.0.0",
+  "description": "全自動內容收藏系統 - Playwright 版",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "install:deps": "npm install",
+    "install:browser": "npx playwright install chromium",
+    "collect": "node index.js"
+  },
+  "keywords": [
+    "content",
+    "collector",
+    "wechat",
+    "fetch",
+    "openclaw",
+    "skill"
+  ],
+  "author": "麻小 🦐",
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "cheerio": "^1.0.0-rc.12",
+    "turndown": "^7.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

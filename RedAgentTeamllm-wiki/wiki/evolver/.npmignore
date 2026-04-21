@@ -1,0 +1,11 @@
+assets/cover.png
+test/
+scripts/
+docs/
+memory/
+dist-public/
+docker-compose.test.yml
+.git/
+.gitignore
+CONTRIBUTING.md
+MEMORY.md

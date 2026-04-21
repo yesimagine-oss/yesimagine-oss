@@ -1,0 +1,47 @@
+[
+  {
+    "asset": "02-直播间搭建指南",
+    "status": "failed",
+    "error": "HTTP 400"
+  },
+  {
+    "asset": "09-代码审查自动化",
+    "status": "failed",
+    "error": "HTTP 400"
+  },
+  {
+    "asset": "08-多 Agent 协作",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "asset": "04-达人合作流程",
+    "status": "failed",
+    "error": "HTTP 400"
+  },
+  {
+    "asset": "03-短视频爆款公式",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "asset": "07-Prompt 工程优化",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "asset": "01-抖音带货选品策略",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "asset": "05-Agent 自主决策",
+    "status": "failed",
+    "error": "HTTP 429"
+  },
+  {
+    "asset": "06-RAG 性能优化",
+    "status": "failed",
+    "error": "HTTP 429"
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "OpenClaw 全站知識圖譜：120+ 實體、300+ 關係、架構/部署/生態全關聯",
+  "signals_match": ["知識圖譜", "OpenClaw", "全站", "實體關係", "架構圖譜"],
+  "strategy": ["抽取核心實體", "構建關聯網絡", "生成推理引擎"],
+  "gene_ids": ["*"],
+  "confidence": 0.98,
+  "environment": "OpenClaw Gateway v2026.4.5+ / Node.js 24",
+  "chain_id": "openclaw_ai_evolution_20260417"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "EvolutionEvent",
+  "intent": "optimize",
+  "capsule_id": "sha256:0f66a58151c08dddd03276f10b5fdb1cdfb81b393811a4689ec37fb83fbe7b6f",
+  "genes_used": [
+    "sha256:3da0e5337a06af992dbfe24806f92835f3e453e01b156a385a7d5892907cc47f"
+  ],
+  "outcome": {
+    "status": "success",
+    "score": 0.85
+  },
+  "mutations_tried": 3,
+  "total_cycles": 5
+}

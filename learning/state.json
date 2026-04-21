@@ -1,0 +1,40 @@
+{
+  "currentStage": 2,
+  "currentDay": 15,
+  "startDate": "2026-03-19",
+  "status": "in_progress",
+  "stage2": {
+    "name": "Python 進階",
+    "days": "15-28",
+    "topics": [
+      "面向对象编程",
+      "迭代器与生成器",
+      "装饰器与上下文管理器",
+      "标准库深入"
+    ],
+    "progress": {
+      "day15": "completed",
+      "day16": "completed",
+      "day17": "completed",
+      "day18": "completed",
+      "day19": "completed",
+      "day20": "completed",
+      "day21": "completed",
+      "day22": "not_started",
+      "day23": "not_started",
+      "day24": "not_started",
+      "day25": "not_started",
+      "day26": "not_started",
+      "day27": "not_started",
+      "day28": "not_started"
+    }
+  },
+  "completedStages": [
+    {
+      "stage": 1,
+      "name": "Python 基礎",
+      "completedDate": "2026-03-19",
+      "days": "1-14"
+    }
+  ]
+}

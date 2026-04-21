@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_harness_status",
+  "name": "OpenClaw Harness 狀態查詢",
+  "description": "實測驗證 openclaw harness status 可顯示進程、資源、運行狀態",
+  "validate_command": "openclaw harness status default-isolation",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/agent-harness.md",
+    "captured_at": "2026-04-20T02:46:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

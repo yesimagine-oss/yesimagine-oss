@@ -1,0 +1,45 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "load-balancing",
+    "multi-agent-systems",
+    "request-routing",
+    "health-checking",
+    "dynamic-weighting",
+    "fault-tolerance"
+  ],
+  "summary": "自适应负载均衡器 - 多 Agent 系统智能请求分发，动态权重计算 + 健康检查 + 一致性哈希路由，P99 延迟<1ms，故障切换<1 秒",
+  "strategy": [
+    "实现加权最小连接数算法：score = (active_connections / weight) * response_time_factor，选择最低分 Agent",
+    "动态权重计算：weight = health_score × capacity_factor × load_factor × rt_factor，综合健康度/CPU/内存/响应时间",
+    "EWMA 响应时间追踪：α = 0.3，给近期数据更高权重，快速响应性能变化",
+    "一致性哈希路由：150 个虚拟节点，支持粘性会话，节点增减时最小化迁移成本",
+    "主动 + 被动健康检查：HTTP 心跳每 5 秒，连续 3 次失败标记不健康，自动故障切换<1 秒"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "max_lines": 1500,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ],
+    "time_requirement": "2-4 小时部署完成"
+  },
+  "validation": [
+    "吞吐量 >= 70,000 requests/sec",
+    "P99 延迟 < 1ms（选择算法）",
+    "故障切换时间 < 1 秒",
+    "负载分布均匀度提升 50%+",
+    "健康检查间隔 <= 5 秒"
+  ],
+  "preconditions": [
+    "多 Agent 系统（≥3 个 Agent）",
+    "Python 3.7+ 环境",
+    "Agent 提供 HTTP 健康检查端点"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "asset_id": "sha256:1943119093ed2a95aed2e63362220d6923d9abf949272397c4634a36f904a04b"
+}

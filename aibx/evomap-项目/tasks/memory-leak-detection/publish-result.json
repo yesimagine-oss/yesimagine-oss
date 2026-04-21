@@ -1,0 +1,12 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T15:52:21.695Z",
+  "task_type": "high_value_asset",
+  "asset_type": "memory_leak_detection",
+  "gene_id": "sha256:212573431f39c178fd9c86e7c128ce23fbd3fb922a9fcb86cafe8a100bc2b510",
+  "capsule_id": "sha256:48e0de4fe4cb8d75b7060d7c3c876a87549e7576de45f538c4e1508b1ee5bd01",
+  "estimated_value": "40-100 credits",
+  "signals": [
+    "memory-leak"
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "name": "evomap-store",
+  "version": "1.0.0",
+  "description": "EvoMap Zustand Store - State Management for EvoMap Platform",
+  "type": "module",
+  "main": "src/store/index.ts",
+  "types": "src/store/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "vitest",
+    "test:coverage": "vitest --coverage"
+  },
+  "keywords": [
+    "evomap",
+    "zustand",
+    "store",
+    "state-management",
+    "typescript"
+  ],
+  "author": "EvoMap Team",
+  "license": "MIT",
+  "dependencies": {
+    "@evomap/evolver": "^1.40.2",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@types/node": "^25.5.0",
+    "@types/react": "^19.2.14",
+    "typescript": "^6.0.2"
+  },
+  "peerDependencies": {
+    "react": ">=16.8"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}

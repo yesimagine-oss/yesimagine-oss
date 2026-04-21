@@ -1,0 +1,51 @@
+{
+  "last_action": {
+    "action_id": "act_1775261459680_6d9496cb",
+    "signal_key": "errsig_norm:358f8750|log_error|repeated_tool_usage:exec",
+    "signals": [
+      "log_error",
+      "errsig:**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 08:10:10] ============================================================ [2026-04-04 08:10:10] EvoMap 节点心跳开始 [2026-04-04 08:10:10] 新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 08:10:11] ✅ 成功 (Status: active, Cred",
+      "repeated_tool_usage:exec"
+    ],
+    "mutation_id": "mut_1775261459679",
+    "mutation_category": "repair",
+    "mutation_risk_level": "low",
+    "personality_key": "rigor=1.0|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9",
+    "personality_state": {
+      "type": "PersonalityState",
+      "rigor": 1,
+      "creativity": 0.35,
+      "verbosity": 0.25,
+      "risk_tolerance": 0.4,
+      "obedience": 0.85
+    },
+    "gene_id": "gene_gep_repair_from_errors",
+    "gene_category": "repair",
+    "hypothesis_id": "hyp_1775261459679_7b83bd2f",
+    "capsules_used": [
+      "capsule_1770477654236"
+    ],
+    "had_error": true,
+    "created_at": "2026-04-04T00:10:59.680Z",
+    "outcome_recorded": false,
+    "baseline_observed": {
+      "agent": "main",
+      "session_scope": null,
+      "drift_enabled": false,
+      "review_mode": false,
+      "dry_run": false,
+      "system_health": "Uptime: 550.7h | Node: v24.14.0 | Agent RSS: 56.1MB | Disk: 47% (20.6G free) | Node Processes: 6 | Integrations: Nominal",
+      "mood": "Mood: Unknown",
+      "scan_ms": 48,
+      "memory_size_bytes": 0,
+      "recent_error_count": 0,
+      "node": "v24.14.0",
+      "platform": "linux",
+      "cwd": "/home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/evolver",
+      "evidence": {
+        "recent_session_tail": "--- SESSION (69f6922b-3e7f-493b-a61c-e009f98534d6.jsonl) ---\n**ASSISTANT**:  现在进行 AI 决策型进化，创建突破性的 429 解决方案：  [TOOL: exec]\n\n--- SESSION (49af1d5b-fb33-4bad-aaa9-43299eb66d7f.jsonl) ---\n**USER**: [cron:evo-node-heartbeat EvoMap 节点心跳（API 调用）] python3 \"/home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/lib/node_heartbeat.py\" Current time: Saturday, April 4th, 2026 — 8:10 AM (Asia/Shanghai)\n**ASSISTANT**:  I see the EvoMap node heartbeat cron job is scheduled to run. Let me check the execution status and results of this heartbeat script.  [TOOL: exec]\n**TOOLRESULT**: Command still running (session neat-kelp, pid 664499). Use process (list/poll/log/write/kill/clear/remove) for follow-up.\n**ASSISTANT**:  [TOOL: process]\n**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 08:10:10] ============================================================ [2026-04-04 08:10:10] EvoMap 节点心跳开始 [2026-04-04 08:10:10]  新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 08:10:11]   ✅ 成功 (Status: active, Credits: 0, Tasks: 0, Work: 20) [2026-04-04 08:10:11]   ⏳\n\n--- SESSION (cc7e3eb3-43f8-44c1-884a-e73e5bdcdaf9.jsonl) ---\n**USER**: [cron:evo-node-heartbeat EvoMap 节点心跳（API 调用）] python3 \"/home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/lib/node_heartbeat.py\" Current time: Saturday, April 4th, 2026 — 8:01 AM (Asia/Shanghai)\n\n--- SESSION (a9ab073d-bf3d-4302-818f-2040d10eaadb.jsonl) ---\n**USER**: [cron:weather-daily-group 群组天气预报] 执行群组天气预报播报：python3 /home/admin/.openclaw/workspace/tools/weather-daily-wttr.py Current time: Saturday, April 4th, 2026 — 8:00 AM (Asia/Shanghai) Return your summary as plain text; it will be delivered automatically. If the task explicitly calls for messaging a speci\n**ASSISTANT**:  [TOOL: exec]\n**TOOLRESULT**: [2026-04-04 08:00:59] ================================================== [2026-04-04 08:00:59] 🌤️  开始每日天气预报播报（wttr.in） [2026-04-04 08:00:59] 📊 获取天气数据：济南, 威海 [2026-04-04 08:01:03] 📝 构建天气报告 [2026-04-04 08:01:03] 🔑 获取飞书 Token [2026-04-04 08:01:04] 📤 发送到群组 oc_55a027a0be1c6252a89177256f2210b9 [2026-\n**ASSISTANT**:  ✅ 群组天气预报播报已完成 **执行时间**: 2026-04-04 08:00:59   **播报城市**: 济南、威海   **发送目标**: 飞书群组 (oc_55a027a0be1c6252a89177256f2210b9)   **状态**: 消息已成功发送\n\n--- SESSION (1f7cd1f4-8f62-44cb-9eff-8dcc07f403b3.jsonl) ---\n**USER**: [cron:evo-node-heartbeat EvoMap 节点心跳（API 调用）] python3 \"/home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/lib/node_heartbeat.py\" Current time: Saturday, April 4th, 2026 — 7:50 AM (Asia/Shanghai)\n**ASSISTANT**:  [TOOL: exec]\n**TOOLRESULT**: Command still running (session tide-basil, pid 661494). Use process (list/poll/log/write/kill/clear/remove) for follow-up.\n**ASSISTANT**:  [TOOL: process]\n**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 07:50:28] ============================================================ [2026-04-04 07:50:28] EvoMap 节点心跳开始 [2026-04-04 07:50:28]  新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 07:50:30]   ✅ 成功 (Status: active, Credits: 0, Tasks: 0, Work: 20) [2026-04-04 07:50:30]   ⏳\n**ASSISTANT**:  ✅ **EvoMap 节点心跳执行成功** | 节点 | 状态 | 积分 | 可用任务 | 可用工作 | |------|------|------|---------|---------| | 新节点 `node_cdd0bc78f3a6d99b` | ✅ active | 0 | 0 | 20 | | 旧节点 `node_67c3b8b37becd262` | ✅ active | 10 | 0 | 20 | **执行时间**: 07:50:28 - 07:50:46 (18 秒)   **成功率**: 2/2 (100%)   **连续失败**: 0/0 两个节点均健康在线，无待领取任\n\n--- SESSION (05f9f766-ab65-4ab4-8ae6-1d4947f091f9.jsonl) ---\n**TOOLRESULT**: Successfully replaced text in /home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/lib/node_heartbeat.py.\n**ASSISTANT**:  [TOOL: edit]\n**TOOLRESULT**: Successfully replaced text in /home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/lib/node_heartbeat.py.\n**ASSISTANT**:  [TOOL: edit]\n**TOOLRESULT**: Successfully replaced text in /home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/lib/node_heartbeat.py.\n**ASSISTANT**:  [TOOL: exec]\n**TOOLRESULT**: Command still running (session nimble-cove, pid 659332). Use process (list/poll/log/write/kill/clear/remove) for follow-up.\n**ASSISTANT**:  [TOOL: process]\n**TOOLRESULT**: ✅ 使用代理 (Clash 运行中) [2026-04-04 07:41:10] ============================================================ [2026-04-04 07:41:10] EvoMap 节点心跳开始 [2026-04-04 07:41:10]  新节点: node_cdd0bc78f3a6d99b (连续失败：0) [2026-04-04 07:41:11]   ✅ 成功 (Status: active, Credits: 0, Tasks: 0, Work: 20) [2026-04-04 07:41:11]   ⏳\n**ASSISTANT**:  [TOOL: exec]\n**TOOLRESULT**: {   \"node_cdd0bc78f3a6d99b\": 0,   \"node_67c3b8b37becd262\": 0 }\n**ASSISTANT**:  ## ✅ EvoMap 节点心跳已修复 ### 🔍 问题诊断 **原因**：两个节点连续调用触发平台速率限制（HTTP 429） - EvoMap 限制：**6 次/分钟** - 原脚本：两个节点无延迟连续调用 ### 🛠️ 修复内容 | 修复项 | 说明 | |--------|------| | **节点间延迟** | 添加 15 秒等待，避免连续调用触发限流 | | **失败计数跟踪** | 记录每个节点连续失败次数 | | **自动跳过机制** | 连续失败 3 次后暂时跳过，避免日志污染 | | **成功重置** | 成功调用后重置失败计数 | ### 📊 当前状态 | 节点",
+        "today_log_tail": "[MISSING] /home/admin/.openclaw/workspace/ai 知识变现/evomap 项目/evolver/memory/2026-04-04.md"
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goToken - Token 節省監控</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 10px; padding: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); }
+        h1 { color: #667eea; margin-bottom: 10px; }
+        .subtitle { color: #666; margin-bottom: 30px; }
+        .stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-bottom: 30px; }
+        .stat-card { background: #f8f9fa; padding: 20px; border-radius: 8px; border-left: 4px solid #667eea; }
+        .stat-card h3 { color: #666; font-size: 14px; margin-bottom: 10px; }
+        .stat-card .value { font-size: 32px; font-weight: bold; color: #333; }
+        .stat-card .unit { font-size: 14px; color: #999; }
+        .highlight { border-left-color: #48bb78; }
+        .highlight .value { color: #48bb78; }
+        .warning { border-left-color: #ed8936; }
+        .warning .value { color: #ed8936; }
+        .progress { background: #e2e8f0; border-radius: 10px; height: 20px; margin: 20px 0; overflow: hidden; }
+        .progress-bar { background: linear-gradient(90deg, #667eea, #48bb78); height: 100%; transition: width 0.5s; }
+        .misses { background: #fff5f5; padding: 15px; border-radius: 8px; margin-top: 20px; }
+        .misses h3 { color: #c53030; margin-bottom: 10px; }
+        .misses ul { list-style: none; }
+        .misses li { padding: 5px 0; color: #666; }
+        .footer { margin-top: 30px; text-align: center; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦞 goToken 監控看板</h1>
+        <p class="subtitle">Token 節省實時統計</p>
+        
+        <div class="stats">
+            <div class="stat-card">
+                <h3>總請求數</h3>
+                <div class="value" id="total">-</div>
+                <div class="unit">requests</div>
+            </div>
+            <div class="stat-card highlight">
+                <h3>緩存命中率</h3>
+                <div class="value" id="hitrate">-%</div>
+                <div class="unit">target ≥75%</div>
+            </div>
+            <div class="stat-card highlight">
+                <h3>節省 Token</h3>
+                <div class="value" id="saved">-</div>
+                <div class="unit">tokens</div>
+            </div>
+            <div class="stat-card warning">
+                <h3>節省金額</h3>
+                <div class="value" id="cost">¥-</div>
+                <div class="unit">CNY</div>
+            </div>
+        </div>
+        
+        <h3>命中率進度</h3>
+        <div class="progress">
+            <div class="progress-bar" id="progressbar" style="width: 0%"></div>
+        </div>
+        
+        <div class="misses">
+            <h3>🔍 未命中問題 (最近 5 個)</h3>
+            <ul id="misseslist">
+                <li>暫無數據</li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>最後更新：<span id="lastupdate">-</span></p>
+            <p>goToken v1.0.2 | 每 30 秒自動刷新</p>
+        </div>
+    </div>
+    
+    <script>
+        async function fetchMetrics() {
+            try {
+                const response = await fetch('/home/admin/.openclaw/workspace/goToken/logs/metrics.json');
+                const data = await response.json();
+                
+                document.getElementById('total').textContent = data.total_requests;
+                document.getElementById('hitrate').textContent = data.hit_rate + '%';
+                document.getElementById('saved').textContent = data.cache_hits * 800;
+                document.getElementById('cost').textContent = '¥' + (data.cache_hits * 800 * 0.002 / 1000).toFixed(2);
+                document.getElementById('progressbar').style.width = Math.min(data.hit_rate, 100) + '%';
+                document.getElementById('lastupdate').textContent = new Date().toLocaleString('zh-CN');
+            } catch (e) {
+                console.log('Waiting for metrics...');
+            }
+        }
+        
+        fetchMetrics();
+        setInterval(fetchMetrics, 30000);
+    </script>
+</body>
+</html>

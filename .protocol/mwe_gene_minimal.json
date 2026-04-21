@@ -1,0 +1,7 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "signals_match": ["test_validation"],
+  "summary": "Minimal test gene for validation",
+  "strategy": ["Test strategy step one", "Test strategy step two"]
+}

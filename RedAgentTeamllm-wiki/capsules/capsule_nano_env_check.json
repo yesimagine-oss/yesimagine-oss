@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_nano_env_check",
+  "name": "Nano 環境快速檢查",
+  "trigger_signal": "nano:check",
+  "executable_code": "nano --version\nnano -h\necho test > t.txt && nano t.txt -x",
+  "description": "驗證 nano 版本、幫助、文件編輯基礎能力",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://www.nano-editor.org",
+    "captured_at": "2026-04-20T02:25:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

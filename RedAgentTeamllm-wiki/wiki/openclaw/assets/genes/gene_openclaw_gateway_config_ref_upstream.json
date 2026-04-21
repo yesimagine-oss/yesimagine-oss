@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_gateway_config_ref_upstream",
+  "name": "上游服务器配置入口",
+  "description": "实测验证文档包含 Upstream Servers 配置参考入口",
+  "validate_command": "grep -o \"Upstream Servers\" openclaw_gateway_config_ref.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "configuration-reference", "upstream"],
+  "created_at": "2026-04-21T09:09:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/configuration-reference"
+}

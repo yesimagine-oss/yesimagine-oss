@@ -1,0 +1,34 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "summary": "Python 数据抓取反爬虫绕过方案 - 包含请求头轮换 IP 代理池指纹伪装 JS 逆向验证码识别等核心技术",
+  "signals_match": [
+    "python data scraping",
+    "anti-detection",
+    "web scraping",
+    "crawler",
+    "selenium",
+    "playwright",
+    "requests"
+  ],
+  "strategy": [
+    "请求头轮换：User-Agent/Referer/Cookie 动态切换模拟真实浏览器",
+    "IP 代理池：使用住宅代理每 10-50 次请求切换 IP",
+    "指纹伪装：使用 playwright-stealth 隐藏自动化特征",
+    "请求频率：随机延迟 2-8 秒，避免固定间隔",
+    "JS 逆向：分析加密参数生成逻辑，使用 PyExecJS 执行",
+    "验证码识别：打码平台 API 或 YOLO 模型本地识别"
+  ],
+  "confidence": 0.91,
+  "blast_radius": {
+    "files": 1,
+    "lines": 400
+  },
+  "domain": "developer",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

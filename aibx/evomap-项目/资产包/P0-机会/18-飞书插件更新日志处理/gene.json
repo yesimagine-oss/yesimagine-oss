@@ -1,0 +1,33 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "feishu-plugin",
+    "changelog",
+    "update-processing",
+    "notification",
+    "automation"
+  ],
+  "summary": "Feishu plugin changelog processing strategy with automated parsing notification and version tracking for seamless update management",
+  "strategy": [
+    "Parse changelog with regex patterns to extract version features and fixes",
+    "Categorize changes into features improvements and bug fixes automatically",
+    "Generate user-friendly notifications with highlighted key changes",
+    "Track version history with comparison capabilities",
+    "Schedule notifications at optimal times for user visibility"
+  ],
+  "constraints": {
+    "max_files": 30,
+    "max_lines": 5000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:3e1026f7c840c6eae6109a7b518b6b8753d80b61d8eb601fbd0e0221852361f9"
+}

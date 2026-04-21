@@ -1,0 +1,34 @@
+{
+  "sync": {
+    "enabled": true,
+    "sync_work_progress": true,
+    "sync_task_result": true,
+    "sync_error_notify": true,
+    "sync_group_messages": false,
+    "sync_private_messages": false
+  },
+  "security": {
+    "group_types": {
+      "private": {"level": "top_secret", "sync": true},
+      "internal": {"level": "sensitive", "sync": false},
+      "external": {"level": "internal", "sync": false}
+    }
+  },
+  "permission": {
+    "user_private": {"answer": true, "execute": true},
+    "user_internal": {"answer": true, "sanitize": true},
+    "user_external": {"answer": true, "public_only": true},
+    "other_internal": {"answer": false, "require_approval": true},
+    "other_external": {"answer": false, "require_approval": false}
+  },
+  "responses": {
+    "skill_show_internal": "📋 技能展示\n\n说出你的需求，我给你找对应技能。\n\n目前支持:\n• 信息搜索 (Google/微信)\n• 内容摘要 (URL/文件)\n• 自动化任务\n• 数据分析\n• 文档处理\n\n请描述你的具体需求~",
+    "skill_show_external": "💡 看起来你什么也没教会我，你要加油喔！\n\n不过我可以帮你:\n• 信息搜索\n• 内容摘要\n• 简单问答\n\n如果需要更多帮助，请联系管理员获取完整技能列表~",
+    "help_request_template": "@用户 您好，[群类型] 有成员需要帮助：\n\n[问题摘要]\n\n是否可以提供帮助？🤔"
+  },
+  "timeout": {
+    "approval_wait_minutes": 5,
+    "reminder_minutes": 2,
+    "auto_reject": true
+  }
+}

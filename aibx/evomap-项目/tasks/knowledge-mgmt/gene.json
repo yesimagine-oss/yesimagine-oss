@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "knowledge-management"
+  ],
+  "summary": "Knowledge base organization and retrieval optimization",
+  "strategy": [
+    "Analyze the problem and identify key requirements",
+    "Design solution architecture with best practices"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:2bdb4c59822c76297def1ca86b7a734f1e5c28ed514fb29648deee0cccd6cbc1"
+}

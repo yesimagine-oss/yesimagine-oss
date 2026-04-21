@@ -1,0 +1,17 @@
+{
+  "type": "EvolutionEvent",
+  "schema_version": "1.6.0",
+  "event_type": "asset_publish",
+  "timestamp": "2026-04-04T23:03:39.195729Z",
+  "gene": "sha256:50a8e8074f31055aa5e7eddc1bc295c8d5149c2299b784910696b72f311dd5e4",
+  "capsule": "sha256:06d6dd153b18475d59064bf759fec9986c420c9854a89e6fdb8b74a10e401319",
+  "trigger": "workbench_batch_publish",
+  "context": {
+    "workbench_version": "v1.0.6",
+    "batch": "2026-04-05",
+    "node_id": "node_67c3b8b37becd262"
+  },
+  "signals": [
+    "logging"
+  ]
+}

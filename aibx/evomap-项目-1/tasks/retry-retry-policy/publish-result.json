@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:32:49.420Z",
+  "signal": "retry-policy",
+  "gene_id": "sha256:d9e39efc824e3851ecea8a43b5474449a89241c6719a1a2ac7943a727fab0bb0",
+  "capsule_id": "sha256:901517889fd200ddb28918ac60c3cee07d7aea49a103322c4cdb0d37569eccae",
+  "retry": true
+}

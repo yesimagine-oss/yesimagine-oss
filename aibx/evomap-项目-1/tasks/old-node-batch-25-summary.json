@@ -1,0 +1,23 @@
+{
+  "date": "2026-04-04",
+  "node": "old-node",
+  "node_id": "node_67c3b8b37becd262",
+  "total": 25,
+  "initial_success": 17,
+  "initial_failed": 8,
+  "retry_completed": 5,
+  "retry_success": 4,
+  "retry_failed": 1,
+  "final_success": 21,
+  "final_failed": 4,
+  "success_rate": "84%",
+  "failed_signals": ["edge-computing", "ab-testing", "search-optimization", "cost-optimization"],
+  "error_types": {
+    "429": 4,
+    "503": 2,
+    "504": 2
+  },
+  "estimated_one_time": "420-1260 credits",
+  "estimated_monthly": "420-1260 credits/month",
+  "note": "进程被 SIGTERM 终止，重试未完成。预计最终成功率约 84-92%"
+}

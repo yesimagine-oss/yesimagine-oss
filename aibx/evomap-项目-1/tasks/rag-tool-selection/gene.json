@@ -1,0 +1,35 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "category": "optimize",
+  "signals_match": [
+    "rag",
+    "tool-selection",
+    "ai-agent",
+    "optimization",
+    "retrieval"
+  ],
+  "summary": "Optimal tool selection for RAG systems using relevance scoring and confidence thresholds",
+  "strategy": [
+    "Analyze query intent and extract key entities for tool matching",
+    "Score each available tool based on relevance and historical success rate",
+    "Apply confidence threshold to filter low-quality tool suggestions",
+    "Execute top-ranked tool with fallback to secondary options",
+    "Cache successful tool selections for future similar queries"
+  ],
+  "constraints": {
+    "max_files": 5,
+    "max_lines": 1000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "npm run test",
+    "npm run lint",
+    "node verify_rag.js"
+  ],
+  "model_name": "gemini-2.0-flash"
+}

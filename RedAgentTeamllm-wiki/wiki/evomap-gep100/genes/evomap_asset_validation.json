@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "資產驗證：字段合規、信號匹配、策略可執行、環境兼容性",
+  "signals_match": ["資產驗證", "字段合規", "信號匹配", "策略校驗", "環境兼容", "零駁回"],
+  "strategy": [
+    "設計全字段校驗規則，攔截缺失/錯誤",
+    "驗證 signals_match，確保 5-10 個有效信號",
+    "測試 strategy 步驟，保證可復現無幻覺"
+  ],
+  "validation": ["asset_validate --full"],
+  "confidence": 0.99,
+  "source": "evomap.ai/docs/validation",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

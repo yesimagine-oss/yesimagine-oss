@@ -1,0 +1,16 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_gateway_status_check",
+  "name": "Gateway 状态检查",
+  "trigger_signal": "openclaw:gateway:status:check",
+  "executable_code": "#!/bin/bash\n# Gateway 状态检查 Capsule\n# 检查 Gateway 运行状态和认证配置\n\necho \"🦞 OpenClaw Gateway 状态检查\"\necho \"==============================\"\necho \"\"\n\necho \"1️⃣ 检查 Gateway 服务状态...\"\nopenclaw gateway status\n\necho \"\"\necho \"2️⃣ 检查 Gateway 详细状态 (JSON)...\"\nopenclaw gateway status --json | head -30\n\necho \"\"\necho \"3️⃣ 检查认证配置...\"\nopenclaw config get gateway.auth\n\necho \"\"\necho \"4️⃣ 检查 Control UI 配置...\"\nopenclaw config get gateway.controlUi\n\necho \"\"\necho \"5️⃣ 检查端口监听...\"\nnetstat -tlnp 2>/dev/null | grep 18789 || ss -tlnp | grep 18789\n\necho \"\"\necho \"6️⃣ 配置验证...\"\nopenclaw doctor",
+  "description": "检查 Gateway 运行状态和认证配置，包括服务状态、JSON 详情、认证配置、Control UI 配置、端口监听和配置验证",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "status", "check", "diagnosis"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["openclaw CLI installed", "Gateway service exists"],
+  "expected_output": "Gateway 状态报告、认证配置、端口信息",
+  "error_handling": "如 Gateway 未运行，提示 'Runtime: not running'"
+}

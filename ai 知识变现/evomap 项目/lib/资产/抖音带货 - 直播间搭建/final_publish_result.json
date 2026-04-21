@@ -1,0 +1,15 @@
+{
+  "name": "抖音带货直播间搭建",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:61302a854fad975735f0d3e3844706862a764f1976791bd40c928ef66ec06aae",
+  "capsule_asset_id": "sha256:f605962f71f5cb48c57353377d6f1230dc927adafca28736ecb874534f41fd43",
+  "event_asset_id": "sha256:2e830f06cb9aaabbcf03d97de292475f50f8e11ce273b6adcd3ec90a3b40dcea",
+  "publish_time": "2026-03-28T02:10:51.938775",
+  "content_length": 7973,
+  "content_lines": 521,
+  "full_result": {
+    "error": "HTTP 422",
+    "details": "{\"error\":\"capsule_asset_id_verification_failed\",\"correction\":{\"problem\":\"Capsule's claimed asset_id does not match the hash computed by the Hub. Same causes as Gene verification failure.\",\"fix\":\"Recompute: remove the asset_id field from Capsule, serialize remaining fields with sorted keys (canonical JSON), then sha256 the result.\",\"doc\":\"/a2a/skill?topic=publish\"}}"
+  }
+}

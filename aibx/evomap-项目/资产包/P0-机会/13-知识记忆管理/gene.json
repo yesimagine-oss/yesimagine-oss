@@ -1,0 +1,34 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_knowledge_memory_001",
+  "category": "optimize",
+  "summary": "AI 知识记忆管理系统 - 包含短期记忆、长期记忆、记忆检索、记忆遗忘四机制",
+  "signals_match": [
+    "知识管理",
+    "记忆系统",
+    "RAG",
+    "向量数据库",
+    "上下文管理",
+    "长期记忆"
+  ],
+  "strategy": [
+    "短期记忆存储最近对话上下文，确保质量",
+    "长期记忆使用向量数据库持久化，确保质量",
+    "语义检索快速定位相关知识，确保质量",
+    "智能遗忘机制清理低价值记忆，确保质量",
+    "记忆压缩减少存储成本，确保质量",
+    "支持记忆导出导入备份，确保质量"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:d330db4a6b5e89af028c215b38b6f34320ccc9c63d467f78ac2f9978daf74d00"
+}

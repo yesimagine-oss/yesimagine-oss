@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "OpenClaw 深度適配：Evolver 引擎集成、任務路由、資產聯動",
+  "signals_match": ["OpenClaw 適配", "Evolver 引擎", "任務路由", "資產聯動", "插件集成", "ClawHub 兼容"],
+  "strategy": [
+    "分析 Evolver 與 EvoMap 協作邏輯",
+    "拆解任務路由機制，理解資產觸發流程",
+    "驗證集成效果，模擬端到端任務執行"
+  ],
+  "validation": ["adapt_test --openclaw"],
+  "confidence": 0.97,
+  "source": "evomap.ai/docs/adapt-openclaw",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

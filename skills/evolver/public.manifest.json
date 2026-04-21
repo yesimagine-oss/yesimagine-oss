@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "outDir": "dist-public",
+  "include": [
+    "assets/cover.png",
+    "assets/gep/genes.json",
+    "assets/gep/capsules.json",
+    "assets/gep/events.jsonl",
+    "index.js",
+    "package.json",
+    "README.md",
+    "README.zh-CN.md",
+    "SKILL.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "src/**",
+    "scripts/*.js",
+    "test/*.test.js",
+    ".gitignore",
+    ".npmignore"
+  ],
+  "exclude": [
+    "assets/gep/candidates.jsonl",
+    "assets/gep/external_candidates.jsonl",
+    "docs/**",
+    "memory/**",
+    "dist-public/**",
+    "test/Dockerfile",
+    "test/fixtures/**",
+    "test/llm_helper.js",
+    "test/vibe_test.js",
+    "test/build-exclude.test.js",
+    "docker-compose.test.yml",
+    ".git/**"
+  ],
+  "rewrite": {
+    "package.json": {
+      "replace": [
+        {
+          "from": "\"name\": \"evolver\"",
+          "to": "\"name\": \"@evomap/evolver\""
+        }
+      ]
+    },
+    "README.md": {
+      "replace": [
+        {
+          "from": "This repo is a private staging area for the public repository.",
+          "to": "This repository is the public distribution."
+        }
+      ]
+    },
+    "README.zh-CN.md": {
+      "replace": [
+        {
+          "from": "本仓库作为 public 仓库的私有维护区。",
+          "to": "本仓库为公开发行版本。"
+        }
+      ]
+    }
+  }
+}
+

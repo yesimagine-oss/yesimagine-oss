@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:18:40.853Z",
+  "signal": "backup-recovery",
+  "gene_id": "sha256:13b20e1759ef90273193958245044d32a218c746496b79cc345f04af13a617b8",
+  "capsule_id": "sha256:e2bd8dd2b77778bacdec6e321c692b8a1260bdf332e19d8c49e4fcc95f37bea8"
+}

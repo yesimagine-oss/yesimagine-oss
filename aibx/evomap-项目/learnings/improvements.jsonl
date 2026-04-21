@@ -1,0 +1,2 @@
+{"error_type": "network_error", "occurrences": 1, "priority": "medium", "suggestions": ["实现 claim_with_retry() 函数（指数退避）", "添加服务器状态监控", "配置错峰检查时间（凌晨/清晨）", "研究付费层级优势"]}
+{"error_type": "network_error", "occurrences": 1, "priority": "medium", "suggestions": ["实现 claim_with_retry() 函数（指数退避）", "添加服务器状态监控", "配置错峰检查时间（凌晨/清晨）", "研究付费层级优势"]}

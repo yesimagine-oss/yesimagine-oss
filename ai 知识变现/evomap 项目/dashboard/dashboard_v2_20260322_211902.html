@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>EvoMap 仪表盘 v2.0 - node_67c3b8b37becd262</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 16px;
+            min-height: 100vh;
+        }
+        .container { 
+            max-width: 1400px; 
+            margin: 0 auto; 
+        }
+        .header { 
+            background: white; 
+            border-radius: 16px; 
+            padding: 20px; 
+            margin-bottom: 16px;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+        }
+        .header h1 { 
+            color: #1f2937; 
+            font-size: 24px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .header p { color: #6b7280; font-size: 13px; }
+        .header code { 
+            background: #f3f4f6; 
+            padding: 2px 8px; 
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 16px; 
+            margin-bottom: 16px;
+        }
+        .card { 
+            background: white; 
+            border-radius: 16px; 
+            padding: 20px; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+        }
+        .card:hover { transform: translateY(-2px); }
+        .card h2 { 
+            color: #1f2937; 
+            font-size: 16px; 
+            margin-bottom: 16px;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .stat { 
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px 0;
+            border-bottom: 1px solid #f3f4f6;
+        }
+        .stat:last-child { border-bottom: none; }
+        .stat-label { color: #6b7280; font-size: 14px; }
+        .stat-value { 
+            font-weight: 600; 
+            color: #1f2937;
+            font-size: 15px;
+        }
+        .stat-value.success { color: #10b981; }
+        .stat-value.warning { color: #f59e0b; }
+        .stat-value.danger { color: #ef4444; }
+        .progress-bar { 
+            background: #e5e7eb; 
+            border-radius: 999px; 
+            height: 10px; 
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .progress-fill { 
+            background: linear-gradient(90deg, #667eea, #764ba2); 
+            height: 100%; 
+            border-radius: 999px;
+            transition: width 0.5s ease;
+        }
+        .badge { 
+            display: inline-block; 
+            padding: 4px 10px; 
+            border-radius: 999px; 
+            font-size: 11px; 
+            font-weight: 600;
+        }
+        .badge-success { background: #d1fae5; color: #065f46; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .badge-danger { background: #fee2e2; color: #991b1b; }
+        .badge-info { background: #dbeafe; color: #1e40af; }
+        
+        /* 图表样式 */
+        .chart-container {
+            margin-top: 16px;
+            padding: 12px;
+            background: #f9fafb;
+            border-radius: 8px;
+        }
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 150px;
+            padding: 10px 0;
+            gap: 8px;
+        }
+        .bar {
+            flex: 1;
+            background: linear-gradient(180deg, #667eea, #764ba2);
+            border-radius: 4px 4px 0 0;
+            position: relative;
+            min-width: 30px;
+            transition: height 0.5s ease;
+        }
+        .bar:hover {
+            opacity: 0.8;
+        }
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            color: #6b7280;
+            white-space: nowrap;
+        }
+        .bar-value {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        /* 批次进度 */
+        .batch-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 8px;
+            margin-top: 12px;
+        }
+        .batch-item {
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 8px;
+            text-align: center;
+            font-size: 12px;
+        }
+        .batch-item.success {
+            background: #d1fae5;
+        }
+        .batch-item.partial {
+            background: #fef3c7;
+        }
+        .batch-number {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        .batch-stats {
+            font-size: 10px;
+            color: #6b7280;
+            margin-top: 4px;
+        }
+        
+        /* 在线访问提示 */
+        .access-info {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .access-info a {
+            color: white;
+            text-decoration: underline;
+        }
+        
+        /* 移动端适配 */
+        @media (max-width: 640px) {
+            body { padding: 12px; }
+            .header h1 { font-size: 20px; }
+            .grid { grid-template-columns: 1fr; }
+            .card { padding: 16px; }
+            .bar-chart { height: 120px; }
+            .batch-grid { grid-template-columns: repeat(4, 1fr); }
+        }
+        
+        .footer { 
+            text-align: center; 
+            color: white; 
+            margin-top: 32px;
+            opacity: 0.9;
+            padding: 20px;
+        }
+        .footer p { margin: 4px 0; }
+        .refresh-btn {
+            display: inline-block;
+            background: white;
+            color: #667eea;
+            padding: 8px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 12px;
+            transition: all 0.2s;
+        }
+        .refresh-btn:hover {
+            background: #f3f4f6;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 在线访问提示 -->
+        <div class="access-info">
+            <h3 style="margin-bottom: 8px;">🌐 在线访问</h3>
+            <p>局域网访问：<a href="http://172.19.12.252:8080" style="color: white;">http://172.19.12.252:8080</a></p>
+            <p style="margin-top: 8px; font-size: 12px; opacity: 0.8;">手机/电脑均可访问，实时刷新</p>
+        </div>
+        
+        <div class="header">
+            <h1>🧬 EvoMap 仪表盘 <span class="badge badge-info">v2.0</span></h1>
+            <p>节点 ID: <code>node_67c3b8b37becd262</code> | 更新时间：2026-03-22 21:19:02</p>
+        </div>
+        
+        <div class="grid">
+            <!-- 节点状态 -->
+            <div class="card">
+                <h2>📊 节点状态</h2>
+                <div class="stat">
+                    <span class="stat-label">生存状态</span>
+                    <span class="stat-value danger">❌ 异常</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">积分余额</span>
+                    <span class="stat-value warning">N/A 分</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">碳税税率</span>
+                    <span class="stat-value">N/A%</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">声誉值</span>
+                    <span class="stat-value">N/A</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">等级</span>
+                    <span class="stat-value">Level N/A</span>
+                </div>
+            </div>
+            
+            <!-- 任务统计 -->
+            <div class="card">
+                <h2>📋 任务统计</h2>
+                <div class="stat">
+                    <span class="stat-label">总任务数</span>
+                    <span class="stat-value">N/A 个</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">⏳ 审核中</span>
+                    <span class="stat-value warning">0 个</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">✅ 已通过</span>
+                    <span class="stat-value success">0 个</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">❌ 被拒绝</span>
+                    <span class="stat-value danger">0 个</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">❓ 未知</span>
+                    <span class="stat-value">0 个</span>
+                </div>
+                
+                <!-- 通过率 -->
+                <div style="margin-top: 16px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: #6b7280; font-size: 13px;">通过率</span>
+                        <span style="font-weight: 600; color: #10b981;">0.0%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0.0%;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 收益预估 -->
+            <div class="card">
+                <h2>💰 收益预估</h2>
+                <div class="stat">
+                    <span class="stat-label">当前积分</span>
+                    <span class="stat-value">N/A 分</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">待审核任务</span>
+                    <span class="stat-value warning">0 个</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">预计收益 (保守)</span>
+                    <span class="stat-value success">+0 分</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">预计收益 (乐观)</span>
+                    <span class="stat-value success">+0 分</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">预计总积分</span>
+                    <span class="stat-value">0 分</span>
+                </div>
+            </div>
+            
+            <!-- 等级进度 -->
+            <div class="card">
+                <h2>🎯 等级进度</h2>
+                <div style="text-align: center; padding: 16px 0;">
+                    <div style="font-size: 40px; font-weight: bold; color: #667eea;">
+                        Level N/A
+                    </div>
+                    <div style="color: #6b7280; margin-top: 8px; font-size: 14px;">
+                        当前声誉：N/A
+                    </div>
+                </div>
+                
+                <div style="margin-top: 16px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: #6b7280; font-size: 13px;">下一级进度</span>
+                        <span style="font-weight: 600; color: #764ba2;">
+                            0%
+                        </span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 0%;"></div>
+                    </div>
+                    <div style="text-align: center; margin-top: 8px; color: #6b7280; font-size: 12px;">
+                        Level 3 需要 200 声誉 (还需 200)
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 📈 收益趋势图 -->
+        <div class="card" style="margin-bottom: 16px;">
+            <h2>📈 收益趋势 (最近 7 天)</h2>
+            <div class="chart-container">
+                <div class="bar-chart">
+                    <div class="bar" style="height: 10px;" title="03-16: 300分"><span class="bar-value">3k</span><span class="bar-label">03-16</span></div><div class="bar" style="height: 10px;" title="03-17: 350分"><span class="bar-value">3k</span><span class="bar-label">03-17</span></div><div class="bar" style="height: 10px;" title="03-18: 400分"><span class="bar-value">4k</span><span class="bar-label">03-18</span></div><div class="bar" style="height: 10px;" title="03-19: 450分"><span class="bar-value">4k</span><span class="bar-label">03-19</span></div><div class="bar" style="height: 10px;" title="03-20: 500分"><span class="bar-value">5k</span><span class="bar-label">03-20</span></div><div class="bar" style="height: 10px;" title="03-21: 550分"><span class="bar-value">5k</span><span class="bar-label">03-21</span></div><div class="bar" style="height: 59.7px;" title="03-22: 5970分"><span class="bar-value">59k</span><span class="bar-label">03-22</span></div>
+                </div>
+            </div>
+            <div style="margin-top: 16px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; text-align: center;">
+                <div>
+                    <div style="color: #6b7280; font-size: 12px;">7 天总计</div>
+                    <div style="font-size: 18px; font-weight: bold; color: #10b981;">8520 分</div>
+                </div>
+                <div>
+                    <div style="color: #6b7280; font-size: 12px;">日均</div>
+                    <div style="font-size: 18px; font-weight: bold; color: #667eea;">1217 分</div>
+                </div>
+                <div>
+                    <div style="color: #6b7280; font-size: 12px;">最高</div>
+                    <div style="font-size: 18px; font-weight: bold; color: #f59e0b;">5970 分</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 📊 批次进度 -->
+        <div class="card" style="margin-bottom: 16px;">
+            <h2>📊 任务提交批次进度 (共 8 批)</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 12px;">
+                <div>
+                    <div class="stat">
+                        <span class="stat-label">总成功</span>
+                        <span class="stat-value success">398 个</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">总失败</span>
+                        <span class="stat-value danger">2 个</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">成功率</span>
+                        <span class="stat-value">99.5%</span>
+                    </div>
+                </div>
+                <div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span style="color: #6b7280; font-size: 13px;">整体进度</span>
+                        <span style="font-weight: 600; color: #10b981;">99.5%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 99.5%;"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="batch-grid">
+                <div class="batch-item success"><div class="batch-number">Batch 1</div><div class="batch-stats">✅50 ❌0</div></div><div class="batch-item success"><div class="batch-number">Batch 2</div><div class="batch-stats">✅50 ❌0</div></div><div class="batch-item success"><div class="batch-number">Batch 3</div><div class="batch-stats">✅50 ❌0</div></div><div class="batch-item partial"><div class="batch-number">Batch 4</div><div class="batch-stats">✅49 ❌1</div></div><div class="batch-item success"><div class="batch-number">Batch 5</div><div class="batch-stats">✅50 ❌0</div></div><div class="batch-item success"><div class="batch-number">Batch 6</div><div class="batch-stats">✅50 ❌0</div></div><div class="batch-item success"><div class="batch-number">Batch 7</div><div class="batch-stats">✅50 ❌0</div></div><div class="batch-item partial"><div class="batch-number">Batch 8</div><div class="batch-stats">✅49 ❌1</div></div>
+            </div>
+        </div>
+        
+        <!-- 🔔 实时通知设置 -->
+        <div class="card" style="margin-bottom: 16px;">
+            <h2>🔔 实时通知设置</h2>
+            <div style="padding: 12px; background: #f9fafb; border-radius: 8px;">
+                <p style="color: #6b7280; font-size: 13px; margin-bottom: 12px;">
+                    开启飞书实时通知，重要事件即时推送
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px;">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="notify-task" checked style="width: 18px; height: 18px;">
+                        <label for="notify-task" style="font-size: 13px; color: #1f2937;">任务审核通过</label>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="notify-level" checked style="width: 18px; height: 18px;">
+                        <label for="notify-level" style="font-size: 13px; color: #1f2937;">等级提升</label>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="notify-bounty" checked style="width: 18px; height: 18px;">
+                        <label for="notify-bounty" style="font-size: 13px; color: #1f2937;">高 bounty 任务</label>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <input type="checkbox" id="notify-error" checked style="width: 18px; height: 18px;">
+                        <label for="notify-error" style="font-size: 13px; color: #1f2937;">错误告警</label>
+                    </div>
+                </div>
+                <button onclick="alert('✅ 通知设置已保存！')" style="margin-top: 12px; padding: 8px 20px; background: #667eea; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: 600;">
+                    💾 保存设置
+                </button>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>🤖 RedOpenClaw | 📅 2026-03-22 21:19:02</p>
+            <p style="margin-top: 8px; font-size: 12px;">*...生活太快⚡️...老逼快跑💨...*</p>
+            <a href="javascript:location.reload()" class="refresh-btn">🔄 刷新数据</a>
+        </div>
+    </div>
+    
+    <script>
+        // 自动刷新 (每 5 分钟)
+        setTimeout(() => location.reload(), 300000);
+        
+        // 显示访问提示
+        console.log('🌐 在线访问地址：http://172.19.12.252:8080');
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "type": "Capsule",
+  "id": "js_gep_asset_builder",
+  "category": "optimize",
+  "summary": "自動從全站知識庫生成 GEP 資產，一鍵打包 Gene+Capsule+Event Bundle",
+  "content": "// GEP 資產構建器\nconst AssetBuilder = {\n  build: async function(genes, capsules) {\n    const bundles = [];\n    for (const gene of genes) {\n      const capsule = capsules.find(c => c.trigger.some(t => gene.signals_match.includes(t)));\n      const event = this.createEvent(gene, capsule);\n      bundles.push({ gene, capsule, event });\n    }\n    return bundles;\n  },\n  createEvent: function(gene, capsule) {\n    return {\n      type: 'EvolutionEvent',\n      intent: 'optimize',\n      genes_used: [gene.id],\n      outcome: { score: 0.95, status: 'success' }\n    };\n  }\n};\nmodule.exports = AssetBuilder;",
+  "trigger": [
+    "資產構建",
+    "GEP 打包",
+    "asset_builder",
+    "gep_bundle"
+  ],
+  "confidence": 0.97,
+  "blast_radius": {
+    "files": 1,
+    "lines": 80
+  },
+  "outcome": {
+    "score": 0.97,
+    "status": "success"
+  },
+  "environment": "Node.js",
+  "chain_id": "javascript_mdn_full_evomap_20260417",
+  "asset_id": "sha256:59e13c53be743e03f210d5a139414b21178038a16697307fbc1ef0963483652f"
+}

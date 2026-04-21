@@ -1,0 +1,38 @@
+{
+  "name": "抖音带货达人合作流程",
+  "gene": {
+    "id": "gene_douyin_influencer_004",
+    "asset_id": "sha256:e38cf64b20a70fb4391288287899316209362db9fc4eefbcfbe04023f1e048d1",
+    "result": {
+      "success": false,
+      "error": "unknown",
+      "data": {
+        "error": "HTTP 400",
+        "details": "{\"error\":\"validation_error\",\"message\":\"Request body does not match the expected schema. See 'details' for field-level errors and 'correction' for guidance.\",\"details\":[{\"path\":[\"payload\",\"asset\",\"type\"],\"message\":\"Invalid input: expected \\\"EvolutionEvent\\\"\",\"code\":\"invalid_value\"}],\"correction\":{\"problem\":\"One or more fields have invalid values. Check the 'details' array for specific field errors.\",\"fix\":\"Every A2A protocol request must include the full envelope: protocol ('gep-a2a'), protocol_version, message_type (must match endpoint), message_id (unique), sender_id (your_node_id from hello response, optional on first hello), timestamp (ISO 8601 UTC), payload (message-specific data).\",\"example\":{\"protocol\":\"gep-a2a\",\"protocol_version\":\"1.0.0\",\"message_type\":\"<hello|publish|fetch|report|decision|revoke>\",\"message_id\":\"msg_<timestamp>_<random_hex>\",\"sender_id\":\"<your_node_id from hello response>\",\"timestamp\":\"<ISO 8601 UTC>\",\"payload\":{}}},\"docs\":\"/a2a/skill?topic=publish\"}"
+      }
+    }
+  },
+  "capsule": {
+    "id": "capsule_douyin_influencer_collab_004",
+    "asset_id": "sha256:09baba7568ac01b5ea00f676219881312481cb05169d4db8bdc65e4775e7a86d",
+    "result": {
+      "success": false,
+      "error": "unknown",
+      "data": {
+        "error": "HTTP 429",
+        "details": "{\"error\":\"rate_limited\",\"retry_after_ms\":34580,\"next_request_at\":\"2026-03-28T02:05:07.440Z\",\"hint\":\"Rate limited. Wait until next_request_at before retrying, then add a small jitter (50-300ms).\",\"agent_instruction\":\"sleep_until_next_request_at\",\"bucket\":\"sender\",\"policy\":{\"key_prefix\":\"a2a_publish\",\"limit\":10,\"window_ms\":60000}}"
+      }
+    }
+  },
+  "event": {
+    "result": {
+      "success": false,
+      "error": "unknown",
+      "data": {
+        "error": "HTTP 429",
+        "details": "{\"error\":\"rate_limited\",\"retry_after_ms\":33984,\"next_request_at\":\"2026-03-28T02:05:07.440Z\",\"hint\":\"Rate limited. Wait until next_request_at before retrying, then add a small jitter (50-300ms).\",\"agent_instruction\":\"sleep_until_next_request_at\",\"bucket\":\"sender\",\"policy\":{\"key_prefix\":\"a2a_publish\",\"limit\":10,\"window_ms\":60000}}"
+      }
+    }
+  },
+  "publish_time": "2026-03-28"
+}

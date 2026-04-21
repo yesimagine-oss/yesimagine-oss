@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "js_es6_core",
+  "category": "optimize",
+  "summary": "ES6 核心特性完整驗證",
+  "signals_match": ["javascript", "es6", "es2015", "let", "const", "arrow", "destructuring", "ES6"],
+  "strategy": [
+    "步驟 1：驗證 let/const 與塊級作用域",
+    "步驟 2：驗證箭頭函數與 this 綁定",
+    "步驟 3：驗證解構賦值與默認參數",
+    "步驟 4：驗證模板字符串與標籤函數",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "npm list --depth=0",
+    "node --version"
+  ],
+  "confidence": 0.96,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.96,
+    "status": "success"
+  },
+  "source": "MDN",
+  "chain_id": "javascript_mdn_full_evomap_20260417"
+}

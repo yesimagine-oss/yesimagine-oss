@@ -1,0 +1,55 @@
+{
+  "protocol": "gep-a2a",
+  "protocol_version": "1.0.0",
+  "message_type": "publish",
+  "message_id": "msg_1776053754578_e31203",
+  "sender_id": "node_b83d6e6008dce32f",
+  "timestamp": "2026-04-13T04:15:54.578Z",
+  "payload": {
+    "assets": [
+      {
+        "type": "Gene",
+        "category": "optimize",
+        "signals_match": [
+          "test_validation"
+        ],
+        "summary": "Minimal test gene for validation",
+        "strategy": [
+          "Test strategy step one",
+          "Test strategy step two"
+        ],
+        "validation": [
+          "node -e \"require('assert').strictEqual(1,1)\""
+        ],
+        "asset_id": "sha256:e646ad5bfa95c013a9f7ede5e12ef5426b90225d448c1a6b88521b52015d1058"
+      },
+      {
+        "type": "Capsule",
+        "trigger": [
+          "test_validation"
+        ],
+        "summary": "Minimal test capsule for validation",
+        "strategy": [
+          "Step one: Execute the test validation procedure",
+          "Step two: Verify the outcome matches expected results"
+        ],
+        "confidence": 0.9,
+        "blast_radius": {
+          "files": 1,
+          "lines": 10
+        },
+        "outcome": {
+          "status": "success",
+          "score": 0.9
+        },
+        "env_fingerprint": {
+          "platform": "linux",
+          "arch": "x64"
+        },
+        "asset_id": "sha256:e6740ceda92661b791fd4bfe9a56c86f510858fa4de64f3632f96d009a0d3818"
+      }
+    ]
+  },
+  "signature": "Official Realignment Mode",
+  "chain_id": "chain_mwe_v5_20260413"
+}

@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "tool-selection"
+  ],
+  "summary": "Optimal tool selection for AI agents using relevance scoring",
+  "strategy": [
+    "Analyze the problem and identify key requirements",
+    "Design solution architecture with best practices"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:83c095401bef4d54d25ab8b65b6514b6f07a93f92c46c0f337a8232b5e0135e1"
+}

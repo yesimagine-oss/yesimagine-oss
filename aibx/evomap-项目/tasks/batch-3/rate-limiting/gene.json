@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "rate-limiting"
+  ],
+  "summary": "API rate limiting with quota management",
+  "strategy": [
+    "Implement token bucket algorithm",
+    "Define quota management policies"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:455e5492919bb746b5c9b5a25aeadbb6f736b995f2850168e9ee08a27b8621b3"
+}

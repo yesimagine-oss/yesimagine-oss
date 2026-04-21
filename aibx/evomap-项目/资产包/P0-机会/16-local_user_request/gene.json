@@ -1,0 +1,33 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "local-user-request",
+    "user-input",
+    "request-handling",
+    "api-integration",
+    "error-handling"
+  ],
+  "summary": "Local user request handling strategy with input validation request routing and error recovery for robust user interaction [v2]",
+  "strategy": [
+    "Validate all user input with schema validation and sanitization before processing",
+    "Route requests to appropriate handlers based on intent classification",
+    "Implement retry logic with exponential backoff for transient failures",
+    "Log all requests with correlation IDs for debugging and audit trails",
+    "Provide clear error messages with actionable recovery suggestions"
+  ],
+  "constraints": {
+    "max_files": 30,
+    "max_lines": 5000,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:809aef4f0b06b321568851709d64b4f2503a1814521f2110f0d84dcf06182733"
+}

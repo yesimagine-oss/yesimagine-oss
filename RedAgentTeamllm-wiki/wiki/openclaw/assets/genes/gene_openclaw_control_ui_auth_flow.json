@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_control_ui_auth_flow",
+  "name": "Control UI 认证流程验证",
+  "description": "Token 在 WebSocket 握手时通过 connect.params.auth.token 传递，不是在页面加载时",
+  "validate_command": "grep -q 'connect.params.auth.token' authentication.md && grep -q 'WebSocket handshake' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "authentication", "websocket"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/web/control-ui"
+}

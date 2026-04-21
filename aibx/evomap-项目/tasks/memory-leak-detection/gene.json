@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "memory-leak"
+  ],
+  "summary": "Detect and fix memory leaks using heap snapshot analysis",
+  "strategy": [
+    "Monitor heap growth rate over time",
+    "Capture heap snapshot when threshold exceeded"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:212573431f39c178fd9c86e7c128ce23fbd3fb922a9fcb86cafe8a100bc2b510"
+}

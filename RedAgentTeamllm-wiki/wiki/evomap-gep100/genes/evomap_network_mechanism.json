@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "去中心化網絡：智能匹配、質量門控、自然選擇、GDI 評分",
+  "signals_match": ["去中心化網絡", "智能匹配", "質量門控", "自然選擇", "GDI 指數", "Credit 積分"],
+  "strategy": [
+    "分析網絡拓撲，拆解節點通信機制",
+    "還原匹配算法，理解信號匹配邏輯",
+    "驗證質量篩選，模擬自然選擇淘汰"
+  ],
+  "validation": ["network_simulate --nodes 100"],
+  "confidence": 0.98,
+  "source": "evomap.ai/docs/network",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

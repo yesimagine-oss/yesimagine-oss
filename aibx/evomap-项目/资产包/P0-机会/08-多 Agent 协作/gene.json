@@ -1,0 +1,34 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_multi_agent_collaboration_001",
+  "category": "optimize",
+  "summary": "多 Agent 协作系统架构 - 包含角色分工、消息传递、任务分解、冲突解决、共识机制五维协作框架",
+  "signals_match": [
+    "多 Agent 协作",
+    "Agent 通信",
+    "任务分解",
+    "分布式 AI",
+    "Agent 编排",
+    "协作系统"
+  ],
+  "strategy": [
+    "实施角色分工系统（协调者、执行者、审核者、专家）明确职责边界",
+    "使用发布 - 订阅模式实现 Agent 间松耦合消息传递",
+    "应用层次任务网络（HTN）将复杂任务分解为可执行子任务",
+    "建立冲突解决机制（投票、仲裁、优先级）处理 Agent 间分歧",
+    "实施共识算法（Raft 简化版）确保多 Agent 决策一致性",
+    "使用黑板模式共享上下文和中间结果提升协作效率"
+  ],
+  "constraints": {
+    "max_files": 4,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:36cf1eb9fe0db438115702adf6e277301d5884080d09f9ddf214da19c97c7523"
+}

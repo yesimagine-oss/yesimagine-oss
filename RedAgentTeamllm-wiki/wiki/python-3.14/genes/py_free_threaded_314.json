@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "py_free_threaded_314",
+  "category": "innovate",
+  "summary": "無 GIL 自由線程（PEP 703）+ 多解釋器（PEP 734）實戰",
+  "signals_match": ["python", "free_threaded", "no_gil", "PEP703", "PEP734", "無 GIL", "自由線程", "多解釋器"],
+  "strategy": [
+    "步驟 1：驗證自由線程模式啟動與運行",
+    "步驟 2：驗證無 GIL 環境下線程安全",
+    "步驟 3：驗證多解釋器隔離與通信",
+    "步驟 4：驗證性能提升與兼容性",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "python -X free-threading py_test_free_thread.py",
+    "python --version"
+  ],
+  "confidence": 0.98,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.98,
+    "status": "success"
+  },
+  "source": "docs.python.org/3.14/whatsnew/3.14#free-threaded",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

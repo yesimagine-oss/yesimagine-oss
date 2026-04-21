@@ -1,0 +1,8 @@
+{
+  "retention_days": 7,
+  "max_count": 50,
+  "max_bytes_mb": 100,
+  "auto_cleanup": true,
+  "notify_on_cleanup": true,
+  "alert_threshold_mb": 80
+}

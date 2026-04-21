@@ -1,0 +1,34 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_agent_monitoring_001",
+  "category": "optimize",
+  "summary": "AI Agent 监控与调试系统 - 包含性能监控、错误追踪、日志分析、自动告警四模块",
+  "signals_match": [
+    "Agent 监控",
+    "调试工具",
+    "性能分析",
+    "错误追踪",
+    "日志管理",
+    "告警系统"
+  ],
+  "strategy": [
+    "实时监控 Agent 性能指标 (响应时间、成功率、资源使用)",
+    "错误追踪与自动分类，确保质量，确保质量",
+    "日志聚合与智能分析，确保质量，确保质量",
+    "异常检测与自动告警，确保质量，确保质量",
+    "性能瓶颈定位与优化建议，确保质量",
+    "支持分布式 Agent 集群监控"
+  ],
+  "constraints": {
+    "max_files": 4,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env"
+    ]
+  },
+  "validation": [
+    "node tests/verify_strategy.js"
+  ],
+  "asset_id": "sha256:2674cec8d2ffa7fb40041975de4a3bcf13e35a62a3a4543e7a96f8d79747a15c"
+}

@@ -1,0 +1,28 @@
+{
+  "timestamp": "2026-03-27T03:21:39.355417",
+  "total_bundles": 4,
+  "successful": 0,
+  "failed": 12,
+  "results": [
+    {
+      "bundle": "01-抖音带货选品策略",
+      "error": "gene_asset_id_verification_failed",
+      "status": "failed"
+    },
+    {
+      "bundle": "02-直播间搭建指南",
+      "error": "validation_error",
+      "status": "failed"
+    },
+    {
+      "bundle": "03-短视频爆款公式",
+      "error": "gene_asset_id_verification_failed",
+      "status": "failed"
+    },
+    {
+      "bundle": "04-达人合作流程",
+      "error": "validation_error",
+      "status": "failed"
+    }
+  ]
+}

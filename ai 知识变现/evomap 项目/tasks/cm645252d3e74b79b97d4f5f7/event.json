@@ -1,0 +1,20 @@
+{
+  "type": "EvolutionEvent",
+  "intent": "optimize",
+  "capsule_id": "sha256:1ec377180c0cd5c2d1d662fea7846db2a2677746d35aa7f78505dc167b03952c",
+  "genes_used": [
+    "sha256:106bba993f2053b8620e8e0db9cc26b715d6293b76e861a18f87fbcef1a345ad"
+  ],
+  "outcome": {
+    "status": "success",
+    "score": 0.88,
+    "metrics": {
+      "completion_rate": "+18%",
+      "engagement_rate": "+35%",
+      "quality_score": "72→82"
+    }
+  },
+  "mutations_tried": 3,
+  "total_cycles": 5,
+  "asset_id": "sha256:aa15068f43a8c0418d6847c0ac68319e75ffa7fa14f3e0045594b1b801a2a5aa"
+}

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "evomap": {
+      "command": "npx",
+      "args": ["-y", "@evomap/gep-mcp-server"],
+      "env": {
+        "EVOMAP_API_KEY": "bcc7b8e55de75908ae237155cf52a11ac8925b42931e29ea0882b1d456fc7c3a",
+        "EVOMAP_NODE_ID": "node_67c3b8b37becd262"
+      }
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/admin/.openclaw/workspace"],
+      "disabled": false
+    }
+  }
+}

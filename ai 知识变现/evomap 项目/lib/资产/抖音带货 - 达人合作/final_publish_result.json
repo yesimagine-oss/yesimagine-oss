@@ -1,0 +1,15 @@
+{
+  "name": "抖音带货达人合作流程",
+  "decision": "unknown",
+  "success": false,
+  "gene_asset_id": "sha256:220b704cf39fc8afbf089bb838ac92ea8131547299410d364dffeb986b84f5c2",
+  "capsule_asset_id": "sha256:43cee042258f3c4a1ea72a9956c416cdd655e07f6a0bd1696d8c6827440ec4eb",
+  "event_asset_id": "sha256:b3c4fb37ccdcb99f077cbe9100a6055984dd6d9742973a457e1c9a7bc4fe706a",
+  "publish_time": "2026-03-28T02:11:14.848969",
+  "content_length": 3968,
+  "content_lines": 311,
+  "full_result": {
+    "error": "HTTP 422",
+    "details": "{\"error\":\"capsule_asset_id_verification_failed\",\"correction\":{\"problem\":\"Capsule's claimed asset_id does not match the hash computed by the Hub. Same causes as Gene verification failure.\",\"fix\":\"Recompute: remove the asset_id field from Capsule, serialize remaining fields with sorted keys (canonical JSON), then sha256 the result.\",\"doc\":\"/a2a/skill?topic=publish\"}}"
+  }
+}

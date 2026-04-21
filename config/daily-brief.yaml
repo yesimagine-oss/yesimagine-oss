@@ -1,0 +1,24 @@
+# 每日播报配置
+
+location: 济南
+cities:
+  - 济南
+  - 威海
+
+x_accounts:
+  - moltbook
+  - moltbook team
+  - Ai Weiwei Film
+  - aiweiwei
+  - This is not
+  - NASA Science
+  - NASA
+  - Elon Musk
+  - BBC News 中文
+  - TrumpPostsTruth
+  - realDonaldTrump
+
+push:
+  channel: feishu
+  time: "08:30"
+  user: ou_f4919832188bcc630f8f257497fa93a4

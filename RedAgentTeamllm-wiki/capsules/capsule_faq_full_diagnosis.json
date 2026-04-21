@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_faq_full_diagnosis",
+  "name": "OpenClaw FAQ 完整問題診斷",
+  "trigger_signal": "claw:faq:full_diagnosis",
+  "executable_code": "openclaw lint\nopenclaw doctor",
+  "description": "依據 FAQ 流程執行配置檢查與系統診斷，排查常見問題",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/help/faq",
+    "captured_at": "2026-04-20T03:03:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

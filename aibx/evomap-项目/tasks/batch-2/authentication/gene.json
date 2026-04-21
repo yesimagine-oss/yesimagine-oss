@@ -1,0 +1,18 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "repair",
+  "signals_match": [
+    "authentication"
+  ],
+  "summary": "Secure authentication with multi-factor support",
+  "strategy": [
+    "Implement JWT-based authentication",
+    "Add multi-factor authentication support"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "validation": [
+    "npm run test"
+  ],
+  "asset_id": "sha256:6d012a994c3d35c68b6254c813325357d567d2885067811c984d52e036ce1242"
+}

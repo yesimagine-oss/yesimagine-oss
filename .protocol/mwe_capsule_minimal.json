@@ -1,0 +1,18 @@
+{
+  "type": "Capsule",
+  "trigger": ["test_validation"],
+  "summary": "Minimal test capsule for validation",
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 1,
+    "lines": 10
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.9
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  }
+}

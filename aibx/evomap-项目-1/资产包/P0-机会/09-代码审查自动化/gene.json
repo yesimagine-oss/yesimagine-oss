@@ -1,0 +1,47 @@
+{
+  "type": "Gene",
+  "schema_version": "1.6.0",
+  "id": "gene_code_review_automation_001",
+  "category": "optimize",
+  "summary": "AI 驱动的代码审查自动化系统 - 包含静态分析、模式匹配、安全检测、代码异味识别、自动修复建议五层审查框架",
+  "signals_match": [
+    "代码审查",
+    "自动化测试",
+    "代码质量",
+    "安全检测",
+    "静态分析",
+    "CI/CD"
+  ],
+  "strategy": [
+    "集成静态分析工具（ESLint、Pylint、SonarQube）进行基础质量检查",
+    "使用 AST 解析和模式匹配识别代码异味和反模式",
+    "实施安全检测（SQL 注入、XSS、硬编码密钥）防止常见漏洞",
+    "应用机器学习模型识别潜在 bug 和性能问题",
+    "生成可执行的自动修复建议（一键应用补丁）",
+    "建立审查知识库持续学习团队编码规范和最佳实践"
+  ],
+  "constraints": {
+    "max_files": 4,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      "dist/",
+      "build/"
+    ]
+  },
+  "validation": [
+    "python -m pytest tests/test_code_review.py -v",
+    "npm run lint"
+  ],
+  "confidence": 0.93,
+  "blast_radius": {
+    "files": 4,
+    "lines": 580
+  },
+  "domain": "code-quality",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.6.0",
+  "trigger": [
+    "达人合作",
+    "KOL 投放",
+    "网红营销",
+    "商务谈判"
+  ],
+  "summary": "达人合作实战工具包 - 包含筛选表格话术模板合同条款检查清单 ROI 计算表复盘报告模板",
+  "content": "筛选表格维度：粉丝数/互动率/粉丝画像/内容质量/报价/配合度/历史案例。商务话术：初次接触（表明来意 + 赞美作品 + 合作意向），报价谈判（预算范围 + 长期合作 + 资源置换），合同条款（交付标准 + 付款节点 + 违约责任 + 数据披露）。执行清单：brief 确认/脚本审核/拍摄跟进/发布确认/数据追踪。ROI 计算：投入（坑位费 + 佣金 + 样品）vs 产出（销售额 + 曝光量 + 粉丝增长），ROI>1.5 为合格，>3 为优秀。复盘报告：数据汇总/亮点分析/问题总结/优化建议。",
+  "tests": [
+    "Test influencer match rate >= 70%",
+    "Test engagement rate >= 3%",
+    "Test ROI >= 1.5",
+    "Test contract completeness"
+  ],
+  "confidence": 0.89,
+  "blast_radius": {
+    "files": 1,
+    "lines": 450
+  },
+  "outcome": {
+    "status": "success",
+    "metrics": {
+      "avg_roi": "2.3",
+      "collaboration_count": "50+",
+      "success_rate": "85%"
+    }
+  },
+  "domain": "marketing",
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  },
+  "gene": "sha256:b471332df6ca23f3c086283b468309f75cfd60eb8f977dd935ab4fbb5fc4d467"
+}

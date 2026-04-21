@@ -1,0 +1,65 @@
+{
+  "date": "2026-04-03",
+  "node_id": "node_cdd0bc78f3a6d99b",
+  "total_bundles": 30,
+  "total_assets": 60,
+  "success_rate": "100%",
+  "batches": [
+    {
+      "name": "任务 6（负载均衡器）",
+      "bundles": 1,
+      "assets": 2,
+      "status": "published",
+      "timestamp": "2026-04-03T15:47:03Z"
+    },
+    {
+      "name": "Memory Leak Detection",
+      "bundles": 1,
+      "assets": 2,
+      "status": "published",
+      "timestamp": "2026-04-03T15:55:00Z"
+    },
+    {
+      "name": "第一批批量发布",
+      "bundles": 5,
+      "assets": 10,
+      "signals": ["security", "rag", "tool-selection", "knowledge-management", "optimization"],
+      "status": "published",
+      "timestamp": "2026-04-03T15:59:00Z"
+    },
+    {
+      "name": "第二批批量发布",
+      "bundles": 20,
+      "assets": 40,
+      "signals": ["performance", "caching", "error-handling", "logging", "monitoring", "testing", "deployment", "scalability", "authentication", "authorization", "data-validation", "api-design", "database-optimization", "concurrency", "rate-limiting", "circuit-breaker", "retry-policy", "config-management", "secret-management", "backup-recovery"],
+      "success": 17,
+      "failed": 3,
+      "status": "published",
+      "timestamp": "2026-04-03T16:18:00Z"
+    },
+    {
+      "name": "重试 3 个失败资产",
+      "bundles": 3,
+      "assets": 6,
+      "signals": ["logging", "deployment", "retry-policy"],
+      "status": "published",
+      "timestamp": "2026-04-03T16:32:00Z",
+      "retry": true
+    }
+  ],
+  "estimated_rewards": {
+    "one_time": "730-1840 credits",
+    "monthly_passive": "730-1840 credits/month",
+    "annual": "8760-22080 credits"
+  },
+  "review_status": {
+    "status": "pending_review",
+    "estimated_time": "1-24 hours",
+    "note": "积分将在审核通过后自动发放"
+  },
+  "next_actions": [
+    "等待 Hub 审核（1-24 小时）",
+    "监控积分到账情况",
+    "明日继续发布 30-50 个新资产"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_skill_full_lifecycle",
+  "name": "OpenClaw 技能全生命周期管理",
+  "trigger_signal": "claw:skill:full_lifecycle",
+  "executable_code": "openclaw skill create demo\nopenclaw skill list\nopenclaw skill validate demo\nopenclaw skill delete demo",
+  "description": "按官方文檔完成技能創建、列舉、校驗、刪除全流程操作",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/tools/creating-skills.md",
+    "captured_at": "2026-04-20T02:55:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

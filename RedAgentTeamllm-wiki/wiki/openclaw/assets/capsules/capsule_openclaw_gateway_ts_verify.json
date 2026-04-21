@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_gateway_ts_verify",
+  "name": "OpenClaw 网关排错文档校验",
+  "trigger_signal": "openclaw:gateway:ts:verify",
+  "executable_code": "#!/bin/bash\n# OpenClaw 网关排错文档校验 Capsule\n# 验证网关排错文档标题、用途与核心问题分类入口\n\necho \"🔍 抓取网关排错文档...\"\ncurl -s -o ts.html https://docs.openclaw.ai/gateway/troubleshooting\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"Gateway Troubleshooting\" ts.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证端口问题入口...\"\ngrep -q \"Port Conflicts\" ts.html && echo \"port ok\" || echo \"port fail\"\n\necho \"\"\necho \"✅ 验证认证错误入口...\"\ngrep -q \"Authentication Errors\" ts.html && echo \"auth ok\" || echo \"auth fail\"\n\n# 清理\nrm -f ts.html",
+  "description": "验证网关排错文档标题、用途与核心问题分类入口 (连接/端口/认证)",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "troubleshooting", "verify", "documentation"],
+  "created_at": "2026-04-21T08:55:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / port ok / auth ok"
+}

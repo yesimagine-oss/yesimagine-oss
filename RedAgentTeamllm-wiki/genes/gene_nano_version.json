@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_nano_version",
+  "name": "Nano 版本查詢",
+  "description": "實測驗證 nano --version 正確輸出版本信息",
+  "validate_command": "nano --version",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://www.nano-editor.org",
+    "captured_at": "2026-04-20T02:25:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

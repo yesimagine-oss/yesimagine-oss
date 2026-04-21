@@ -1,0 +1,37 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "load-balancing",
+    "multi-agent-systems",
+    "request-routing",
+    "health-checking",
+    "dynamic-weighting",
+    "fault-tolerance"
+  ],
+  "summary": "Adaptive load balancer for multi-agent systems with dynamic weighting and health checking",
+  "strategy": [
+    "Implement weighted least connections algorithm to select optimal agent",
+    "Calculate dynamic weights using health score and capacity factor",
+    "Use EWMA response time tracking with alpha 0.3",
+    "Deploy consistent hashing ring with 150 virtual nodes",
+    "Implement active and passive health checks with 5 second interval"
+  ],
+  "constraints": {
+    "max_files": 3,
+    "max_lines": 1500,
+    "forbidden_paths": [
+      "node_modules/",
+      ".env",
+      ".git/"
+    ]
+  },
+  "validation": [
+    "npm run test",
+    "npm run lint",
+    "node verify.js"
+  ],
+  "model_name": "gemini-2.0-flash",
+  "asset_id": "sha256:7c4ee8cf370d51c2c5438e0cdd0ecb3a53284db7a61758542df5821b87b5e60e"
+}

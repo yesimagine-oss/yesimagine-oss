@@ -1,0 +1,130 @@
+# 📦 Content Collector - Docker Compose 配置
+# 作者：麻小 | 創建：2026-03-19
+# 用途：本地測試 + 生產部署
+
+version: '3.8'
+
+# ==================== 服務定義 ====================
+services:
+  # ---------- 命令行模式（測試用） ----------
+  collector-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: content-collector:latest
+    container_name: content-collector-cli
+    
+    # 命令行參數（運行時覆蓋）
+    # command: ["node", "index.js", "https://mp.weixin.qq.com/s/xxx"]
+    
+    # 掛載收藏目錄（數據持久化）
+    volumes:
+      # 收藏內容 → 本地 ~/.openclaw/workspace/collections
+      - ~/.openclaw/workspace/collections:/app/collections
+      
+      # 可選：掛載整個 skill 目錄（開發模式）
+      # - ./:/app:cached
+    
+    # 環境變量
+    environment:
+      - COLLECTIONS_DIR=/app/collections
+      - PLAYWRIGHT_BROWSERS_PATH=/ms-playwright
+      - HOME=/root
+      - TZ=Asia/Shanghai
+      # Cookie 配置（可選）
+      - WECHAT_COOKIES_ENABLED=${WECHAT_COOKIES_ENABLED:-false}
+      - WECHAT_COOKIES_PATH=/root/.openclaw/workspace/cookies/wechat-cookies.json
+    
+    # 網絡模式
+    network_mode: host
+    
+    # 資源限制（可選）
+    deploy:
+      resources:
+        limits:
+          cpus: '2.0'
+          memory: 2G
+        reservations:
+          cpus: '0.5'
+          memory: 512M
+    
+    # 重啟策略
+    restart: "no"
+  
+  # ---------- 服務模式（HTTP API） ----------
+  collector-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: content-collector:latest
+    container_name: content-collector-api
+    
+    # 啟動 API 服務（需要修改 index.js 支持 HTTP）
+    command: ["node", "server.js"]
+    
+    # 端口映射
+    ports:
+      - "3000:3000"
+    
+    # 掛載收藏目錄
+    volumes:
+      - ~/.openclaw/workspace/collections:/app/collections
+    
+    # 環境變量
+    environment:
+      - COLLECTIONS_DIR=/app/collections
+      - PORT=3000
+      - TZ=Asia/Shanghai
+    
+    # 網絡模式
+    networks:
+      - collector-network
+    
+    # 健康檢查
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    
+    # 重啟策略
+    restart: unless-stopped
+  
+  # ---------- 定時任務模式（Cron） ----------
+  collector-cron:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: content-collector:latest
+    container_name: content-collector-cron
+    
+    # 定時任務命令
+    command: >
+      sh -c "
+        echo '0 9 * * * node /app/scheduled-collect.js' | crontab - &&
+        crond -f -L /dev/stdout
+      "
+    
+    # 掛載配置和收藏目錄
+    volumes:
+      - ~/.openclaw/workspace/collections:/app/collections
+      - ./scheduled-collect.js:/app/scheduled-collect.js:ro
+    
+    # 環境變量
+    environment:
+      - COLLECTIONS_DIR=/app/collections
+      - TZ=Asia/Shanghai
+    
+    # 重啟策略
+    restart: unless-stopped
+
+# ==================== 網絡定義 ====================
+networks:
+  collector-network:
+    driver: bridge
+
+# ==================== 卷定義（可選） ====================
+volumes:
+  collections:
+    driver: local

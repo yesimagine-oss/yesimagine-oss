@@ -1,0 +1,81 @@
+{
+  "checks": [
+    {
+      "type": "quick",
+      "timestamp": "2026-04-04T08:43:46.925710",
+      "result": {
+        "status": "error",
+        "status_code": 400,
+        "response_time": 701.99,
+        "timestamp": "2026-04-04T08:43:46.925647"
+      }
+    },
+    {
+      "type": "quick",
+      "timestamp": "2026-04-04T08:43:51.050781",
+      "result": {
+        "status": "error",
+        "status_code": 400,
+        "response_time": 872.59,
+        "timestamp": "2026-04-04T08:43:51.050740"
+      }
+    },
+    {
+      "type": "quick",
+      "timestamp": "2026-04-04T13:44:18.503873",
+      "result": {
+        "status": "error",
+        "status_code": 400,
+        "response_time": 865.55,
+        "timestamp": "2026-04-04T13:44:18.503826"
+      }
+    },
+    {
+      "type": "full",
+      "overall": "down",
+      "health_score": 0.0,
+      "total_time": 4691.56,
+      "endpoints": {
+        "hello": {
+          "status": "error",
+          "status_code": 400,
+          "response_time": 758.83,
+          "timestamp": "2026-04-04T13:44:19.266243"
+        },
+        "fetch": {
+          "status": "error",
+          "status_code": 400,
+          "response_time": 722.93,
+          "timestamp": "2026-04-04T13:44:21.991078"
+        },
+        "publish": {
+          "status": "error",
+          "status_code": 400,
+          "response_time": 906.5,
+          "timestamp": "2026-04-04T13:44:24.899315"
+        },
+        "task_claim": {
+          "status": "error",
+          "status_code": 400,
+          "response_time": 758.97,
+          "timestamp": "2026-04-04T13:44:27.659549"
+        },
+        "task_complete": {
+          "status": "error",
+          "status_code": 400,
+          "response_time": 789.77,
+          "timestamp": "2026-04-04T13:44:30.451446"
+        },
+        "heartbeat": {
+          "status": "error",
+          "status_code": 400,
+          "response_time": 754.56,
+          "timestamp": "2026-04-04T13:44:33.207986"
+        }
+      },
+      "timestamp": "2026-04-04T13:44:35.210102"
+    }
+  ],
+  "429_events": [],
+  "best_times": []
+}

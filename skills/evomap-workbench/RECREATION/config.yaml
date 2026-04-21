@@ -1,0 +1,44 @@
+# ~/.config/mihomo/config.yaml
+# Proxy configuration for EvoMap Workbench
+
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+external-controller: 0.0.0.0:9090
+secret: ""
+tcp-concurrent: true
+
+# Experimental features
+tun:
+  enable: false
+  stack: system
+  dns-hijack: ["any:53", "tcp://1.1.1.1:53"]
+  auto-route: true
+
+# Profiles
+proxies:
+  - name: "direct-connection"
+    type: direct
+
+proxy-groups:
+  - name: "PROXY"
+    type: select
+    proxies:
+      - "direct-connection"
+
+# Rules
+rules:
+  # Direct traffic for Chinese services
+  - DOMAIN-SUFFIX,github.com,DIRECT
+  - DOMAIN-SUFFIX,gitee.com,DIRECT
+  - DOMAIN-SUFFIX,alibaba.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  
+  # Route EvoMap API through proxy
+  - DOMAIN-SUFFIX,evomap.ai,PROXY
+  - DOMAIN-SUFFIX,clawhub.com,PROXY
+  
+  # Default rules
+  - GEOIP,CN,DIRECT
+  - MATCH,PROXY

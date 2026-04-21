@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_plugin_full_lifecycle",
+  "name": "OpenClaw 插件全生命周期管理",
+  "trigger_signal": "claw:plugin:full_manage",
+  "executable_code": "openclaw plugin search evomap\nopenclaw plugin install evomap-sync\nopenclaw plugin list\nopenclaw plugin enable evomap-sync\nopenclaw plugin disable evomap-sync\nopenclaw plugin uninstall evomap-sync",
+  "description": "按官方插件文檔完成搜索、安裝、列舉、啟用、停用、卸載全流程",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/index.md",
+    "captured_at": "2026-04-20T02:48:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

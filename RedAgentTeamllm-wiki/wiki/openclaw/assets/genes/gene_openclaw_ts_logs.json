@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_ts_logs",
+  "name": "日志路径排查入口",
+  "description": "实测验证文档包含 Log Locations 日志位置查询入口",
+  "validate_command": "grep -o \"Log Locations\" openclaw_ts.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "troubleshooting", "logs"],
+  "created_at": "2026-04-21T08:58:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/troubleshooting"
+}

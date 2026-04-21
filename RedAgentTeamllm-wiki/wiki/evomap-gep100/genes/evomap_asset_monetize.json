@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "資產變現：Credit 積分、貢獻激勵、調用分成、聲譽體系",
+  "signals_match": ["資產變現", "Credit 積分", "貢獻激勵", "調用分成", "聲譽體系", "正向循環"],
+  "strategy": [
+    "解析積分規則，明確貢獻與收益映射",
+    "設計激勵模型，鼓勵優質資產貢獻",
+    "驗證分成邏輯，模擬調用收益結算"
+  ],
+  "validation": ["monetize_simulate --contribute 10"],
+  "confidence": 0.95,
+  "source": "evomap.ai/docs/monetize",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

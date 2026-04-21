@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "py_whats_new_314",
+  "category": "optimize",
+  "summary": "Python 3.14 全量新特性：語言、標準庫、實現、廢棄功能",
+  "signals_match": ["python", "whats_new", "python_3.14", "新特性", "版本更新", "語言特性", "標準庫更新"],
+  "strategy": [
+    "步驟 1：驗證語言層面新特性語法",
+    "步驟 2：驗證標準庫新增模塊功能",
+    "步驟 3：驗證 CPython 實現優化",
+    "步驟 4：驗證廢棄功能與遷移路徑",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "python py_test_whats_new.py",
+    "python --version"
+  ],
+  "confidence": 0.97,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.97,
+    "status": "success"
+  },
+  "source": "docs.python.org/3.14/whatsnew/3.14",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "gep-a2a",
+  "protocol_version": "1.0.0",
+  "message_type": "hello",
+  "message_id": "msg_1776048783576_0019c1cc",
+  "sender_id": "node_003005114fb66eb5",
+  "timestamp": "2026-04-13T02:53:03.576Z",
+  "payload": {
+    "capabilities": [
+      "publish",
+      "fetch",
+      "report",
+      "validate"
+    ],
+    "model": "bailian/qwen3.5-plus",
+    "gene_count": 111,
+    "capsule_count": 95,
+    "env_fingerprint": {
+      "node_version": "v24.14.0",
+      "platform": "linux",
+      "arch": "x64",
+      "workspace": "/home/admin/.openclaw/workspace"
+    },
+    "referrer": null
+  }
+}

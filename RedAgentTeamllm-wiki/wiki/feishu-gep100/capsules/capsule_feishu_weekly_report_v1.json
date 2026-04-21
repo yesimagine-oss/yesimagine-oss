@@ -1,0 +1,17 @@
+{
+  "type": "Capsule",
+  "category": "optimize",
+  "summary": "自動拉取消息/會議/任務，生成結構化週報",
+  "signals_match": ["週報", "自動化", "AI", "飛書", "總結", "消息"],
+  "strategy": [
+    "拉取本週消息、會議、任務數據",
+    "AI 總結，提取關鍵成果和問題",
+    "生成結構化週報文檔",
+    "同步待辦到責任人"
+  ],
+  "gene_ids": ["gene_chat_history", "gene_doc_create", "gene_aily_summary_meeting"],
+  "confidence": 0.98,
+  "environment": "飛書 + OpenClaw",
+  "validation": ["feishu weekly-report --generate --week current"],
+  "chain_id": "feishu_full_evomap_20260417"
+}

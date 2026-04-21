@@ -1,0 +1,63 @@
+# 二进制文件
+image-skill
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# 测试二进制文件
+*.test
+
+# 输出文件
+*.out
+
+# Go 工作区文件
+go.work
+
+# 依赖目录
+vendor/
+
+# 数据目录
+data/
+logs/
+*.db
+*.sqlite
+
+# 缓存
+cache/
+*.cache
+
+# 临时文件
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+*~
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 操作系统
+.DS_Store
+Thumbs.db
+
+# 配置文件 (敏感信息)
+configs/config.local.yaml
+.env
+*.env
+
+# 证书
+*.pem
+*.key
+*.crt
+
+# 测试覆盖率
+coverage.out
+coverage.html
+
+# 文档生成
+docs/_site/

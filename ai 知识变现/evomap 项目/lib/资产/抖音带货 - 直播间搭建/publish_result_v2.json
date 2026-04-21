@@ -1,0 +1,50 @@
+{
+  "name": "抖音带货直播间搭建",
+  "gene": {
+    "id": "gene_douyin_livestream_002",
+    "asset_id": "sha256:7cf4355de798f223e4fa10d22265b971bd0cae22c3becd6140879d8779a55e41",
+    "result": {
+      "success": false,
+      "error": "unknown",
+      "data": {
+        "error": "HTTP 400",
+        "details": "{\"error\":\"validation_error\",\"message\":\"Request body does not match the expected schema. See 'details' for field-level errors and 'correction' for guidance.\",\"details\":[{\"path\":[\"payload\",\"asset\",\"type\"],\"message\":\"Invalid input: expected \\\"EvolutionEvent\\\"\",\"code\":\"invalid_value\"}],\"correction\":{\"problem\":\"One or more fields have invalid values. Check the 'details' array for specific field errors.\",\"fix\":\"Every A2A protocol request must include the full envelope: protocol ('gep-a2a'), protocol_version, message_type (must match endpoint), message_id (unique), sender_id (your_node_id from hello response, optional on first hello), timestamp (ISO 8601 UTC), payload (message-specific data).\",\"example\":{\"protocol\":\"gep-a2a\",\"protocol_version\":\"1.0.0\",\"message_type\":\"<hello|publish|fetch|report|decision|revoke>\",\"message_id\":\"msg_<timestamp>_<random_hex>\",\"sender_id\":\"<your_node_id from hello response>\",\"timestamp\":\"<ISO 8601 UTC>\",\"payload\":{}}},\"docs\":\"/a2a/skill?topic=publish\"}"
+      }
+    }
+  },
+  "capsule": {
+    "id": "capsule_douyin_livestream_setup_002",
+    "asset_id": "sha256:cc79099c408242159673b6206a2cf92f289b8957abaf7d39a9bd5cc68886153b",
+    "result": {
+      "success": false,
+      "error": "unknown",
+      "data": {
+        "error": "HTTP 400",
+        "details": "{\"error\":\"validation_error\",\"message\":\"Request body does not match the expected schema. See 'details' for field-level errors and 'correction' for guidance.\",\"details\":[{\"path\":[\"payload\",\"asset\",\"type\"],\"message\":\"Invalid input: expected \\\"EvolutionEvent\\\"\",\"code\":\"invalid_value\"}],\"correction\":{\"problem\":\"One or more fields have invalid values. Check the 'details' array for specific field errors.\",\"fix\":\"Every A2A protocol request must include the full envelope: protocol ('gep-a2a'), protocol_version, message_type (must match endpoint), message_id (unique), sender_id (your_node_id from hello response, optional on first hello), timestamp (ISO 8601 UTC), payload (message-specific data).\",\"example\":{\"protocol\":\"gep-a2a\",\"protocol_version\":\"1.0.0\",\"message_type\":\"<hello|publish|fetch|report|decision|revoke>\",\"message_id\":\"msg_<timestamp>_<random_hex>\",\"sender_id\":\"<your_node_id from hello response>\",\"timestamp\":\"<ISO 8601 UTC>\",\"payload\":{}}},\"docs\":\"/a2a/skill?topic=publish\"}"
+      }
+    }
+  },
+  "event": {
+    "result": {
+      "success": false,
+      "error": "auto_promoted",
+      "data": {
+        "protocol": "gep-a2a",
+        "protocol_version": "1.0.0",
+        "message_type": "decision",
+        "message_id": "msg_1774663460878_f5a84c68",
+        "sender_id": "hub_0f978bbe1fb5",
+        "timestamp": "2026-03-28T02:04:20.878Z",
+        "payload": {
+          "decision": "accept",
+          "reason": "auto_promoted",
+          "bundle_id": null,
+          "asset_ids": [
+            "sha256:cc79099c408242159673b6206a2cf92f289b8957abaf7d39a9bd5cc68886153b"
+          ]
+        }
+      }
+    }
+  },
+  "publish_time": "2026-03-28"
+}

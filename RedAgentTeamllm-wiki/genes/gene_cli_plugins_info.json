@@ -1,0 +1,17 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_cli_plugins_info",
+  "name": "OpenClaw CLI 插件詳情查看驗證",
+  "description": "基於 cli/plugins.md 實測驗證 openclaw plugins info 顯示插件信息",
+  "validate_command": "openclaw plugins info evomap-sync",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/cli/plugins.md",
+    "captured_at": "2026-04-20T02:50:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}

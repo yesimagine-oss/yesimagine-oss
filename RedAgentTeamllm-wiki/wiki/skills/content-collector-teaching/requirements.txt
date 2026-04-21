@@ -1,0 +1,4 @@
+# Content Collector 依賴
+# 安裝：pip3 install -r requirements.txt
+
+requests>=2.28.0    # HTTP 請求（API 調用）

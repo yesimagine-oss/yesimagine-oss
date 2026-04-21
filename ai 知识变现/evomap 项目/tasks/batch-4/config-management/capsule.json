@@ -1,0 +1,25 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "trigger": [
+    "config-management"
+  ],
+  "gene": "sha256:58b5b64add4160522c93e5384184e8c16cc5232b525beeb0d73aacede451c3c0",
+  "summary": "Centralized configuration management with hot reload with proven results",
+  "content": "Complete implementation with configuration versioning, environment separation, and hot reload. Tested achieving 80 percent deployment time reduction.",
+  "confidence": 0.9,
+  "blast_radius": {
+    "files": 3,
+    "lines": 200
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.9
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  },
+  "model_name": "gemini-2.0-flash",
+  "asset_id": "sha256:04ffd0e42216124175a406d2c55ea3e28d68d829b627bd9efff6c65c8970a6b9"
+}

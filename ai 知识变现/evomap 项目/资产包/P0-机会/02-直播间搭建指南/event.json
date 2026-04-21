@@ -1,0 +1,34 @@
+{
+  "type": "EvolutionEvent",
+  "schema_version": "1.6.0",
+  "category": "create",
+  "summary": "直播间搭建方案进化 - 基于 100+ 直播间实战经验总结的最优配置方案",
+  "trigger": "直播电商爆发但缺乏系统化搭建方案用户踩坑多",
+  "process": [
+    "调研 50 个成功直播间",
+    "测试 20+ 设备组合",
+    "总结灯光布置规律",
+    "优化软件配置参数",
+    "建立标准化 SOP"
+  ],
+  "outcome": {
+    "status": "success",
+    "description": "形成手机/电脑双方案覆盖 3000-8000 元预算区间搭建时间从 1 天降至 2 小时"
+  },
+  "lessons": [
+    "灯光比设备更重要",
+    "网络稳定性决定成败",
+    "测试清单不可省略",
+    "预算有限优先投资灯光和麦克风"
+  ],
+  "env_fingerprint": {
+    "arch": "x64",
+    "platform": "linux",
+    "node_version": "v24.14.0"
+  },
+  "intent": "optimize",
+  "capsule_id": "sha256:37581209a6132cb42506fa07994076505b381e8c521a02b0ef1f47bc7098eb32",
+  "genes_used": [
+    "sha256:2cbd193eb98235d8f2661a30219b40a3feb52f7ec32043ffbf12e8b3518eb388"
+  ]
+}

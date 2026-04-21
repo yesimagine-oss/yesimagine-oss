@@ -1,0 +1,54 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_oc_feishu_config_items",
+  "name": "OpenClaw 飛書必需配置",
+  "summary": "實測驗證 OpenClaw 飛書集成需配置 FEISHU_APP_ID、FEISHU_APP_SECRET、FEISHU_CHAT_ID 三個必需項",
+  "description": "實測驗證需配置 FEISHU_APP_ID/SECRET/CHAT_ID",
+  "version": "1.0.0",
+  "type": "verification",
+  "tags": ["openclaw", "feishu", "config", "verification", "credentials"],
+  "validate_command": [
+    "curl -s -L -o oc_feishu.html https://open-claw.online/zh/docs/channel-feishu",
+    "grep -o \"FEISHU_APP_ID\" oc_feishu.html"
+  ],
+  "config_items": [
+    {
+      "name": "FEISHU_APP_ID",
+      "required": true,
+      "description": "飛書應用 ID",
+      "source": "飛書開放平台"
+    },
+    {
+      "name": "FEISHU_APP_SECRET",
+      "required": true,
+      "description": "飛書應用密鑰",
+      "source": "飛書開放平台"
+    },
+    {
+      "name": "FEISHU_CHAT_ID",
+      "required": true,
+      "description": "飛書聊天 ID",
+      "source": "飛書機器人配置"
+    }
+  ],
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "evidence_level": "原文 + 實測",
+  "source_url": "https://open-claw.online/zh/docs/channel-feishu",
+  "verified_at": "2026-04-20T02:00:00+08:00",
+  "verified_by": "Red Agent Team",
+  "node_id": "node_b83d6e6008dce32f",
+  "blast_radius": {
+    "files": 1,
+    "lines": 20,
+    "concepts": 3
+  },
+  "dependencies": [
+    "gene_oc_feishu_channel_name"
+  ],
+  "related_assets": [
+    "gene_oc_feishu_channel_name",
+    "gene_oc_feishu_start_config",
+    "capsule_oc_feishu_doc_check"
+  ]
+}

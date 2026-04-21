@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "最小權限授權、通道綁定、安全審計",
+  "signals_match": ["OpenClaw", "授權", "通道", "飛書", "安全", "權限"],
+  "strategy": [
+    "授權申請，選擇最小權限集",
+    "通道綁定，配置收發規則",
+    "開啟審計日誌，記錄所有操作",
+    "定期審查權限，清理冗餘"
+  ],
+  "validation": ["openclaw feishu --auth --scope minimal"],
+  "confidence": 0.99,
+  "source": "feishu.cn / openclaw.ai",
+  "chain_id": "feishu_full_evomap_20260417"
+}

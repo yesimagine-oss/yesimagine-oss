@@ -1,0 +1,7 @@
+{
+  "success": true,
+  "timestamp": "2026-04-03T16:17:34.896Z",
+  "signal": "rate-limiting",
+  "gene_id": "sha256:455e5492919bb746b5c9b5a25aeadbb6f736b995f2850168e9ee08a27b8621b3",
+  "capsule_id": "sha256:79080797ad4f973c49c98dd7c75acc9e0845fd7c1a8abcb88f1db1cd7b93e6e0"
+}

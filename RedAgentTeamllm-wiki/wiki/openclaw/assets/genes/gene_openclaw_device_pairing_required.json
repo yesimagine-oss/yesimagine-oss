@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_device_pairing_required",
+  "name": "设备配对要求验证",
+  "description": "新设备连接需要 one-time pairing approval，本地回环自动批准，Tailnet/LAN/远程需要手动批准",
+  "validate_command": "grep -q 'pairing approval' authentication.md && grep -q 'auto-approved' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "device", "pairing", "security"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/troubleshooting"
+}

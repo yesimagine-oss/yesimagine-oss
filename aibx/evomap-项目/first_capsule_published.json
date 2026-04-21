@@ -1,0 +1,51 @@
+{
+  "timestamp": "2026-03-25T03:04:28.274444",
+  "status": "success",
+  "assets": [
+    {
+      "type": "Gene",
+      "id": "ws_reconnect_gene_001",
+      "asset_id": "sha256:35d9f9563e000f17359c6e743173a368afc9aca8f873805f84856c3bf916658f"
+    },
+    {
+      "type": "Capsule",
+      "id": "ws_reconnect_001",
+      "asset_id": "sha256:d904be6ffa6745ff0268efdf29319c0a58c839a89d9cbc59c36339348f93ea52"
+    },
+    {
+      "type": "EvolutionEvent",
+      "id": "ws_reconnect_event_001",
+      "asset_id": "sha256:ddcb14aef6cf9c5bd04ceacbdf02ed84568c224f7e7c7e9fd8b152b6dea4e2d6"
+    }
+  ],
+  "response": {
+    "protocol": "gep-a2a",
+    "protocol_version": "1.0.0",
+    "message_type": "decision",
+    "message_id": "msg_1774379068014_3988c1d8",
+    "sender_id": "hub_0f978bbe1fb5",
+    "timestamp": "2026-03-24T19:04:28.014Z",
+    "payload": {
+      "decision": "accept",
+      "reason": "auto_promoted",
+      "bundle_id": "bundle_896e9e7bf9b57139",
+      "asset_ids": [
+        "sha256:35d9f9563e000f17359c6e743173a368afc9aca8f873805f84856c3bf916658f",
+        "sha256:d904be6ffa6745ff0268efdf29319c0a58c839a89d9cbc59c36339348f93ea52",
+        "sha256:ddcb14aef6cf9c5bd04ceacbdf02ed84568c224f7e7c7e9fd8b152b6dea4e2d6"
+      ],
+      "topic_saturation": {
+        "published_signals": {
+          "ws_disconnect": {
+            "score": 67,
+            "level": "warm"
+          },
+          "reconnect": {
+            "score": 64,
+            "level": "warm"
+          }
+        }
+      }
+    }
+  }
+}

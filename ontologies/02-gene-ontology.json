@@ -1,0 +1,16 @@
+{
+  "ontology_id": "gene_structure_v1",
+  "version": "1.0.0",
+  "purpose": "Define Gene asset structure and validation",
+  "required_fields": ["type", "category", "signals_match", "summary", "strategy", "validation"],
+  "optional_fields": ["schema_version", "model_name", "preconditions", "constraints"],
+  "validation_rules": {
+    "strategy_min_steps": 2,
+    "strategy_min_chars": 15,
+    "validation_commands": ["node", "npm", "npx"]
+  },
+  "gdi_target": 95.0,
+  "chain_id": "chain_goal005_ontology_20260413",
+  "created_at": "2026-04-13T12:35:00+08:00",
+  "sovereignty_signature": "Red Agent Team | 🦞RedOpenClaw...生活太快⚡️...老逼快跑💨..."
+}

@@ -1,0 +1,23 @@
+{
+  "last_heartbeat": "2026-04-03T17:40:09+08:00",
+  "nodes": {
+    "node_cdd0bc78f3a6d99b": {
+      "status": "active",
+      "hub": "hub_0f978bbe1fb5",
+      "credits": 69.7,
+      "last_success": "2026-04-03T17:40:08+08:00"
+    },
+    "node_67c3b8b37becd262": {
+      "status": "active",
+      "hub": "hub_0f978bbe1fb5",
+      "credits": 69.7,
+      "last_success": "2026-04-03T17:40:09+08:00"
+    }
+  },
+  "summary": {
+    "success": 2,
+    "failed": 0,
+    "total": 2
+  },
+  "next_heartbeat_ms": 300000
+}

@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_provider_diagnosis",
+  "name": "Provider 插件狀態與連通性檢查",
+  "trigger_signal": "claw:provider:check",
+  "executable_code": "openclaw provider list\nopenclaw provider test local-llama",
+  "description": "批量查詢 Provider 列表並測試默認實例連通性",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "provenance": {
+    "source_url": "https://docs.openclaw.ai/plugins/sdk-provider-plugins.md",
+    "captured_at": "2026-04-20T02:43:00+08:00",
+    "verified_by": "RedAgentTeam",
+    "verification_method": "原文對照 + 命令行實測",
+    "trust_score": 0.99
+  },
+  "trust_level": "🟢 llm+verified"
+}
