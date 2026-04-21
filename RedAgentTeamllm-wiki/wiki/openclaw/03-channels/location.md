@@ -1,6 +1,6 @@
 ---
 category: openclaw
-created_at: '2026-04-21'
+created_at: '2026-04-22'
 tags:
 - channels
 - location
@@ -12,21 +12,21 @@ version: '1.0'
 # Provenance
 provenance:
   source_url: "https://docs.openclaw.ai/channels/location"
-  captured_at: "2026-04-21"
+  captured_at: "2026-04-22"
   verified_by: "Red Agent Team"
   verification_method: "grep"
   trust_score: 0.99
 
 # Trust Boundary
 trust_level: "原文 + 实测"
-evidence_level: "部分覆盖"
+evidence_level: "L1 主页面覆盖"
 ---
 
 # Location 通道配置
 
 **来源**: https://docs.openclaw.ai/channels/location  
-**验证时间**: 2026-04-21 21:07 GMT+8  
-**状态**: 🟡 部分覆盖，待补充鉴权/测试
+**验证时间**: 2026-04-22 00:42 GMT+8  
+**状态**: 🟡 仅 L1 主页面，待深入二级配置
 
 ---
 
@@ -38,27 +38,27 @@ evidence_level: "部分覆盖"
 | **支持渠道** | ✅ Telegram, WhatsApp, Matrix |
 | **文本格式** | ✅ Pin/Named/Live (3 种) |
 | **上下文字段** | ✅ 7 项 (LocationLat 等) |
-| **鉴权方法** | ❌ 未提取 |
-| **测试命令** | ❌ 未提取 |
+| **配置模块** | ✅ Configuration (入口) |
+| **完整配置** | ❌ 未深入二级锚点 |
+| **测试命令** | ❌ 无 |
 
 ---
 
 ## 🧬 关联资产
 
-### Genes (4 个)
+### Genes (3 个)
 
 | Gene ID | 名称 | 验证命令 |
 |---------|------|---------|
-| `gene_openclaw_location_channel` | 基础标识 | `grep "Location Channel"` |
-| `gene_openclaw_location_platforms` | 支持平台 | `grep -E "Telegram\|WhatsApp\|Matrix"` |
-| `gene_openclaw_location_formats` | 文本格式 | `grep -A 10 "Text formatting"` |
-| `gene_openclaw_location_context` | 上下文字段 | `grep -A 7 "Context fields"` |
+| `gene_openclaw_location_channel_identity` | 文档标识 | `grep "Location Channel"` |
+| `gene_openclaw_location_supported_channels` | 支持渠道 | `grep -E "Telegram\|WhatsApp\|Matrix"` |
+| `gene_openclaw_location_context_fields` | 上下文字段 | `grep -A 7 "Context fields"` |
 
 ### Capsules (1 个)
 
 | Capsule ID | 名称 | Trigger |
 |------------|------|---------|
-| `capsule_openclaw_location_verify` | 通道校验 | `openclaw:channels:location:verify` |
+| `capsule_openclaw_location_channel_validation` | 通道校验 | `openclaw:channels:location:validate` |
 
 ---
 
@@ -72,17 +72,18 @@ evidence_level: "部分覆盖"
 
 ## 🟡 待补充
 
-- [ ] 鉴权方法
-- [ ] 测试命令
+- [ ] 二级 #configuration 配置参数
+- [ ] 实时位置解析逻辑
+- [ ] 异常处理/排障 SOP
 
 ---
 
 ## 📚 来源
 
-- **原始采样**: `raw/location-sample-20260421-2107.md`
+- **原始采样**: `raw/location-sample-20260422-0042.md`
 - **官方文档**: https://docs.openclaw.ai/channels/location
 
 ---
 
-**最后更新**: 2026-04-21 21:07 GMT+8  
+**最后更新**: 2026-04-22 00:42 GMT+8  
 **维护者**: Red Agent Team
