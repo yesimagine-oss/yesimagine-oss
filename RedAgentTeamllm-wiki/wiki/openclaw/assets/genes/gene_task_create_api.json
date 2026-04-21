@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_task_create_api",
+  "name": "任务创建接口",
+  "description": "通过 task.Create(TaskSpec) 创建任务并返回 TaskID",
+  "validate_command": "curl -s https://docs.openclaw.ai/automation/tasks | grep \"task.Create\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "tasks", "create", "api"],
+  "created_at": "2026-04-21T23:48:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/tasks"
+}

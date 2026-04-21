@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_task_status_cli",
+  "name": "查询任务状态",
+  "trigger_signal": "openclaw:task:status",
+  "executable_code": "openclaw task status <task-id>",
+  "description": "查看指定任务的当前运行状态",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "tasks", "status", "cli"],
+  "created_at": "2026-04-21T23:48:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/tasks",
+  "composed_genes": [
+    "gene_task_state_enum",
+    "gene_task_create_api"
+  ]
+}
