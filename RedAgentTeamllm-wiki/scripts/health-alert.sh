@@ -12,9 +12,9 @@ REPORTS_DIR="$WIKI_ROOT/reports"
 LOG_FILE="$WIKI_ROOT/log.md"
 ALERT_LOG="$WIKI_ROOT/alerts.md"
 
-# 告警閾值
-HEALTH_WARNING=75
-HEALTH_CRITICAL=60
+# 告警閾值 (根據知識庫健康標準)
+HEALTH_WARNING=80    # 🟡 警告：<80 容易產生隱患
+HEALTH_CRITICAL=75   # 🔴 危險：<75 健康度不合格
 
 # 通知配置 (需用戶填寫)
 FEISHU_WEBHOOK=""  # 飛書機器人 Webhook

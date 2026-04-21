@@ -59,12 +59,19 @@ EOF
 # 2. 孤頁檢測
 echo "  檢查孤頁..."
 ORPHAN_COUNT=0
-INDEX_FILE="$WIKI_ROOT/index.md"
+# 使用 Wiki 層索引而非全局索引
+INDEX_FILE="$WIKI_DIR/index.md"
+
+# 如果 Wiki 索引不存在，使用全局索引
+if [ ! -f "$INDEX_FILE" ]; then
+    INDEX_FILE="$WIKI_ROOT/index.md"
+fi
 
 for file in "$WIKI_DIR"/*.md; do
     if [ -f "$file" ] && [ "$file" != "$INDEX_FILE" ]; then
         filename=$(basename "$file" .md)
-        if ! grep -q "$filename" "$INDEX_FILE" 2>/dev/null; then
+        # 檢查文件名是否在索引中被引用 (支持多種格式)
+        if ! grep -qi "$filename" "$INDEX_FILE" 2>/dev/null; then
             ORPHAN_COUNT=$((ORPHAN_COUNT + 1))
             echo "    孤頁：$filename"
         fi

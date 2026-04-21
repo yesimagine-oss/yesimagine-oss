@@ -1,4 +1,34 @@
 
+## 2026-04-21T11:15:58+08:00 - 自動 Lint 檢查
+
+**週次:** 2026-W17
+**結果:** 矛盾=3, 孤頁=0, 過時=0
+**報告:** /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/reports/lint-weekly-2026-W17.md
+**狀態:** ✅ 完成
+
+---
+
+
+## 2026-04-21T11:15:35+08:00 - 自動 Lint 檢查
+
+**週次:** 2026-W17
+**結果:** 矛盾=3, 孤頁=7, 過時=0
+**報告:** /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/reports/lint-weekly-2026-W17.md
+**狀態:** ✅ 完成
+
+---
+
+
+## 2026-04-21T11:14:40+08:00 - 自動 Lint 檢查
+
+**週次:** 2026-W17
+**結果:** 矛盾=3, 孤頁=19, 過時=0
+**報告:** /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/reports/lint-weekly-2026-W17.md
+**狀態:** ✅ 完成
+
+---
+
+
 ## 2026-04-21T11:07:25+08:00 - 自動 Lint 檢查
 
 **週次:** 2026-W17

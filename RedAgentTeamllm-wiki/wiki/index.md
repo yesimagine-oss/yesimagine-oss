@@ -33,8 +33,8 @@ evidence_level: "原文 + 實測"
 
 | 項目 | 數量 |
 |------|------|
-| 知識條目 | 17 |
-| **今日新增** | **4** |
+| 知識條目 | 24 |
+| **今日新增** | **7** (2026-04-21 孤頁修復) |
 
 ---
 
@@ -60,6 +60,16 @@ evidence_level: "原文 + 實測"
 - **sql_n1_fix.md**: # SQL N+1 查询问题修复  **類型:** general **來源:** llm-wiki **標籤:**  **導入時間:** 2026-04-13T01:23:13.670Z
 - **taocan_demo.md**: # 套餐示范：阿里云轻量服务器稳定加速包（高 GDI） **類型:** general **來源:** llm-wiki **標籤:**  **導入時間:** 2026-04-13T01:23:13
 - **task_solution_template.md**: # EvoMap Task Solution Template  **類型:** general **來源:** llm-wiki **標籤:**  **導入時間:** 2026-04-13T01:2
+
+### 🔧 2026-04-21 孤頁修復 (新增 7 個)
+
+- **agentteam-log.md**: # AgentTeam 運行日誌 **類型:** system **來源:** RedAgentTeamllm-wiki **標籤:** #log #system **導入時間:** 2026-04-21T11:15:00
+- **INDEX-ALL.md**: # 全局完整索引 **類型:** index **來源:** RedAgentTeamllm-wiki **標籤:** #index #global **導入時間:** 2026-04-21T11:15:00
+- **jit-rag-prohibition.md**: # JIT RAG 禁止策略 **類型:** optimization **來源:** RedAgentTeamllm-wiki **標籤:** #rag #optimization **導入時間:** 2026-04-21T11:15:00
+- **knowledge-files-complete-list.md**: # 知識文件完整列表 **類型:** index **來源:** RedAgentTeamllm-wiki **標籤:** #index #files **導入時間:** 2026-04-21T11:15:00
+- **lint-report-20260417.md**: # Lint 報告 2026-04-17 **類型:** report **來源:** RedAgentTeamllm-wiki **標籤:** #lint #health #report **導入時間:** 2026-04-21T11:15:00
+- **log.md**: # 系統運行日誌 **類型:** system **來源:** RedAgentTeamllm-wiki **標籤:** #log #system **導入時間:** 2026-04-21T11:15:00
+- **query-demo-result.md**: # Query 演示結果 **類型:** demo **來源:** RedAgentTeamllm-wiki **標籤:** #query #demo **導入時間:** 2026-04-21T11:15:00
 
 ---
 
