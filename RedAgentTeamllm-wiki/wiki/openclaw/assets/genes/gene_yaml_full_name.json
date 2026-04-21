@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_yaml_full_name",
+  "name": "YAML 官方全称",
+  "description": "YAML 是递归缩写：YAML Ain't Markup Language™，为人类友好的数据序列化标准",
+  "validate_command": "curl -s https://yaml.org | grep \"YAML Ain't Markup Language\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://yaml.org",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

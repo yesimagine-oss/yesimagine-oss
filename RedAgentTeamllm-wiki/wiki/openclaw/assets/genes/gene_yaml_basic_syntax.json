@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_yaml_basic_syntax",
+  "name": "YAML 基础语法元素",
+  "description": "包含键值对 key: value（冒号后必须有空格）、列表项 - item、# 注释三种基础语法",
+  "validate_command": "curl -s https://yaml.org | grep -E \"key:|-|#\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://yaml.org",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

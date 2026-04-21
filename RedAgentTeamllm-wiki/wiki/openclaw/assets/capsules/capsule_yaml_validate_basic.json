@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_yaml_validate_basic",
+  "name": "YAML 基础语法校验",
+  "trigger_signal": "yaml:validate:basic",
+  "executable_steps": [
+    "检查键值对格式为 key: value（冒号后必须有空格）",
+    "检查列表以 - 开头",
+    "检查注释以 # 开头"
+  ],
+  "description": "验证 YAML 基础语法是否符合官方首页定义",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://yaml.org",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
