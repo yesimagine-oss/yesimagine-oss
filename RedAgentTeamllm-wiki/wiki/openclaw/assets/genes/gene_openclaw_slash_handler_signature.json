@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_slash_handler_signature",
+  "name": "斜杠命令处理器签名",
+  "description": "固定签名：func(ctx context.Context, args []string) (string, error)",
+  "validate_command": "curl -s https://docs.openclaw.ai/tools/slash-commands | grep \"Handler: func\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "tools", "slash-commands", "handler", "signature"],
+  "created_at": "2026-04-21T23:41:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/slash-commands"
+}
