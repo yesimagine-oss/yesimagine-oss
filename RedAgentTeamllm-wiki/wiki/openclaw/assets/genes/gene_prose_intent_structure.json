@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_prose_intent_structure",
+  "name": "Prose 意图标准结构",
+  "description": "解析结果包含：Action、Entities、Params、Confidence",
+  "validate_command": "curl -s https://docs.openclaw.ai/prose | grep \"Intent: { Action\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "prose", "intent", "structure"],
+  "created_at": "2026-04-21T23:44:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/prose"
+}

@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_prose_parse_text",
+  "name": "解析自然语言文本",
+  "trigger_signal": "openclaw:prose:parse",
+  "executable_code": "openclaw prose parse \"请列出所有已安装技能\"",
+  "description": "将自然语言输入解析为可执行的系统意图",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "prose", "nlp", "parse"],
+  "created_at": "2026-04-21T23:44:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/prose",
+  "composed_genes": [
+    "gene_prose_nlp_engine_role",
+    "gene_prose_intent_structure"
+  ]
+}
