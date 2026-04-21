@@ -30,6 +30,15 @@ Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨...
 
 ---
 
+## 📧 用戶聯繫方式
+
+| 類型 | 地址 |
+|------|------|
+| **Gmail** | yesimagine@gmail.com |
+| **GitHub** | https://github.com/yesimagine-oss |
+
+---
+
 ## 📥 知識采樣入庫回復格式
 
 **每次成功入庫必須包含:**

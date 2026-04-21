@@ -1,0 +1,41 @@
+{
+  "$schema": "https://clawhub.ai/schemas/plugin-manifest.json",
+  "id": "gotoken",
+  "name": "goToken",
+  "version": "1.0.2",
+  "description": "穷逼专用 Token 优化器 - 用 75% 更少 Token，做 100% 相同的事。智能缓存 + 语义匹配 + 限流保护",
+  "author": {
+    "name": "Red Agent Team",
+    "url": "https://github.com/yesimagine-oss"
+  },
+  "license": "MIT-0",
+  "keywords": [
+    "token",
+    "cache",
+    "optimization",
+    "savings",
+    "llm",
+    "cost",
+    "chinese"
+  ],
+  "categories": [
+    "productivity",
+    "utility",
+    "optimization"
+  ],
+  "main": "./src/main.go",
+  "engines": {
+    "openclaw": ">=2026.3.3"
+  },
+  "permissions": [
+    "storage",
+    "http"
+  ],
+  "minAppVersion": "2026.3.3",
+  "icon": "./assets/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yesimagine-oss/goToken"
+  },
+  "changelog": "v1.0.2: 语义相似度缓存，命中率 75%，限流保护，完整错误处理"
+}
