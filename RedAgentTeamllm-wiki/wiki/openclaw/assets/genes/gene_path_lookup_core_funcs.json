@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_path_lookup_core_funcs",
+  "name": "路径查找核心函数与结构体",
+  "description": "内核路径查找依赖 nameidata 结构体与 path_init、path_walk、follow_managed 核心函数",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/path-lookup.html\" | grep -E \"nameidata|path_init|path_walk|follow_managed\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/path-lookup.html",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

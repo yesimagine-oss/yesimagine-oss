@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_path_lookup_check_components",
+  "name": "检查内核路径查找核心组件",
+  "trigger_signal": "linux:vfs:check-path-lookup",
+  "executable_steps": [
+    "访问 https://www.kernel.org/doc/html/latest/filesystems/path-lookup.html",
+    "检索 nameidata、path_init、path_walk、follow_managed 关键词",
+    "输出路径查找核心组件存在状态"
+  ],
+  "description": "依据内核官方文档验证 VFS 路径查找核心组件",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/path-lookup.html",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

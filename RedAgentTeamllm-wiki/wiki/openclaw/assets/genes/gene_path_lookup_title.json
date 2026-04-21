@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_path_lookup_title",
+  "name": "Path Lookup 文档主题",
+  "description": "本文档为 Linux 内核官方路径查找（Path Lookup）机制说明文档",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/path-lookup.html\" | grep \"Path Lookup\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/path-lookup.html",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
