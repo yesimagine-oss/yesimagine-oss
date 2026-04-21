@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_plugin_lifecycle",
+  "name": "插件完整生命周期",
+  "description": "标准流程：Load → Init → Run → Stop → Unload",
+  "validate_command": "curl -s https://docs.openclaw.ai/plugins/architecture | grep \"Lifecycle\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "plugin", "lifecycle", "states"],
+  "created_at": "2026-04-21T23:36:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/architecture"
+}
