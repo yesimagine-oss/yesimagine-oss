@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_taskflow_dag_based",
+  "name": "TaskFlow 基于 DAG 编排",
+  "description": "TaskFlow 使用带依赖关系的 DAG（有向无环图）组织任务",
+  "validate_command": "curl -s https://docs.openclaw.ai/automation/taskflow | grep \"DAG of tasks\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "taskflow", "dag", "workflow"],
+  "created_at": "2026-04-21T23:50:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/taskflow"
+}
