@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_skill_config_file",
+  "name": "技能配置文件名",
+  "description": "技能配置支持 YAML / JSON 格式，默认文件名为 skills.yaml 或 skills.json",
+  "validate_command": "curl -s https://docs.openclaw.ai/tools/skills-config | grep \"skills.yaml\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "tools", "skills", "configuration", "file"],
+  "created_at": "2026-04-21T23:40:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/skills-config"
+}
