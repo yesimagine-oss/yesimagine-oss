@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_harness_register_plugin",
+  "name": "插件注册到 Harness",
+  "trigger_signal": "openclaw:harness:register",
+  "executable_code": "go run main.go -register ./plugin.so",
+  "description": "将插件注册到 Agent Harness 并加入调度",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "agent-harness", "plugin", "registration"],
+  "created_at": "2026-04-21T23:25:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/sdk-agent-harness",
+  "composed_genes": [
+    "gene_openclaw_sdk_agent_harness_purpose",
+    "gene_openclaw_sdk_harness_core_methods"
+  ]
+}
