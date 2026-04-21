@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_vfs_intro_chapter",
+  "name": "VFS 简介章节标识",
+  "description": "Virtual Filesystem (VFS) 简介为内核 VFS 文档的起始章节，标题为 Introduction",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html#introduction\" | grep \"Introduction\"",
+  "confidence": 1.0,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#introduction",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}
