@@ -7,7 +7,7 @@ set -e
 
 # 配置
 WORKSPACE_ROOT="/home/admin/.openclaw/workspace"
-WIKI_ROOT="$WORKSPACE_ROOT/AgentTeamllm-wiki"
+WIKI_ROOT="$WORKSPACE_ROOT/RedAgentTeamllm-wiki"
 WIKI_DIR="$WIKI_ROOT/wiki"
 REPORTS_DIR="$WIKI_ROOT/reports"
 LOG_FILE="$WIKI_ROOT/log.md"
