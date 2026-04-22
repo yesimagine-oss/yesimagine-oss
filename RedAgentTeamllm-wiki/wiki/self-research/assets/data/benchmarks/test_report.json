@@ -1,0 +1,55 @@
+{
+  "total": 9,
+  "passed": 8,
+  "failed": 1,
+  "skipped": 0,
+  "total_duration_ms": 41939,
+  "timestamp": "2026-04-22T12:06:26+08:00",
+  "tests": [
+    {
+      "name": "导航到百度",
+      "required": true,
+      "duration_ms": 3716
+    },
+    {
+      "name": "百度截图",
+      "required": true,
+      "duration_ms": 3539
+    },
+    {
+      "name": "导航到飞书",
+      "required": true,
+      "duration_ms": 16600
+    },
+    {
+      "name": "百度搜索",
+      "required": false,
+      "duration_ms": 2954
+    },
+    {
+      "name": "Gitee 表单",
+      "required": false,
+      "duration_ms": 4019
+    },
+    {
+      "name": "数据抓取",
+      "required": false,
+      "duration_ms": 5722
+    },
+    {
+      "name": "自动填写",
+      "required": false,
+      "duration_ms": 2922
+    },
+    {
+      "name": "微信测试",
+      "required": false,
+      "duration_ms": 2463
+    },
+    {
+      "name": "飞书 API",
+      "required": false,
+      "error": "飞书通知未配置完整"
+    }
+  ]
+}
