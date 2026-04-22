@@ -96,6 +96,8 @@ self-research/
 
 | 链接 | 说明 |
 |------|------|
+| [基因关联图谱](./genes/association-map.md) | 🆕 可视化关联关系 |
+| [数据资产库](./assets/index.md) | 原始报告 + 数据 |
 | [OpenClaw 知识库](../openclaw/index.md) | OpenClaw 官方文档 |
 | [goEX 代码](../../goEX/) | goEX 源代码 |
 | [goToken 代码](../../goToken/) | goToken 源代码 |

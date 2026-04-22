@@ -36,11 +36,11 @@
 
 ### 关联设计基因
 
-| 基因编码 | 说明 |
-|---------|------|
-| `goToken_design_001` | 75% Token 节省原则 |
-| `goToken_design_002` | 精确匹配缓存策略 |
-| `goToken_design_003` | 2 小时缓存 TTL |
+| 基因编码 | 说明 | 链接 |
+|---------|------|------|
+| `goToken_design_001` | 75% Token 节省原则 | [design-gene.md](./design-gene.md#1-75-token-节省原则) |
+| `goToken_design_002` | 精确匹配缓存策略 | [design-gene.md](./design-gene.md#2-精确匹配缓存策略) |
+| `goToken_design_003` | 2 小时缓存 TTL | [design-gene.md](./design-gene.md#3-2-小时缓存-ttl) |
 
 ---
 

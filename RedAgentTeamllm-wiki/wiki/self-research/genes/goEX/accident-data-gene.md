@@ -22,15 +22,15 @@
 
 ### 关联事故基因
 
-| 基因编码 | 说明 |
-|---------|------|
-| `goEX_acc_001-005` | 5 条事故教训基因 |
+| 基因编码 | 说明 | 链接 |
+|---------|------|------|
+| `goEX_acc_001-005` | 5 条事故教训基因 | [accident-gene.md](./accident-gene.md#-基因序列) |
 
 ### 关联 SOP
 
-| 文件 | 说明 |
-|------|------|
-| `../../../openclaw/03-sop/function-change-sop.md` | 功能变更确认 SOP |
+| 文件 | 说明 | 链接 |
+|------|------|------|
+| `../../../openclaw/03-sop/function-change-sop.md` | 功能变更确认 SOP | [查看 SOP](../../../openclaw/03-sop/function-change-sop.md) |
 
 ---
 
