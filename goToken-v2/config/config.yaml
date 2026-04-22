@@ -1,0 +1,40 @@
+# goToken-v2 配置文件
+# 修改后需要重启 Gateway 生效
+
+# 缓存设置
+cache:
+  # 缓存有效期（小时）
+  # 建议：2-4 小时，太短命中率低，太长答案可能过期
+  ttl_hours: 2
+  
+  # 最大 Token 数（每次 API 调用）
+  # 建议：300-500，根据问题复杂度调整
+  max_tokens: 300
+
+# 模型设置
+model:
+  # 使用的模型
+  # 可选：qwen-coding-lite, qwen3.5-plus, 等
+  name: qwen-coding-lite
+  
+  # API 地址（一般不用改）
+  api_base: https://dashscope.aliyuncs.com/api/v1/services/aigc/text-generation/generation
+
+# 监控设置
+monitoring:
+  # 是否启用监控
+  enabled: true
+  
+  # 监控日志路径
+  log_path: /home/admin/.openclaw/workspace/goToken-v2/logs/metrics.json
+  
+  # 统计间隔（秒）
+  stats_interval: 60
+
+# 限流设置
+rate_limit:
+  # 最大并发请求数
+  max_concurrent: 2
+  
+  # 是否启用限流
+  enabled: true
