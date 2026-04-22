@@ -1,0 +1,408 @@
+package main
+
+import (
+	"context"
+	"fmt"
+	"net"
+	"os"
+	"strings"
+	"time"
+
+	"github.com/chromedp/chromedp"
+	"gitlab.com/openclaw/goex/plugin"
+	_ "gitlab.com/openclaw/goex/plugin/feishu_notify"
+	_ "gitlab.com/openclaw/goex/plugin/wechat_grab"
+	_ "gitlab.com/openclaw/goex/plugin/wiki_ingest"
+)
+
+// PluginLoader manages plugin lifecycle
+type PluginLoader struct {
+	registry *plugin.Registry
+	loaded   []string
+}
+
+func NewPluginLoader() *PluginLoader {
+	return &PluginLoader{
+		registry: plugin.GlobalRegistry,
+		loaded:   make([]string, 0),
+	}
+}
+
+func (pl *PluginLoader) LoadAll() error {
+	names := pl.registry.List()
+	fmt.Printf("🔌 发现 %d 个插件：%v\n", len(names), names)
+	
+	for _, name := range names {
+		p, err := pl.registry.Get(name)
+		if err != nil {
+			fmt.Printf("⚠️  获取插件 %s 失败：%v\n", name, err)
+			continue
+		}
+		
+		config := pl.getDefaultConfig(name)
+		err = p.Init(config)
+		if err != nil {
+			fmt.Printf("⚠️  初始化插件 %s 失败：%v\n", name, err)
+			continue
+		}
+		
+		pl.loaded = append(pl.loaded, name)
+		fmt.Printf("✅ 插件 %s 已加载\n", name)
+	}
+	
+	fmt.Printf("✅ 成功加载 %d/%d 个插件\n", len(pl.loaded), len(names))
+	return nil
+}
+
+func (pl *PluginLoader) getDefaultConfig(name string) map[string]interface{} {
+	config := make(map[string]interface{})
+	
+	switch name {
+	case "wiki-ingest":
+		config["base_path"] = "/home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/raw/"
+		config["max_retries"] = 3
+		config["timeout_sec"] = 45
+	case "feishu-notify":
+		config["webhook"] = os.Getenv("FEISHU_WEBHOOK")
+		config["app_id"] = os.Getenv("FEISHU_APP_ID")
+		config["app_secret"] = os.Getenv("FEISHU_APP_SECRET")
+		config["user_id"] = "ou_f4919832188bcc630f8f257497fa93a4"
+	case "wechat-grab":
+		config["base_path"] = "/home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/raw/wechat/"
+		config["login_wait"] = true
+		config["max_wait_sec"] = 300
+	}
+	
+	return config
+}
+
+func (pl *PluginLoader) Execute(name string, params map[string]interface{}) (map[string]interface{}, error) {
+	p, err := pl.registry.Get(name)
+	if err != nil {
+		return nil, err
+	}
+	
+	fmt.Printf("🔌 执行插件：%s\n", name)
+	return p.Execute(params)
+}
+
+func (pl *PluginLoader) Shutdown() error {
+	fmt.Println("🔌 关闭所有插件...")
+	for _, name := range pl.loaded {
+		p, _ := pl.registry.Get(name)
+		p.Shutdown()
+	}
+	return nil
+}
+
+var pluginLoader *PluginLoader
+var allocCtx context.Context
+var allocCancel context.CancelFunc
+
+func initBrowser() {
+	opts := append(chromedp.DefaultExecAllocatorOptions[:],
+		chromedp.Flag("headless", "new"),
+		chromedp.Flag("no-sandbox", true),
+		chromedp.Flag("disable-gpu", true),
+		chromedp.Flag("window-size", "1920,1080"),
+	)
+	
+	proxy := os.Getenv("HTTP_PROXY")
+	if proxy == "" {
+		proxy = os.Getenv("http_proxy")
+	}
+	if proxy == "" {
+		proxy = "http://127.0.0.1:7890"
+	}
+	
+	if isProxyAvailable(proxy) {
+		fmt.Printf("🌐 使用代理：%s\n", proxy)
+		opts = append(opts, chromedp.Flag("proxy-server", proxy))
+	} else {
+		fmt.Println("⚠️  代理不可用，使用直连")
+	}
+	
+	allocCtx, allocCancel = chromedp.NewExecAllocator(context.Background(), opts...)
+}
+
+func isProxyAvailable(proxyURL string) bool {
+	host := proxyURL
+	if len(proxyURL) > 7 && proxyURL[:7] == "http://" {
+		host = proxyURL[7:]
+	}
+	if idx := strings.Index(host, ":"); idx != -1 {
+		host = host[:idx]
+	}
+	
+	conn, err := net.DialTimeout("tcp", host+":7890", 2*time.Second)
+	if err != nil {
+		return false
+	}
+	conn.Close()
+	return true
+}
+
+func main() {
+	fmt.Println("🚀 goEX v0.5.0 - 插件化自动化测试套件")
+	fmt.Println("================================")
+	
+	// 初始化插件系统
+	pluginLoader = NewPluginLoader()
+	err := pluginLoader.LoadAll()
+	if err != nil {
+		fmt.Printf("⚠️  插件加载警告：%v\n", err)
+	}
+	defer pluginLoader.Shutdown()
+	
+	// 初始化浏览器
+	initBrowser()
+	defer allocCancel()
+	fmt.Println("✅ 浏览器初始化完成")
+	
+	// 命令行模式处理
+	if len(os.Args) > 1 {
+		switch os.Args[1] {
+		case "--wiki":
+			if len(os.Args) < 3 {
+				fmt.Println("❌ 用法：goex --wiki <url>")
+				os.Exit(1)
+			}
+			url := os.Args[2]
+			fmt.Println("📚 Wiki 抓取模式（插件版）")
+			fmt.Printf("🔗 URL: %s\n", url)
+			
+			result, err := pluginLoader.Execute("wiki-ingest", map[string]interface{}{
+				"url": url,
+			})
+			if err != nil {
+				fmt.Printf("❌ 失败：%v\n", err)
+				os.Exit(1)
+			}
+			fmt.Printf("✅ 完成：%v\n", result)
+			return
+			
+		case "--notify":
+			if len(os.Args) < 3 {
+				fmt.Println("❌ 用法：goex --notify <message>")
+				os.Exit(1)
+			}
+			message := strings.Join(os.Args[2:], " ")
+			fmt.Println("📬 飞书通知模式（插件版）")
+			
+			result, err := pluginLoader.Execute("feishu-notify", map[string]interface{}{
+				"title":   "goEX 通知",
+				"content": message,
+			})
+			if err != nil {
+				fmt.Printf("❌ 失败：%v\n", err)
+				os.Exit(1)
+			}
+			fmt.Printf("✅ 完成：%v\n", result)
+			return
+			
+		case "--wechat":
+			if len(os.Args) < 3 {
+				fmt.Println("❌ 用法：goex --wechat <url>")
+				os.Exit(1)
+			}
+			url := os.Args[2]
+			fmt.Println("💬 微信采集模式（插件版）")
+			fmt.Printf("🔗 URL: %s\n", url)
+			
+			result, err := pluginLoader.Execute("wechat-grab", map[string]interface{}{
+				"url": url,
+			})
+			if err != nil {
+				fmt.Printf("❌ 失败：%v\n", err)
+				os.Exit(1)
+			}
+			fmt.Printf("✅ 完成：%v\n", result)
+			return
+			
+		case "--test":
+			fmt.Println("🧪 插件测试模式")
+			testPlugins()
+			return
+			
+		case "--stability":
+			fmt.Println("🔁 稳定性测试模式")
+			runStabilityTest()
+			return
+		}
+	}
+	
+	// 默认：运行测试套件
+	fmt.Println("\n📋 运行测试套件...")
+	runTestSuite()
+}
+
+func testPlugins() {
+	fmt.Println("\n=== 插件测试 ===")
+	
+	// 测试 Wiki-Inest
+	fmt.Println("\n1️⃣ 测试 Wiki-Ingest 插件")
+	_, err := pluginLoader.Execute("wiki-ingest", map[string]interface{}{
+		"url": "https://www.baidu.com",
+	})
+	if err != nil {
+		fmt.Printf("   ❌ Wiki-Ingest: %v\n", err)
+	} else {
+		fmt.Println("   ✅ Wiki-Ingest: 通过")
+	}
+	
+	// 测试 Feishu-Notify
+	fmt.Println("\n2️⃣ 测试 Feishu-Notify 插件")
+	_, err = pluginLoader.Execute("feishu-notify", map[string]interface{}{
+		"title":   "goEX 测试",
+		"content": "这是一条测试消息",
+	})
+	if err != nil {
+		fmt.Printf("   ⚠️  Feishu-Notify: %v (可能未配置)\n", err)
+	} else {
+		fmt.Println("   ✅ Feishu-Notify: 通过")
+	}
+	
+	fmt.Println("\n=== 测试完成 ===")
+}
+
+func runTestSuite() {
+	tests := []struct {
+		name     string
+		required bool
+	}{
+		{"导航到百度", true},
+		{"百度截图", true},
+		{"导航到飞书", true},
+		{"百度搜索", false},
+		{"数据抓取", false},
+	}
+	
+	passed := 0
+	failed := 0
+	
+	for i, test := range tests {
+		fmt.Printf("\n[%d/%d] 测试：%s\n", i+1, len(tests), test.name)
+		
+		err := runSingleTest(test.name)
+		if err != nil {
+			fmt.Printf("❌ 失败：%v\n", err)
+			if test.required {
+				failed++
+			}
+		} else {
+			fmt.Println("✅ 通过")
+			passed++
+		}
+	}
+	
+	fmt.Println("\n================================")
+	fmt.Printf("📊 测试完成：%d 通过，%d 失败\n", passed, failed)
+}
+
+func runSingleTest(name string) error {
+	ctx, cancel := chromedp.NewContext(allocCtx)
+	defer cancel()
+	
+	ctx, timeoutCancel := context.WithTimeout(ctx, 30*time.Second)
+	defer timeoutCancel()
+	
+	switch name {
+	case "导航到百度":
+		var title string
+		return chromedp.Run(ctx,
+			chromedp.Navigate("https://www.baidu.com"),
+			chromedp.Title(&title),
+		)
+		
+	case "百度截图":
+		var buf []byte
+		err := chromedp.Run(ctx,
+			chromedp.Navigate("https://www.baidu.com"),
+			chromedp.FullScreenshot(&buf, 100),
+		)
+		if err != nil {
+			return err
+		}
+		return os.WriteFile("test_baidu.png", buf, 0644)
+		
+	case "导航到飞书":
+		var title string
+		return chromedp.Run(ctx,
+			chromedp.Navigate("https://feishu.cn"),
+			chromedp.Title(&title),
+		)
+		
+	case "百度搜索":
+		var title string
+		return chromedp.Run(ctx,
+			chromedp.Navigate("https://www.baidu.com"),
+			chromedp.Title(&title),
+		)
+		
+	case "数据抓取":
+		var titles []string
+		err := chromedp.Run(ctx,
+			chromedp.Navigate("https://www.baidu.com"),
+			chromedp.Sleep(2*time.Second),
+			chromedp.Evaluate(`() => {
+				const els = Array.from(document.querySelectorAll('.c-single-text-ellipsis'));
+				return els.slice(0, 5).map(e => e.textContent.trim()).filter(t => t.length > 5);
+			}()`, &titles),
+		)
+		if err != nil || len(titles) == 0 {
+			return fmt.Errorf("热搜抓取失败")
+		}
+		fmt.Printf("   📰 抓取到 %d 条热门内容\n", len(titles))
+		return nil
+		
+	default:
+		return fmt.Errorf("未知测试：%s", name)
+	}
+}
+
+func runStabilityTest() {
+	totalRuns := 10
+	passedRuns := 0
+	
+	for i := 1; i <= totalRuns; i++ {
+		fmt.Printf("第 %d/%d 次测试...\n", i, totalRuns)
+		
+		opts := append(chromedp.DefaultExecAllocatorOptions[:],
+			chromedp.Flag("headless", "new"),
+			chromedp.Flag("no-sandbox", true),
+			chromedp.Flag("disable-gpu", true),
+		)
+		ctx, cancel := chromedp.NewExecAllocator(context.Background(), opts...)
+		
+		browserCtx, browserCancel := chromedp.NewContext(ctx)
+		browserCtx, _ = context.WithTimeout(browserCtx, 30*time.Second)
+		
+		var title string
+		err := chromedp.Run(browserCtx,
+			chromedp.Navigate("https://www.baidu.com"),
+			chromedp.Title(&title),
+		)
+		
+		browserCancel()
+		cancel()
+		
+		if err == nil && title != "" {
+			passedRuns++
+			fmt.Printf("  ✅ 通过 (%s)\n", title)
+		} else {
+			fmt.Printf("  ❌ 失败：%v\n", err)
+		}
+		time.Sleep(2 * time.Second)
+	}
+	
+	rate := float64(passedRuns) / float64(totalRuns) * 100
+	fmt.Printf("\n📊 稳定性测试结果：%d/%d 通过 (%.1f%%)\n", passedRuns, totalRuns, rate)
+	
+	if rate >= 95 {
+		fmt.Println("✅ 达到生产级标准（≥95%）")
+	} else if rate >= 80 {
+		fmt.Println("🟡 达到可用标准（≥80%）")
+	} else {
+		fmt.Println("❌ 需继续优化（<80%）")
+	}
+}

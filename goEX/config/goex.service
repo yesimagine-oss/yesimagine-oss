@@ -1,0 +1,15 @@
+[Unit]
+Description=goEX HTTP Server
+After=network.target
+
+[Service]
+Type=simple
+User=admin
+WorkingDirectory=/home/admin/.goex
+ExecStart=/home/admin/.goex/goEX --http-server :8081
+Restart=always
+RestartSec=5
+Environment=HTTP_PROXY=http://127.0.0.1:7890
+
+[Install]
+WantedBy=multi-user.target

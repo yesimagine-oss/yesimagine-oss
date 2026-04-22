@@ -1,0 +1,24 @@
+# goEX 配置文件
+
+# 快捷方式
+shortcuts:
+  wechat: "navigate https://mp.weixin.qq.com"
+  feishu: "navigate https://feishu.cn"
+  baidu: "navigate https://www.baidu.com"
+
+# 服务器配置
+server:
+  port: 8080
+  timeout: 30s
+
+# 插件配置
+plugins:
+  enabled:
+    - recorder
+  directory: ~/.goex/plugins
+
+# 浏览器配置
+browser:
+  headless: true
+  no-sandbox: true
+  disable-gpu: true
