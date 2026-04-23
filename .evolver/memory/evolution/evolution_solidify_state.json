@@ -1,7 +1,7 @@
 {
   "last_run": {
-    "run_id": "run_1776918903797",
-    "created_at": "2026-04-23T04:35:03.865Z",
+    "run_id": "run_1776920749898",
+    "created_at": "2026-04-23T05:05:49.962Z",
     "parent_event_id": null,
     "selected_gene_id": "gene_tool_integrity",
     "selected_capsule_id": null,
@@ -9,55 +9,64 @@
       "selected": "gene_tool_integrity",
       "reason": [
         "signals match gene.signals_match",
-        "signals: bounty_task, external_task, fails, validation, claim, `exp`, jwt, security, serverless, clock_skew, JWT_validation, repeated_tool_usage:exec, tool_bypass",
-        "memory_graph: memory_prefer:gene_tool_integrity | gene_prior:0.750",
+        "signals: bounty_task, external_task, rebalance导致的数据处理延迟，如何优化？, group, consumer, kafka, Flink, latency, rebalance, consumer-group, Kafka, user_feature_request, user_feature_request:write] [TOOL, capability_gap, repeated_tool_usage:exec, tool_bypass, hub_search_miss_with_problem",
         "drift_intensity: 0.577",
-        "selection_path: score_ranked",
-        "memory_preference_followed: true"
+        "selection_path: random"
       ],
-      "alternatives": [],
-      "selectionPath": "score_ranked",
-      "memoryUsed": true
+      "alternatives": [
+        "gene_gep_repair_from_errors",
+        "gene_gep_optimize_prompt_and_assets"
+      ],
+      "selectionPath": "random",
+      "memoryUsed": false
     },
     "signals": [
       "bounty_task",
       "external_task",
-      "fails",
-      "validation",
-      "claim",
-      "`exp`",
-      "jwt",
-      "security",
-      "serverless",
-      "clock_skew",
-      "JWT_validation",
+      "rebalance导致的数据处理延迟，如何优化？",
+      "group",
+      "consumer",
+      "kafka",
+      "Flink",
+      "latency",
+      "rebalance",
+      "consumer-group",
+      "Kafka",
+      "user_feature_request",
+      "user_feature_request:write] [TOOL",
+      "capability_gap",
       "repeated_tool_usage:exec",
-      "tool_bypass"
+      "tool_bypass",
+      "hub_search_miss_with_problem"
     ],
     "mutation": {
       "type": "Mutation",
-      "id": "mut_1776918903784",
+      "id": "mut_1776920749884",
       "category": "innovate",
       "trigger_signals": [
         "bounty_task",
         "external_task",
-        "fails",
-        "validation",
-        "claim",
-        "`exp`",
-        "jwt",
-        "security",
-        "serverless",
-        "clock_skew",
-        "JWT_validation",
+        "rebalance导致的数据处理延迟，如何优化？",
+        "group",
+        "consumer",
+        "kafka",
+        "Flink",
+        "latency",
+        "rebalance",
+        "consumer-group",
+        "Kafka",
+        "user_feature_request",
+        "user_feature_request:write] [TOOL",
+        "capability_gap",
         "repeated_tool_usage:exec",
-        "tool_bypass"
+        "tool_bypass",
+        "hub_search_miss_with_problem"
       ],
       "target": "gene:gene_tool_integrity",
       "expected_effect": "explore new strategy combinations to escape local optimum",
       "risk_level": "medium"
     },
-    "mutation_id": "mut_1776918903784",
+    "mutation_id": "mut_1776920749884",
     "personality_state": {
       "type": "PersonalityState",
       "rigor": 0.7,
@@ -70,34 +79,16 @@
     "personality_known": false,
     "personality_mutations": [],
     "drift": false,
-    "selected_by": "memory_graph+selector",
+    "selected_by": "selector",
     "source_type": "generated",
     "reused_asset_id": null,
     "reused_source_node": null,
     "reused_chain_id": null,
     "baseline_untracked": [
-      ".evolver/memory/evolution/evolution_solidify_state.json",
-      ".evolver/memory/evolution/evolution_state.json",
-      ".evolver/memory/evolution/memory_graph.jsonl",
-      ".evolver/memory/evolution/memory_graph_state.json",
-      ".evolver/memory/evolution/personality_state.json",
-      ".evolver/memory/evolver_update_check.json",
-      ".evolver/memory/skills_list_cache.json",
-      "AgentTeamllm-wiki/backup/agentteamllm-wiki-2026-04-23.sha256",
-      "AgentTeamllm-wiki/backup/agentteamllm-wiki-2026-04-23.tar.gz",
-      "assets/gep/candidates.jsonl",
-      "assets/gep/capsules.json",
-      "assets/gep/events.jsonl",
-      "assets/gep/failed_capsules.json",
-      "assets/gep/genes.json",
-      "assets/gep/genes.jsonl",
-      "evomap/fix-flagged-assets.sh",
-      "evomap/publish-flagged-fix.sh",
-      "goToken/build/goToken",
-      "goToken/src/openclaw-gateway/skill/go.mod",
-      "goToken/src/openclaw-gateway/skill/skill.go"
+      ".evolver/memory/assets/asset1-llm-token-optimizer.json",
+      ".evolver/memory/assets/asset2-llm-response-cacher.json"
     ],
-    "baseline_git_head": "d48824e631d8552132f8f333e250ddcb0762910f",
+    "baseline_git_head": "5b960c80726cf6f9c4658034d42da3ade29f2a77",
     "blast_radius_estimate": {
       "files": 4,
       "lines": 320
@@ -117,14 +108,31 @@
         "Target max files for this cycle: 4."
       ]
     },
-    "active_task_id": "cmo96vhk00qtwnu01vckwdolh",
-    "active_task_title": "JWT `exp` claim validation fails after clock skew on serverless functions",
+    "active_task_id": "cmoawbiby14bbm401amfrj3ej",
+    "active_task_title": "Kafka Consumer Group Rebalance导致的数据处理延迟，如何优化？",
     "worker_assignment_id": null,
     "worker_pending": false,
-    "commitment_deadline": "2026-04-23T05:35:03.198Z",
+    "commitment_deadline": "2026-04-23T05:35:49.302Z",
     "applied_lessons": [],
     "hub_lessons": [],
-    "cycleId": "0003",
+    "cycleId": "0004",
     "initial_user_prompt": "Sender (untrusted metadata):\n```json\n{\n  \"label\": \"openclaw-control-ui\",\n  \"id\": \"openclaw-control-ui\"\n}\n```\n\n[Thu 2026-04-23 11:45 GMT+8] 好了"
-  }
+  },
+  "last_solidify": {
+    "run_id": "run_1776920749898",
+    "at": "2026-04-23T05:09:04.988Z",
+    "event_id": "evt_1776920944988",
+    "capsule_id": null,
+    "outcome": {
+      "status": "failed",
+      "score": 0.67
+    }
+  },
+  "last_validation_failure": {
+    "cmd": "node scripts/validate-suite.js",
+    "stderr": "node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module '/home/admin/.openclaw/workspace/scripts/validate-suite.js'\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1456:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1066:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1071:22)\n    at Module._load (node:internal/modules/cjs/loader:1242:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.e",
+    "retries_attempted": 2,
+    "at": "2026-04-23T05:09:04.988Z"
+  },
+  "solidify_count": 1
 }

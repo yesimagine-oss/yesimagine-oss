@@ -95,8 +95,52 @@
         "node scripts/validate-suite.js"
       ],
       "anti_patterns": [
-        "tool_bypass"
-      ]
+        "tool_bypass",
+        {
+          "at": "2026-04-23T05:09:05.384Z",
+          "mode": "soft",
+          "reason_class": "validation",
+          "learning_signals": [
+            "problem:reliability",
+            "action:repair",
+            "problem:performance",
+            "action:optimize",
+            "problem:capability",
+            "action:innovate",
+            "area:orchestration",
+            "risk:validation"
+          ]
+        }
+      ],
+      "learning_history": [
+        {
+          "at": "2026-04-23T05:09:05.384Z",
+          "outcome": "failed",
+          "mode": "soft",
+          "reason_class": "validation",
+          "retryable": true,
+          "learning_signals": [
+            "problem:reliability",
+            "action:repair",
+            "problem:performance",
+            "action:optimize",
+            "problem:capability",
+            "action:innovate",
+            "area:orchestration",
+            "risk:validation"
+          ]
+        }
+      ],
+      "epigenetic_marks": [
+        {
+          "context": "linux/x64/v24.14.0",
+          "boost": -0.1,
+          "reason": "failure_in_environment",
+          "created_at": "2026-04-23T05:09:05.386Z"
+        }
+      ],
+      "schema_version": "1.6.0",
+      "asset_id": "sha256:c096ff1ef7104694315f0df61273c7c0ba06425907657d192edc94b44652d101"
     }
   ]
 }
