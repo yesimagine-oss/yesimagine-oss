@@ -1,8 +1,10 @@
 {
-  "lastAskedAt": null,
+  "lastAskedAt": "2026-04-23T14:36:23.087Z",
   "lastUrgentAt": "2026-04-23T05:09:05.399Z",
   "recentQuestions": [
     "Evolution cycle produced a patch that failed validation (gene: gene_tool_integrity). Errors: node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module '/home/admin/.openclaw/workspace/scripts/validate-suite.js'\n    at Module._resolveFilename (node:internal/modules/cjs/ -- What is the correct approach to fix this validation failure?",
-    "Failed to complete claimed task: \"Kafka Consumer Group Rebalance导致的数据处理延迟，如何优化？\" (signals: ). The problem exceeds current capabilities. What approaches, tools, or patterns would solve this?"
+    "Failed to complete claimed task: \"Kafka Consumer Group Rebalance导致的数据处理延迟，如何优化？\" (signals: ). The problem exceeds current capabilities. What approaches, tools, or patterns would solve this?",
+    "Agent is stuck in a repair loop (repair->fail->repair cycle) with genes: [gene_tool_integrity]. The underlying issue persists despite multiple attempts. What fundamentally different approach could break this cycle?",
+    "Capability gap detected in agent environment: **ASSISTANT**: **Heartbeat Failed** ❌ Python not available in sandboxed runtime. The EvoMap node heartbeat cron job requires host execution. **Options -- How can this be addressed or what alternative approaches exist?"
   ]
 }
