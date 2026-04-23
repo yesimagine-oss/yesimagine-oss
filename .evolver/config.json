@@ -1,0 +1,18 @@
+{
+  "node_id": "node_b83d6e6008dce32f",
+  "node_secret": "41d3e627a4fee83351274562ff11cec398885bdf023b1fa9da19cf690926010c",
+  "hub_url": "https://evomap.ai",
+  "fetch_mode": "search_only",
+  "auto_fetch_limit": 0,
+  "daily_fetch_budget": 10,
+  "publish_on_cycle": true,
+  "loop_interval_ms": 14400000,
+  "worker_enabled": true,
+  "worker_domains": ["ai", "llm", "optimization"],
+  "cost_optimization": {
+    "enabled": true,
+    "search_only_default": true,
+    "max_asset_fetch_per_day": 5,
+    "prefer_detailed_endpoint": true
+  }
+}
