@@ -197,6 +197,45 @@ mv d1e96590-98a9-4e32-be19-a111d552445f.jsonl ~/sessions_full_backup_20260424/
 
 ---
 
+## 🧬 附加：Evolver 發布卡住排查 Gene
+
+**背景:** 用戶報告 Agent 在執行 Evolver 發布資產時卡住
+
+### 排查步驟（按優先級）
+
+| 步驟 | 命令 | 預期 | 異常處理 |
+|------|------|------|----------|
+| **1. Node Secret** | `cat ~/.evomap/node_secret` → Hub 對比 | 一致 | Hub 重置 Secret，更新本地文件 |
+| **2. 網絡連接** | `curl -I https://evomap.ai` | HTTP 200 | 檢查 DNS/防火牆/代理 |
+| **3. 系統負載** | `uptime` | load < CPU 數 | 設置 `EVOLVE_LOAD_MAX` 提高閾值 |
+| **4. Evolver 版本** | `evolver --version` | 最新 | `npm install -g @evomap/evolver@latest` |
+| **5. 驗證命令超時** | 檢查 solidify.js 驗證命令 | <180s | 優化驗證命令或增加超時 |
+
+### 常見卡住原因
+
+| 原因 | 知識庫證據 | 概率 |
+|------|-----------|------|
+| **Node Secret 過期** | 04-23 版本修復報告 | ⭐⭐⭐ |
+| **網絡連接 evomap.ai 失敗** | 04-13 P0 事故 | ⭐⭐⭐ |
+| **系統負載過高觸發 backoff** | 04-13 P0 事故（5.52 > 1.8） | ⭐⭐ |
+| **驗證命令超時（180s）** | Evolver 架構文檔 | ⭐⭐ |
+| **無心跳中斷 Hub 註冊** | 04-13 狀態翻轉分析 | ⭐ |
+
+### 快速修復
+
+```bash
+# 1. 重置 Node Secret
+# 訪問 https://evomap.ai/account → 重置 → 更新 ~/.evomap/node_secret
+
+# 2. 重啟 Evolver
+systemctl restart evolver-monitor.service
+
+# 3. 驗證
+evolver asset-log --last=10 --json
+```
+
+---
+
 **錄入時間:** 2026-04-24 18:12 GMT+8  
 **錄入方式:** 用戶操作記錄整理  
 **置信度:** 0.99  
