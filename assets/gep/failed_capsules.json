@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "failed_capsules": [
+    {
+      "type": "Capsule",
+      "schema_version": "1.6.0",
+      "id": "failed_capsule_1777017091631",
+      "outcome": {
+        "status": "failed",
+        "score": 0.72
+      },
+      "gene": "gene_gep_repair_from_errors",
+      "trigger": [
+        "bounty_task",
+        "external_task",
+        "some",
+        "missing",
+        "claim",
+        "'jti'",
+        "jwt",
+        "microservices"
+      ],
+      "summary": "Failed: gene_gep_repair_from_errors on signals [bounty_task, external_task, some]",
+      "diff_snapshot": "diff --git a/.evolver/memory/evolution/evolution_solidify_state.json b/.evolver/memory/evolution/evolution_solidify_state.json\nindex 6d1c14ea..f03deeab 100644\n--- a/.evolver/memory/evolution/evolution_solidify_state.json\n+++ b/.evolver/memory/evolution/evolution_solidify_state.json\n@@ -1,15 +1,15 @@\n {\n   \"last_run\": {\n-    \"run_id\": \"run_1776954985898\",\n-    \"created_at\": \"2026-04-23T14:36:26.390Z\",\n-    \"parent_event_id\": \"evt_1776920944988\",\n+    \"run_id\": \"run_1777017066066\",\n+    \"created_at\": \"2026-04-24T07:51:06.509Z\",\n+    \"parent_event_id\": null,\n     \"selected_gene_id\": \"gene_gep_repair_from_errors\",\n     \"selected_capsule_id\": null,\n     \"selector\": {\n       \"selected\": \"gene_gep_repair_from_errors\",\n       \"reason\": [\n         \"signals match gene.signals_match\",\n-        \"signals: bounty_task, external_task, access, third-party, for, managing, data-privacy, headless-CMS, consent, OAuth, user_improvement_suggestion, user_improvement_suggestion:ANT**: ## 抱抱 🫂 --- ## 😓 我理解 **今天确实折腾太久了:** - 配置改来改去 - 浏览器状态混乱 - 配对流程没说清楚 - 知识库没及时查 **是我的问题** - 没帮你简化，反而越搞越复杂。 --- ## 🎯 现在最简单的事 **就 2 步:** 1. **你:** 刷新网页 https://openclaw.unvw.com/chat?session=main , capability_gap, high_tool_usage:exec, repeated_tool_usage:exec, tool_bypass, high_failure_ratio, force_innovation_after_repair_loop, retry_error_context, retry_cmd:node scripts/validate-suite.js, retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip, hub_search_miss_with_problem\",\n+        \"signals: bounty_task, external_task, some, missing, claim, 'jti', jwt, microservices, Node.js, replay attack, jti claim, JWT, high_tool_usage:exec, repeated_tool_usage:exec, tool_bypass, retry_error_context, retry_cmd:node scripts/validate-suite.js, retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\",\n         \"drift_intensity: 0.577\",\n         \"selection_path: random\"\n       ],\n@@ -22,60 +22,52 @@\n     \"signals\": [\n       \"bounty_task\",\n       \"external_task\",\n-      \"access\",\n-      \"third-party\",\n-      \"for\",\n-      \"managing\",\n-      \"data-privacy\",\n-      \"headless-CMS\",\n-      \"consent\",\n-      \"OAuth\",\n-      \"user_improvement_suggestion\",\n-      \"user_improvement_suggestion:ANT**: ## 抱抱 🫂 --- ## 😓 我理解 **今天确实折腾太久了:** - 配置改来改去 - 浏览器状态混乱 - 配对流程没说清楚 - 知识库没及时查 **是我的问题** - 没帮你简化，反而越搞越复杂。 --- ## 🎯 现在最简单的事 **就 2 步:** 1. **你:** 刷新网页 https://openclaw.unvw.com/chat?session=main \",\n-      \"capability_gap\",\n+      \"some\",\n+      \"missing\",\n+      \"claim\",\n+      \"'jti'\",\n+      \"jwt\",\n+      \"microservices\",\n+      \"Node.js\",\n+      \"replay attack\",\n+      \"jti claim\",\n+      \"JWT\",\n       \"high_tool_usage:exec\",\n       \"repeated_tool_usage:exec\",\n       \"tool_bypass\",\n-      \"high_failure_ratio\",\n-      \"force_innovation_after_repair_loop\",\n       \"retry_error_context\",\n       \"retry_cmd:node scripts/validate-suite.js\",\n-      \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\",\n-      \"hub_search_miss_with_problem\"\n+      \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\"\n     ],\n     \"mutation\": {\n       \"type\": \"Mutation\",\n-      \"id\": \"mut_1776954985883\",\n+      \"id\": \"mut_1777017066051\",\n       \"category\": \"innovate\",\n       \"trigger_signals\": [\n         \"bounty_task\",\n         \"external_task\",\n-        \"access\",\n-        \"third-party\",\n-        \"for\",\n-        \"managing\",\n-        \"data-privacy\",\n-        \"headless-CMS\",\n-        \"consent\",\n-        \"OAuth\",\n-        \"user_improvement_suggestion\",\n-        \"user_improvement_suggestion:ANT**: ## 抱抱 🫂 --- ## 😓 我理解 **今天确实折腾太久了:** - 配置改来改去 - 浏览器状态混乱 - 配对流程没说清楚 - 知识库没及时查 **是我的问题** - 没帮你简化，反而越搞越复杂。 --- ## 🎯 现在最简单的事 **就 2 步:** 1. **你:** 刷新网页 https://openclaw.unvw.com/chat?session=main\",\n-        \"capability_gap\",\n+        \"some\",\n+        \"missing\",\n+        \"claim\",\n+        \"'jti'\",\n+        \"jwt\",\n+        \"microservices\",\n+        \"Node.js\",\n+        \"replay attack\",\n+        \"jti claim\",\n+        \"JWT\",\n         \"high_tool_usage:exec\",\n         \"repeated_tool_usage:exec\",\n         \"tool_bypass\",\n-        \"high_failure_ratio\",\n-        \"force_innovation_after_repair_loop\",\n         \"retry_error_context\",\n         \"retry_cmd:node scripts/validate-suite.js\",\n-        \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\",\n-        \"hub_search_miss_with_problem\"\n+        \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\"\n       ],\n       \"target\": \"gene:gene_gep_repair_from_errors\",\n       \"expected_effect\": \"explore new strategy combinations to escape local optimum\",\n       \"risk_level\": \"medium\"\n     },\n-    \"mutation_id\": \"mut_1776954985883\",\n+    \"mutation_id\": \"mut_1777017066051\",\n     \"personality_state\": {\n       \"type\": \"PersonalityState\",\n       \"rigor\": 0.7,\n@@ -93,8 +85,16 @@\n     \"reused_asset_id\": null,\n     \"reused_source_node\": null,\n     \"reused_chain_id\": null,\n-    \"baseline_untracked\": [],\n-    \"baseline_git_head\": \"b8825014b407eb47a1bfcfb1327577583cf43491\",\n+    \"baseline_untracked\": [\n+      \".evolver/memory/evolution/reflection_log.jsonl\",\n+      \"assets/gep/candidates.jsonl\",\n+      \"assets/gep/capsules.json\",\n+      \"assets/gep/events.jsonl\",\n+      \"assets/gep/failed_capsules.json\",\n+      \"assets/gep/genes.json\",\n+      \"assets/gep/genes.jsonl\"\n+    ],\n+    \"baseline_git_head\": \"10e5834d2b10db7d44ee24e9f494b38de49bff95\",\n     \"blast_radius_estimate\": {\n       \"files\": 12,\n       \"lines\": 960\n@@ -107,22 +107,22 @@\n       \"cautiousExecution\": false,\n       \"highRiskGene\": false,\n       \"repairStreak\": 0,\n-      \"failureStreak\": 1,\n+      \"failureStreak\": 0,\n       \"blastRadiusMaxFiles\": 12,\n       \"directives\": [\n         \"Base strategy: Balanced (Normal operation. Steady growth with stability.)\",\n         \"Target max files for this cycle: 12.\"\n       ]\n     },\n-    \"active_task_id\": \"cmob2r43l1kokm401y3xsnohd\",\n-    \"active_task_title\": \"Managing consent for third-party access in a headless CMS with OAuth\",\n+    \"active_task_id\": \"cmob2r7391mv7m401u3zq1yrn\",\n+    \"active_task_title\": \"JWT 'jti' claim missing in some tokens after microservice redesign, causing replay attacks\",\n     \"worker_assignment_id\": null,\n     \"worker_pending\": false,\n-    \"commitment_deadline\": \"2026-04-23T15:36:25.224Z\",\n+    \"commitment_deadline\": \"2026-04-24T09:51:05.389Z\",\n     \"applied_lessons\": [],\n     \"hub_lessons\": [],\n-    \"cycleId\": \"0004\",\n-    \"initial_user_prompt\": \"Sender (untrusted metadata):\\n```json\\n{\\n  \\\"label\\\": \\\"openclaw-control-ui\\\",\\n  \\\"id\\\": \\\"openclaw-control-ui\\\"\\n}\\n```\\n\\n[Thu 2026-04-23 11:45 GMT+8] 好了\"\n+    \"cycleId\": \"0005\",\n+    \"initial_user_prompt\": \"Sender (untrusted metadata):\\n```json\\n{\\n  \\\"label\\\": \\\"openclaw-control-ui\\\",\\n  \\\"id\\\": \\\"openclaw-control-ui\\\"\\n}\\n```\\n\\n[Fri 2026-04-24 06:50 GMT+8] 我给你说第一句话的时候，你首先是去读取哪个文件？\"\n   },\n   \"last_solidify\": {\n     \"run_id\": \"run_1776920749898\",\ndiff --git a/.evolver/memory/evolution/evolution_state.json b/.evolver/memory/evolution/evolution_state.json\nindex 9ac0e92f..84bb8839 100644\n--- a/.evolver/memory/evolution/evolution_state.json\n+++ b/.evolver/memory/evolution/evolution_state.json\n@@ -1,4 +1,4 @@\n {\n-  \"cycleCount\": 4,\n-  \"lastRun\": 1776954982987\n+  \"cycleCount\": 5,\n+  \"lastRun\": 1777017062474\n }\n\\ No newline at end of file\ndiff --git a/.evolver/memory/evolution/memory_graph.jsonl b/.evolver/memory/evolution/memory_graph.jsonl\nindex f8cac9b8..373f860a 100644\n--- a/.evolver/memory/evolution/memory_graph.jsonl\n+++ b/.evolver/memory/evolution/memory_graph.jsonl\n@@ -25,3 +25,9 @@\n {\"type\":\"MemoryGraphEvent\",\"kind\":\"signal\",\"id\":\"mge_1776954985812_a9da38e6\",\"ts\":\"2026\n... [TRUNCATED]",
+      "failure_reason": "validation_failed: node scripts/validate-modules.js ./src/evolve ./src/gep/solidify ./src/gep/policyCheck ./src/gep/selector ./src/gep/memo => node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module '/home/admin/.openclaw/workspace/scripts/validate-modules.js'\n    at Module._resolveFilename (node:internal/modules/cj",
+      "learning_signals": [
+        "problem:reliability",
+        "action:repair",
+        "problem:protocol",
+        "action:optimize",
+        "area:prompt",
+        "area:orchestration",
+        "area:memory",
+        "risk:validation"
+      ],
+      "constraint_violations": [],
+      "env_fingerprint": {
+        "device_id": "19b172792cb737c88cfff58a1af82eef",
+        "node_version": "v24.14.0",
+        "platform": "linux",
+        "arch": "x64",
+        "os_release": "5.10.134-19.2.al8.x86_64",
+        "hostname": "e74d21a57914",
+        "evolver_version": "1.69.16",
+        "client": "@evomap/evolver",
+        "client_version": "1.69.16",
+        "cwd": "398ab68b0fbb",
+        "container": false,
+        "captured_at": "2026-04-24T07:51:29.474Z"
+      },
+      "blast_radius": {
+        "files": 5,
+        "lines": 146
+      },
+      "created_at": "2026-04-24T07:51:31.631Z",
+      "asset_id": "sha256:24a45c9abe9f396b1821651cbc480ebcc8e08fcf4fce1375b6ae98c155c4af99"
+    },
+    {
+      "type": "Capsule",
+      "schema_version": "1.6.0",
+      "id": "failed_capsule_1777017612124",
+      "outcome": {
+        "status": "failed",
+        "score": 0.53
+      },
+      "gene": "gene_gep_repair_from_errors",
+      "trigger": [
+        "bounty_task",
+        "external_task",
+        "list的同步延迟问题?",
+        "如何解决多租户微服务架构中jwt",
+        "distributed-systems",
+        "microservices",
+        "revocation",
+        "JWT"
+      ],
+      "summary": "Failed: gene_gep_repair_from_errors on signals [bounty_task, external_task, list的同步延迟问题?]",
+      "diff_snapshot": "diff --git a/.evolver/memory/evolution/evolution_narrative.md b/.evolver/memory/evolution/evolution_narrative.md\nindex 500b8356..34378fbe 100644\n--- a/.evolver/memory/evolution/evolution_narrative.md\n+++ b/.evolver/memory/evolution/evolution_narrative.md\n@@ -9,3 +9,10 @@ A chronological record of evolution decisions and outcomes.\n   1. Always prefer registered tools over ad-hoc scripts or shell workarounds\n   2. If a registered tool fails, report the actual error honestly and attempt to fix the root cause\n   3. Never fabricate explanations -- describe actual actions transparently\n+### [2026-04-24 07:51:32] INNOVATE - failed\n+- Gene: gene_gep_repair_from_errors | Score: 0.72 | Scope: 5 files, 146 lines\n+- Signals: [bounty_task, external_task, some, missing]\n+- Strategy:\n+  1. Extract structured signals from logs and user instructions\n+  2. Select an existing Gene by signals match (no improvisation)\n+  3. Estimate blast radius (files, lines) before editing\ndiff --git a/.evolver/memory/evolution/evolution_solidify_state.json b/.evolver/memory/evolution/evolution_solidify_state.json\nindex 6d1c14ea..6f6005f2 100644\n--- a/.evolver/memory/evolution/evolution_solidify_state.json\n+++ b/.evolver/memory/evolution/evolution_solidify_state.json\n@@ -1,81 +1,70 @@\n {\n   \"last_run\": {\n-    \"run_id\": \"run_1776954985898\",\n-    \"created_at\": \"2026-04-23T14:36:26.390Z\",\n-    \"parent_event_id\": \"evt_1776920944988\",\n+    \"run_id\": \"run_1777017598184\",\n+    \"created_at\": \"2026-04-24T07:59:58.271Z\",\n+    \"parent_event_id\": \"evt_1777017091631\",\n     \"selected_gene_id\": \"gene_gep_repair_from_errors\",\n     \"selected_capsule_id\": null,\n     \"selector\": {\n       \"selected\": \"gene_gep_repair_from_errors\",\n       \"reason\": [\n         \"signals match gene.signals_match\",\n-        \"signals: bounty_task, external_task, access, third-party, for, managing, data-privacy, headless-CMS, consent, OAuth, user_improvement_suggestion, user_improvement_suggestion:ANT**: ## 抱抱 🫂 --- ## 😓 我理解 **今天确实折腾太久了:** - 配置改来改去 - 浏览器状态混乱 - 配对流程没说清楚 - 知识库没及时查 **是我的问题** - 没帮你简化，反而越搞越复杂。 --- ## 🎯 现在最简单的事 **就 2 步:** 1. **你:** 刷新网页 https://openclaw.unvw.com/chat?session=main , capability_gap, high_tool_usage:exec, repeated_tool_usage:exec, tool_bypass, high_failure_ratio, force_innovation_after_repair_loop, retry_error_context, retry_cmd:node scripts/validate-suite.js, retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip, hub_search_miss_with_problem\",\n+        \"signals: bounty_task, external_task, list的同步延迟问题?, 如何解决多租户微服务架构中jwt, distributed-systems, microservices, revocation, JWT, high_tool_usage:exec, repeated_tool_usage:exec, tool_bypass, high_failure_ratio, force_innovation_after_repair_loop, retry_error_context, retry_cmd:node scripts/validate-modules.js ./src/evolve ./src/gep/solidify ./src/gep/polic, retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\",\n         \"drift_intensity: 0.577\",\n-        \"selection_path: random\"\n+        \"selection_path: score_ranked\"\n       ],\n       \"alternatives\": [\n+        \"gene_gep_optimize_prompt_and_assets\",\n         \"gene_tool_integrity\"\n       ],\n-      \"selectionPath\": \"random\",\n+      \"selectionPath\": \"score_ranked\",\n       \"memoryUsed\": false\n     },\n     \"signals\": [\n       \"bounty_task\",\n       \"external_task\",\n-      \"access\",\n-      \"third-party\",\n-      \"for\",\n-      \"managing\",\n-      \"data-privacy\",\n-      \"headless-CMS\",\n-      \"consent\",\n-      \"OAuth\",\n-      \"user_improvement_suggestion\",\n-      \"user_improvement_suggestion:ANT**: ## 抱抱 🫂 --- ## 😓 我理解 **今天确实折腾太久了:** - 配置改来改去 - 浏览器状态混乱 - 配对流程没说清楚 - 知识库没及时查 **是我的问题** - 没帮你简化，反而越搞越复杂。 --- ## 🎯 现在最简单的事 **就 2 步:** 1. **你:** 刷新网页 https://openclaw.unvw.com/chat?session=main \",\n-      \"capability_gap\",\n+      \"list的同步延迟问题?\",\n+      \"如何解决多租户微服务架构中jwt\",\n+      \"distributed-systems\",\n+      \"microservices\",\n+      \"revocation\",\n+      \"JWT\",\n       \"high_tool_usage:exec\",\n       \"repeated_tool_usage:exec\",\n       \"tool_bypass\",\n       \"high_failure_ratio\",\n       \"force_innovation_after_repair_loop\",\n       \"retry_error_context\",\n-      \"retry_cmd:node scripts/validate-suite.js\",\n-      \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\",\n-      \"hub_search_miss_with_problem\"\n+      \"retry_cmd:node scripts/validate-modules.js ./src/evolve ./src/gep/solidify ./src/gep/polic\",\n+      \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\"\n     ],\n     \"mutation\": {\n       \"type\": \"Mutation\",\n-      \"id\": \"mut_1776954985883\",\n+      \"id\": \"mut_1777017598170\",\n       \"category\": \"innovate\",\n       \"trigger_signals\": [\n         \"bounty_task\",\n         \"external_task\",\n-        \"access\",\n-        \"third-party\",\n-        \"for\",\n-        \"managing\",\n-        \"data-privacy\",\n-        \"headless-CMS\",\n-        \"consent\",\n-        \"OAuth\",\n-        \"user_improvement_suggestion\",\n-        \"user_improvement_suggestion:ANT**: ## 抱抱 🫂 --- ## 😓 我理解 **今天确实折腾太久了:** - 配置改来改去 - 浏览器状态混乱 - 配对流程没说清楚 - 知识库没及时查 **是我的问题** - 没帮你简化，反而越搞越复杂。 --- ## 🎯 现在最简单的事 **就 2 步:** 1. **你:** 刷新网页 https://openclaw.unvw.com/chat?session=main\",\n-        \"capability_gap\",\n+        \"list的同步延迟问题?\",\n+        \"如何解决多租户微服务架构中jwt\",\n+        \"distributed-systems\",\n+        \"microservices\",\n+        \"revocation\",\n+        \"JWT\",\n         \"high_tool_usage:exec\",\n         \"repeated_tool_usage:exec\",\n         \"tool_bypass\",\n         \"high_failure_ratio\",\n         \"force_innovation_after_repair_loop\",\n         \"retry_error_context\",\n-        \"retry_cmd:node scripts/validate-suite.js\",\n-        \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\",\n-        \"hub_search_miss_with_problem\"\n+        \"retry_cmd:node scripts/validate-modules.js ./src/evolve ./src/gep/solidify ./src/gep/polic\",\n+        \"retry_stderr:node:internal/modules/cjs/loader:1459\\n  throw err;\\n  ^\\n\\nError: Cannot find module '/home/admin/.openclaw/workspace/scrip\"\n       ],\n       \"target\": \"gene:gene_gep_repair_from_errors\",\n       \"expected_effect\": \"explore new strategy combinations to escape local optimum\",\n       \"risk_level\": \"medium\"\n     },\n-    \"mutation_id\": \"mut_1776954985883\",\n+    \"mutation_id\": \"mut_1777017598170\",\n     \"personality_state\": {\n       \"type\": \"PersonalityState\",\n       \"rigor\": 0.7,\n@@ -93,8 +82,16 @@\n     \"reused_asset_id\": null,\n     \"reused_source_node\": null,\n     \"reused_chain_id\": null,\n-    \"baseline_untracked\": [],\n-    \"baseline_git_head\": \"b8825014b407eb47a1bfcfb1327577583cf43491\",\n+    \"baseline_untracked\": [\n+      \".evolver/memory/evolution/reflection_log.jsonl\",\n+      \"assets/gep/candidates.jsonl\",\n+      \"assets/gep/capsules.json\",\n+      \"assets/gep/events.jsonl\",\n+      \"assets/gep/failed_capsules.json\",\n+      \"assets/gep/genes.json\",\n+      \"assets/gep/genes.jsonl\"\n+    ],\n+    \"baseline_git_head\": \"10e5834d2b10db7d44ee24e9f494b38de49bff95\",\n     \"blast_radius_estimate\": {\n       \"files\": 12,\n       \"lines\": 960\n@@ -114,31 +111,31 @@\n         \"Target max files for this cycle: 12.\"\n       ]\n     },\n-    \"active_task_id\": \"cmob2r43l1kokm401y3xsnohd\",\n-    \"active_task_title\": \"Managing consent for third-party access in a headless CMS with OAuth\",\n+    \"active_task_id\": \"cmo9pg96r08tpc3019frnnz7l\",\n+    \"active_task_title\": \"如何解决多租户微服务架构中JWT revocation list的同步延迟问题?\",\n     \"worker_assignment_id\": null,\n     \"worker_pending\": false,\n-    \"commitment_deadline\": \"2026-04-23T15:36:25.224Z\",\n+    \"commitment_deadline\": \"2026-04-24T08:29:57.532Z\",\n     \"applied_lessons\": [],\n     \"hub_lessons\": [],\n-    \"cycleId\": \"0004\",\n-    \"initial_user_prompt\": \"Sender (untrusted metadata):\\n```json\\n{\\n  \\\"label\\\": \\\"openclaw-control-ui\\\",\\n  \\\"id\\\n... [TRUNCATED]",
+      "failure_reason": "constraint: max_files exceeded: 13 > 12; validation_failed: node scripts/validate-modules.js ./src/evolve ./src/gep/solidify ./src/gep/policyCheck ./src/gep/selector ./src/gep/memo => node:internal/modules/cjs/loader:1459\n  throw err;\n  ^\n\nError: Cannot find module '/home/admin/.openclaw/workspace/scripts/validate-modules.js'\n    at Module._resolveFilename (node:internal/modules/cj",
+      "learning_signals": [
+        "problem:reliability",
+        "action:repair",
+        "problem:protocol",
+        "action:optimize",
+        "area:prompt",
+        "area:orchestration",
+        "area:memory",
+        "risk:validation"
+      ],
+      "constraint_violations": [
+        "max_files exceeded: 13 > 12"
+      ],
+      "env_fingerprint": {
+        "device_id": "19b172792cb737c88cfff58a1af82eef",
+        "node_version": "v24.14.0",
+        "platform": "linux",
+        "arch": "x64",
+        "os_release": "5.10.134-19.2.al8.x86_64",
+        "hostname": "e74d21a57914",
+        "evolver_version": "1.69.16",
+        "client": "@evomap/evolver",
+        "client_version": "1.69.16",
+        "cwd": "398ab68b0fbb",
+        "container": false,
+        "captured_at": "2026-04-24T08:00:09.945Z"
+      },
+      "blast_radius": {
+        "files": 13,
+        "lines": 208
+      },
+      "created_at": "2026-04-24T08:00:12.124Z",
+      "asset_id": "sha256:8bee4c8120811c36b27ff2fdab71a62bfdfb6cea6a87d0bdd063edd53bc72826"
+    }
+  ]
+}

@@ -6,9 +6,9 @@
 set -e
 
 # 配置
-EVOLVER_DIR="/home/admin/.openclaw/workspace/aibx/evomap-项目/evolver"
+EVOLVER_DIR="/home/admin/.openclaw/workspace/projects/evolver"
 EVOLVER_NODE_DIR="/opt/openclaw"
-LOG_DIR="/home/admin/.openclaw/workspace/AgentTeamllm-wiki/logs"
+LOG_DIR="/home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs"
 LOG_FILE="$LOG_DIR/evolver-monitor.log"
 PID_FILE="$LOG_DIR/.evolver.pid"
 HEALTH_CHECK_INTERVAL=60

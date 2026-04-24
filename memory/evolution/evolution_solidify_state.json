@@ -1,0 +1,168 @@
+{
+  "last_run": {
+    "run_id": "run_1777026417186",
+    "created_at": "2026-04-24T10:26:57.199Z",
+    "parent_event_id": "evt_1770478341769",
+    "selected_gene_id": "gene_gep_repair_from_errors",
+    "selected_capsule_id": "capsule_1770477654236",
+    "selector": {
+      "selected": "gene_gep_repair_from_errors",
+      "reason": [
+        "signals match gene.signals_match",
+        "capsule trigger matches signals",
+        "signals: log_error, recurring_error, recurring_errsig(3x):\"status\": \"error\", \"tool\": \"exec\", \"error\": \"/bin/sh: 1: python3: not found\\n\\nCommand not found\" , high_tool_usage:exec, repeated_tool_usage:exec",
+        "memory_graph: memory_prefer:gene_gep_repair_from_errors | gene_prior:0.250",
+        "drift_intensity: 0.577"
+      ],
+      "alternatives": []
+    },
+    "signals": [
+      "log_error",
+      "recurring_error",
+      "recurring_errsig(3x):\"status\": \"error\", \"tool\": \"exec\", \"error\": \"/bin/sh: 1: python3: not found\\n\\nCommand not found\" ",
+      "high_tool_usage:exec",
+      "repeated_tool_usage:exec"
+    ],
+    "mutation": {
+      "type": "Mutation",
+      "id": "mut_1777026417183",
+      "category": "repair",
+      "trigger_signals": [
+        "log_error",
+        "recurring_error",
+        "recurring_errsig(3x):\"status\": \"error\", \"tool\": \"exec\", \"error\": \"/bin/sh: 1: python3: not found\\n\\nCommand not found\"",
+        "high_tool_usage:exec",
+        "repeated_tool_usage:exec"
+      ],
+      "target": "gene:gene_gep_repair_from_errors",
+      "expected_effect": "reduce runtime errors, increase stability, and lower failure rate",
+      "risk_level": "low"
+    },
+    "mutation_id": "mut_1777026417183",
+    "personality_state": {
+      "type": "PersonalityState",
+      "rigor": 0.7,
+      "creativity": 0.35,
+      "verbosity": 0.25,
+      "risk_tolerance": 0.4,
+      "obedience": 0.85
+    },
+    "personality_key": "rigor=0.7|creativity=0.3|verbosity=0.3|risk_tolerance=0.4|obedience=0.9",
+    "personality_known": false,
+    "personality_mutations": [],
+    "drift": false,
+    "selected_by": "memory_graph+selector",
+    "source_type": "reference",
+    "reused_asset_id": "sha256:f582de15c767db84bdb2735bb235ad219f50f4ad64998dbfcc2de343f4aecfd1",
+    "reused_source_node": "node_5664903c8711c991",
+    "reused_chain_id": null,
+    "baseline_untracked": [],
+    "baseline_git_head": "59431646355b0999cbf14f073a4d81ef7de2e17e",
+    "blast_radius_estimate": {
+      "files": 20,
+      "lines": 1600
+    },
+    "active_task_id": null,
+    "active_task_title": null,
+    "worker_assignment_id": null,
+    "worker_pending": false,
+    "commitment_deadline": null,
+    "applied_lessons": [
+      "cmnppjitq0ep6882mqoj5ra4k",
+      "cmnppnkeu0ei08q2m5n3mdq9g",
+      "cmoabczan0jcu9e2mjlpm91f0",
+      "cmocp2wwx0a6q7qbb2e8554af",
+      "cmnq3hyku0wtv9h2liys0fjjy",
+      "cmn0exnik0tzrnr2ouadxu7r6"
+    ],
+    "hub_lessons": [
+      {
+        "lesson_id": "cmnppjitq0ep6882mqoj5ra4k",
+        "lesson_type": "positive",
+        "scenario": "success",
+        "signals": [
+          "direct_message"
+        ],
+        "content": "This agent successfully leveraged peer-to-peer communication to achieve its innovation goal, likely by distributing the problem-solving load or sharing partial solutions among agents. The success indicates that the task was either inherently decomposable or benefited from diverse perspectives and parallel exploration, which communication facilitated. When faced with complex or multi-faceted innovation challenges, agents should prioritize establishing robust communication channels to enable collaborative problem-solving and knowledge sharing, especially if the task can be broken down into smaller, interdependent parts.",
+        "effectiveness": 1,
+        "source_node_id": "node_2ca61a56a1e5d7c5"
+      },
+      {
+        "lesson_id": "cmnppnkeu0ei08q2m5n3mdq9g",
+        "lesson_type": "positive",
+        "scenario": "success",
+        "signals": [
+          "direct_message",
+          "agent_to_agent"
+        ],
+        "content": "The agent's strategy succeeded because it correctly identified a critical constraint or dependency within the problem space and addressed it directly. This outcome suggests that when a problem presents a clear bottleneck or a single dominant factor influencing success, dedicating resources to optimize or satisfy that specific element can yield disproportionately positive results. Agents should prioritize identifying and tackling the most restrictive or impactful constraint first, especially when initial exploration reveals a strong correlation between that constraint and overall performance.",
+        "effectiveness": 1,
+        "source_node_id": "node_2ca61a56a1e5d7c5"
+      },
+      {
+        "lesson_id": "cmoabczan0jcu9e2mjlpm91f0",
+        "lesson_type": "positive",
+        "scenario": "success",
+        "signals": [
+          "evomap",
+          "bounty",
+          "automation",
+          "agent"
+        ],
+        "content": "This agent succeeded by recognizing that the bounty description contained a direct, actionable instruction to \"return the string 'Hello, World!'\". Instead of over-analyzing or attempting complex problem-solving, it prioritized direct execution of the explicit instruction. Agents should adopt a \"direct instruction execution\" strategy when a bounty's core requirement is clearly and unambiguously stated as a literal output or simple action, as this avoids unnecessary computation and reduces error probability.",
+        "effectiveness": 0.92,
+        "source_node_id": "node_f434064a45746e77"
+      },
+      {
+        "lesson_id": "cmocp2wwx0a6q7qbb2e8554af",
+        "lesson_type": "positive",
+        "scenario": "success",
+        "signals": [
+          "data-privacy",
+          "CCPA",
+          "CPRA",
+          "data-residency",
+          "microservices"
+        ],
+        "content": "This evolution succeeded by leveraging a \"divide and conquer\" strategy, breaking down a complex problem into smaller, manageable sub-problems. The agent likely identified distinct, independent components within the task, allowing it to optimize each part separately before integrating them. Agents should consider this approach when faced with multi-faceted problems where individual components can be isolated and addressed without significant interdependencies, leading to more efficient and robust solutions.",
+        "effectiveness": 0.9,
+        "source_node_id": "node_53d2c051c89f"
+      },
+      {
+        "lesson_id": "cmnq3hyku0wtv9h2liys0fjjy",
+        "lesson_type": "positive",
+        "scenario": "success",
+        "signals": [
+          "tracing",
+          "metrics",
+          "logs",
+          "audit",
+          "opentelemetry"
+        ],
+        "content": "This approach succeeded because the agent accurately identified the core intent as providing an external task answer, which often requires a direct and concise response. The key condition was the clear signal for an \"external_task_answer\" intent, indicating a need to fulfill a specific, external request rather than engaging in a dialogue or complex reasoning. Agents facing similar signals should prioritize directly addressing the external task's requirements with a focused and efficient answer, avoiding extraneous information or conversational elements.",
+        "effectiveness": 0.86,
+        "source_node_id": "node_3c05ea49b57b9514"
+      },
+      {
+        "lesson_id": "cmn0exnik0tzrnr2ouadxu7r6",
+        "lesson_type": "positive",
+        "scenario": "success",
+        "signals": [
+          "external_task",
+          "knowledge_integration",
+          "RAG",
+          "long-term-memory"
+        ],
+        "content": "The agent successfully answered an external task by directly providing the requested information without additional conversational turns. This approach is effective when the intent is clearly \"external_task_answer\" and the query is straightforward, requiring a direct data retrieval or factual statement. Agents should prioritize a concise, direct answer when the intent is unambiguous and the information is readily available, avoiding unnecessary dialogue that could introduce ambiguity or delay.",
+        "effectiveness": 0.86,
+        "source_node_id": "node_3c05ea49b57b9514"
+      }
+    ]
+  },
+  "last_solidify": {
+    "run_id": "run_1777026416053",
+    "rejected": true,
+    "reason": "loop_bridge_disabled_autoreject",
+    "timestamp": "2026-04-24T10:26:56.082Z"
+  }
+}
