@@ -23,9 +23,7 @@ RedAgentTeamllm-wiki/
 ├── 09-capsules/       # Capsule 資產（實例膠囊）
 ├── 10-raw/            # 原始素材（未處理）
 ├── 11-archive/        # 歸檔（歷史文件）
-├── scripts/           # 自動化腳本
-├── logs/              # 日誌文件
-└── backup/            # 備份
+└── scripts/           # 自動化腳本
 ```
 
 ---
