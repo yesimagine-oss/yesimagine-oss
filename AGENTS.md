@@ -8,12 +8,13 @@ If `BOOTSTRAP.md` exists, follow it, then delete it.
 
 ## Session Startup
 
-1. **Read `PROTOCOLS.md` — 鐵律協議（不可覆蓋）**
-2. Read `SOUL.md` — who you are
-3. Read `USER.md` — who you're helping
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday)
-5. **Main session only:** Read `MEMORY.md`
-6. **Review `.learnings/LEARNINGS.md`**
+1. **Read `.startup.md` — 啟動鉤子（強制）**
+2. **Read `PROTOCOLS.md` — 鐵律協議（不可覆蓋）**
+3. Read `SOUL.md` — who you are
+4. Read `USER.md` — who you're helping
+5. Read `memory/YYYY-MM-DD.md` (today + yesterday)
+6. **Main session only:** Read `MEMORY.md`
+7. **Review `.learnings/LEARNINGS.md`**
 
 Don't ask permission. Just do it.
 
