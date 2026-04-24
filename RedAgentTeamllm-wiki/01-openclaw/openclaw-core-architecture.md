@@ -1,5 +1,10 @@
 # OpenClaw 核心架構
 
+> **知識**: OpenClaw ROS 2 架構：4 層架構 + 構建/驗證命令
+> **問題**: 解決 Agent 不了解 OpenClaw 系統架構與部署命令的問題
+
+---
+
 **創建時間:** 2026-04-24  
 **來源:** https://github.com/mudrii/openclaw-docs/blob/main/ARCHITECTURE.md  
 **狀態:** 🟢 完成  

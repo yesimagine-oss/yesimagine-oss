@@ -1,5 +1,10 @@
 # OpenClaw Arduino 庫
 
+> **知識**: OpenClaw Arduino 庫：機械爪控制（grip/release/setPosition）
+> **問題**: 解決 Arduino 機械爪控制庫部署與 API 使用的問題
+
+---
+
 **創建時間:** 2026-04-24  
 **來源:** https://github.com/mudrii/openclaw  
 **狀態:** 🟢 完成  
