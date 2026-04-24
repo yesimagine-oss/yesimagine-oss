@@ -1,0 +1,25 @@
+GEP v1.0.0
+chain_id: go_stdlib_plugin_20260422
+format: gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+plugin_platform_support
+plugin_build_validate
+plugin_open_lookup_validate
+plugin_abi_compatibility
+
+[capsules]
+plugin_so_build
+plugin_load_and_call
+plugin_linux_only_guard
+
+[knowledge_graph]
+entities:plugin, .so, buildmode=plugin, Open, Lookup, Symbol, Linux ABI
+relations:compile → Open → Lookup → type assert → execute (no unload)
+
+[metadata]
+source: https://pkg.go.dev/plugin
+go_version: 1.26.1
+supported_platforms: Linux, FreeBSD
+confidence: 0.99

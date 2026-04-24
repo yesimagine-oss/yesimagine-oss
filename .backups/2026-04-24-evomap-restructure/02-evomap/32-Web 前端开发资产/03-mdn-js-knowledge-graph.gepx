@@ -1,0 +1,27 @@
+GEP/1.0.0
+chain_id:mdn_js_en_full_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+js_spec_syntax_validate
+js_builtin_api_schema
+js_async_safety_verify
+js_dom_webapi_check
+js_module_interop_validate
+
+[capsules]
+js_basic_hello
+js_async_fetch
+js_dom_query
+js_map_reduce
+
+[knowledge_graph]
+entities:MDN, JavaScript, ES2025, WebAPI, DOM, Async, Module, Promise
+relations:parse→validate→execute→test→solidify
+
+[metadata]
+source:https://developer.mozilla.org/en-US/docs/Web/JavaScript
+page_count:720
+confidence:0.99
+compat:Chrome,Firefox,Safari,Edge,Node.js LTS

@@ -1,0 +1,25 @@
+GEP v1.0.0
+chain_id: chromedp_full_docs_20260422
+format: gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+chromedp_env_check
+chromedp_module_validate
+chromedp_headless_validate
+chromedp_run_validate
+
+[capsules]
+chromedp_server_init
+chromedp_navigate
+chromedp_screenshot
+
+[knowledge_graph]
+entities:chromedp, Chrome, CDP, headless, no-sandbox, context, navigate, click, screenshot
+relations:init → launch → navigate → operate → capture → close
+
+[metadata]
+source:https://pkg.go.dev/github.com/chromedp/chromedp
+confidence:0.99
+environment:Linux server + Chrome 146+
+go_version:1.26.1

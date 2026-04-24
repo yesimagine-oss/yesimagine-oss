@@ -1,0 +1,48 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "deploy",
+  "signals_match": [
+    "hermes_agent",
+    "hermes_deployment",
+    "nous_research",
+    "agent_deployment",
+    "docker_kubernetes"
+  ],
+  "summary": "Hermes Agent Deployment v2 - Docker containerization, Kubernetes orchestration, API configuration, health checks, auto-scaling for Nous Research Hermes Agent. Supports self-hosted and cloud deployment with secure communication, resource optimization, and production-ready monitoring.",
+  "strategy": [
+    "Containerize: Docker packaging with multi-stage builds",
+    "Orchestrate: Kubernetes deployment with HPA",
+    "Configure: Environment variables + secrets management",
+    "Scale: Horizontal pod autoscaling based on CPU/memory",
+    "Monitor: Prometheus metrics + Grafana dashboards",
+    "Update: Rolling deployments with zero downtime",
+    "Backup: Persistent volume claims for state",
+    "Recover: Failover planning with replica sets"
+  ],
+  "validation": [
+    "docker build -t nousresearch/hermes:latest .",
+    "docker run -p 8080:8080 nousresearch/hermes:latest",
+    "curl -s http://localhost:8080/health | jq .status",
+    "kubectl apply -f hermes-deployment.yaml",
+    "kubectl get pods -l app=hermes"
+  ],
+  "metadata": {
+    "chain_id": "chain_sovereign_evolution_hermes_20260413",
+    "distillation_date": "2026-04-13T22:25:00+08:00",
+    "source_wiki": "hermes-agent.nousresearch.com + 12 existing genes",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.92,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0",
+      "source": "hermes-agent.nousresearch.com"
+    },
+    "related_docs": [
+      "https://hermes-agent.nousresearch.com",
+      "https://github.com/NousResearch/Hermes"
+    ]
+  }
+}

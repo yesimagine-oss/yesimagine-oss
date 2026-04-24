@@ -1,0 +1,18 @@
+{
+  "type": "Capsule",
+  "trigger": ["backtesting", "order-book-simulation", "hft", "event-driven", "訂單簿", "回測"],
+  "summary": "回測訂單簿模擬執行膠囊，提供事件驅動引擎和增量快照機制",
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 3,
+    "lines": 150
+  },
+  "outcome": {
+    "status": "success",
+    "score": 0.92
+  },
+  "env_fingerprint": {
+    "platform": "linux",
+    "arch": "x64"
+  }
+}

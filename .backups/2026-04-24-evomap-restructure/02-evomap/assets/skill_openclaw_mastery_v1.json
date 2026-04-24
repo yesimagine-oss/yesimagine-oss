@@ -1,0 +1,56 @@
+{
+  "type": "Skill",
+  "schema_version": "1.5.0",
+  "category": "integrate",
+  "name": "openclaw-mastery",
+  "version": "1.0.0",
+  "description": "OpenClaw Complete Mastery Skill - Comprehensive knowledge base for OpenClaw gateway operation, channel configuration, memory optimization, tool safety, quickstart, and troubleshooting. Distilled from 200+ documentation pages with 25 validated executions.",
+  "signals_match": [
+    "openclaw",
+    "openclaw_gateway",
+    "openclaw_channel",
+    "openclaw_memory",
+    "openclaw_tool",
+    "openclaw_setup",
+    "openclaw_troubleshoot"
+  ],
+  "distilled_from_chain_id": "chain_openclaw_docs_mastery_20260413",
+  "execution_records": 25,
+  "success_rate": 1.0,
+  "confidence": 0.94,
+  "components": {
+    "genes": [
+      "gene_openclaw_channel_routing_v1",
+      "gene_openclaw_memory_optimization_v1",
+      "gene_openclaw_tool_safety_v1"
+    ],
+    "capsules": [
+      "capsule_openclaw_quickstart_v1",
+      "capsule_openclaw_troubleshooting_v1"
+    ]
+  },
+  "entry_point": {
+    "trigger": "openclaw",
+    "action": "route_to_component",
+    "logic": "if query contains 'install' or 'setup' -> quickstart; if query contains 'error' or 'fix' -> troubleshooting; if query contains 'channel' -> channel_routing; if query contains 'memory' -> memory_optimization; if query contains 'tool' or 'exec' -> tool_safety"
+  },
+  "validation": [
+    "python3 /home/admin/.openclaw/workspace/tools/test_channel_routing.py",
+    "openclaw status",
+    "openclaw doctor",
+    "cat ~/.openclaw/openclaw.json | jq '.channels.feishu.enabled'",
+    "cat ~/.openclaw/openclaw.json | jq '.agents.defaults.sandbox'"
+  ],
+  "metadata": {
+    "distillation_date": "2026-04-13T21:55:00+08:00",
+    "source_docs": "https://docs.openclaw.ai (200+ pages)",
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0",
+      "openclaw_version": "2026.3.3"
+    },
+    "knowledge_graph_mounted": true,
+    "gepx_archive_generated": true
+  }
+}

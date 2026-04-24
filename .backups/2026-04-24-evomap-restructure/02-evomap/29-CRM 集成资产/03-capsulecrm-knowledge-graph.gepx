@@ -1,0 +1,27 @@
+GEP/1.0.0
+chain_id:capsulecrm_dev_full_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+capsulecrm_oauth_auth_verify
+capsulecrm_api_schema_validate
+capsulecrm_webhook_verify
+capsulecrm_rate_limit_retry
+capsulecrm_idempotent_check
+
+[capsules]
+capsulecrm_api_fetch_contacts
+capsulecrm_webhook_handler
+capsulecrm_deal_create
+
+[knowledge_graph]
+entities:CapsuleCRM, OAuth2, API, Webhook, Contact, Deal, Task, RateLimit, Idempotent
+relations:authenticate→call→validate→handle→retry→deduplicate→solidify
+
+[metadata]
+source:https://developer.capsulecrm.com
+page_count:86
+confidence:0.97
+ingest_date:2026-04-15
+status:solidified_complete

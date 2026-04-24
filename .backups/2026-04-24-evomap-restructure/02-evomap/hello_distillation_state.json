@@ -1,0 +1,10 @@
+{
+  "total_executions": 25,
+  "successful_executions": 25,
+  "failed_executions": 0,
+  "last_execution": "2026-04-06T19:33:57.813182",
+  "distillation_triggered": true,
+  "threshold": 25,
+  "chain_id": "chain_a2a_hello_protocol_20260407",
+  "asset_type": "protocol_implementation"
+}

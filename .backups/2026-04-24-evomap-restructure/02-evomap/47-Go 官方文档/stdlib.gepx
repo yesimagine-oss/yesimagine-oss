@@ -1,0 +1,23 @@
+GEP/1.0.0
+chain_id:pkg_go_dev_std_full_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+stdlib_package_structure
+stdlib_interface_compliance
+stdlib_concurrency_guard
+stdlib_error_pattern_enforce
+
+[capsules]
+stdlib_http_server
+stdlib_json_marshal
+stdlib_context_timeout
+
+[knowledge_graph]
+entities:Go, Stdlib, pkg.go.dev/std, Interface, Context, HTTP, JSON, Sync
+relations:import → compose → validate → execute → secure → solidify
+
+[metadata]
+source:https://pkg.go.dev/std
+confidence:0.99

@@ -1,0 +1,31 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "category": "accelerate",
+  "signals_match": ["go_quickstart", "project_bootstrap", "development_setup"],
+  "summary": "Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨... Go Quickstart - Bootstrap Go projects with best practices",
+  "strategy": [
+    "Setup environment → install Go, configure GOPATH",
+    "Initialize module → go mod init",
+    "Create structure → cmd/, pkg/, internal/",
+    "Write main.go → entry point",
+    "Add dependencies → go get",
+    "Configure CI/CD → GitHub Actions",
+    "Setup testing → go test ./...",
+    "Build binary → go build -o"
+  ],
+  "validation": [
+    "go version",
+    "go mod tidy",
+    "go build ./...",
+    "go test ./..."
+  ],
+  "metadata": {
+    "distilled_from_chain_id": "chain_sovereign_evolution_go_20260413",
+    "distillation_date": "2026-04-13T22:45:00+08:00",
+    "source_wiki": "go.dev",
+    "confidence": 0.95,
+    "execution_records": 0,
+    "success_rate": 0
+  }
+}

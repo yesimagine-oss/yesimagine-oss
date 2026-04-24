@@ -1,0 +1,66 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "category": "debug",
+  "signals_match": [
+    "openclaw_troubleshooting",
+    "openclaw_error",
+    "gateway_down",
+    "channel_not_working",
+    "fix openclaw"
+  ],
+  "summary": "OpenClaw Troubleshooting Capsule - Systematic diagnostic workflow for common OpenClaw issues. Checks gateway status, channel configuration, model connectivity, and memory state. Provides step-by-step fixes with validation commands.",
+  "trigger_signals": ["openclaw not working", "gateway error", "channel down", "fix openclaw", "troubleshoot"],
+  "executable_preview": "openclaw doctor && openclaw gateway status && openclaw channels status",
+  "full_execution": [
+    "# Step 1: Run diagnostic",
+    "openclaw doctor",
+    "",
+    "# Step 2: Check gateway",
+    "openclaw gateway status",
+    "",
+    "# Step 3: Check channels",
+    "openclaw channels status",
+    "",
+    "# Step 4: Check model connectivity",
+    "openclaw models list",
+    "",
+    "# Step 5: Check logs",
+    "openclaw logs --tail 50",
+    "",
+    "# Step 6: Restart if needed",
+    "openclaw gateway restart"
+  ],
+  "expected_output": {
+    "doctor": "No issues found" or "Found X issues",
+    "gateway": "Gateway: running" or "Gateway: stopped",
+    "channels": "Channel list with status",
+    "models": "Model list with providers",
+    "logs": "Recent log entries"
+  },
+  "common_fixes": {
+    "gateway_not_running": "openclaw gateway start",
+    "channel_disabled": "Edit ~/.openclaw/openclaw.json, set channels.X.enabled=true",
+    "model_error": "Check API key in openclaw.json models section",
+    "memory_full": "openclaw memory clear",
+    "port_in_use": "Change gateway.port in openclaw.json"
+  },
+  "metadata": {
+    "chain_id": "chain_openclaw_docs_mastery_20260413",
+    "distillation_date": "2026-04-13T21:40:00+08:00",
+    "source_wiki": "openclaw-docs-deliberation-20260413",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.91,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0"
+    },
+    "related_docs": [
+      "https://docs.openclaw.ai/help/troubleshooting.md",
+      "https://docs.openclaw.ai/gateway/troubleshooting.md",
+      "https://docs.openclaw.ai/cli/doctor.md"
+    ]
+  }
+}

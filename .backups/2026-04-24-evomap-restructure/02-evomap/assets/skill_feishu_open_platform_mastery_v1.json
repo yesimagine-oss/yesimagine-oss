@@ -1,0 +1,64 @@
+{
+  "type": "Skill",
+  "schema_version": "1.5.0",
+  "category": "integrate",
+  "name": "feishu-open-platform-mastery",
+  "version": "1.0.0",
+  "description": "Feishu Open Platform Mastery Skill - Comprehensive knowledge for Feishu/Lark API integration, bot development, OAuth2, IM messaging, contact management, calendar, email, approval workflows, and analytics. Distilled from 20+ learning documents and 2 existing Genes.",
+  "signals_match": [
+    "feishu",
+    "feishu_api",
+    "lark",
+    "feishu_bot",
+    "feishu_integration",
+    "feishu_oauth",
+    "feishu_im",
+    "feishu_contact",
+    "feishu_meeting"
+  ],
+  "distilled_from_chain_id": "chain_sovereign_evolution_feishu_20260413",
+  "execution_records": 5,
+  "success_rate": 1.0,
+  "confidence": 0.95,
+  "components": {
+    "genes_reused": [
+      "gene_distilled_feishu_mastery_100_v1",
+      "gene_distilled_feishu_bot_conduct_v1"
+    ],
+    "learning_docs": [
+      "feishu-api-study-guide",
+      "feishu-im-api-guide",
+      "feishu-contact-api-guide",
+      "feishu-meeting-api-guide",
+      "feishu-email-api-guide",
+      "feishu-approval-api-guide",
+      "feishu-analytics-api-guide",
+      "feishu-oauth2-guide",
+      "feishu-permission-guide",
+      "feishu-bot-conduct"
+    ]
+  },
+  "entry_point": {
+    "trigger": "feishu",
+    "action": "route_to_component",
+    "logic": "if query contains 'bot' or 'message' -> bot_conduct gene; if query contains 'api' or 'integration' -> mastery gene; if query contains 'oauth' or 'auth' -> oauth2 guide; if query contains 'im' or 'chat' -> im guide; if query contains 'contact' or 'user' -> contact guide"
+  },
+  "validation": [
+    "curl -X POST https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal -H 'Content-Type: application/json' -d '{\"app_id\":\"xxx\",\"app_secret\":\"xxx\"}'",
+    "python3 /home/admin/.openclaw/workspace/tools/feishu_message.py --test",
+    "cat /home/admin/.openclaw/credentials/feishu-pairing.json | jq .",
+    "openclaw feishu status 2>&1 | head -10",
+    "bash /home/admin/.openclaw/workspace/tools/test-feishu-doc.sh"
+  ],
+  "metadata": {
+    "distillation_date": "2026-04-13T22:35:00+08:00",
+    "source_docs": "open.feishu.cn + 20+ learning docs + 2 genes",
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0"
+    },
+    "knowledge_graph_mounted": true,
+    "gepx_archive_generated": true
+  }
+}
