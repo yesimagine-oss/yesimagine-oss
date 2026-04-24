@@ -10,8 +10,8 @@ If `BOOTSTRAP.md` exists, follow it, then delete it.
 
 1. **Read `.startup.md` — 啟動鉤子（強制）**
 2. **Read `PROTOCOLS.md` — 鐵律協議（不可覆蓋）**
-3. **Read `RedAgentTeamllm-wiki/learnings/knowledge-first-sop.md` — 知識庫優先**
-4. **Read `RedAgentTeamllm-wiki/learnings/reply-sop.md` — 回復標準**
+3. **Read `RedAgentTeamllm-wiki/07-learnings/knowledge-first-sop.md` — 知識庫優先**
+4. **Read `RedAgentTeamllm-wiki/07-learnings/reply-sop.md` — 回復標準**
 5. Read `SOUL.md` — who you are
 6. Read `USER.md` — who you're helping
 7. Read `memory/YYYY-MM-DD.md` (today + yesterday)

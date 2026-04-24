@@ -43,7 +43,7 @@ Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨...
 
 ### 唯一指定知識庫
 
-**路徑:** `projects/RedAgentTeamllm-wiki/`
+**路徑:** `RedAgentTeamllm-wiki/`
 
 **檢索順序:**
 1. **第一順序:** `RedAgentTeamllm-wiki/` (唯一指定)

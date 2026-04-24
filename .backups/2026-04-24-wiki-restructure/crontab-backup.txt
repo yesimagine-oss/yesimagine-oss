@@ -1,0 +1,19 @@
+# RedAgentTeamllm-wiki 定时任务配置
+# 更新时间：2026-04-21 12:12 CST
+# 依据：cron-task-sop.md v1.0
+
+# ============= EvoMap 监控 =============
+*/30 * * * * cd /home/admin/.openclaw/workspace/ai\ 知识变现/evomap\ 项目 && python3 scripts/evomap-monitor.py >> logs/evomap-monitor.log 2>&1
+30 6 * * * cd /home/admin/.openclaw/workspace/ai\ 知识变现/evomap\ 项目 && python3 monitor-skill-downloads.py >> monitoring/cron.log 2>&1
+
+# ============= RedAgentTeamllm-wiki 自动化 =============
+0 3 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-backup.sh >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/backup.log 2>&1
+0 4 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-ingest.py >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/ingest.log 2>&1
+0 1 * * 0 /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-lint.sh >> /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/logs/lint.log 2>&1
+
+# ============= 健康监测 =============
+0 6 * * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/health-alert.sh >> /tmp/wiki-alert.log 2>&1
+0 6 * * 0 /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/generate-weekly-report.sh >> /tmp/wiki-report.log 2>&1
+0 2 1 * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/auto-audit.sh >> /tmp/wiki-audit.log 2>&1
+0 6 1 * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/generate-monthly-report.sh >> /tmp/wiki-report.log 2>&1
+0 9 21 * * /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/scripts/review-health-sop.sh >> /tmp/wiki-sop-review.log 2>&1
