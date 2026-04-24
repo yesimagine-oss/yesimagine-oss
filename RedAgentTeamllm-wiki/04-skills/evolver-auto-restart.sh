@@ -18,6 +18,44 @@ RESTART_DELAY=10
 # 確保日誌目錄存在
 mkdir -p "$LOG_DIR"
 
+# 路徑檢查（防止目錄整理後路徑失效）
+check_paths() {
+    local failed=0
+    
+    if [ ! -d "$EVOLVER_DIR" ]; then
+        log "🔴 CRITICAL: EVOLVER_DIR 不存在: $EVOLVER_DIR"
+        log "🔴 可能原因：目錄整理後路徑未更新，請檢查 systemd 服務配置"
+        failed=1
+    fi
+    
+    if [ ! -f "$EVOLVER_DIR/package.json" ]; then
+        log "🔴 CRITICAL: Evolver package.json 不存在: $EVOLVER_DIR/package.json"
+        failed=1
+    fi
+    
+    if [ ! -d "$LOG_DIR" ]; then
+        log "🔴 CRITICAL: LOG_DIR 不存在: $LOG_DIR"
+        failed=1
+    fi
+    
+    # 檢查 memory/evolution/ 權限
+    local mem_dir="/home/admin/.openclaw/workspace/memory/evolution"
+    if [ -d "$mem_dir" ]; then
+        if [ ! -w "$mem_dir" ]; then
+            log "🔴 CRITICAL: memory/evolution/ 無寫入權限"
+            failed=1
+        fi
+    fi
+    
+    if [ $failed -eq 1 ]; then
+        log "🔴 路徑檢查失敗，Evolver 無法啟動"
+        log "🔴 請修復後重啟服務: sudo systemctl restart evolver-monitor.service"
+        exit 1
+    fi
+    
+    log "✅ 路徑檢查通過"
+}
+
 # 日誌函數
 log() {
     echo "[$(date -Iseconds)] $1" | tee -a "$LOG_FILE"
@@ -142,6 +180,9 @@ main() {
     log "🚀 Evolver 監控服務啟動"
     log "📊 檢查間隔：${HEALTH_CHECK_INTERVAL}秒"
     log "🔄 最大重啟次數：$MAX_RESTART_ATTEMPTS"
+    
+    # 路徑檢查（防止目錄整理後路徑失效）
+    check_paths
     
     local consecutive_failures=0
     local restart_count=0
