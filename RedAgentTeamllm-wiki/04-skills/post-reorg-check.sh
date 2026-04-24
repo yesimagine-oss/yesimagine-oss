@@ -23,8 +23,8 @@ main() {
     # 1. 檢查 Evolver 路徑
     log ""
     log "--- Evolver 路徑檢查 ---"
-    if [ -d "/home/admin/.openclaw/workspace/projects/evolver" ]; then
-        log "✅ Evolver 目錄存在"
+    if [ -d "/usr/lib/node_modules/@evomap/evolver" ]; then
+        log "✅ Evolver 目錄存在 (全局 1.69.16)"
     else
         log "❌ Evolver 目錄不存在！"
         failed=1
