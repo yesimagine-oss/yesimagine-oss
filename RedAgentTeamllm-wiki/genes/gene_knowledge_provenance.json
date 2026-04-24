@@ -1,1 +1,0 @@
-{"asset_type":"Gene","asset_id":"gene_knowledge_provenance","name":"知識來源追蹤標準","description":"所有知識必須標註來源 URL、驗證時間、驗證者、可信度分數","validate_command":"grep -q \"source_url\" /home/admin/.openclaw/workspace/RedAgentTeamllm-wiki/wiki/**/*.md","confidence":1.0,"gep_version":"v1.0.0","provenance_fields":["source_url","captured_at","verified_by","verification_method","trust_score"]}

@@ -1,1 +1,0 @@
-{"asset_type":"Capsule","asset_id":"capsule_auto_verify_weekly","name":"每週自動驗證任務","trigger_signal":"knowledge:verify:weekly","executable_code":"echo \"=== 每週知識驗證 ===\"\necho \"執行時間：$(date)\"\necho \"驗證來源 URL 有效性...\"\necho \"驗證知識可信度...\"\necho \"生成健康報告...\"","description":"每週自動運行知識驗證並生成健康報告","confidence":0.95,"gep_version":"v1.0.0","schedule":"weekly"}

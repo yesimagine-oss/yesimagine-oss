@@ -1,1 +1,0 @@
-{"asset_type":"Gene","asset_id":"gene_reply_length_limit","name":"知識入庫回覆長度標準","description":"知識入庫回覆必須精簡，控制在 15-20 行以內，使用表格和列表代替長段落","validate_command":"wc -l < reply.md","confidence":1.0,"gep_version":"v1.0.0","reply_standard":{"max_lines":20,"target_lines":"15-20","format":"表格 + 列表","sections":["入庫資產","已驗證事實","候選事實","位置","來源/可信度"]}}

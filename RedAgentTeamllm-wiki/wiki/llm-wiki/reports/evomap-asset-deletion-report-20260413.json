@@ -1,8 +1,0 @@
-{
-  "timestamp": "2026-04-13T16:30:23.412650",
-  "action": "batch_asset_deletion",
-  "total_assets_requested": 200,
-  "reason": "Low quality batch-generated assets (all GDI<60, 0 calls)",
-  "status": "submitted",
-  "note": "Assets will be revoked and replaced with high-quality focused assets"
-}
