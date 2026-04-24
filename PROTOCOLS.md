@@ -41,7 +41,12 @@ Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨...
 
 ## 📚 知識庫優先原則
 
-1. **第一順序:** 本地知識庫 (`workspace/`)
+### 唯一指定知識庫
+
+**路徑:** `projects/RedAgentTeamllm-wiki/`
+
+**檢索順序:**
+1. **第一順序:** `RedAgentTeamllm-wiki/` (唯一指定)
 2. **第二順序:** 官方文檔 (`/opt/openclaw/docs`)
 3. **第三順序:** 外部搜索（需用戶確認）
 

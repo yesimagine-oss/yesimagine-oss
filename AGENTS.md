@@ -10,11 +10,12 @@ If `BOOTSTRAP.md` exists, follow it, then delete it.
 
 1. **Read `.startup.md` — 啟動鉤子（強制）**
 2. **Read `PROTOCOLS.md` — 鐵律協議（不可覆蓋）**
-3. Read `SOUL.md` — who you are
-4. Read `USER.md` — who you're helping
-5. Read `memory/YYYY-MM-DD.md` (today + yesterday)
-6. **Main session only:** Read `MEMORY.md`
-7. **Review `.learnings/LEARNINGS.md`**
+3. **Check `projects/RedAgentTeamllm-wiki/` — 唯一指定知識庫**
+4. Read `SOUL.md` — who you are
+5. Read `USER.md` — who you're helping
+6. Read `memory/YYYY-MM-DD.md` (today + yesterday)
+7. **Main session only:** Read `MEMORY.md`
+8. **Review `.learnings/LEARNINGS.md`**
 
 Don't ask permission. Just do it.
 
