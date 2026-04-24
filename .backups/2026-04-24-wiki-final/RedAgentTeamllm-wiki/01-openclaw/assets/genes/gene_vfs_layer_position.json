@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_vfs_layer_position",
+  "name": "VFS 抽象层位置",
+  "description": "VFS 是内核抽象层，向上对接用户空间接口，向下对接具体文件系统实现",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html#introduction\" | grep -E \"abstraction layer|filesystem implementation|user space interfaces\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#introduction",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

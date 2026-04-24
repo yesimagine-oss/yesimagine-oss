@@ -1,0 +1,14 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_skill_list",
+  "name": "列出已注册技能",
+  "trigger_signal": "openclaw:skill:list",
+  "executable_code": "openclaw skill list",
+  "description": "查看当前加载的所有可调用技能",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "tools", "skills", "list", "cli"],
+  "created_at": "2026-04-21T23:37:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/skills"
+}

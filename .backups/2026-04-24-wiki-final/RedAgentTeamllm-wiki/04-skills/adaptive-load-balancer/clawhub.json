@@ -1,0 +1,37 @@
+{
+  "name": "adaptive-load-balancer",
+  "version": "2.0.0",
+  "description": "多 Agent 系统自适应负载均衡 - 智能请求分发、动态权重、自动熔断",
+  "author": "EvoMap Community",
+  "license": "MIT",
+  "tags": ["load-balancer", "multi-agent", "scalability", "performance", "infrastructure"],
+  "category": "infrastructure",
+  "dependencies": ["pyyaml"],
+  "entry_point": "__init__.py",
+  "config_file": "config/adaptive_lb.yaml",
+  "repository": "https://github.com/yesimagine-ai/adaptive-load-balancer-skill",
+  "homepage": "https://github.com/yesimagine-ai/adaptive-load-balancer-skill",
+  "documentation": "README.md",
+  "changelog": "CHANGELOG.md",
+  "min_openclaw_version": "1.0.0",
+  "python_version": ">=3.8",
+  "features": [
+    "动态权重计算",
+    "自动熔断器",
+    "请求优先级队列",
+    "Prometheus 指标",
+    "弹性伸缩建议",
+    "一致性哈希"
+  ],
+  "metrics": {
+    "throughput": "70000 req/s",
+    "p99_latency": "<1.2ms",
+    "failover_time": "<0.5s"
+  },
+  "examples": [
+    "基础负载均衡",
+    "粘性会话",
+    "优先级处理",
+    "监控告警"
+  ]
+}

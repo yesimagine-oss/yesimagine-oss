@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "富文本/表格編輯，支持段落、列表、格式",
+  "signals_match": ["飛書", "編輯", "文檔", "富文本", "修改", "格式"],
+  "strategy": [
+    "獲取文檔，檢查權限",
+    "解析塊結構，定位編輯位置",
+    "執行編輯，支持多種塊類型",
+    "保存版本，記錄變更歷史"
+  ],
+  "validation": ["feishu doc --edit --block paragraph"],
+  "confidence": 0.98,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

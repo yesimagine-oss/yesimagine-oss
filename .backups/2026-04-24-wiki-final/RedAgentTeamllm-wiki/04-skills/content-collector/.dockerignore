@@ -1,0 +1,62 @@
+# 📦 Content Collector - Docker 忽略文件
+# 創建：2026-03-19
+
+# ==================== 依賴目錄 ====================
+node_modules/
+npm-debug.log
+
+# ==================== 日誌文件 ====================
+*.log
+logs/
+
+# ==================== 收藏內容（不打包到鏡像） ====================
+collections/
+collections/wechat/
+collections/articles/
+collections/images/
+
+# ==================== 測試文件 ====================
+test/
+*.test.js
+*.spec.js
+
+# ==================== 文檔 ====================
+README.md
+SKILL.md
+docs/
+
+# ==================== Git ====================
+.git/
+.gitignore
+
+# ==================== Docker ====================
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# ==================== 系統文件 ====================
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# ==================== 環境配置 ====================
+.env
+.env.local
+.env.*.local
+
+# ==================== IDE ====================
+.vscode/
+.idea/
+*.iml
+
+# ==================== Python（如果有） ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/

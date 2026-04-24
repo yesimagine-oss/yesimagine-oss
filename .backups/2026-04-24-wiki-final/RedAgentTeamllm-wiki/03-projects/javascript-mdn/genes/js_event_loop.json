@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "js_event_loop",
+  "category": "optimize",
+  "summary": "事件循環、微任務/宏任務執行順序權威驗證",
+  "signals_match": ["javascript", "event_loop", "microtask", "macrotask", "promise", "事件循環", "異步"],
+  "strategy": [
+    "步驟 1：驗證事件循環機制與調用棧原理",
+    "步驟 2：驗證微任務（Promise/mutationObserver）",
+    "步驟 3：驗證宏任務（setTimeout/setInterval）",
+    "步驟 4：驗證執行順序與優先級規則",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "npm list --depth=0",
+    "node --version"
+  ],
+  "confidence": 0.99,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.99,
+    "status": "success"
+  },
+  "source": "MDN",
+  "chain_id": "javascript_mdn_full_evomap_20260417"
+}

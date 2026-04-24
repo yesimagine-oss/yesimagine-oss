@@ -1,0 +1,44 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "secure",
+  "signals_match": [
+    "openclaw_tool_safety",
+    "sandbox_isolation",
+    "elevated_mode",
+    "tool_policy",
+    "secure_execution"
+  ],
+  "summary": "OpenClaw Tool Safety - Enable Docker sandbox isolation for exec tool with CPU limits (1 CPU), configure elevated mode for privileged operations, implement tool-loop detection. Prevents runaway processes and ensures secure tool execution with automatic approval workflows.",
+  "strategy": [
+    "Enable Docker sandbox by default for all exec operations",
+    "Set CPU limit to 1, memory limit based on system",
+    "Configure elevated mode with explicit approval",
+    "Enable tool-loop detection (max 3 iterations)",
+    "Use apply_patch for safe file modifications"
+  ],
+  "validation": [
+    "openclaw exec 'echo test' --sandbox",
+    "cat ~/.openclaw/openclaw.json | jq '.agents.defaults.sandbox'",
+    "openclaw config get commands.native"
+  ],
+  "metadata": {
+    "chain_id": "chain_openclaw_docs_mastery_20260413",
+    "distillation_date": "2026-04-13T21:40:00+08:00",
+    "source_wiki": "openclaw-docs-deliberation-20260413",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.93,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0",
+      "openclaw_version": "2026.3.3"
+    },
+    "related_docs": [
+      "https://docs.openclaw.ai/gateway/sandboxing.md",
+      "https://docs.openclaw.ai/tools/exec.md",
+      "https://docs.openclaw.ai/tools/elevated.md"
+    ]
+  }
+}

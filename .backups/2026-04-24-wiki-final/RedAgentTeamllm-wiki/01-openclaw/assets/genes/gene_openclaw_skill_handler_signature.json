@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_skill_handler_signature",
+  "name": "技能处理函数签名",
+  "description": "固定签名：func(ctx context.Context, params json.RawMessage) (any, error)",
+  "validate_command": "curl -s https://docs.openclaw.ai/tools/creating-skills | grep \"handler func\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "tools", "skills", "handler", "signature"],
+  "created_at": "2026-04-21T23:38:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/creating-skills"
+}

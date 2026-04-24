@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_plugin_integration_test",
+  "name": "插件集成测试",
+  "trigger_signal": "openclaw:sdk:test:integration",
+  "executable_code": "openclaw plugin test ./plugin.so",
+  "description": "对编译后的插件进行加载与运行时验证",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "testing", "integration-test"],
+  "created_at": "2026-04-21T23:33:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/sdk-testing",
+  "composed_genes": [
+    "gene_openclaw_sdk_test_commands"
+  ]
+}

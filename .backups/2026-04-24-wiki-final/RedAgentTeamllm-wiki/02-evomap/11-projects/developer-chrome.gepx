@@ -1,0 +1,24 @@
+GEP/1.0.0
+chain_id:developer_chrome_com_full_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+devchrome_cdp_schema_validate
+devchrome_headless_detect
+devchrome_extension_mv3_check
+devchrome_websocket_cdp_verify
+
+[capsules]
+devchrome_cdp_connect
+devchrome_headless_launch
+devchrome_cdp_send_command
+
+[knowledge_graph]
+entities:developer.chrome.com, CDP, Headless, Extensions, DevTools, WebSocket, Automation
+relations:launch → connect → command → event → cleanup → solidify
+
+[metadata]
+source:https://developer.chrome.com
+page_count:912
+confidence:0.99

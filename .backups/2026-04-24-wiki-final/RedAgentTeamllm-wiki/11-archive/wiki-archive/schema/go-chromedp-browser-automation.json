@@ -1,0 +1,87 @@
+---
+name: go_chromedp_browser_automation
+version: 1.1.0
+type: gene
+tags:
+  - go
+  - chromedp
+  - browser
+  - automation
+  - cdp
+created_at: "2026-04-14T10:55:00+08:00"
+updated_at: "2026-04-14T11:18:00+08:00"
+chain_id: chain_go_browser_dev_20260414
+---
+
+# Gene: Go Chromedp Browser Automation
+
+## Core Viewpoint
+
+**4-Phase Learning Path for clawbrowser-core Development**
+
+| Phase | Topic | Key Functions | Outcome |
+|-------|-------|---------------|---------|
+| 1 | chromedp Basics | NewContext, Navigate, Click, SendKeys, Screenshot, Text | Browser automation scripts |
+| 2 | CDP Protocol | DOM.QuerySelector, Page.Navigate, Runtime.Evaluate, Accessibility.GetFullAXTree | Direct CDP commands |
+| 3 | ARIA Snapshot | GetFullAXTree, parse nodes, generate refs | @e1, @e2, @e3... |
+| 4 | CLI Wrapper | cobra, viper, fmt.Errorf, go build | Executable CLI tool |
+
+## Reasoning Chain
+
+1. **chromedp.Run()** → High-level API → Quick start (Phase 1)
+2. **CDP Domains** → DOM/Page/Runtime/Accessibility → Deep understanding (Phase 2)
+3. **AXTree parsing** → Generate refs → Core feature (Phase 3)
+4. **cobra CLI** → Error handling → Delivery format (Phase 4)
+
+## Judgment Criteria
+
+- ✅ Phase 1: Open pages, click, screenshot, extract text
+- ✅ Phase 2: Call CDP domains directly
+- ✅ Phase 3: Generate @e1, @e2 refs from AXTree
+- ✅ Phase 4: CLI with error handling and go build
+
+## Application Rules
+
+1. **Start with chromedp.Run()** - Don't build from scratch
+2. **Learn CDP domains incrementally** - DOM → Page → Runtime → Accessibility
+3. **Reuse existing patterns** - agent-browser for ARIA reference
+4. **Test each phase** - Verify before moving to next
+
+## Verification Commands
+
+```bash
+# Phase 1: chromedp examples
+go run examples/screenshot.go
+go run examples/form-fill.go
+go run examples/text-extract.go
+
+# Phase 2: CDP commands
+go run cdp/dom-query.go
+go run cdp/page-nav.go
+go run cdp/runtime-eval.go
+
+# Phase 3: ARIA snapshot
+go run aria/snapshot-gen.go
+
+# Phase 4: CLI tool
+go build -o clawbrowser .
+./clawbrowser open https://example.com
+./clawbrowser screenshot page.png
+```
+
+## Completion Checklist
+
+- [ ] Phase 1: 3 practice scripts (screenshot, form, text)
+- [ ] Phase 2: CDP domain tests (DOM, Page, Runtime, Accessibility)
+- [ ] Phase 3: Snapshot generator with refs
+- [ ] Phase 4: Executable CLI with error handling
+
+## References
+
+- https://github.com/chromedp/chromedp
+- https://chromedevtools.github.io/devtools-protocol/
+- go-complete-mastery.md
+
+## Confidence
+
+0.95

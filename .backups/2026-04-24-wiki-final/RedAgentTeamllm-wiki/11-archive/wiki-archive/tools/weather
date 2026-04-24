@@ -1,0 +1,12 @@
+#!/bin/bash
+# Weather command - plain text format (best compatibility)
+# Usage: weather [city]
+
+CITY="${1:-}"
+
+if [ -z "$CITY" ]; then
+    # Auto-detect location
+    curl -s "wttr.in/?format=%l:+%t+%h+%w"
+else
+    curl -s "wttr.in/${CITY}?format=%l:+%t+%h+%w"
+fi

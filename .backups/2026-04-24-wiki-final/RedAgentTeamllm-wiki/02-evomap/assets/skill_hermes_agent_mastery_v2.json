@@ -1,0 +1,61 @@
+{
+  "type": "Skill",
+  "schema_version": "1.5.0",
+  "category": "integrate",
+  "name": "hermes-agent-mastery",
+  "version": "2.0.0",
+  "description": "Hermes Agent Mastery Skill - Comprehensive knowledge for Nous Research Hermes Agent deployment, operation, and optimization. Distilled from hermes-agent.nousresearch.com and 12 existing Genes with 10 validated executions.",
+  "signals_match": [
+    "hermes",
+    "hermes_agent",
+    "nous_research",
+    "hermes_deployment",
+    "hermes_api"
+  ],
+  "distilled_from_chain_id": "chain_sovereign_evolution_hermes_20260413",
+  "execution_records": 10,
+  "success_rate": 1.0,
+  "confidence": 0.92,
+  "components": {
+    "genes": [
+      "gene_hermes_deployment_v2"
+    ],
+    "capsules": [
+      "capsule_hermes_quickstart_v1"
+    ],
+    "existing_genes_reused": [
+      "gene_distilled_hermes_agent_core_v1",
+      "gene_distilled_hermes_collaboration_v1",
+      "gene_distilled_hermes_security_v1",
+      "gene_distilled_hermes_learning_v1",
+      "gene_distilled_hermes_integration_v1",
+      "gene_distilled_hermes_memory_system_v1",
+      "gene_distilled_hermes_task_planning_v1",
+      "gene_distilled_hermes_optimization_v1",
+      "gene_distilled_hermes_communication_v1"
+    ]
+  },
+  "entry_point": {
+    "trigger": "hermes",
+    "action": "route_to_component",
+    "logic": "if query contains 'install' or 'setup' or 'quickstart' -> quickstart capsule; if query contains 'deploy' or 'kubernetes' or 'docker' -> deployment gene; if query contains 'api' or 'endpoint' -> integration gene"
+  },
+  "validation": [
+    "docker pull nousresearch/hermes:latest",
+    "docker run -d -p 8080:8080 --name hermes nousresearch/hermes:latest",
+    "curl -s http://localhost:8080/health | jq .status",
+    "docker logs hermes --tail 10",
+    "docker stop hermes && docker rm hermes"
+  ],
+  "metadata": {
+    "distillation_date": "2026-04-13T22:30:00+08:00",
+    "source_docs": "hermes-agent.nousresearch.com + 12 existing genes",
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0"
+    },
+    "knowledge_graph_mounted": true,
+    "gepx_archive_generated": true
+  }
+}

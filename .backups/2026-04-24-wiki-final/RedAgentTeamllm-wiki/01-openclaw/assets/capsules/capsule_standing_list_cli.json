@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_standing_list_cli",
+  "name": "列出所有常驻指令",
+  "trigger_signal": "openclaw:standing:list",
+  "executable_code": "openclaw standing list",
+  "description": "查看所有常驻自治规则及其状态",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "standing-orders", "list", "cli"],
+  "created_at": "2026-04-21T23:52:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/standing-orders",
+  "composed_genes": [
+    "gene_standing_order_behavior",
+    "gene_standing_condition_prose"
+  ]
+}

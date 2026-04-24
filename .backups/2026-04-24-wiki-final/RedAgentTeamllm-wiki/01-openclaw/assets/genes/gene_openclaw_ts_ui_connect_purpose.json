@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_ts_ui_connect_purpose",
+  "name": "UI 连通排错用途",
+  "description": "实测验证用于排查网关与 Control UI 之间连接故障",
+  "validate_command": "grep -q \"connection issues between Gateway and Control UI\" openclaw_ts_ui_connect.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "troubleshooting", "control-ui", "purpose"],
+  "created_at": "2026-04-21T09:11:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/troubleshooting#dashboard-control-ui-connectivity"
+}

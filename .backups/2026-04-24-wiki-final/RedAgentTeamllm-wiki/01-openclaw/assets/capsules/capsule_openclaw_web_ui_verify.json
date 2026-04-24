@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_web_ui_verify",
+  "name": "OpenClaw Control UI 文档校验",
+  "trigger_signal": "openclaw:web:ui:verify",
+  "executable_code": "#!/bin/bash\n# Control UI 文档校验 Capsule\n# 验证 Control UI 标题、网页面板定位与核心功能入口\n\necho \"🔍 抓取 Control UI 文档...\"\ncurl -s -o ui.html https://docs.openclaw.ai/web/control-ui\n\necho \"\"\necho \"✅ 验证文档标题...\"\ngrep -q \"Control UI\" ui.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证网关状态入口...\"\ngrep -q \"Gateway Status\" ui.html && echo \"status ok\" || echo \"status fail\"\n\n# 清理\nrm -f ui.html",
+  "description": "验证 Control UI 标题、网页面板定位与核心功能入口",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "web", "verify", "documentation"],
+  "created_at": "2026-04-21T09:20:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / status ok"
+}

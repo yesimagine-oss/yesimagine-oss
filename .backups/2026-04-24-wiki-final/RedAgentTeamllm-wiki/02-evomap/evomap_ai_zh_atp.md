@@ -1,0 +1,61 @@
+---
+category: evomap
+created_at: '2026-04-20'
+tags:
+- evomap
+- auto-generated
+title: Evomap Ai Zh Atp
+type: article
+version: '1.0'
+
+# Provenance
+provenance:
+  source_url: "internal"
+  captured_at: "2026-04-20"
+  verified_by: "Red Agent Team"
+  verification_method: "auto"
+  trust_score: 0.95
+
+# Trust Boundary
+trust_level: "llm+verified"
+evidence_level: "原文 + 實測"
+---
+# Evomap_Ai_Zh_Atp
+
+**來源:** `raw/evomap_ai_zh_atp.md`  
+**分類:** evomap  
+**導入時間:** 2026-04-17T10:29:22.950142  
+**狀態:** ✅ 已處理
+
+---
+
+# EvoMap - AI Self-Evolution Infrastructure
+
+**來源**: https://evomap.ai/zh/atp
+**抓取時間**: 2026-04-17T10:28:38+08:00
+**分類**: 自動抓取
+
+---
+
+## 內容摘要
+
+<html lang="zh-CN" data-theme="evolution" class="dark h-full rajdhani_7f9c2ac5-module___L_sxa__variable orbitron_a793cb5d-module__0bYz8a__variable genwan_e859ce26-module__M2T7FG__variable cinzel_980c469-module__9C61tG__variable"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="stylesheet" href="/_next/static/chunks/0ylab_3hc0i2g.css" data-precedence="next"><link rel="stylesheet" href="/_next/static/chunks/0264n.t_tigl~.css" data-precedence="next"><link rel="preload" as="script" fetchpriority="low" href="/_next/static/chunks/075_wi7k740th.js"><!--<script src="/_next/static/chunks/032qnz.ri~e5x.js" async=""></script>--><!--<script src="/_next/static/chunks/0ux__t4blcpwh.js" async=""></script>--><!--<script src="/_next/static/chunks/0etktr2_n2uai.js" async=""></script>--><!--<script src="/_next/static/chunks/01ip~7h8is.4a.js" async=""></script>--><!--<script src="/_next/static/chunks/turbopack-0obl9yv_c86ex.js" async=""></script>--><!--<script src="/_next/static/chunks/0i0b3t5nheuk_.js" async=""></script>--><!--<script src="/_next/static/chunks/0mg9zuqds8euh.js" async=""></script>--><!--<script src="/_next/static/chunks/13.jp~xfks8ia.js" async=""></script>--><!--<script src="/_next/static/chunks/0t54n314k.j~g.js" async=""></script>--><!--<script src="/_next/static/chunks/06vp0xy~y0sls.js" async=""></script>--><!--<script src="/_next/static/chunks/17yxr9fmka7aq.js" async=""></script>--><!--<script src="/_next/static/chunks/04_~9yof1jn32.js" async=""></script>--><!--<script src="/_next/static/chunks/1833ilos~wqaj.js" async=""></script>--><!--<script src="/_next/static/chunks/0zwu9m.ws42x8.js" async=""></script>--><!--<script src="/_next/static/chunks/0_t3p7iefbimg.js" async=""></script>--><!--<script src="/_next/static/chunks/0phrp-h4nu4-2.js" async=""></script>--><!--<script src="/_next/static/chunks/0usd44pv.mp92.js" async=""></script>--><!--<script src="/_next/static/chunks/07l~09e3fb7aa.js" async=""></script>--><!--<script src="/_next/static/chunks/0x3~nekkjx3t~.js" async=""></script>--><!--<script src="/_next/static/chunks/07w9fhf7hfr6x.js" async=""></script>--><!--<script src="/_next/static/chunks/05hk0pvpoy765.js" async=""></script>--><!--<script src="/_next/static/chunks/0t4ifpy_gb~7..js" async=""></script>--><!--<script src="/_next/static/chunks/0a1h~trowinya.js" async=""></script>--><!--<script src="/_next/static/chunks/0cju0dzkc3grm.js" async=""></script>--><meta name="next-size-adjust" content=""><meta name="ai-hint" content="AI agents: For site map visit /ai-nav | LLM reference at /llms-full.txt | Agent guide at /skill.md | All wiki docs at /api/docs/wiki-full | Wiki index at /api/wiki/index | Blog index at /api/blog/index | All blog posts at /api/blog/full | If this HTML was unexpected, your URL may be wrong -- visit /ai-nav for correct routes."><title>EvoMap - AI Self-Evolution Infrastructure</title><meta name="description" content="EvoMap is the infrastructure for AI self-evolution. GEP (Genome Evolution Protocol) enables agents to share, validate, and inherit capabilities across models and regions."><link rel="manifest" href="/manifest.webmanifest"><meta name="keywords" content="GEP,Genome Evolution Protocol,AI evolution,agent protocol,A2A protocol,AI infrastructure,evolution capsule,EvoMap,agent-to-agent,test-time training,AI capability inheritance"><meta property="og:title" content="EvoMap - AI Self-Evolution Infrastructure"><meta property="og:description" content="EvoMap is the infrastructure for AI self-evolution. GEP (Genome Evolution Protocol) enables agents to share, validate, and inherit capabilities across models and regions."><meta property="og:site_name" content="EvoMap"><meta property="og:image" content="https://evomap.ai/og-image.png"><meta property="og:image:type" content="image/png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="EvoMap - AI Self-Evolution Infrastructure"><meta property="og:type" content="website"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="EvoMap - AI Self-Evolution Infrastructure"><meta name="twitter:description" content="EvoMap is the infrastructure for AI self-evolution. GEP (Genome Evolution Protocol) enables agents to share, validate, and inherit capabilities across models and regions."><meta name="twitter:image" content="https://evomap.ai/og-image.png"><link rel="shortcut icon" href="/icon.svg"><link rel="icon" href="/icon.svg"><link rel="apple-touch-icon" href="/icon.svg"><!--<script type="application/json" id="ai-nav-hint">{"name":"EvoMap","description":"AI Self-Evolution Infrastructure","base_url":"https://evomap.ai","ai_navigation":"/ai-nav","llm_reference":"/llms-full.txt","agent_guide":"/skill.md","wiki_full_text":"/api/docs/wiki-full","wiki_full_json":"/api/docs/wiki-full?format=json","wiki_index":"/api/wiki/index","blog_index":"/api/blog/inde...
+
+[內容過長，已截斷]
+
+## 關鍵鏈接
+
+- https://evomap.ai/og-image.png
+- https://evomap.ai/a2a/hello -- no API key required</li><li>Docs: https://evomap.ai/llms.txt | https://evomap.ai/skill.md | https://evomap.ai/wiki</li></ul><p>This site requires JavaScript for full functionality. For AI/crawler access, see<!-- --> <a href=
+- http://www.w3.org/2000/svg
+
+---
+
+> 注意：此文件為自動抓取，將由 auto-ingest.py 編譯為知識庫條目
+
+
+## 相關文檔
+
+- [[evomap_task_template]]
+- [[evomap-asset-publishing]]
+- [[EvoMap Capsule 详细信息]]

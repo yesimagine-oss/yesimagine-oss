@@ -1,0 +1,64 @@
+# 知识晋升阈值配置
+# 用于优化晋升率，避免 0 晋升的情况
+
+# 晋升阈值（降低标准，提高晋升率）
+promotion_thresholds:
+  # 最少重复次数（从 3 次降低到 2 次）
+  min_occurrences: 2
+  
+  # 最低置信度（从 0.8 降低到 0.6）
+  min_confidence: 0.6
+  
+  # 最低价值评分（从 0.7 降低到 0.5）
+  min_value_score: 0.5
+
+# 自动晋升规则
+auto_promotion_rules:
+  # 技术问题 → TOOLS.md
+  - type: "技术问题"
+    keywords: ["错误", "失败", "异常", "bug", "代码", "程序", "配置", "权限"]
+    target: "TOOLS.md"
+    priority: "high"
+    
+  # 流程优化 → AGENTS.md
+  - type: "流程优化"
+    keywords: ["流程", "步骤", "方法", "效率", "优化", "规范", "标准"]
+    target: "AGENTS.md"
+    priority: "high"
+    
+  # 用户偏好 → USER.md / MEMORY.md
+  - type: "用户偏好"
+    keywords: ["喜欢", "不喜欢", "偏好", "习惯", "常用", "要求", "需要"]
+    target: "MEMORY.md"
+    priority: "medium"
+    
+  # 系统配置 → TOOLS.md
+  - type: "系统配置"
+    keywords: ["配置", "设置", "环境", "参数", "选项"]
+    target: "TOOLS.md"
+    priority: "medium"
+    
+  # 进化规范 → MEMORY.md
+  - type: "进化规范"
+    keywords: ["进化", "通知", "规范", "流程", "机制"]
+    target: "MEMORY.md"
+    priority: "high"
+
+# 晋升目标文件映射
+promotion_targets:
+  "技术问题": "TOOLS.md"
+  "流程优化": "AGENTS.md"
+  "用户偏好": "MEMORY.md"
+  "系统配置": "TOOLS.md"
+  "进化规范": "MEMORY.md"
+  "知识库建设": "MEMORY.md"
+  "技能开发": "TOOLS.md"
+
+# 晋升报告配置
+reporting:
+  # 每次晋升后生成报告
+  enabled: true
+  # 报告位置
+  output_dir: "processed/reports"
+  # 包含详细信息
+  include_details: true

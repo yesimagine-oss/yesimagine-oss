@@ -1,0 +1,25 @@
+GEP/1.0.0
+chain_id:chromedp_release_v0_15_1_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+chromedp_v151_build_verify
+chromedp_v151_context_fix
+chromedp_v151_cdp_sync
+chromedp_v151_selector_stability
+
+[capsules]
+chromedp_v151_init_stable
+chromedp_v151_navigate_click
+chromedp_v151_version_check
+
+[knowledge_graph]
+entities:chromedp, v0.15.1, bugfix, race, context, CDP, stability
+relations:pin-version → init-fixed → execute → validate → solidify
+
+[metadata]
+source:https://github.com/chromedp/chromedp/releases/tag/v0.15.1
+version:v0.15.1
+kind:stable-bugfix
+confidence:0.99

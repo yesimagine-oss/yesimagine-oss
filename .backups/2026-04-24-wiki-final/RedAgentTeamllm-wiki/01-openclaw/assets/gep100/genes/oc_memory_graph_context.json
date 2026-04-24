@@ -1,0 +1,11 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "Graph 記憶引擎：ContextEngine 熱插拔、DAG 存儲、向量檢索、長對話無損",
+  "signals_match": ["Memory", "ContextEngine", "記憶", "DAG", "向量檢索", "無損"],
+  "strategy": ["配置記憶路徑", "優化向量索引", "實現長期偏好記憶"],
+  "validation": ["openclaw memory --test recall"],
+  "confidence": 0.96,
+  "source": "openclaw.ai / docs.openclaw.ai",
+  "chain_id": "openclaw_ai_evolution_20260417"
+}

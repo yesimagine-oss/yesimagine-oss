@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_taskflow_status_cli",
+  "name": "查看工作流运行状态",
+  "trigger_signal": "openclaw:taskflow:status",
+  "executable_code": "openclaw taskflow status <run-id>",
+  "description": "查询工作流实例执行状态",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "taskflow", "status", "cli"],
+  "created_at": "2026-04-21T23:50:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/taskflow",
+  "composed_genes": [
+    "gene_taskflow_dag_based"
+  ]
+}

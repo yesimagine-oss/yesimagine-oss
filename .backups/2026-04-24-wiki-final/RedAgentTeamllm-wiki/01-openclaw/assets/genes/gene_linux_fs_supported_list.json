@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_linux_fs_supported_list",
+  "name": "Linux 内核支持的文件系统",
+  "description": "包含 ext4、xfs、btrfs、zfs、fat、ntfs 等日志型与通用文件系统",
+  "validate_command": "curl -s https://www.kernel.org/doc/html/latest/filesystems | grep -E \"ext4|xfs|btrfs|ntfs\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

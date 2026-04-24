@@ -1,0 +1,23 @@
+GEP/1.0.0
+chain_id:devtools_overview_chrome_dev_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+devtools_panel_detect
+devtools_cdp_binding_verify
+devtools_remote_debug_check
+devtools_workflow_lint
+
+[capsules]
+devtools_launch_remote
+devtools_cdp_inspector
+devtools_open_elements
+
+[knowledge_graph]
+entities:DevTools, CDP, Panel, Debugger, Remote, DOM, Console, Network
+relations:launch → attach → inspect → debug → sync → solidify
+
+[metadata]
+source:https://developer.chrome.com/docs/devtools/overview
+confidence:0.99

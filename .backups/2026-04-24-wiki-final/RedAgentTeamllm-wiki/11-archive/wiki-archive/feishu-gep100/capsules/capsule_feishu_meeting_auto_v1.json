@@ -1,0 +1,17 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "預約→轉寫→紀要→待辦→責任人閉環",
+  "signals_match": ["會議", "自動化", "紀要", "待辦", "AI", "閉環"],
+  "strategy": [
+    "預約會議，發送邀請",
+    "會議中自動轉寫錄音",
+    "AI 生成紀要和待辦事項",
+    "創建待辦並同步責任人"
+  ],
+  "gene_ids": ["gene_meeting_schedule", "gene_aily_summary_meeting"],
+  "confidence": 0.99,
+  "environment": "飛書 + aily",
+  "validation": ["feishu meeting --auto --meeting-id xxx"],
+  "chain_id": "feishu_full_evomap_20260417"
+}

@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "與飛書 aily 對話，支持問答、指令、總結",
+  "signals_match": ["aily", "AI", "對話", "問答", "指令", "智能助手"],
+  "strategy": [
+    "輸入理解，解析用戶意圖",
+    "意圖識別，匹配能力範圍",
+    "執行指令或回答問題",
+    "結構化輸出，支持多輪對話"
+  ],
+  "validation": ["feishu aily --chat --query '總結本周會議'"],
+  "confidence": 0.99,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

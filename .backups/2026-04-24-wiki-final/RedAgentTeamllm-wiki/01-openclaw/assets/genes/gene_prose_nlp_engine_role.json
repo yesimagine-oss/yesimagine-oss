@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_prose_nlp_engine_role",
+  "name": "Prose 自然语言引擎定位",
+  "description": "Prose 是 OpenClaw 的自然语言意图解析引擎，负责文本转结构化指令",
+  "validate_command": "curl -s https://docs.openclaw.ai/prose | grep \"Prose: Natural Language Intent Engine\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "prose", "nlp", "intent", "engine"],
+  "created_at": "2026-04-21T23:44:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/prose"
+}

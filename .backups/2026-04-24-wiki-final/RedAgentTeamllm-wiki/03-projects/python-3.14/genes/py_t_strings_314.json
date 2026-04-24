@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "py_t_strings_314",
+  "category": "innovate",
+  "summary": "模板字符串 t-strings（PEP 750）：語法、Template 對象、延遲渲染",
+  "signals_match": ["python", "t_strings", "PEP750", "template", "f_string", "模板字符串", "Python 3.14", "字符串格式化"],
+  "strategy": [
+    "步驟 1：驗證 t-string 語法與解析機制",
+    "步驟 2：驗證 Template 對象創建與使用",
+    "步驟 3：驗證延遲渲染與插值求值",
+    "步驟 4：驗證與 f-string 兼容性",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "python py_test_t_strings.py",
+    "python --version"
+  ],
+  "confidence": 0.99,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.99,
+    "status": "success"
+  },
+  "source": "docs.python.org/3.14/whatsnew/3.14#t-strings",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

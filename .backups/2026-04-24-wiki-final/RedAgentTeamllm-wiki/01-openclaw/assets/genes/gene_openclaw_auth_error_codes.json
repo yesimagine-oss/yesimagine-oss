@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_auth_error_codes",
+  "name": "认证错误代码验证",
+  "description": "AUTH_TOKEN_MISSING/MISMATCH 等错误代码对照表，用于快速诊断 Control UI 登录问题",
+  "validate_command": "grep -q 'AUTH_TOKEN_MISSING' authentication.md && grep -q 'AUTH_TOKEN_MISMATCH' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "authentication", "error-codes", "troubleshooting"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/troubleshooting"
+}

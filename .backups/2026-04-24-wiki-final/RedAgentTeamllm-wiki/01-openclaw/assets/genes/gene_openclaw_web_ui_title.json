@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_web_ui_title",
+  "name": "OpenClaw Control UI 文档确认",
+  "description": "实测验证页面为 OpenClaw 网页端 Control UI 文档",
+  "validate_command": "grep -o \"Control UI\" openclaw_web_ui.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "web", "dashboard"],
+  "created_at": "2026-04-21T09:20:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/web/control-ui"
+}

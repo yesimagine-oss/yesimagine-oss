@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_sdk_harness_core_methods",
+  "name": "Harness 核心方法",
+  "description": "NewHarness() → Register() → Start() 标准启动流程",
+  "validate_command": "curl -s https://docs.openclaw.ai/plugins/sdk-agent-harness | grep -E \"NewHarness|Register|Start\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "agent-harness", "api", "methods"],
+  "created_at": "2026-04-21T23:25:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/sdk-agent-harness"
+}

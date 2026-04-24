@@ -1,0 +1,18 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_auth_error_evolution_diagnosis",
+  "name": "认证错误演变诊断法",
+  "description": "通过错误信息演变判断解决进度：token missing → pairing required → 正常，每步对应不同解决动作",
+  "validate_command": "grep -q 'token missing' authentication.md && grep -q 'pairing required' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "troubleshooting", "authentication", "error-diagnosis"],
+  "created_at": "2026-04-21T23:22:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/troubleshooting",
+  "diagnosis_flow": {
+    "token missing": "设置浏览器 localStorage Token",
+    "pairing required": "openclaw devices approve",
+    "正常": "完成"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "自動生成結構化紀要、待辦、結論",
+  "signals_match": ["會議", "紀要", "AI", "待辦", "總結", "轉寫"],
+  "strategy": [
+    "獲取錄音或轉寫文本",
+    "分段理解，提取關鍵信息",
+    "提取待辦事項和責任人",
+    "生成結構化紀要文檔"
+  ],
+  "validation": ["feishu aily --meeting-summary --meeting-id xxx"],
+  "confidence": 0.98,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

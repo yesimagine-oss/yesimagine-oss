@@ -1,0 +1,220 @@
+{
+  "timestamp": "2026-04-13T16:05:59.866073",
+  "signals": {
+    "automation": 36691,
+    "optimization": 32553,
+    "memory_leak": 28319,
+    "performance": 25555,
+    "perf_bottleneck": 20835,
+    "optimization_sought": 19210,
+    "security": 15569,
+    "websocket_reconnect": 14993,
+    "python": 11667,
+    "event_sourcing": 10347,
+    "agent": 9468,
+    "evomap": 9289,
+    "exponential_backoff": 9060,
+    "postgresql": 9037,
+    "code_splitting": 8790
+  },
+  "trending": [
+    {
+      "title": "N/A",
+      "calls": 126561,
+      "reuse": 928,
+      "gdi": 71.85
+    },
+    {
+      "title": "N/A",
+      "calls": 124546,
+      "reuse": 2667,
+      "gdi": 71.75
+    },
+    {
+      "title": "N/A",
+      "calls": 121870,
+      "reuse": 2707,
+      "gdi": 71.55
+    },
+    {
+      "title": "N/A",
+      "calls": 136685,
+      "reuse": 1073,
+      "gdi": 71.55
+    },
+    {
+      "title": "N/A",
+      "calls": 115914,
+      "reuse": 2435,
+      "gdi": 71.35
+    },
+    {
+      "title": "N/A",
+      "calls": 120129,
+      "reuse": 2463,
+      "gdi": 70.15
+    },
+    {
+      "title": "N/A",
+      "calls": 106122,
+      "reuse": 1992,
+      "gdi": 70.1
+    },
+    {
+      "title": "N/A",
+      "calls": 119334,
+      "reuse": 2454,
+      "gdi": 69.8
+    },
+    {
+      "title": "N/A",
+      "calls": 140713,
+      "reuse": 4406,
+      "gdi": 69.75
+    },
+    {
+      "title": "N/A",
+      "calls": 968,
+      "reuse": 169,
+      "gdi": 69.15
+    }
+  ],
+  "saturation": {
+    "Webhook": {
+      "avg_assets": 1.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "webhook",
+        "webhook_retry",
+        "webhook_delivery"
+      ]
+    },
+    "Circuit Breaker": {
+      "avg_assets": 1.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "circuit_breaker",
+        "fault_tolerance"
+      ]
+    },
+    "Idempotency": {
+      "avg_assets": 0.3333333333333333,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "idempotency",
+        "idempotency_key",
+        "deduplication"
+      ]
+    },
+    "AI/Agent": {
+      "avg_assets": 0.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "agent",
+        "llm",
+        "prompt_engineering"
+      ]
+    },
+    "Database": {
+      "avg_assets": 0.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "postgresql",
+        "database",
+        "query_optimization"
+      ]
+    },
+    "Security": {
+      "avg_assets": 0.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "security",
+        "authentication",
+        "authorization"
+      ]
+    },
+    "Performance": {
+      "avg_assets": 0.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "performance",
+        "optimization",
+        "caching"
+      ]
+    },
+    "Distributed": {
+      "avg_assets": 0.0,
+      "saturation": "🟢 藍海",
+      "recommendation": "✅ 推薦",
+      "signals": [
+        "distributed_tracing",
+        "microservices",
+        "service_mesh"
+      ]
+    }
+  },
+  "opportunities": [
+    {
+      "title": "N/A",
+      "signals": [
+        ""
+      ],
+      "calls": 1633560,
+      "reuse": 1001240,
+      "gdi": 69,
+      "value_score": 2004251.56,
+      "competition": 0.0
+    },
+    {
+      "title": "N/A",
+      "signals": [
+        ""
+      ],
+      "calls": 140713,
+      "reuse": 4406,
+      "gdi": 69.75,
+      "value_score": 9092.213,
+      "competition": 0.0
+    },
+    {
+      "title": "N/A",
+      "signals": [
+        ""
+      ],
+      "calls": 74127,
+      "reuse": 3634,
+      "gdi": 68.55,
+      "value_score": 7479.227000000001,
+      "competition": 0.0
+    },
+    {
+      "title": "N/A",
+      "signals": [
+        ""
+      ],
+      "calls": 121870,
+      "reuse": 2707,
+      "gdi": 71.55,
+      "value_score": 5678.97,
+      "competition": 0.0
+    },
+    {
+      "title": "N/A",
+      "signals": [
+        ""
+      ],
+      "calls": 124546,
+      "reuse": 2667,
+      "gdi": 71.75,
+      "value_score": 5602.046,
+      "competition": 0.0
+    }
+  ]
+}

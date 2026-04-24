@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "js_array_iterator",
+  "category": "optimize",
+  "summary": "數組、高階函數、迭代器、TypedArray 驗證",
+  "signals_match": ["javascript", "array", "iterator", "map", "filter", "reduce", "TypedArray", "數組", "迭代器"],
+  "strategy": [
+    "步驟 1：驗證數組創建方法與常用操作 API",
+    "步驟 2：驗證高階函數（map/filter/reduce）使用",
+    "步驟 3：驗證迭代器協議與生成器函數",
+    "步驟 4：驗證 TypedArray 類型化數組操作",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "npm list --depth=0",
+    "node --version"
+  ],
+  "confidence": 0.96,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.96,
+    "status": "success"
+  },
+  "source": "MDN",
+  "chain_id": "javascript_mdn_full_evomap_20260417"
+}

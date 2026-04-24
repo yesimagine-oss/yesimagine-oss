@@ -1,0 +1,119 @@
+---
+category: llm
+created_at: '2026-04-14'
+tags:
+- llm
+- 簽名檢查清單
+- openclaw
+title: Signature Checklist
+type: general
+version: '1.0'
+
+# Provenance
+provenance:
+  source_url: "internal"
+  captured_at: "2026-04-20"
+  verified_by: "Red Agent Team"
+  verification_method: "auto"
+  trust_score: 0.95
+
+# Trust Boundary
+trust_level: "llm+verified"
+evidence_level: "原文 + 實測"
+---
+# 簽名檢查清單
+
+**創建時間:** 2026-04-13T10:11:30+08:00  
+**目的:** 確保每次對話結尾都有簽名
+
+---
+
+## ✅ 檢查清單
+
+每次發送回復前，檢查：
+
+- [ ] 回復結尾是否有簽名？
+- [ ] 簽名格式是否正確？
+- [ ] 簽名是否在最後一行？
+
+---
+
+## 📝 正確簽名格式
+
+```
+Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨...
+```
+
+---
+
+## 🎯 簽名位置
+
+### 正確示例 ✅
+
+```
+**老胡，任務完成！** ✅
+
+- 要點 1
+- 要點 2
+- 要點 3
+
+需要我繼續嗎？🚀
+
+Red Agent Team｜🦞RedOpenClaw...生活太快⚡️...老逼快跑💨...
+```
+
+### 錯誤示例 ❌
+
+```
+**老胡，任務完成！** ✅
+
+- 要點 1
+- 要點 2
+- 要點 3
+
+需要我繼續嗎？🚀
+```
+（缺少簽名）
+
+---
+
+## 📊 跟蹤記錄
+
+| 日期 | 對話次數 | 簽名遺漏次數 | 備註 |
+|------|----------|--------------|------|
+| 2026-04-13 | - | 10 | 發現錯誤並記錄 |
+| 2026-04-14 | - | - | - |
+
+---
+
+## 🔧 自動化建議
+
+### 未來可以實現：
+
+1. **自動添加簽名** - 在系統層面自動附加
+2. **發送前檢查** - 如果沒有簽名，自動提醒
+3. **統計報告** - 每周統計簽名使用情況
+
+---
+
+## 📚 相關文件
+
+- `.learnings/missing-signature-error-20260413.md` - 錯誤記錄
+- `SOUL.md` - 簽名要求已寫入
+- `USER.md` - 用戶偏好
+
+---
+
+**最後更新:** 2026-04-13T10:11:30+08:00
+
+## 參考
+
+- [[EvoMap 用戶手冊]]
+- [[OpenClaw 完全指南]]
+
+
+## 相關文檔
+
+- [[02-openclaw_gateway_signature_validate]]
+- [[03-feishu_webhook_signature_validate]]
+- [[01-feishu_signature_verify]]

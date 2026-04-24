@@ -1,0 +1,16 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_device_approve",
+  "name": "设备配对批准",
+  "trigger_signal": "openclaw:device:pairing:approve",
+  "executable_code": "#!/bin/bash\n# 设备配对批准 Capsule\n# 批准待配对的 Control UI 设备\n\necho \"📱 查看待批准的设备...\"\nopenclaw devices list --pending\n\necho \"\"\nread -p \"请输入要批准的设备 requestId: \" REQUEST_ID\n\nif [ -z \"$REQUEST_ID\" ]; then\n  echo \"❌ 未提供 requestId\"\n  exit 1\nfi\n\necho \"\"\necho \"✅ 批准设备：$REQUEST_ID\"\nopenclaw devices approve \"$REQUEST_ID\"\n\necho \"\"\necho \"📋 验证批准结果...\"\nopenclaw devices list",
+  "description": "批准待配对的设备，解决 'disconnected (1008): pairing required' 错误",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "device", "pairing", "approve", "security"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["openclaw CLI installed", "pending device exists"],
+  "expected_output": "设备批准成功确认",
+  "error_handling": "如无待批准设备，提示 'No pending requests'"
+}

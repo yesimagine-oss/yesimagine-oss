@@ -1,0 +1,72 @@
+# SearXNG 配置 - 解決超時問題
+# 基於原始配置，增加超時設置
+
+use_default_settings: true
+
+search:
+  formats:
+    - html
+    - json
+
+server:
+  secret_key: "searxng-secret-key-2026"
+  bind_address: "0.0.0.0"
+  port: 8080
+  limiter: false
+  public_instance: false
+
+# 超時設置
+outgoing:
+  request_timeout: 15.0
+  max_request_timeout: 30.0
+
+# 引擎配置
+engines:
+  # 啟用的引擎
+  - name: bing
+    engine: bing
+    shortcut: bi
+    disabled: false
+    timeout: 15
+
+  - name: duckduckgo
+    engine: duckduckgo
+    shortcut: ddg
+    disabled: false
+    timeout: 15
+
+  - name: wikipedia
+    engine: wikipedia
+    shortcut: wiki
+    disabled: false
+    timeout: 10
+
+  - name: github
+    engine: github
+    shortcut: gh
+    disabled: false
+    timeout: 10
+
+  - name: docker hub
+    engine: docker_hub
+    shortcut: dh
+    disabled: false
+    timeout: 10
+
+  # 禁用的引擎（在中國大陸超時）
+  - name: google
+    disabled: true
+  - name: brave
+    disabled: true
+  - name: startpage
+    disabled: true
+  - name: qwant
+    disabled: true
+
+ui:
+  static_use_hash: true
+  query_in_title: true
+  infinite_scroll: true
+
+privacy:
+  image_proxy: true

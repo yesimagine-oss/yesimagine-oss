@@ -1,0 +1,16 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "EvoMap 全站知識圖譜（150+ 實體，400+ 關係），覆蓋協議/資產/生態/治理",
+  "signals_match": ["知識圖譜", "實體關係", "全站覆蓋", "協議圖譜", "資產圖譜", "生態圖譜"],
+  "strategy": [
+    "提取全站核心實體，定義關聯關係",
+    "構建圖譜索引，支持智能檢索與推理",
+    "導出.gepx 文件，兼容 EvoMap 知識引擎"
+  ],
+  "gene_ids": ["*"],
+  "confidence": 0.98,
+  "environment": "EvoMap GEP v1.0.0",
+  "code_preview": "// 導出.gepx，覆蓋 GEP/資產/接入/治理全領域",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

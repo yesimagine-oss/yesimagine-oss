@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_cron_add_cli",
+  "name": "添加定时任务",
+  "trigger_signal": "openclaw:cron:add",
+  "executable_code": "openclaw cron add \"daily-check\" \"0 3 * * *\" skill-backup",
+  "description": "通过 CLI 创建 cron 定时任务",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "cron", "add", "cli"],
+  "created_at": "2026-04-21T23:47:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/cron-jobs",
+  "composed_genes": [
+    "gene_cron_standard_syntax"
+  ]
+}

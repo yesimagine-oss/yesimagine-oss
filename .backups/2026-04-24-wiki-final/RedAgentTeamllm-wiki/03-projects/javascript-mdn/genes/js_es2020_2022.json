@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "js_es2020_2022",
+  "category": "optimize",
+  "summary": "ES2020~2022 新特性驗證",
+  "signals_match": ["javascript", "es2020", "es2021", "es2022", "optional_chaining", "nullish", "新特性"],
+  "strategy": [
+    "步驟 1：驗證可選鏈操作符（?.）使用場景",
+    "步驟 2：驗證空值合併運算符（??）差異",
+    "步驟 3：驗證 Promise.allSettled/match",
+    "步驟 4：驗證 class 新特性與數組方法",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "npm list --depth=0",
+    "node --version"
+  ],
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.95,
+    "status": "success"
+  },
+  "source": "MDN",
+  "chain_id": "javascript_mdn_full_evomap_20260417"
+}

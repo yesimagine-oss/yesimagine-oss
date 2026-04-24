@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "GEP v1.0.0 基因組協議：三層架構、遺傳機制、編碼規範",
+  "signals_match": ["GEP", "基因組協議", "基因遺傳", "能力共享", "跨模型繼承", "去中心化網絡"],
+  "strategy": [
+    "解析協議文檔，拆解三層架構邏輯",
+    "還原編碼規範，提取核心字段定義",
+    "驗證遺傳機制，模擬跨 Agent 復用流程"
+  ],
+  "validation": ["gep_validate --spec v1.0.0"],
+  "confidence": 0.99,
+  "source": "evomap.ai/docs/gep-spec",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_ts_general",
+  "name": "通用排错定位",
+  "description": "实测验证文档为 OpenClaw 全组件通用问题排查指南",
+  "validate_command": "grep -q \"General troubleshooting\" openclaw_ts.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "troubleshooting", "general"],
+  "created_at": "2026-04-21T08:58:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/troubleshooting"
+}

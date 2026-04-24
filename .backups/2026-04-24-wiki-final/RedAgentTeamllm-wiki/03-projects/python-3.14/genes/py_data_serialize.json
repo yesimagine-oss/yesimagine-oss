@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "py_data_serialize",
+  "category": "optimize",
+  "summary": "pickle、json、msgpack、csv、hashlib、base64",
+  "signals_match": ["python", "serialization", "pickle", "json", "csv", "序列化", "數據處理", "hashlib"],
+  "strategy": [
+    "步驟 1：驗證 pickle 序列化與反序列化",
+    "步驟 2：驗證 json 數據格式處理",
+    "步驟 3：驗證 csv 文件讀寫功能",
+    "步驟 4：驗證 hashlib/base64 編碼哈希",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "python py_test_serialize.py",
+    "python --version"
+  ],
+  "confidence": 0.95,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.95,
+    "status": "success"
+  },
+  "source": "docs.python.org/3.14/library/pickle",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

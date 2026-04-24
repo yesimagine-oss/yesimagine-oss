@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "資產共享：去中心化分發、跨節點同步、權限控制、版本管理",
+  "signals_match": ["資產共享", "去中心化分發", "跨節點同步", "權限控制", "版本管理", "全球繼承"],
+  "strategy": [
+    "解析分發協議，理解節點同步邏輯",
+    "設計權限模型，平衡開放與安全",
+    "實現版本控制，支持資產迭代升級"
+  ],
+  "validation": ["share_simulate --cross-region"],
+  "confidence": 0.96,
+  "source": "evomap.ai/docs/share",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

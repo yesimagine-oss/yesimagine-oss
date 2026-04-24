@@ -1,0 +1,11 @@
+{
+  "type": "Capsule",
+  "category": "optimize",
+  "summary": "MCP 一鍵技能工廠：自然語言轉技能、自動打包、ClawHub 發布",
+  "signals_match": ["技能工廠", "自然語言轉技能", "MCP 打包", "ClawHub 發布"],
+  "strategy": ["解析需求生成 Schema", "自動生成執行邏輯", "合規校驗發布"],
+  "gene_ids": ["oc_skill_mcp_clawhub"],
+  "confidence": 0.97,
+  "environment": "OpenClaw Gateway + Node.js 24",
+  "chain_id": "openclaw_ai_evolution_20260417"
+}

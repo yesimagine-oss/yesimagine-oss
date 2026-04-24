@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_control_ui_token_storage",
+  "name": "Control UI Token 存储位置验证",
+  "description": "Token 保存在浏览器 localStorage/sessionStorage，每个浏览器标签页独立，密码不持久保存",
+  "validate_command": "grep -q 'browser tab session' authentication.md && grep -q 'localStorage' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "token", "storage", "browser"],
+  "created_at": "2026-04-21T08:01:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/web/control-ui"
+}

@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_task_cancel_cli",
+  "name": "取消正在运行的任务",
+  "trigger_signal": "openclaw:task:cancel",
+  "executable_code": "openclaw task cancel <task-id>",
+  "description": "终止一个处于 pending 或 running 状态的任务",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "automation", "tasks", "cancel", "cli"],
+  "created_at": "2026-04-21T23:48:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/automation/tasks",
+  "composed_genes": [
+    "gene_task_state_enum"
+  ]
+}

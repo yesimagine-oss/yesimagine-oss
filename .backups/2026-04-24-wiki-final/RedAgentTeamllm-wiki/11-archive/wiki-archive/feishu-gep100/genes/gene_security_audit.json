@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "操作日誌、越權檢測、高危行為追溯",
+  "signals_match": ["安全", "審計", "日誌", "權限", "追溯", "合規"],
+  "strategy": [
+    "日誌採集，覆蓋所有操作",
+    "異常檢測，識別越權行為",
+    "風險標記，實時告警",
+    "報告輸出，支持合規審查"
+  ],
+  "validation": ["feishu security --audit --period 7d"],
+  "confidence": 0.99,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

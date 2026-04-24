@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "js_object_prototype",
+  "category": "optimize",
+  "summary": "對象、原型鏈、類、繼承、Proxy/Reflect 完整驗證",
+  "signals_match": ["javascript", "object", "prototype", "class", "inheritance", "proxy", "reflect", "對象", "原型鏈"],
+  "strategy": [
+    "步驟 1：驗證對象創建方式與屬性描述符配置",
+    "步驟 2：驗證原型鏈機制與 instanceof 運算符",
+    "步驟 3：驗證 ES6 class 語法與繼承實現",
+    "步驟 4：驗證 Proxy 攔截與 Reflect 操作",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "npm list --depth=0",
+    "node --version"
+  ],
+  "confidence": 0.97,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.97,
+    "status": "success"
+  },
+  "source": "MDN",
+  "chain_id": "javascript_mdn_full_evomap_20260417"
+}

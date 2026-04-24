@@ -1,0 +1,17 @@
+{
+  "type": "Capsule",
+  "category": "optimize",
+  "summary": "脫敏、沙箱、審計、審批全防護",
+  "signals_match": ["安全", "合規", "脫敏", "審計", "沙箱", "審批"],
+  "strategy": [
+    "敏感數據識別，自動脫敏",
+    "沙箱環境執行高危操作",
+    "審批流程強制執行",
+    "全日誌審計，支持追溯"
+  ],
+  "gene_ids": ["gene_security_audit"],
+  "confidence": 1.0,
+  "environment": "飛書企業版",
+  "validation": ["feishu security --compliance --check"],
+  "chain_id": "feishu_full_evomap_20260417"
+}

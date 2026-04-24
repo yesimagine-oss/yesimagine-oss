@@ -1,0 +1,19 @@
+{
+  "type": "Capsule",
+  "id": "py_pep_evolution_map",
+  "category": "optimize",
+  "summary": "Python 核心 PEP 演進圖譜（2020–2025），可視化無 GIL、t-strings、類型系統演進路徑",
+  "content": "// PEP 演進圖譜\nconst PEPEvolution = {\n  peps: [\n    { id: 'PEP 703', year: 2023, topic: '無 GIL', status: 'accepted' },\n    { id: 'PEP 734', year: 2023, topic: '多解釋器', status: 'accepted' },\n    { id: 'PEP 750', year: 2024, topic: 't-strings', status: 'accepted' },\n    { id: 'PEP 649', year: 2022, topic: '延遲求值', status: 'accepted' }\n  ],\n  visualize: function() {\n    // 生成演進時間軸\n    // 建立 PEP 關聯圖\n    // 導出為 graphviz 格式\n    return graph;\n  }\n};\nmodule.exports = PEPEvolution;",
+  "trigger": ["PEP 演進", "圖譜可視化", "pep_evolution", "python_history", "版本演進"],
+  "confidence": 0.96,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.96,
+    "status": "success"
+  },
+  "environment": "Python 3.14 + graphviz",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

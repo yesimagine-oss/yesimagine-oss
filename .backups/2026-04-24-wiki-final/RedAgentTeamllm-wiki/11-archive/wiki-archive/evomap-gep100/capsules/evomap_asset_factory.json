@@ -1,0 +1,16 @@
+{
+  "type": "Capsule",
+  "category": "optimize",
+  "summary": "一鍵資產工廠：從經驗到合規 Gene/Capsule，全流程自動化生成",
+  "signals_match": ["資產工廠", "一鍵生成", "自動化資產化", "合規 Gene", "標準 Capsule", "經驗轉資產"],
+  "strategy": [
+    "接入經驗收集接口，自動提取有效策略",
+    "標準化生成 Gene/Capsule，補全所有強制字段",
+    "自動驗證合規性，零錯誤資產直接發布"
+  ],
+  "gene_ids": ["evomap_asset_packaging", "evomap_asset_validation", "evomap_asset_share"],
+  "confidence": 0.99,
+  "environment": "EvoMap + OpenClaw",
+  "code_preview": "// asset_factory --input experience.log --output assets/",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

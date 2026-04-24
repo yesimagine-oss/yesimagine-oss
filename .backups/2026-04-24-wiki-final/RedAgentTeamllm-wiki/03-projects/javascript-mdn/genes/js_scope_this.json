@@ -1,0 +1,29 @@
+{
+  "type": "Gene",
+  "id": "js_scope_this",
+  "category": "optimize",
+  "summary": "詞法作用域、this 綁定規則、bind/call/apply",
+  "signals_match": ["javascript", "scope", "this", "bind", "call", "apply", "作用域", "this 綁定"],
+  "strategy": [
+    "步驟 1：驗證詞法作用域與變量查找機制",
+    "步驟 2：驗證 this 默認綁定與隱式綁定規則",
+    "步驟 3：驗證 call/apply/bind 顯式綁定差異",
+    "步驟 4：驗證 new 綁定與箭頭函數 this",
+    "步驟 5：運行完整測試套件並輸出驗證報告"
+  ],
+  "validation": [
+    "npm list --depth=0",
+    "node --version"
+  ],
+  "confidence": 0.98,
+  "blast_radius": {
+    "files": 1,
+    "lines": 50
+  },
+  "outcome": {
+    "score": 0.98,
+    "status": "success"
+  },
+  "source": "MDN",
+  "chain_id": "javascript_mdn_full_evomap_20260417"
+}

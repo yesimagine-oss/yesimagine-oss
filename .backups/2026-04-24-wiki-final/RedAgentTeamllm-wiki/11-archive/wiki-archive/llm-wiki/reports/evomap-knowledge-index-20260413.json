@@ -1,0 +1,116 @@
+{
+  "created_at": "2026-04-13T16:11:14.397555",
+  "total_files_scanned": 141,
+  "total_duplicates": 14,
+  "categories": {
+    "documentation": 77,
+    "data": 3,
+    "scripts": 18,
+    "task_solution": 3,
+    "assets": 30,
+    "prompts": 1,
+    "other": 8,
+    "webhook": 1
+  },
+  "high_value_knowledge": [
+    {
+      "title": "EvoMap Task Solution Blueprint: Design a verifi...",
+      "signals": [
+        "design",
+        "verified",
+        "compression",
+        "algorithm",
+        "lz77",
+        "deflate",
+        "sliding",
+        "solution_design",
+        "operational_strategy",
+        "optimization",
+        "automation",
+        "evomap_task_solution"
+      ],
+      "gdi": 69.95,
+      "calls": 118002,
+      "reuse": 2476,
+      "value_score": 5209.902
+    },
+    {
+      "title": "Secure",
+      "signals": [
+        "webhook_retry",
+        "webhook_delivery",
+        "event_notification"
+      ],
+      "gdi": 65.4,
+      "calls": 1650,
+      "reuse": 349,
+      "value_score": 830.45
+    },
+    {
+      "title": "Orchestrate Circuit Breaker: 90% False Positive Re",
+      "signals": [
+        "circuit_breaker",
+        "cascading_failure",
+        "service_degradation"
+      ],
+      "gdi": 67.25,
+      "calls": 1332,
+      "reuse": 167,
+      "value_score": 469.832
+    },
+    {
+      "title": "Idempotency Keys for Duplicate Payment Prevention",
+      "signals": [
+        "idempotency_key",
+        "request_dedup",
+        "duplicate_prevention"
+      ],
+      "gdi": 66.7,
+      "calls": 1220,
+      "reuse": 158,
+      "value_score": 450.62
+    }
+  ],
+  "structure": {
+    "01_market_analysis": {
+      "description": "市場分析與機會識別",
+      "files": []
+    },
+    "02_high_value_assets": {
+      "description": "高價值資產模板",
+      "files": []
+    },
+    "03_signal_strategies": {
+      "description": "信號策略與組合",
+      "files": []
+    },
+    "04_validation_patterns": {
+      "description": "驗證命令模式",
+      "files": []
+    },
+    "05_optimization_techniques": {
+      "description": "GDI 優化技術",
+      "files": []
+    },
+    "06_monetization_playbook": {
+      "description": "變現實戰手冊",
+      "files": []
+    }
+  },
+  "modules_completed": [
+    "01_market_analysis/README.md",
+    "02_high_value_assets/asset_templates.md",
+    "03_signal_strategies/signal_handbook.md",
+    "04_validation_patterns/validation_patterns.md",
+    "05_optimization_techniques/gdi_optimization.md",
+    "06_monetization_playbook/monetization_guide.md",
+    "DISTILLATION_PLAYBOOK.md"
+  ],
+  "distillation_status": {
+    "phase1_audit": "✅ Completed",
+    "phase2_knowledge_base": "✅ Completed",
+    "phase3_asset_optimization": "⏳ Pending",
+    "phase4_new_asset_creation": "⏳ Pending"
+  },
+  "updated_at": "2026-04-13T16:15:27.684938"
+}

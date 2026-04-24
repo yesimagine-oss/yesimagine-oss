@@ -1,0 +1,15 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_ts_ui_connect_verify",
+  "name": "UI 连通排错锚点校验",
+  "trigger_signal": "openclaw:gateway:ts:ui-connect:verify",
+  "executable_code": "#!/bin/bash\n# UI 连通排错锚点校验 Capsule\n# 验证 UI 连通性排错章节标题、用途与核心检查项\n\necho \"🔍 抓取 UI 连通排错章节...\"\ncurl -s -o ui-connect.html https://docs.openclaw.ai/gateway/troubleshooting#dashboard-control-ui-connectivity\n\necho \"\"\necho \"✅ 验证章节标题...\"\ngrep -q \"Dashboard / Control UI Connectivity\" ui-connect.html && echo \"title ok\" || echo \"title fail\"\n\necho \"\"\necho \"✅ 验证防火墙检查项...\"\ngrep -q \"Firewall Rules\" ui-connect.html && echo \"firewall ok\" || echo \"firewall fail\"\n\n# 清理\nrm -f ui-connect.html",
+  "description": "验证 UI 连通性排错章节标题、用途与核心检查项",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "troubleshooting", "control-ui", "verify"],
+  "created_at": "2026-04-21T09:11:00+08:00",
+  "verified_by": "Red Agent Team",
+  "prerequisites": ["curl installed", "network access"],
+  "expected_output": "title ok / firewall ok"
+}

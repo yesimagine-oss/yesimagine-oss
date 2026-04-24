@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_vfs_intro_scan",
+  "name": "扫描 VFS 简介核心关键词",
+  "trigger_signal": "linux:vfs:scan-intro",
+  "executable_steps": [
+    "访问 https://www.kernel.org/doc/html/latest/filesystems/vfs.html#introduction",
+    "检索 Introduction、VFS、abstraction layer、filesystem implementation、user space interfaces",
+    "输出章节关键信息存在状态"
+  ],
+  "description": "依据内核官方文档扫描 VFS 简介章节核心关键词",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#introduction",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

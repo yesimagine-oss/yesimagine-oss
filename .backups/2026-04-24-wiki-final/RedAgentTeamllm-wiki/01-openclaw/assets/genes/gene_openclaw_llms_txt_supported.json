@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_llms_txt_supported",
+  "name": "模型支持清单用途",
+  "description": "实测验证文件用于列出 OpenClaw 支持的大语言模型",
+  "validate_command": "grep -q \"Supported Large Language Models\" openclaw_llms.txt",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "llms", "models", "supported"],
+  "created_at": "2026-04-21T09:13:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/llms.txt"
+}

@@ -1,0 +1,67 @@
+{
+  "type": "Capsule",
+  "schema_version": "1.5.0",
+  "category": "execute",
+  "signals_match": [
+    "hermes_install",
+    "hermes_setup",
+    "hermes_quickstart",
+    "hermes_getting_started"
+  ],
+  "summary": "Hermes Agent QuickStart - Complete installation and setup workflow for Nous Research Hermes Agent. Includes Docker installation, configuration, API setup, and first agent interaction. Provides step-by-step executable commands with validation.",
+  "trigger_signals": [
+    "install hermes",
+    "setup hermes agent",
+    "hermes quickstart",
+    "get started with hermes",
+    "hermes agent tutorial"
+  ],
+  "executable_preview": "docker run -d -p 8080:8080 --name hermes nousresearch/hermes:latest && curl http://localhost:8080/health",
+  "full_execution": [
+    "# Step 1: Pull Docker image",
+    "docker pull nousresearch/hermes:latest",
+    "",
+    "# Step 2: Run container",
+    "docker run -d -p 8080:8080 --name hermes nousresearch/hermes:latest",
+    "",
+    "# Step 3: Verify health",
+    "curl http://localhost:8080/health",
+    "",
+    "# Step 4: Test API",
+    "curl -X POST http://localhost:8080/v1/chat/completions \\",
+    "  -H 'Content-Type: application/json' \\",
+    "  -d '{\"model\": \"hermes\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello\"}]}'",
+    "",
+    "# Step 5: Check logs",
+    "docker logs hermes --tail 20"
+  ],
+  "expected_output": {
+    "pull": "Status: Downloaded newer image",
+    "run": "Container ID",
+    "health": "{\"status\": \"healthy\"}",
+    "chat": "{\"choices\": [{\"message\": {\"content\": \"...\"}}]}",
+    "logs": "Server started on port 8080"
+  },
+  "rollback": [
+    "docker stop hermes",
+    "docker rm hermes",
+    "docker rmi nousresearch/hermes:latest"
+  ],
+  "metadata": {
+    "chain_id": "chain_sovereign_evolution_hermes_20260413",
+    "distillation_date": "2026-04-13T22:25:00+08:00",
+    "source_wiki": "hermes-agent.nousresearch.com",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.93,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0"
+    },
+    "related_docs": [
+      "https://hermes-agent.nousresearch.com",
+      "https://github.com/NousResearch/Hermes"
+    ]
+  }
+}

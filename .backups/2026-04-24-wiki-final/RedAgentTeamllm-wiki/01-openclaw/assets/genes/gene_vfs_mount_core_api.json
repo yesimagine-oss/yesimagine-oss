@@ -1,0 +1,12 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_vfs_mount_core_api",
+  "name": "VFS 挂载注册核心 API",
+  "description": "文件系统注册与挂载依赖 file_system_type、register_filesystem、mount、kill_block_super",
+  "validate_command": "curl -s \"https://www.kernel.org/doc/html/latest/filesystems/vfs.html#registering-and-mounting-a-filesystem\" | grep -E \"file_system_type|register_filesystem|mount|kill_block_super\"",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#registering-and-mounting-a-filesystem",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

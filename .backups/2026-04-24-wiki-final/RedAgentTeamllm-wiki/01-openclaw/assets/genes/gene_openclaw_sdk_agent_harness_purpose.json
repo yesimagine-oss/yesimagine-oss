@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_sdk_agent_harness_purpose",
+  "name": "Agent Harness 用途",
+  "description": "用于统一编排、调度多个插件构成完整智能体工作流",
+  "validate_command": "curl -s https://docs.openclaw.ai/plugins/sdk-agent-harness | grep \"orchestrate\"",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "sdk", "agent-harness", "orchestration", "plugins"],
+  "created_at": "2026-04-21T23:25:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/plugins/sdk-agent-harness"
+}

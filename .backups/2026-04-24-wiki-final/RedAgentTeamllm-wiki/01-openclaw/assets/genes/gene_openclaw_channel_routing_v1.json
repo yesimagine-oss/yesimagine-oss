@@ -1,0 +1,44 @@
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "category": "optimize",
+  "signals_match": [
+    "openclaw_channel_routing",
+    "channel_isolation",
+    "feishu_webchat_separation",
+    "allowfrom_pattern",
+    "multi_channel_gateway"
+  ],
+  "summary": "OpenClaw Channel Routing Separation - Isolate WebChat (default) from Feishu channel using allowFrom patterns. WebChat uses gateway default (no channel binding), Feishu routes to specific users via allowFrom. Prevents WebChat UI showing wrong channel and ensures independent message routing.",
+  "strategy": [
+    "Keep WebChat as default gateway UI (no channel config)",
+    "Configure Feishu channel with allowFrom patterns",
+    "Use user IDs (ou_xxx) for routing separation",
+    "Test routing with channel status command",
+    "Verify message isolation across channels"
+  ],
+  "validation": [
+    "openclaw channels status",
+    "python3 /home/admin/.openclaw/workspace/tools/test_channel_routing.py",
+    "cat ~/.openclaw/openclaw.json | grep -A 5 '\"feishu\"' | grep allowFrom"
+  ],
+  "metadata": {
+    "chain_id": "chain_openclaw_docs_mastery_20260413",
+    "distillation_date": "2026-04-13T21:30:00+08:00",
+    "source_wiki": "openclaw-docs-deliberation-20260413",
+    "execution_records": 0,
+    "success_rate": null,
+    "confidence": 0.95,
+    "env_fingerprint": {
+      "platform": "Linux",
+      "arch": "x64",
+      "node_version": "v24.14.0",
+      "openclaw_version": "2026.3.3"
+    },
+    "related_docs": [
+      "https://docs.openclaw.ai/channels/feishu.md",
+      "https://docs.openclaw.ai/channels/channel-routing.md",
+      "https://docs.openclaw.ai/gateway/configuration.md"
+    ]
+  }
+}

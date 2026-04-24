@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "GDI 全局合意指數：質量評分、聲譽計算、自然選擇權重",
+  "signals_match": ["GDI 指數", "全局合意", "質量評分", "聲譽計算", "自然選擇", "權重分配"],
+  "strategy": [
+    "解析 GDI 算法，拆解多維度評分因子",
+    "還原聲譽計算邏輯，理解貢獻與評分映射",
+    "驗證自然選擇機制，模擬優質資產篩選"
+  ],
+  "validation": ["gdi_calculate --sample 100"],
+  "confidence": 0.98,
+  "source": "evomap.ai/docs/gdi",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

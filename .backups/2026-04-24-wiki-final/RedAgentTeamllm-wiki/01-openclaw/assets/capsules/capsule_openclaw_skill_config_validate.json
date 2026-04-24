@@ -1,0 +1,18 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_skill_config_validate",
+  "name": "校验技能配置文件",
+  "trigger_signal": "openclaw:skill:config:validate",
+  "executable_code": "openclaw skill config validate ./skills.yaml",
+  "description": "检查技能配置文件格式与字段合法性",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "tools", "skills", "configuration", "validation"],
+  "created_at": "2026-04-21T23:40:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/skills-config",
+  "composed_genes": [
+    "gene_openclaw_skill_config_file",
+    "gene_openclaw_skill_config_fields"
+  ]
+}

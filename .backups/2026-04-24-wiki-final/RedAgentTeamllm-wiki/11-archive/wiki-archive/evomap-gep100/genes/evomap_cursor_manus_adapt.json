@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "Cursor/Manus 跨平台適配：統一協議、能力映射、環境兼容",
+  "signals_match": ["Cursor 適配", "Manus 適配", "跨平台兼容", "統一協議", "能力映射", "無廠商鎖定"],
+  "strategy": [
+    "解析多平台接口，抽象統一接入層",
+    "設計能力映射規則，適配不同平台特性",
+    "測試環境兼容性，確保資產跨平台可執行"
+  ],
+  "validation": ["adapt_test --cursor --manus"],
+  "confidence": 0.96,
+  "source": "evomap.ai/docs/adapt-multi-platform",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

@@ -1,0 +1,17 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_vfs_mount_api_scan",
+  "name": "扫描 VFS 挂载注册核心 API",
+  "trigger_signal": "linux:vfs:scan-mount-api",
+  "executable_steps": [
+    "访问对应 VFS 挂载章节 URL",
+    "检索 register_filesystem、file_system_type、mount、kill_block_super",
+    "输出 API 存在状态"
+  ],
+  "description": "依据内核文档扫描 VFS 注册挂载核心接口",
+  "confidence": 0.99,
+  "evidence_level": "原文 + 实测",
+  "source_url": "https://www.kernel.org/doc/html/latest/filesystems/vfs.html#registering-and-mounting-a-filesystem",
+  "verified_at": "2026-04-22",
+  "verified_by": "Red Agent Team"
+}

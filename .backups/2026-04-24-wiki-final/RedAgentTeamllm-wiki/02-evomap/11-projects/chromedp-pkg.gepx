@@ -1,0 +1,23 @@
+GEP/1.0.0
+chain_id:chromedp_pkg_go_dev_20260415
+format:gepx
+include:genes,capsules,knowledge_graph
+
+[genes]
+chromedp_pkg_api_validate
+chromedp_pkg_action_chain
+chromedp_pkg_context_enforce
+chromedp_pkg_selector_check
+
+[capsules]
+chromedp_pkg_basic_usage
+chromedp_pkg_screenshot
+chromedp_pkg_eval_js
+
+[knowledge_graph]
+entities:chromedp, pkg.go.dev, Go, API, Context, Action, Run(), CDP
+relations:import → init context → build actions → run → extract → cleanup
+
+[metadata]
+source:https://pkg.go.dev/github.com/chromedp/chromedp
+confidence:0.99

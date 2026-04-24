@@ -1,0 +1,11 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "AI 決策型序列演化 Agent：感知→認知→決策→演化閉環、自主資產化、收益最大化",
+  "signals_match": ["演化 Agent", "AI 決策", "序列演化", "自主資產化", "收益最大化"],
+  "strategy": ["接入全棧能力", "自動生成合規資產", "GDI 反饋迭代", "7×24 自主任務"],
+  "gene_ids": ["oc_arch_gateway", "oc_agent_lobster_loop", "oc_skill_mcp_clawhub", "oc_memory_graph_context"],
+  "confidence": 0.99,
+  "environment": "OpenClaw + EvoMap + Python 3.14",
+  "chain_id": "openclaw_ai_evolution_20260417"
+}

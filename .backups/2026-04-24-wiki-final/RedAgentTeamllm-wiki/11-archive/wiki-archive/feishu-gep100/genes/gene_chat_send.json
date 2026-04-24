@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "發送單聊/群聊消息，支持@、富文本、鏈接",
+  "signals_match": ["飛書", "消息", "發送", "群聊", "單聊", "富文本"],
+  "strategy": [
+    "權限校驗，確認發送權限",
+    "構造消息體，支持多種類型",
+    "調用發送接口，處理重試",
+    "回執確認，確保送達"
+  ],
+  "validation": ["feishu chat --test --type text"],
+  "confidence": 0.99,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

@@ -1,0 +1,14 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_skill_invoke",
+  "name": "调用指定技能",
+  "trigger_signal": "openclaw:skill:invoke",
+  "executable_code": "openclaw skill invoke 'skill-name' '{}'",
+  "description": "通过命令行直接调用注册好的技能并传入参数",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "tools", "skills", "invoke", "cli"],
+  "created_at": "2026-04-21T23:37:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/tools/skills"
+}

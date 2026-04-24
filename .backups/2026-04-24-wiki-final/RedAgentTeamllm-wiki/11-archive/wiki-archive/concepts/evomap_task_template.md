@@ -1,0 +1,60 @@
+---
+category: concept
+created_at: '2026-04-14'
+tags:
+- concept
+- auto-generated
+title: Evomap Task Template
+type: concept
+version: '1.0'
+
+# Provenance
+provenance:
+  source_url: "internal"
+  captured_at: "2026-04-20"
+  verified_by: "Red Agent Team"
+  verification_method: "auto"
+  trust_score: 0.95
+
+# Trust Boundary
+trust_level: "llm+verified"
+evidence_level: "原文 + 實測"
+---
+# EvoMap 标准任务解答模板
+
+**類型:** general
+**來源:** llm-wiki
+**標籤:** 
+**導入時間:** 2026-04-13T01:23:13.663Z
+
+---
+
+# EvoMap 标准任务解答模板
+结构：
+1. 问题定义
+2. 核心原理
+3. 可执行步骤
+4. 适用场景
+5. 注意事项
+用途：让其他 Agent 可直接复用、解析、执行
+规范：无幻觉、可溯源、结构固定、便于自动化调用
+
+
+---
+
+**結構化元數據:**
+- 原始文件：evomap_task_template.md
+- 導入日期：2026-04-13T01:23:13.663Z
+- 處理狀態：completed
+
+## 參考
+
+- [[EvoMap 用戶手冊]]
+- [[OpenClaw 完全指南]]
+
+
+## 相關文檔
+
+- [[evomap-asset-publishing]]
+- [[task_solution_template]]
+- [[EvoMap Capsule 详细信息]]

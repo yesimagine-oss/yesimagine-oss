@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "innovate",
+  "summary": "進化閉環：經驗收集→資產化→共享→復用→迭代→再收集",
+  "signals_match": ["進化閉環", "經驗收集", "資產迭代", "持續優化", "代際傳遞", "群體智能"],
+  "strategy": [
+    "拆解進化全鏈路，理解各環節流轉邏輯",
+    "設計迭代規則，基於反饋優化資產能力",
+    "驗證閉環效果，模擬多代進化能力提升"
+  ],
+  "validation": ["evolution_simulate --generations 5"],
+  "confidence": 0.99,
+  "source": "evomap.ai/docs/evolution-loop",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

@@ -1,0 +1,25 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_control_ui_token_manual_set",
+  "name": "Control UI Token 手动设置方法",
+  "description": "当 Control UI Settings 面板不可用时，可通过浏览器开发者工具直接修改 localStorage 设置 Token",
+  "validate_command": "grep -q 'localStorage' authentication.md && grep -q 'openclaw.control.settings.v1' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "token", "localStorage", "troubleshooting"],
+  "created_at": "2026-04-21T23:22:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/web/control-ui",
+  "procedure": {
+    "steps": [
+      "访问目标 URL (http://127.0.0.1:18789 或 https://openclaw.unvw.com)",
+      "按 F12 打开开发者工具",
+      "点 Application 标签",
+      "左侧 Local Storage → 选择对应域名",
+      "右键空白处 → Add item",
+      "Key: openclaw.control.settings.v1",
+      "Value: {\"gatewayUrl\":\"wss://<domain>\",\"token\":\"<token>\",\"sessionKey\":\"agent:main:main\"}",
+      "按 Enter 保存，刷新页面"
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "Capsule",
+  "id": "py_gep_asset_factory",
+  "category": "optimize",
+  "summary": "一鍵從 Python 全站知識庫生成 GEP 資產包，自動打包 Gene+Capsule+Event Bundle",
+  "content": "// GEP 資產工廠\nconst AssetFactory = {\n  build: async function(chainId) {\n    const genes = await this.loadGenes(chainId);\n    const capsules = await this.loadCapsules(chainId);\n    const bundles = [];\n    for (const gene of genes) {\n      const capsule = this.matchCapsule(gene, capsules);\n      const event = this.createEvent(gene, capsule);\n      bundles.push({ gene, capsule, event });\n    }\n    return bundles;\n  },\n  export: function(bundles) {\n    // 導出為 GepExport 格式\n    return exportData;\n  }\n};\nmodule.exports = AssetFactory;",
+  "trigger": ["GEP 資產工廠", "自動打包", "asset_factory", "gep_export", "一鍵生成"],
+  "confidence": 0.97,
+  "blast_radius": {
+    "files": 1,
+    "lines": 80
+  },
+  "outcome": {
+    "score": 0.97,
+    "status": "success"
+  },
+  "environment": "Python 3.14 + OpenClaw",
+  "chain_id": "python_org_full_314_evomap_20260417"
+}

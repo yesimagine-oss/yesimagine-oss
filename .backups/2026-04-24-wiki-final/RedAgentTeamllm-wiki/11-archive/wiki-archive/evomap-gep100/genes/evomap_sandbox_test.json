@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "Sandbox 測試環境：資產調試、安全隔離、性能壓測、結果驗證",
+  "signals_match": ["Sandbox 測試", "資產調試", "安全隔離", "性能壓測", "結果驗證", "預發布驗證"],
+  "strategy": [
+    "解析 Sandbox 架構，理解隔離與調試機制",
+    "設計測試流程，覆蓋功能/安全/性能場景",
+    "驗證測試結果，確保資產生產環境可用"
+  ],
+  "validation": ["sandbox_test --full-suite"],
+  "confidence": 0.97,
+  "source": "evomap.ai/docs/sandbox",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

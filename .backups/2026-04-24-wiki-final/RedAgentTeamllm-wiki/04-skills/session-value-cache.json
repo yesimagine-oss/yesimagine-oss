@@ -1,0 +1,59 @@
+{
+  "timestamp": "2026-03-24T20:04:41.456830",
+  "results": [
+    {
+      "name": "e2bc04f8-a400-44a3-90be-318fa571b30a.jsonl",
+      "score": 73,
+      "level": "important",
+      "size_mb": 0.22
+    },
+    {
+      "name": "e28f982a-3e97-44d5-8249-4dbada134c8e.jsonl",
+      "score": 73,
+      "level": "important",
+      "size_mb": 0.09
+    },
+    {
+      "name": "9fbeaa27-8d3b-400b-9512-946d5652e11a.jsonl",
+      "score": 70,
+      "level": "important",
+      "size_mb": 0.04
+    },
+    {
+      "name": "47c3395e-cdf2-44e0-893b-2a4d84c04ec2.jsonl",
+      "score": 70,
+      "level": "important",
+      "size_mb": 0.04
+    },
+    {
+      "name": "4f90cb74-45c8-4c61-b910-21f4bc90b682.jsonl",
+      "score": 60,
+      "level": "important",
+      "size_mb": 1.59
+    },
+    {
+      "name": "1a9a21fe-9c28-43ca-ae94-c0b9f01257e1.jsonl",
+      "score": 60,
+      "level": "important",
+      "size_mb": 0.34
+    },
+    {
+      "name": "30cf9bc9-d367-4668-ac08-9e546dcb44a9.jsonl",
+      "score": 40,
+      "level": "normal",
+      "size_mb": 0.03
+    },
+    {
+      "name": "6806099c-e072-424d-a19b-e5eca5306741.jsonl",
+      "score": 37,
+      "level": "temp",
+      "size_mb": 0.01
+    },
+    {
+      "name": "1c9ef9da-cfa1-4a03-aeec-267ae7005c45.jsonl",
+      "score": 23,
+      "level": "temp",
+      "size_mb": 0.0
+    }
+  ]
+}

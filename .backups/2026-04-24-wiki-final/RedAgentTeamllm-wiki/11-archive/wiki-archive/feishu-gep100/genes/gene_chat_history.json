@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "按權限讀取會話歷史，支持時間範圍過濾",
+  "signals_match": ["飛書", "歷史", "消息", "權限", "讀取", "過濾"],
+  "strategy": [
+    "鑒權，獲取會話訪問權限",
+    "拉取歷史，支持分頁",
+    "清洗結構化，提取關鍵信息",
+    "返回數據，支持時間過濾"
+  ],
+  "validation": ["feishu chat --history --limit 50"],
+  "confidence": 0.98,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

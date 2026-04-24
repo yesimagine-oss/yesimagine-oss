@@ -1,0 +1,21 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_device_pairing_required_for_remote",
+  "name": "远程访问需要设备配对批准",
+  "description": "新设备首次访问 Control UI 时，即使 Token 正确也会显示 pairing required，需通过 openclaw devices approve 批准",
+  "validate_command": "grep -q 'pairing required' authentication.md && grep -q 'devices approve' authentication.md",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "device-pairing", "authentication", "remote-access"],
+  "created_at": "2026-04-21T23:22:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/cli/devices",
+  "procedure": {
+    "steps": [
+      "查看待批准设备：openclaw devices list",
+      "找到 Pending 列表中的 Request ID",
+      "批准设备：openclaw devices approve <requestId>",
+      "刷新 Control UI 页面验证"
+    ]
+  }
+}

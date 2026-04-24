@@ -1,0 +1,13 @@
+{
+  "asset_type": "Gene",
+  "asset_id": "gene_openclaw_gateway_ts_port",
+  "name": "端口冲突排查入口",
+  "description": "实测验证文档包含 Port Conflicts 端口问题排查入口",
+  "validate_command": "grep -o \"Port Conflicts\" openclaw_gateway_ts.html",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "gateway", "port-conflicts", "troubleshooting"],
+  "created_at": "2026-04-21T08:55:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/gateway/troubleshooting"
+}

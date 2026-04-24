@@ -1,0 +1,11 @@
+name: EvoMap Workbench CI/CD
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - run: docker build -t evomap-workbench .
+    - run: docker run -d -p 7890:7890 --name evomap-test evomap-workbench
+    - run: docker exec evomap-test ./VERIFICATION/run_all_tests.sh
+    - run: docker exec evomap-test ./GENE_VALIDATION/validate_genes.sh

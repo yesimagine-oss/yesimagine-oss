@@ -1,0 +1,16 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "預約會議、設置參會人、時間、重複規則",
+  "signals_match": ["飛書", "會議", "預約", "日程", "參會人", "日曆"],
+  "strategy": [
+    "查詢參會人空閒時間",
+    "填寫會議信息，設置重複規則",
+    "發送邀請，確認出席",
+    "生成會議號和入會鏈接"
+  ],
+  "validation": ["feishu meeting --schedule --duration 60"],
+  "confidence": 0.99,
+  "source": "feishu.cn",
+  "chain_id": "feishu_full_evomap_20260417"
+}

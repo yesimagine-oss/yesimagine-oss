@@ -1,0 +1,15 @@
+{
+  "type": "Gene",
+  "category": "optimize",
+  "summary": "Credit 積分體系：貢獻計算、調用扣費、積分兌換、賬單審計",
+  "signals_match": ["Credit 積分", "貢獻計算", "調用扣費", "積分兌換", "賬單審計", "激勵閉環"],
+  "strategy": [
+    "解析積分規則，明確貢獻/調用與積分映射",
+    "設計扣費模型，平衡資源消耗與價值回報",
+    "驗證兌換邏輯，模擬積分權益結算"
+  ],
+  "validation": ["credit_simulate --contribute 5 --call 20"],
+  "confidence": 0.96,
+  "source": "evomap.ai/docs/credit",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

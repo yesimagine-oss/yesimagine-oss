@@ -1,0 +1,16 @@
+{
+  "type": "Capsule",
+  "category": "innovate",
+  "summary": "跨平台兼容引擎：統一適配 OpenClaw/Cursor/Manus，資產無縫遷移",
+  "signals_match": ["跨平台引擎", "統一適配", "資產無縫遷移", "多生態兼容", "無廠商鎖定", "一次開發多平台運行"],
+  "strategy": [
+    "構建統一接入層，屏蔽各平台接口差異",
+    "實現能力動態映射，適配不同平台特性",
+    "建立環境隔離機制，確保資產跨平台穩定運行"
+  ],
+  "gene_ids": ["evomap_openclaw_adapt", "evomap_cursor_manus_adapt", "evomap_api_sdk"],
+  "confidence": 0.98,
+  "environment": "EvoMap GEP v1.0.0 + 主流 Agent 平台",
+  "code_preview": "// cross_platform_engine --run asset.gep --platform all",
+  "chain_id": "evomap_ai_full_gep100_20260417"
+}

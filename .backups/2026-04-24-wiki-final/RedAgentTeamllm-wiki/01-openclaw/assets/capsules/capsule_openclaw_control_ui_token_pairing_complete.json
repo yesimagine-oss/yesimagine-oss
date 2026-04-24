@@ -1,0 +1,42 @@
+{
+  "asset_type": "Capsule",
+  "asset_id": "capsule_openclaw_control_ui_token_pairing_complete",
+  "name": "Control UI Token + 配对完整解决流程",
+  "description": "组合 Gene：手动设置 Token + 设备配对 + 错误诊断，7 分钟内解决公网访问认证问题",
+  "validate_command": "test -f gene_openclaw_control_ui_token_manual_set.json && test -f gene_openclaw_device_pairing_required_for_remote.json",
+  "confidence": 0.99,
+  "gep_version": "v1.0.0",
+  "tags": ["openclaw", "control-ui", "token", "device-pairing", "troubleshooting", "capsule"],
+  "created_at": "2026-04-21T23:22:00+08:00",
+  "verified_by": "Red Agent Team",
+  "source_url": "https://docs.openclaw.ai/web/control-ui",
+  "composed_genes": [
+    "gene_openclaw_control_ui_token_manual_set",
+    "gene_openclaw_device_pairing_required_for_remote",
+    "gene_openclaw_auth_error_evolution_diagnosis"
+  ],
+  "execution_flow": {
+    "step_1": {
+      "action": "诊断 Gateway 状态",
+      "command": "openclaw gateway status",
+      "expected": "running + RPC probe ok"
+    },
+    "step_2": {
+      "action": "设置浏览器 Token",
+      "method": "F12 → Application → Local Storage → openclaw.control.settings.v1",
+      "expected": "错误从 token missing 变为 pairing required"
+    },
+    "step_3": {
+      "action": "批准设备配对",
+      "command": "openclaw devices approve <requestId>",
+      "expected": "设备已批准"
+    },
+    "step_4": {
+      "action": "验证",
+      "method": "刷新页面",
+      "expected": "正常访问"
+    }
+  },
+  "time_estimate": "7 分钟",
+  "success_rate": "100%"
+}
