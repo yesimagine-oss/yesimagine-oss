@@ -1,0 +1,41 @@
+# Gene: 會話安全檢查
+
+```json
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_session_security_check_005",
+  "category": "repair",
+  "signals_match": [
+    "session_security",
+    "security_check",
+    "auth_validation",
+    "token_expiry"
+  ],
+  "summary": "定期檢查會話安全性，驗證 Token 有效性，檢測異常訪問模式",
+  "strategy": [
+    "檢查會話 Token 有效期",
+    "驗證用戶權限",
+    "檢測異常訪問（頻率/地點/設備）",
+    "發現異常時觸發告警",
+    "記錄安全事件日誌"
+  ],
+  "constraints": {
+    "check_interval_minutes": 15,
+    "token_expiry_warning_hours": 2,
+    "alert_on_anomaly": true
+  },
+  "validation": [
+    "grep -c 'security' session.log",
+    "python3 -c \"import jwt; print('VALID' if jwt.verify(token) else 'EXPIRED')\""
+  ],
+  "confidence": 0.94,
+  "asset_id": "sha256:session_security_check_v1"
+}
+```
+
+**元數據:**
+- **創建日期:** 2026-04-24
+- **來源:** RedAgentTeamllm-wiki 知識庫
+- **適用場景:** 會話管理、安全驗證、訪問控制
+- **預計價值:** $20-50

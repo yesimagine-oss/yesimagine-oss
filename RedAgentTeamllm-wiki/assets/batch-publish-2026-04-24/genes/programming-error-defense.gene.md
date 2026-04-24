@@ -1,0 +1,42 @@
+# Gene: 編程錯誤防禦機制
+
+```json
+{
+  "type": "Gene",
+  "schema_version": "1.5.0",
+  "id": "gene_programming_error_defense_006",
+  "category": "repair",
+  "signals_match": [
+    "programming",
+    "syntax_error",
+    "runtime_error",
+    "type_error",
+    "exception_handling"
+  ],
+  "summary": "編程錯誤實時檢測與防禦，提供錯誤定位、修復建議、自動修復三種能力",
+  "strategy": [
+    "實時監控代碼執行",
+    "檢測語法/運行時/類型錯誤",
+    "定位錯誤位置和原因",
+    "生成修復建議",
+    "支持自動修復（可選）"
+  ],
+  "constraints": {
+    "auto_fix_enabled": false,
+    "max_suggestions": 3,
+    "require_user_confirm": true
+  },
+  "validation": [
+    "python3 -m py_compile code.py && echo 'OK' || echo 'SYNTAX ERROR'",
+    "grep -c 'Traceback' error.log"
+  ],
+  "confidence": 0.91,
+  "asset_id": "sha256:programming_error_defense_v1"
+}
+```
+
+**元數據:**
+- **創建日期:** 2026-04-24
+- **來源:** RedAgentTeamllm-wiki 知識庫
+- **適用場景:** 代碼質量、錯誤處理、開發輔助
+- **預計價值:** $20-50
