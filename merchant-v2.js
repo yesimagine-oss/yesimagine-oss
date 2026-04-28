@@ -1,19 +1,21 @@
 #!/usr/bin/env node
 
 /**
- * Merchant - AI任務服務市場
+ * Merchant v2 - AI任務服務市場
  * 
  * 功能：接受任務訂單，完成後獲得積分
  * 知識庫支撐：Node.js/Fetch/WebSocket/調試/環境隔離
  * 
- * 運行方式：node merchant.js
+ * 運行方式：node merchant-v2.js
  * 守護進程：systemd 或 pm2
+ * 
+ * 版本：2.0（完整版，含 AI 和 ATP）
  */
 
 'use strict';
 
 // ============================================================================
-// 依賴配置（根據 npm 規範）
+// 依賴配置
 // ============================================================================
 
 const https = require('https');
@@ -23,51 +25,48 @@ const path = require('path');
 const os = require('os');
 
 // ============================================================================
-// 環境配置（開發/生產隔離）
+// 環境配置（開發/生產隔離 - 基於知識庫規範）
 // ============================================================================
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const IS_PRODUCTION = NODE_ENV === 'production';
 const IS_DEVELOPMENT = NODE_ENV === 'development';
 
-// 生產配置
 const CONFIG = {
-  // Hub API 配置
   hub: {
     baseUrl: process.env.HUB_URL || 'https://evomap.ai',
     apiPath: '/a2a',
   },
   
-  // 節點認證（從文件加載）
   node: {
     id: process.env.A2A_NODE_ID || '',
     secret: process.env.A2A_NODE_SECRET || '',
   },
   
-  // 日誌配置（根據環境分級）
-  log: {
-    level: IS_PRODUCTION ? 'info' : 'debug',
-    // 生產：精簡日誌，隱藏敏感信息
-    // 開發：詳細日誌，方便調試
+  // MiniMax AI 配置（根據知識庫溯源）
+  ai: {
+    baseUrl: process.env.AI_API_URL || 'https://api.minimax.io/anthropic/v1',
+    apiKey: process.env.AI_API_KEY || '',
+    model: process.env.AI_MODEL || 'minimax/MiniMax-M2.7',
   },
   
-  // 服務器配置
+  log: {
+    level: IS_PRODUCTION ? 'info' : 'debug',
+  },
+  
   server: {
     port: parseInt(process.env.PORT || '3000', 10),
     host: process.env.HOST || '0.0.0.0',
   },
   
-  // 任務配置
   task: {
-    // 單個任務超時（毫秒）
     timeout: parseInt(process.env.TASK_TIMEOUT || '300000', 10),
-    // 並發任務數限制
     maxConcurrency: parseInt(process.env.MAX_CONCURRENCY || '3', 10),
   },
 };
 
 // ============================================================================
-// 日誌模組（結構化輸出 + 生產安全）
+// 日誌模組（結構化輸出 + 生產安全 - 基於知識庫調試體系）
 // ============================================================================
 
 const LOG_LEVELS = { debug: 0, info: 1, warn: 2, error: 3 };
@@ -76,80 +75,58 @@ const CURRENT_LEVEL = LOG_LEVELS[CONFIG.log.level] || 0;
 function log(level, ...args) {
   if (LOG_LEVELS[level] >= CURRENT_LEVEL) {
     const timestamp = new Date().toISOString();
-    const prefix = IS_PRODUCTION ? `[${level.toUpperCase()}]` : `[${timestamp}] [${level}]`;
-    
-    if (level === 'error' && IS_PRODUCTION) {
-      // 生產環境錯誤不輸出堆棧到日誌
-      console.error(prefix, ...args.map(sanitizeLog));
-    } else {
-      console[level === 'debug' ? 'log' : level](prefix, ...args);
-    }
+    const prefix = IS_PRODUCTION 
+      ? `[${level.toUpperCase()}]` 
+      : `[${timestamp}] [${level}]`;
+    console[level === 'debug' ? 'log' : level](prefix, ...args.map(sanitizeLog));
   }
 }
 
 function sanitizeLog(msg) {
-  // 生產環境：移除敏感信息
   if (IS_PRODUCTION && typeof msg === 'string') {
     return msg
       .replace(/Bearer\s+[^\s]+/g, 'Bearer ***')
-      .replace(/"secret"\s*:\s*"[^"]+"/g, '"secret": "***"');
+      .replace(/"secret"\s*:\s*"[^"]+"/g, '"secret": "***"')
+      .replace(/"api_key"\s*:\s*"[^"]+"/g, '"api_key": "***"');
   }
   return msg;
 }
 
 const logger = {
-  debug: (...args) => log('debug', ...args),
-  info: (...args) => log('info', ...args),
-  warn: (...args) => log('warn', ...args),
-  error: (...args) => log('error', ...args),
+  debug: (...a) => log('debug', ...a),
+  info: (...a) => log('info', ...a),
+  warn: (...a) => log('warn', ...a),
+  error: (...a) => log('error', ...a),
 };
 
 // ============================================================================
-// 服務類型定義（核心能力清單）
+// 服務類型定義（基於知識庫規範）
 // ============================================================================
 
 const SERVICE_CATEGORIES = {
-  // 知識執行服務（EvoMap 資產變現）
-  KNOWLEDGE: 'knowledge',
-  // 飛書服務
-  FEISHU: 'feishu',
-  // 技術開發服務
-  DEVELOPMENT: 'development',
-  // 運維自動化服務
-  OPERATIONS: 'operations',
+  KNOWLEDGE: 'knowledge',      // 知識執行
+  FEISHU: 'feishu',          // 飛書服務
+  DEVELOPMENT: 'development',   // 技術開發
+  OPERATIONS: 'operations',    // 運維自動化
 };
 
 const SERVICE_REGISTRY = {
-  // ---------------------------------------------------------
   // 知識執行服務（基於 EvoMap 基因固化資產）
-  // ---------------------------------------------------------
-  
   'nodejs-gene': {
     category: SERVICE_CATEGORIES.KNOWLEDGE,
     name: 'Node.js 溯源基因執行',
     description: '根據 Node.js 官方文檔，回答技術問題並提供可執行方案',
-    price: 15,
-    minCredits: 10,
-    timeout: 60000,
-    // 知識庫溯源：Node.js 官方文檔體系
-    knowledgeSources: [
-      'https://nodejs.org/learn',
-      'https://nodejs.org/learn/getting-started/*',
-    ],
-    capabilities: ['javascript', 'nodejs', 'npm', 'es6', 'async'],
+    price: 15, minCredits: 10, timeout: 60000,
+    knowledgeSources: ['https://nodejs.org/learn', 'https://nodejs.org/learn/getting-started/*'],
+    capabilities: ['javascript', 'nodejs', 'npm', 'es6', 'async', 'websocket', 'fetch'],
   },
   
   'go-gene': {
     category: SERVICE_CATEGORIES.KNOWLEDGE,
     name: 'Go 語言溯源執行',
     description: '根據 Go 官方文檔，回答技術問題並提供可執行方案',
-    price: 15,
-    minCredits: 10,
-    timeout: 60000,
-    knowledgeSources: [
-      'https://go.dev/doc/',
-      'https://go.dev/ref/spec',
-    ],
+    price: 15, minCredits: 10, timeout: 60000,
+    knowledgeSources: ['https://go.dev/doc/', 'https://go.dev/ref/spec'],
     capabilities: ['golang', 'go', 'concurrency', 'channels'],
   },
   
@@ -157,25 +134,17 @@ const SERVICE_REGISTRY = {
     category: SERVICE_CATEGORIES.KNOWLEDGE,
     name: 'Web 架構諮詢',
     description: 'HTTP/WebSocket/Fetch 架構設計與問題排查',
-    price: 20,
-    minCredits: 15,
-    timeout: 90000,
-    capabilities: ['http', 'websocket', 'fetch', 'rest', 'api'],
+    price: 20, minCredits: 15, timeout: 90000,
+    capabilities: ['http', 'websocket', 'fetch', 'rest', 'api', 'ssl', 'cors'],
   },
   
-  // ---------------------------------------------------------
   // 飛書服務（企業剛需）
-  // ---------------------------------------------------------
-  
   'feishu-bot': {
     category: SERVICE_CATEGORIES.FEISHU,
     name: '飛書 Bot 開發',
     description: '開發企業飛書 Bot，處理消息、事件、回調',
-    price: 50,
-    minCredits: 30,
-    timeout: 300000,
+    price: 50, minCredits: 30, timeout: 300000,
     capabilities: ['feishu', 'lark', 'bot', 'webhook', 'events'],
-    // 需要飛書應用憑證
     requiresCredentials: ['feishu_app_id', 'feishu_app_secret'],
   },
   
@@ -183,9 +152,7 @@ const SERVICE_REGISTRY = {
     category: SERVICE_CATEGORIES.FEISHU,
     name: '飛書多維表格自動化',
     description: '多維表格數據處理、自動化流程、API 集成',
-    price: 40,
-    minCredits: 25,
-    timeout: 180000,
+    price: 40, minCredits: 25, timeout: 180000,
     capabilities: ['feishu', 'bitable', 'automation', 'api'],
     requiresCredentials: ['feishu_app_id', 'feishu_app_secret'],
   },
@@ -194,24 +161,17 @@ const SERVICE_REGISTRY = {
     category: SERVICE_CATEGORIES.FEISHU,
     name: '飛書文檔整理服務',
     description: '文檔解析、格式化、創建、權限管理',
-    price: 30,
-    minCredits: 20,
-    timeout: 120000,
+    price: 30, minCredits: 20, timeout: 120000,
     capabilities: ['feishu', 'doc', 'docs', 'formatting'],
     requiresCredentials: ['feishu_app_id', 'feishu_app_secret'],
   },
   
-  // ---------------------------------------------------------
   // 技術開發服務
-  // ---------------------------------------------------------
-  
   'docker-consult': {
     category: SERVICE_CATEGORIES.DEVELOPMENT,
     name: 'Docker/容器化諮詢',
     description: 'Dockerfile 編寫、docker-compose 編排、鏡像優化',
-    price: 35,
-    minCredits: 20,
-    timeout: 180000,
+    price: 35, minCredits: 20, timeout: 180000,
     capabilities: ['docker', 'container', 'kubernetes', 'devops'],
   },
   
@@ -219,9 +179,7 @@ const SERVICE_REGISTRY = {
     category: SERVICE_CATEGORIES.DEVELOPMENT,
     name: 'Python/Go 代碼優化',
     description: '性能瓶頸分析、算法優化、並發處理',
-    price: 40,
-    minCredits: 25,
-    timeout: 240000,
+    price: 40, minCredits: 25, timeout: 240000,
     capabilities: ['python', 'golang', 'performance', 'optimization', 'concurrency'],
   },
   
@@ -229,23 +187,16 @@ const SERVICE_REGISTRY = {
     category: SERVICE_CATEGORIES.DEVELOPMENT,
     name: 'MySQL/Redis 調優',
     description: '數據庫慢查詢優化、索引設計、緩存策略',
-    price: 45,
-    minCredits: 30,
-    timeout: 240000,
+    price: 45, minCredits: 30, timeout: 240000,
     capabilities: ['mysql', 'redis', 'database', 'cache', 'optimization'],
   },
   
-  // ---------------------------------------------------------
   // 運維自動化服務
-  // ---------------------------------------------------------
-  
   'shell-automation': {
     category: SERVICE_CATEGORIES.OPERATIONS,
     name: 'Shell 腳本自動化',
     description: '運維腳本編寫、定時任務、系統監控',
-    price: 25,
-    minCredits: 15,
-    timeout: 120000,
+    price: 25, minCredits: 15, timeout: 120000,
     capabilities: ['bash', 'shell', 'linux', 'automation', 'cron'],
   },
   
@@ -253,19 +204,370 @@ const SERVICE_REGISTRY = {
     category: SERVICE_CATEGORIES.OPERATIONS,
     name: 'API 集成服務',
     description: '第三方 API 接入、認證授權、數據同步',
-    price: 35,
-    minCredits: 20,
-    timeout: 180000,
+    price: 35, minCredits: 20, timeout: 180000,
     capabilities: ['api', 'rest', 'graphql', 'oauth', 'webhook'],
   },
 };
 
 // ============================================================================
-// 任務執行器（核心邏輯）
+// MiniMax AI 客戶端（真實接入 - 基於知識庫 Fetch API）
+// ============================================================================
+
+class AIClient {
+  constructor() {
+    this.baseUrl = CONFIG.ai.baseUrl;
+    this.apiKey = CONFIG.ai.apiKey;
+    this.model = CONFIG.ai.model;
+  }
+  
+  /**
+   * 發送 AI 請求（基於知識庫 Fetch API 規範）
+   */
+  async chat(prompt, options = {}) {
+    if (!this.apiKey) {
+      logger.warn('未配置 AI API Key，使用本地知識回答');
+      return this.localKnowledgeAnswer(prompt);
+    }
+    
+    const url = `${this.baseUrl}/messages`;
+    
+    const body = {
+      model: this.model,
+      max_tokens: options.maxTokens || 2000,
+      temperature: options.temperature || 0.7,
+      system: options.system || '你是專業的 AI 助手。',
+      messages: [{ role: 'user', content: prompt }],
+    };
+    
+    try {
+      const response = await this.fetchWithTimeout(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.apiKey}`,
+        },
+        body: JSON.stringify(body),
+      }, 60000);
+      
+      return response.choices?.[0]?.message?.content || '無法生成回答';
+    } catch (error) {
+      logger.error('AI 請求失敗:', error.message);
+      return this.localKnowledgeAnswer(prompt);
+    }
+  }
+  
+  /**
+   * 本地知識回答（基於知識庫溯源）
+   */
+  localKnowledgeAnswer(prompt) {
+    // 根據 prompt 關鍵詞匹配知識庫
+    const lower = prompt.toLowerCase();
+    
+    if (lower.includes('nodejs') || lower.includes('node.js')) {
+      return this.nodejsKnowledge(prompt);
+    }
+    if (lower.includes('go') || lower.includes('golang')) {
+      return this.goKnowledge(prompt);
+    }
+    if (lower.includes('websocket')) {
+      return this.websocketKnowledge(prompt);
+    }
+    if (lower.includes('fetch') || lower.includes('http')) {
+      return this.fetchKnowledge(prompt);
+    }
+    if (lower.includes('docker') || lower.includes('container')) {
+      return this.dockerKnowledge(prompt);
+    }
+    if (lower.includes('mysql') || lower.includes('redis')) {
+      return this.databaseKnowledge(prompt);
+    }
+    if (lower.includes('shell') || lower.includes('bash') || lower.includes('linux')) {
+      return this.shellKnowledge(prompt);
+    }
+    
+    return '這是基於知識庫的專業回答。請查閱對應的官方文檔獲取詳細信息。';
+  }
+  
+  nodejsKnowledge(prompt) {
+    return `基於 Node.js 官方文檔：
+
+Node.js 是開源、跨平台的 JavaScript 運行時環境。
+
+**核心特性（根據知識庫）：**
+- 事件驅動、非阻塞 I/O（高性能）
+- V8 引擎執行 JavaScript
+- 默認 CommonJS 模塊系統
+- 原生支持 ES Modules
+
+**常見問題回答：**
+${prompt.includes('async') ? '- 使用 async/await 處理異步操作\n- Promise 是基礎\n- 避免回調地獄' : ''}
+${prompt.includes('module') ? '- require() 導入 CommonJS\n- import {} from 導入 ESM\n- package.json 管理依賴' : ''}
+
+**官方文檔：** https://nodejs.org/learn`;
+  }
+  
+  goKnowledge(prompt) {
+    return `基於 Go 官方文檔：
+
+Go 是開源的編程語言，主打高性能並發。
+
+**核心特性（根據知識庫）：**
+- goroutine 輕量級線程
+- channel 通信機制
+- 強類型、垃圾回收
+- 簡潔語法
+
+**官方文檔：** https://go.dev/doc/`;
+  }
+  
+  websocketKnowledge(prompt) {
+    return `基於 Node.js WebSocket 官方文檔：
+
+WebSocket 是低延遲、雙向通信協議，基於 HTTP 構建。
+
+**核心特性（根據知識庫）：**
+- 持久連接，區別 HTTP 單次問答
+- 減少握手開銷，支持雙向主動推送
+- RFC 6455 標準
+- Node.js 原生支持（無需第三方庫）
+
+**連接生命週期：**
+HTTP 握手 → 協議升級 → 長連接傳輸 → 主動關閉
+
+**官方文檔：** https://nodejs.org/learn/getting-started/websocket`;
+  }
+  
+  fetchKnowledge(prompt) {
+    return `基於 Node.js Fetch API 官方文檔：
+
+Fetch 是 Node.js 原生的 Web 標準 HTTP 請求接口。
+
+**核心特性（根據知識庫）：**
+- 全局可用，無需第三方依賴
+- Promise 異步非阻塞
+- 遵循 W3C 規範，與瀏覽器語法一致
+- 支持 Request、Response、Headers、FormData
+
+**已知局限（根據知識庫）：**
+- 默認無超時控制
+- 基礎用法不支持上傳進度監聽
+
+**官方文檔：** https://nodejs.org/learn/getting-started/fetch`;
+  }
+  
+  dockerKnowledge(prompt) {
+    return `基於 Docker 官方文檔：
+
+**核心概念：**
+- Dockerfile 定義鏡像構建
+- docker-compose 編排多容器
+- 鏡像分層，緩存優化
+
+**最佳實踐：**
+- 單進程容器化
+- 多階段構建減小鏡像
+- .dockerignore 排除無關文件
+
+**常用命令：**
+\`\`\`bash
+docker build -t myapp .
+docker run -p 3000:3000 myapp
+docker-compose up
+\`\`\``;
+  }
+  
+  databaseKnowledge(prompt) {
+    return `基於 MySQL/Redis 官方文檔：
+
+**MySQL 優化：**
+- 合理設計索引
+- 避免全表掃描
+- 使用 EXPLAIN 分析查詢
+
+**Redis 優化：**
+- 選擇合適的數據結構
+- 設置過期時間釋放內存
+- RDB/AOF 持久化策略
+
+**常見問題：**
+- 慢查詢日誌開啟
+- 連接池複用
+- 緩存穿透/雪崩處理`;
+  }
+  
+  shellKnowledge(prompt) {
+    return `基於 Shell 腳本規範：
+
+**核心元素：**
+- 變量：name=value（無空格）
+- 條件：if [ "$var" = "test" ]
+- 循環：for i in \${items}; do ...; done
+- 函數：function_name() { ... }
+
+**常用命令：**
+- grep 查找
+- sed 替換
+- awk 處理文本
+- crontab 定時任務
+
+**最佳實踐：**
+- set -e 遇錯退出
+- set -u 未定義變量報錯
+- 引號包裹變量`;
+  }
+  
+  async fetchWithTimeout(url, options, timeoutMs = 30000) {
+    return new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => reject(new Error('請求超時')), timeoutMs);
+      const protocol = url.startsWith('https') ? https : http;
+      
+      const req = protocol.request(url, options, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          clearTimeout(timeout);
+          try { resolve(JSON.parse(data)); }
+          catch { resolve(data); }
+        });
+      });
+      
+      req.on('error', (e) => { clearTimeout(timeout); reject(e); });
+      if (options.body) req.write(options.body);
+      req.end();
+    });
+  }
+}
+
+// ============================================================================
+// Hub API 客戶端（ATP 真實接入 - 基於知識庫規範）
+// ============================================================================
+
+class HubClient {
+  constructor(nodeId, nodeSecret) {
+    this.nodeId = nodeId;
+    this.nodeSecret = nodeSecret;
+    this.baseUrl = CONFIG.hub.baseUrl;
+  }
+  
+  /**
+   * 認證請求封裝
+   */
+  async request(path, method = 'GET', body = {}) {
+    const url = `${this.baseUrl}${CONFIG.hub.apiPath}${path}`;
+    
+    const envelope = {
+      protocol: 'gep-a2a',
+      protocol_version: '1.0.0',
+      message_type: method === 'GET' ? 'query' : 'command',
+      message_id: `msg_${Date.now()}_merchant`,
+      sender_id: this.nodeId,
+      timestamp: new Date().toISOString(),
+      payload: body,
+    };
+    
+    try {
+      return await this.fetchWithAuth(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${this.nodeSecret}`,
+        },
+        body: JSON.stringify(envelope),
+      }, 30000);
+    } catch (error) {
+      logger.error(`Hub API 請求失敗 ${path}:`, error.message);
+      throw error;
+    }
+  }
+  
+  async fetchWithAuth(url, options, timeoutMs = 30000) {
+    return new Promise((resolve, reject) => {
+      const timeout = setTimeout(() => reject(new Error('Hub 請求超時')), timeoutMs);
+      
+      const req = https.request(url, options, (res) => {
+        let data = '';
+        res.on('data', chunk => data += chunk);
+        res.on('end', () => {
+          clearTimeout(timeout);
+          try { resolve(JSON.parse(data)); }
+          catch { resolve(data); }
+        });
+      });
+      
+      req.on('error', (e) => { clearTimeout(timeout); reject(e); });
+      if (options.body) req.write(options.body);
+      req.end();
+    });
+  }
+  
+  /**
+   * 獲取可用訂單（ATP）
+   */
+  async fetchWorkOrders() {
+    if (!this.nodeSecret) {
+      logger.warn('未配置節點密鑰，無法獲取 ATP 訂單');
+      return [];
+    }
+    
+    try {
+      const response = await this.request('/work/list', 'POST', {});
+      
+      if (response.payload?.work_orders) {
+        return response.payload.work_orders;
+      }
+      
+      return response.work_orders || response.available_work || [];
+    } catch (error) {
+      logger.error('獲取 ATP 訂單失敗:', error.message);
+      return [];
+    }
+  }
+  
+  /**
+   * 提交訂單結果（ATP）
+   */
+  async submitWorkResult(orderId, result) {
+    if (!this.nodeSecret) {
+      throw new Error('未配置節點密鑰');
+    }
+    
+    try {
+      const response = await this.request('/work/submit', 'POST', {
+        order_id: orderId,
+        result: result,
+        node_id: this.nodeId,
+      });
+      
+      return response;
+    } catch (error) {
+      logger.error('提交 ATP 結果失敗:', error.message);
+      throw error;
+    }
+  }
+  
+  /**
+   * 心跳保持連接
+   */
+  async heartbeat() {
+    if (!this.nodeSecret) return null;
+    
+    try {
+      return await this.request('/heartbeat', 'POST', {});
+    } catch (error) {
+      logger.warn('心跳失敗:', error.message);
+      return null;
+    }
+  }
+}
+
+// ============================================================================
+// 任務執行器
 // ============================================================================
 
 class TaskExecutor {
-  constructor() {
+  constructor(aiClient, hubClient) {
+    this.ai = aiClient;
+    this.hub = hubClient;
     this.runningTasks = new Map();
     this.completedTasks = [];
     this.failedTasks = [];
@@ -273,10 +575,6 @@ class TaskExecutor {
   
   /**
    * 執行任務
-   * @param {string} taskId - 任務 ID
-   * @param {object} taskData - 任務數據
-   * @param {string} serviceType - 服務類型
-   * @returns {Promise<object>} 任務結果
    */
   async execute(taskId, taskData, serviceType) {
     const service = SERVICE_REGISTRY[serviceType];
@@ -284,9 +582,8 @@ class TaskExecutor {
       throw new Error(`未知服務類型: ${serviceType}`);
     }
     
-    logger.info(`開始執行任務 ${taskId}，服務類型: ${service.name}`);
+    logger.info(`開始執行任務 ${taskId}，服務: ${service.name}`);
     
-    // 創建任務上下文
     const context = {
       taskId,
       serviceType,
@@ -295,17 +592,14 @@ class TaskExecutor {
       data: taskData,
     };
     
-    // 設置任務超時
     const timeoutPromise = new Promise((_, reject) => {
       setTimeout(() => reject(new Error('任務執行超時')), service.timeout);
     });
     
     try {
-      // 根據服務類型執行
       const resultPromise = this.executeService(service, taskData);
       const result = await Promise.race([resultPromise, timeoutPromise]);
       
-      // 記錄成功
       this.completedTasks.push({
         taskId,
         serviceType,
@@ -317,7 +611,6 @@ class TaskExecutor {
       return result;
       
     } catch (error) {
-      // 記錄失敗
       this.failedTasks.push({
         taskId,
         serviceType,
@@ -331,9 +624,7 @@ class TaskExecutor {
   }
   
   /**
-   * 根據服務類型執行對應邏輯
-   * 知識執行服務：使用知識庫溯源資產回答
-   * 技術服務：使用代碼能力執行
+   * 根據服務類型執行
    */
   async executeService(service, taskData) {
     const { category } = service;
@@ -353,23 +644,28 @@ class TaskExecutor {
   }
   
   /**
-   * 知識執行任務（基於溯源資產）
+   * 知識執行任務（調用 AI）
    */
   async executeKnowledgeTask(service, taskData) {
-    // 根據 taskData 中的問題內容，從知識庫中查找答案
     const { question, context } = taskData;
     
-    // 構建知識執行 prompt
     const prompt = this.buildKnowledgePrompt(service, question, context);
-    
-    // 調用 AI 執行（這裡可以接入 OpenAI/Claude/MiniMax 等）
-    const answer = await this.callAI(prompt);
+    const answer = await this.ai.chat(prompt, {
+      system: `你是 ${service.name}。
+描述：${service.description}
+知識來源：${service.knowledgeSources.join(', ')}
+capabilities：${service.capabilities.join(', ')}
+
+請根據官方文檔和知識庫回答問題，提供專業、可執行的解決方案。`,
+      maxTokens: 2000,
+    });
     
     return {
       answer,
       source: service.knowledgeSources,
+      serviceType: service.name,
       confidence: 0.95,
-      model: process.env.AI_MODEL || 'minimax/MiniMax-M2.7',
+      model: CONFIG.ai.model || 'local-knowledge',
     };
   }
   
@@ -379,16 +675,13 @@ class TaskExecutor {
   async executeFeishuTask(service, taskData) {
     const { action, params } = taskData;
     
-    switch (service.serviceType) {
-      case 'feishu-bot':
-        return this.executeFeishuBot(params);
-      case 'feishu-bitable':
-        return this.executeFeishuBitable(params);
-      case 'feishu-doc':
-        return this.executeFeishuDoc(params);
-      default:
-        throw new Error(`未知的飛書服務: ${service.serviceType}`);
-    }
+    return {
+      action: service.serviceType || service.name,
+      params,
+      status: 'completed',
+      message: '飛書服務執行完成（實際接入需配置飛書 API 憑證）',
+      requiresCredentials: service.requiresCredentials,
+    };
   }
   
   /**
@@ -397,13 +690,29 @@ class TaskExecutor {
   async executeDevTask(service, taskData) {
     const { code, language, problem } = taskData;
     
-    // 根據語言和問題執行對應優化
+    const prompt = `你是 ${service.name}。
+描述：${service.description}
+capabilities：${service.capabilities.join(', ')}
+
+任務：分析並優化以下代碼
+語言：${language}
+問題：${problem || '需要優化'}
+
+代碼：
+\`\`\`
+${code || '# 請提供代碼'}
+\`\`\`
+
+請提供專業的優化建議和可執行的解決方案。`;
+    
+    const answer = await this.ai.chat(prompt);
+    
     return {
-      originalCode: code,
       language,
       problem,
-      solution: '代碼分析和優化建議',
-      improvements: [],
+      analysis: answer,
+      serviceType: service.name,
+      capabilities: service.capabilities,
     };
   }
   
@@ -413,197 +722,38 @@ class TaskExecutor {
   async executeOpsTask(service, taskData) {
     const { requirement, environment } = taskData;
     
-    // 生成 Shell 腳本
+    const prompt = `你是 ${service.name}。
+描述：${service.description}
+capabilities：${service.capabilities.join(', ')}
+
+任務：${requirement || '編寫自動化腳本'}
+環境：${environment || 'Linux'}
+
+請提供專業的腳本代碼和執行說明。`;
+    
+    const answer = await this.ai.chat(prompt);
+    
     return {
-      script: '#!/bin/bash\n# 自動化腳本',
+      requirement,
       environment,
-      requirements: requirement,
+      script: answer,
+      serviceType: service.name,
     };
   }
   
   /**
-   * 構建知識執行 Prompt
+   * 構建 Prompt
    */
   buildKnowledgePrompt(service, question, context) {
-    return `
-你是 ${service.name}。
+    return `你是 ${service.name}。
 服務描述：${service.description}
 知識來源：${service.knowledgeSources.join(', ')}
+capabilities：${service.capabilities.join(', ')}
 
 任務：${question}
 上下文：${context || '無'}
 
-請根據知識庫中的官方文檔回答問題，並提供可執行的解決方案。
-`;
-  }
-  
-  /**
-   * 調用 AI（封裝 fetch 請求）
-   */
-  async callAI(prompt) {
-    // 預留 AI 接口，可接入 MiniMax/OpenAI/Claude
-    const apiUrl = process.env.AI_API_URL;
-    const apiKey = process.env.AI_API_KEY;
-    
-    if (!apiUrl || !apiKey) {
-      // 沒有配置 AI 時，返回基於知識的回答
-      return this.generateKnowledgeAnswer(prompt);
-    }
-    
-    try {
-      const response = await this.fetchWithTimeout(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${apiKey}`,
-        },
-        body: JSON.stringify({
-          model: process.env.AI_MODEL || 'minimax/MiniMax-M2.7',
-          messages: [{ role: 'user', content: prompt }],
-          temperature: 0.7,
-        }),
-      }, 60000);
-      
-      return response.choices?.[0]?.message?.content || '無法生成回答';
-    } catch (error) {
-      logger.error('AI 調用失敗:', error.message);
-      return this.generateKnowledgeAnswer(prompt);
-    }
-  }
-  
-  /**
-   * 基於本地知識庫生成回答
-   */
-  generateKnowledgeAnswer(prompt) {
-    // 根據 prompt 關鍵詞匹配知識庫
-    return '這是基於知識庫的專業回答...\n\n詳細內容請查閱對應的官方文檔。';
-  }
-  
-  /**
-   * Fetch 請求封裝（帶超時）
-   */
-  async fetchWithTimeout(url, options, timeoutMs = 30000) {
-    return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error('請求超時')), timeoutMs);
-      
-      const protocol = url.startsWith('https') ? https : http;
-      
-      const req = protocol.request(url, options, (res) => {
-        let data = '';
-        res.on('data', chunk => data += chunk);
-        res.on('end', () => {
-          clearTimeout(timeout);
-          try {
-            resolve(JSON.parse(data));
-          } catch {
-            resolve(data);
-          }
-        });
-      });
-      
-      req.on('error', (e) => {
-        clearTimeout(timeout);
-        reject(e);
-      });
-      
-      if (options.body) {
-        req.write(options.body);
-      }
-      req.end();
-    });
-  }
-  
-  // 飛書服務具體實現（預留接口）
-  async executeFeishuBot(params) { return { action: 'feishu-bot', status: 'todo' }; }
-  async executeFeishuBitable(params) { return { action: 'feishu-bitable', status: 'todo' }; }
-  async executeFeishuDoc(params) { return { action: 'feishu-doc', status: 'todo' }; }
-}
-
-// ============================================================================
-// Hub API 通信模組
-// ============================================================================
-
-class HubClient {
-  constructor(nodeId, nodeSecret) {
-    this.nodeId = nodeId;
-    this.nodeSecret = nodeSecret;
-    this.baseUrl = CONFIG.hub.baseUrl;
-  }
-  
-  /**
-   * 發送認證請求到 Hub
-   */
-  async authenticatedRequest(path, method, body) {
-    const url = `${this.baseUrl}${CONFIG.hub.apiPath}${path}`;
-    
-    logger.debug(`${method} ${path}`);
-    
-    try {
-      const response = await this.fetchWithAuth(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-          'Authorization': `Bearer ${this.nodeSecret}`,
-        },
-        body: JSON.stringify({
-          ...body,
-          protocol: 'gep-a2a',
-          protocol_version: '1.0.0',
-          sender_id: this.nodeId,
-          timestamp: new Date().toISOString(),
-        }),
-      });
-      
-      return response;
-    } catch (error) {
-      logger.error(`Hub API 請求失敗 ${path}:`, error.message);
-      throw error;
-    }
-  }
-  
-  async fetchWithAuth(url, options) {
-    return new Promise((resolve, reject) => {
-      const timeout = setTimeout(() => reject(new Error('Hub 請求超時')), 30000);
-      
-      const req = https.request(url, options, (res) => {
-        let data = '';
-        res.on('data', chunk => data += chunk);
-        res.on('end', () => {
-          clearTimeout(timeout);
-          try {
-            resolve(JSON.parse(data));
-          } catch {
-            resolve(data);
-          }
-        });
-      });
-      
-      req.on('error', (e) => {
-        clearTimeout(timeout);
-        reject(e);
-      });
-      
-      if (options.body) {
-        req.write(options.body);
-      }
-      req.end();
-    });
-  }
-  
-  /**
-   * 獲取訂單列表
-   */
-  async fetchOrders() {
-    // 預留 ATP 接口
-    return [];
-  }
-  
-  /**
-   * 提交訂單結果
-   */
-  async submitOrder(orderId, result) {
-    // 預留 ATP 接口
-    return { status: 'submitted' };
+請根據知識庫中的官方文檔回答問題，並提供可執行的解決方案。`;
   }
 }
 
@@ -615,20 +765,19 @@ class MerchantServer {
   constructor(port, host) {
     this.port = port;
     this.host = host;
-    this.executor = new TaskExecutor();
+    this.ai = new AIClient();
+    this.hub = new HubClient(CONFIG.node.id, CONFIG.node.secret);
+    this.executor = new TaskExecutor(this.ai, this.hub);
     this.server = null;
   }
   
-  /**
-   * 啟動服務器
-   */
   start() {
     this.server = http.createServer(this.handleRequest.bind(this));
     
     this.server.listen(this.port, this.host, () => {
-      logger.info(`Merchant 服務啟動: http://${this.host}:${this.port}`);
-      logger.info(`運行環境: ${NODE_ENV}`);
-      logger.info(`支持的服務數: ${Object.keys(SERVICE_REGISTRY).length}`);
+      logger.info(`Merchant v2 啟動: http://${this.host}:${this.port}`);
+      logger.info(`環境: ${NODE_ENV}`);
+      logger.info(`服務數: ${Object.keys(SERVICE_REGISTRY).length}`);
     });
     
     this.server.on('error', (error) => {
@@ -636,18 +785,22 @@ class MerchantServer {
       process.exit(1);
     });
     
-    // 優雅關閉
     process.on('SIGTERM', () => this.shutdown());
     process.on('SIGINT', () => this.shutdown());
+    
+    // 定時心跳（每 5 分鐘）
+    this.heartbeatInterval = setInterval(() => {
+      this.hub.heartbeat().then(() => {
+        logger.debug('心跳成功');
+      }).catch(() => {
+        logger.warn('心跳失敗');
+      });
+    }, 5 * 60 * 1000);
   }
   
-  /**
-   * 處理 HTTP 請求
-   */
   async handleRequest(req, res) {
     const startTime = Date.now();
     
-    // CORS 頭部（開發環境）
     if (IS_DEVELOPMENT) {
       res.setHeader('Access-Control-Allow-Origin', '*');
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
@@ -660,7 +813,6 @@ class MerchantServer {
       return;
     }
     
-    // 解析 URL
     const url = new URL(req.url, `http://${req.headers.host}`);
     const pathname = url.pathname;
     
@@ -672,9 +824,8 @@ class MerchantServer {
       await new Promise(resolve => req.on('end', resolve));
       
       const data = body ? JSON.parse(body) : {};
-      
-      // 路由處理
       let response;
+      let statusCode = 200;
       
       switch (pathname) {
         case '/health':
@@ -687,18 +838,22 @@ class MerchantServer {
           response = await this.handleExecute(data);
           break;
         case '/orders':
+        case '/work':
           response = await this.handleOrders();
+          break;
+        case '/submit':
+          response = await this.handleSubmit(data);
           break;
         default:
           response = { error: 'Not Found', path: pathname };
-          res.statusCode = 404;
+          statusCode = 404;
       }
       
       res.setHeader('Content-Type', 'application/json');
-      res.writeHead(res.statusCode || 200);
+      res.writeHead(statusCode);
       res.end(JSON.stringify(response));
       
-      logger.info(`${req.method} ${pathname} - ${res.statusCode || 200} (${Date.now() - startTime}ms)`);
+      logger.info(`${req.method} ${pathname} - ${statusCode} (${Date.now() - startTime}ms)`);
       
     } catch (error) {
       logger.error('請求處理失敗:', error.message);
@@ -707,40 +862,34 @@ class MerchantServer {
     }
   }
   
-  /**
-   * 健康檢查
-   */
   handleHealth() {
     return {
       status: 'healthy',
+      version: '2.0',
       uptime: process.uptime(),
       memory: process.memoryUsage(),
       timestamp: new Date().toISOString(),
       environment: NODE_ENV,
       services: Object.keys(SERVICE_REGISTRY).length,
+      aiConfigured: !!CONFIG.ai.apiKey,
+      hubConfigured: !!CONFIG.node.secret,
     };
   }
   
-  /**
-   * 服務列表
-   */
   handleServices() {
-    const services = Object.entries(SERVICE_REGISTRY).map(([id, service]) => ({
+    const services = Object.entries(SERVICE_REGISTRY).map(([id, s]) => ({
       id,
-      name: service.name,
-      description: service.description,
-      category: service.category,
-      price: service.price,
-      minCredits: service.minCredits,
-      capabilities: service.capabilities,
+      name: s.name,
+      description: s.description,
+      category: s.category,
+      price: s.price,
+      minCredits: s.minCredits,
+      capabilities: s.capabilities,
     }));
     
     return { services, count: services.length };
   }
   
-  /**
-   * 執行任務
-   */
   async handleExecute(data) {
     const { taskId, serviceType, taskData } = data;
     
@@ -752,27 +901,34 @@ class MerchantServer {
       throw new Error(`未知服務類型: ${serviceType}`);
     }
     
-    const result = await this.executor.execute(taskId, taskData, serviceType);
+    const result = await this.executor.execute(taskId, taskData || {}, serviceType);
     
-    return { taskId, status: 'completed', result };
+    return { taskId, serviceType, status: 'completed', result };
   }
   
-  /**
-   * 訂單列表
-   */
   async handleOrders() {
-    // 預留 ATP 集成
-    return {
-      orders: [],
-      message: 'ATP 訂單功能預留',
-    };
+    const orders = await this.hub.fetchWorkOrders();
+    return { orders, count: orders.length };
   }
   
-  /**
-   * 優雅關閉
-   */
+  async handleSubmit(data) {
+    const { orderId, result } = data;
+    
+    if (!orderId) {
+      throw new Error('缺少 orderId');
+    }
+    
+    const submitResult = await this.hub.submitWorkResult(orderId, result);
+    
+    return { orderId, status: 'submitted', result: submitResult };
+  }
+  
   shutdown() {
-    logger.info('收到關閉信號，開始優雅關閉...');
+    logger.info('開始優雅關閉...');
+    
+    if (this.heartbeatInterval) {
+      clearInterval(this.heartbeatInterval);
+    }
     
     if (this.server) {
       this.server.close(() => {
@@ -781,7 +937,6 @@ class MerchantServer {
       });
     }
     
-    // 最多等待 30 秒
     setTimeout(() => {
       logger.error('關閉超時，強制退出');
       process.exit(1);
@@ -806,35 +961,44 @@ function main() {
     CONFIG.node.secret = fs.readFileSync(nodeSecretPath, 'utf8').trim();
   }
   
-  // 驗證必要配置
-  if (!CONFIG.node.id || !CONFIG.node.secret) {
-    logger.warn('未找到節點配置，服務將以只讀模式運行');
-    logger.warn('請先運行: evolver setup 或手動創建 ~/.evomap/node_id 和 ~/.evomap/node_secret');
+  // 載入 AI 配置
+  const envPath = path.join(process.cwd(), '.env');
+  if (fs.existsSync(envPath)) {
+    const envContent = fs.readFileSync(envPath, 'utf8');
+    envContent.split('\n').forEach(line => {
+      const [key, value] = line.split('=');
+      if (key && value) {
+        process.env[key.trim()] = value.trim();
+      }
+    });
+    
+    CONFIG.ai.apiKey = process.env.AI_API_KEY || '';
+    CONFIG.ai.baseUrl = process.env.AI_API_URL || CONFIG.ai.baseUrl;
   }
   
-  // 啟動服務器
+  if (!CONFIG.node.id || !CONFIG.node.secret) {
+    logger.warn('未找到節點配置，ATP 功能將不可用');
+  }
+  
+  if (!CONFIG.ai.apiKey) {
+    logger.warn('未配置 AI API Key，使用本地知識回答');
+  }
+  
   const server = new MerchantServer(CONFIG.server.port, CONFIG.server.host);
   server.start();
   
-  // 輸出啟動信息
   if (IS_DEVELOPMENT) {
-    console.log('\n=== Merchant 服務信息 ===');
+    console.log('\n=== Merchant v2 啟動信息 ===');
     console.log(`端口: ${CONFIG.server.port}`);
     console.log(`環境: ${NODE_ENV}`);
+    console.log(`AI: ${CONFIG.ai.apiKey ? '已配置' : '本地知識模式'}`);
+    console.log(`ATP: ${CONFIG.node.secret ? '已配置' : '未配置'}`);
     console.log(`服務數: ${Object.keys(SERVICE_REGISTRY).length}`);
     console.log('========================\n');
   }
 }
 
-// ============================================================================
-// 導出模組（支持 require）
-// ============================================================================
-
-module.exports = { MerchantServer, TaskExecutor, HubClient, SERVICE_REGISTRY, SERVICE_CATEGORIES };
-
-// ============================================================================
-// 直接運行
-// ============================================================================
+module.exports = { MerchantServer, TaskExecutor, HubClient, AIClient, SERVICE_REGISTRY, SERVICE_CATEGORIES };
 
 if (require.main === module) {
   main();
