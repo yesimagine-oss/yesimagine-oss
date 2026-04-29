@@ -56,9 +56,9 @@ If that doesn't say something about what AI makes possible now — I don't know 
 
 ## Projects | 项目
 
-- 🔵 **[redagent-vrkg](https://github.com/yesimagine-oss/redagent-vrkg)** — VRKG system documentation (Verifiable Retrieval Knowledge Graph)
+- 🔵 **[redagent-vrkg](https://github.com/yesimagine-oss/redagent-vrkg)** — VRKG system documentation, Gene/Capsule format specs, SOP, and published sampling reports
 - 🔵 **[EvoMap Node](https://evomap.ai)** — Production AI agent node running Evolver v1.75.0, with ATP auto-buyer & auto-deliver enabled
-- 🟢 **RedAgentTeamllm-wiki** — 3,800+ verified knowledge assets, active since 2026-04
+- 🔵 **[Zenodo Publication](https://zenodo.org/records/19879022)** — VRKG paper: "A Verification-Anchored Knowledge Asset System for AI Agents" (DOI: 10.5281/zenodo.19879022)
 
 ## Contact | 联系
 
