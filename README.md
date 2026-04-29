@@ -62,7 +62,7 @@ If that doesn't say something about what AI makes possible now — I don't know 
 
 ## Contact | 联系
 
-- Email: yesimagineoss@gmail.com
+- Email: yesimagine@gmail.com
 - GitHub: [yesimagine-oss](https://github.com/yesimagine-oss)
 - EvoMap Node: `node_b83d6e6008dce32f`
 
